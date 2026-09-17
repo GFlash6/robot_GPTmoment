@@ -1,0 +1,30 @@
+{
+  "repo": "PlanSys2/ros2_planning_system",
+  "group": "execution_planning",
+  "url": "https://github.com/PlanSys2/ros2_planning_system",
+  "observed_at": "2026-09-05T06:06:43.552166+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/PlanSys2/ros2_planning_system/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be/README.md",
+      "web_url": "https://github.com/PlanSys2/ros2_planning_system/blob/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be/README.md",
+      "local_path": "docs/research/sources/PlanSys2__ros2_planning_system/README.md",
+      "sha256": "b3622d03c2afffd11d1fbb5276f7a15d1314af5c336a6cefc470f45cd0b8bcd5",
+      "bytes": 2381
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/PlanSys2/ros2_planning_system/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be/LICENSE",
+      "web_url": "https://github.com/PlanSys2/ros2_planning_system/blob/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be/LICENSE",
+      "local_path": "docs/research/sources/PlanSys2__ros2_planning_system/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    }
+  ],
+  "errors": [],
+  "head_sha": "c44cf3dff6abc0d0a95ea554b2bace597bf5f9be",
+  "head_commit_author_date": "Tue, 28 Jul 2026 13:49:17 +0200",
+  "commit_date_source": "https://github.com/PlanSys2/ros2_planning_system/commit/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be.patch"
+}

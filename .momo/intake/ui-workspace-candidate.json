@@ -1,0 +1,584 @@
+{
+  "format": "momo-workspace",
+  "version": 2,
+  "workspace": {
+    "key": "workspace-robot-agent-framework",
+    "title": "机器人 Agent 框架",
+    "revision": 7,
+    "updatedAt": "2026-09-05T16:03:17.142Z",
+    "confirmedBy": "momo-skill",
+    "confirmedAt": "2026-09-05T16:03:17.142Z"
+  },
+  "snapshot": {
+    "schemaVersion": 4,
+    "objects": [
+      {
+        "id": "project-robot-agent-framework",
+        "projectId": "project-robot-agent-framework",
+        "type": "project",
+        "schemaVersion": 1,
+        "title": "机器人 Agent 框架",
+        "lifecycle": "in_progress",
+        "summary": "第一版软件框架可运行，真实模型和机器人验收仍缺。",
+        "properties": {
+          "workspaceKey": "workspace-robot-agent-framework",
+          "ownership": "owned",
+          "workspaceRole": "primary",
+          "detailPolicy": "full",
+          "phase": "implementation",
+          "evidenceStatus": "Confirmed"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "goal",
+        "projectId": "project-robot-agent-framework",
+        "type": "outcome",
+        "schemaVersion": 1,
+        "title": "机器人 Agent 通用框架",
+        "lifecycle": "in_progress",
+        "summary": "第一版软件框架已实现并通过软件验证；真实模型、机器人与多模态现场验收未完成，整体目标保持进行中。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "single",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "单机器人多任务与多资源",
+        "lifecycle": "open",
+        "summary": "第一版边界已由用户确认；预留多机器人接口。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "orchestration",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "任务分解、编排、技能、恢复与打断",
+        "lifecycle": "open",
+        "summary": "框架核心要求，不绑定特定探索算法。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "memory",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "多模态数据与地图记忆",
+        "lifecycle": "open",
+        "summary": "覆盖 RGB、深度、点云、点云地图、占据地图、体素地图。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "truth",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "实际返回与证据判定",
+        "lifecycle": "open",
+        "summary": "禁止将传输成功或模型自述替代真实技能结果。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "research",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "开源资源广泛调研",
+        "lifecycle": "done",
+        "summary": "首轮 41 个仓库研究已完成，结论支持第一版组件组合。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/research/REPORT.md",
+          "researchReport": "docs/research/REPORT.md",
+          "sourceManifest": "docs/research/inventory.json"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "selection",
+        "projectId": "project-robot-agent-framework",
+        "type": "decision",
+        "schemaVersion": 1,
+        "title": "框架底座与复用组合",
+        "lifecycle": "done",
+        "summary": "第一版实际采用 DBOS、py_trees 条件链、MCAP、jsonschema 和 httpx；后续部署与深层复用仍待验证。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/ARCHITECTURE.md",
+          "proposal": "docs/research/REPORT.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "kernel",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "框架实现",
+        "lifecycle": "in_progress",
+        "summary": "第一版生产包、HTTP 数据服务、持久任务、资源和取消机制已实现；机器人适配和全目标验收仍未完成。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/VALIDATION.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "questions",
+        "projectId": "project-robot-agent-framework",
+        "type": "artifact",
+        "schemaVersion": 1,
+        "title": "模块待决问题台账",
+        "lifecycle": "in_progress",
+        "summary": "docs/OPEN_QUESTIONS.md 已存在，持续维护。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/OPEN_QUESTIONS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "verification",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "实际 AI 与机器人技能联调",
+        "lifecycle": "blocked",
+        "summary": "软件、真实 HTTP 与 ROS2 诊断录制已验证；没有实际模型成功或机器人运动验收。",
+        "properties": {
+          "evidenceStatus": "Unknown",
+          "source": "docs/VALIDATION.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "momo",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "Momo 项目生命周期维护",
+        "lifecycle": "in_progress",
+        "summary": "已确认正式单项目并注册；持续维护实现、证据和未知项。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "initial-tests",
+        "projectId": "project-robot-agent-framework",
+        "type": "evidence",
+        "schemaVersion": 1,
+        "title": "历史初始契约测试失败基线",
+        "lifecycle": "done",
+        "summary": "调研阶段失败基线保留；当前回归已通过，历史失败不代表当前状态。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "core-execution",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "任务执行与控制权",
+        "lifecycle": "done",
+        "summary": "派发前身份、资源事务、fallback、打断、DBOS 恢复已通过软件验证。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "robot_agent/runtime.py"
+        },
+        "createdAt": "2026-09-05T08:00:31.921946+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "multimodal-storage",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "原始记录与证据目录",
+        "lifecycle": "done",
+        "summary": "MCAP、rosbag2 录制和资产证据目录已实现；不包含尚未验证的视觉分类和地图算法。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "robot_agent/memory.py"
+        },
+        "createdAt": "2026-09-05T08:00:31.921946+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "model-adapter",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "真实模型规划与有界重规划",
+        "lifecycle": "in_progress",
+        "summary": "适配器、内容校验、拒绝默认计划、版本保护已实现；实际模型成功路径未联调。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "robot_agent/planner.py"
+        },
+        "createdAt": "2026-09-05T08:00:31.921946+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "software-validation",
+        "projectId": "project-robot-agent-framework",
+        "type": "evidence",
+        "schemaVersion": 1,
+        "title": "第一版实际验证记录",
+        "lifecycle": "done",
+        "summary": "24 tests 与 9 subtests 通过；实际 HTTP 复制、取消、进程被杀恢复；25 条 ROS2 诊断消息录制。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/VALIDATION.md"
+        },
+        "createdAt": "2026-09-05T08:00:31.921946+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "workflow-ui",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "解耦流程可视化 UI",
+        "lifecycle": "done",
+        "summary": "独立 React/TypeScript 只读流程 UI 与观察 API 已实现；任务 DAG、结果、fallback、停止证据、资源、记忆和模型记录均读取真实账本。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/UI_DESIGN.md",
+          "designStatus": "implemented",
+          "validationSource": "docs/UI_VALIDATION.md",
+          "apiSource": "docs/UI_API.md"
+        },
+        "createdAt": "2026-09-05T16:03:17.080903+00:00",
+        "updatedAt": "2026-09-06T06:24:43.478330+00:00"
+      },
+      {
+        "id": "ui-validation",
+        "projectId": "project-robot-agent-framework",
+        "type": "evidence",
+        "schemaVersion": 1,
+        "title": "解耦 UI 实际账本与浏览器验证",
+        "lifecycle": "done",
+        "summary": "30 tests、9 subtests 和 4 项 Chromium 检查通过；构建通过。使用真实文件操作账本，无机器人或模型成功声明。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/UI_VALIDATION.md"
+        },
+        "createdAt": "2026-09-06T06:24:43.478330+00:00",
+        "updatedAt": "2026-09-06T06:24:43.478330+00:00"
+      }
+    ],
+    "relations": [
+      {
+        "id": "contains-goal",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "goal",
+        "type": "contains"
+      },
+      {
+        "id": "contains-single",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "single",
+        "type": "contains"
+      },
+      {
+        "id": "contains-orchestration",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "orchestration",
+        "type": "contains"
+      },
+      {
+        "id": "contains-memory",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "memory",
+        "type": "contains"
+      },
+      {
+        "id": "contains-truth",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "truth",
+        "type": "contains"
+      },
+      {
+        "id": "contains-research",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "research",
+        "type": "contains"
+      },
+      {
+        "id": "contains-selection",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "selection",
+        "type": "contains"
+      },
+      {
+        "id": "contains-kernel",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "kernel",
+        "type": "contains"
+      },
+      {
+        "id": "contains-questions",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "questions",
+        "type": "contains"
+      },
+      {
+        "id": "contains-verification",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "verification",
+        "type": "contains"
+      },
+      {
+        "id": "contains-momo",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "momo",
+        "type": "contains"
+      },
+      {
+        "id": "contains-initial-tests",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "initial-tests",
+        "type": "contains"
+      },
+      {
+        "id": "relation-3ac8b90d2c205f7a",
+        "sourceObjectId": "single",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-23d075ab01747412",
+        "sourceObjectId": "orchestration",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-e77a7651269374a8",
+        "sourceObjectId": "memory",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-eaa03768cb223c5b",
+        "sourceObjectId": "truth",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-fd6f7d3c30895d42",
+        "sourceObjectId": "research",
+        "targetObjectId": "kernel",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-316d9f0385a81825",
+        "sourceObjectId": "questions",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-6ffd674cbb28f0bc",
+        "sourceObjectId": "momo",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-1eccb04a3cf44bc8",
+        "sourceObjectId": "verification",
+        "targetObjectId": "truth",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "contains-core-execution",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "core-execution",
+        "type": "contains"
+      },
+      {
+        "id": "contains-multimodal-storage",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "multimodal-storage",
+        "type": "contains"
+      },
+      {
+        "id": "contains-model-adapter",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "model-adapter",
+        "type": "contains"
+      },
+      {
+        "id": "contains-software-validation",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "software-validation",
+        "type": "contains"
+      },
+      {
+        "id": "relation-369b137c81c1be79",
+        "sourceObjectId": "selection",
+        "targetObjectId": "kernel",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-17e63ef6216b1f1f",
+        "sourceObjectId": "core-execution",
+        "targetObjectId": "orchestration",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-99bedfec76d5fd33",
+        "sourceObjectId": "multimodal-storage",
+        "targetObjectId": "memory",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-9a4c82b2b887d853",
+        "sourceObjectId": "model-adapter",
+        "targetObjectId": "orchestration",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-1a8060fe213077e7",
+        "sourceObjectId": "software-validation",
+        "targetObjectId": "kernel",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-7678dfc1725f0ac1",
+        "sourceObjectId": "software-validation",
+        "targetObjectId": "initial-tests",
+        "type": "derived_from",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-30461971cb9aa5e7",
+        "sourceObjectId": "kernel",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "contains-workflow-ui",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "workflow-ui",
+        "type": "contains"
+      },
+      {
+        "id": "relation-1aa8f8ad3465a47b",
+        "sourceObjectId": "workflow-ui",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T16:03:17.142Z"
+      },
+      {
+        "id": "contains-ui-validation",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "ui-validation",
+        "type": "contains"
+      }
+    ],
+    "proposals": [],
+    "views": [],
+    "objectTypes": [
+      {
+        "id": "artifact",
+        "label": "artifact",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "decision",
+        "label": "decision",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "evidence",
+        "label": "evidence",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "outcome",
+        "label": "outcome",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "requirement",
+        "label": "requirement",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "work_item",
+        "label": "work_item",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      }
+    ],
+    "contents": [],
+    "activity": [],
+    "assets": [],
+    "attachmentRefs": []
+  }
+}

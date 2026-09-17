@@ -1,0 +1,30 @@
+{
+  "repo": "crewAIInc/crewAI",
+  "group": "durable_agent",
+  "url": "https://github.com/crewAIInc/crewAI",
+  "observed_at": "2026-09-05T06:06:47.484451+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/crewAIInc/crewAI/143e902178a07d0f13f9db2308f983aaacaaf0f8/README.md",
+      "web_url": "https://github.com/crewAIInc/crewAI/blob/143e902178a07d0f13f9db2308f983aaacaaf0f8/README.md",
+      "local_path": "docs/research/sources/crewAIInc__crewAI/README.md",
+      "sha256": "b0f39843f93676b12883d5821a34555e2146e62bd2c42dc12733fc41222de013",
+      "bytes": 32755
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/crewAIInc/crewAI/143e902178a07d0f13f9db2308f983aaacaaf0f8/LICENSE",
+      "web_url": "https://github.com/crewAIInc/crewAI/blob/143e902178a07d0f13f9db2308f983aaacaaf0f8/LICENSE",
+      "local_path": "docs/research/sources/crewAIInc__crewAI/LICENSE",
+      "sha256": "28868731966f4aa37f02879839aabc797137e27ddde4e274ef9cf965f9a71774",
+      "bytes": 1055
+    }
+  ],
+  "errors": [],
+  "head_sha": "143e902178a07d0f13f9db2308f983aaacaaf0f8",
+  "head_commit_author_date": "Fri, 4 Sep 2026 13:26:07 -0700",
+  "commit_date_source": "https://github.com/crewAIInc/crewAI/commit/143e902178a07d0f13f9db2308f983aaacaaf0f8.patch"
+}

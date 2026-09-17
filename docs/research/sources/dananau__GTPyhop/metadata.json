@@ -1,0 +1,30 @@
+{
+  "repo": "dananau/GTPyhop",
+  "group": "execution_planning",
+  "url": "https://github.com/dananau/GTPyhop",
+  "observed_at": "2026-09-05T06:06:44.895309+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/dananau/GTPyhop/1ca7773963443476d0e83d03f10efab325327565/README.md",
+      "web_url": "https://github.com/dananau/GTPyhop/blob/1ca7773963443476d0e83d03f10efab325327565/README.md",
+      "local_path": "docs/research/sources/dananau__GTPyhop/README.md",
+      "sha256": "e0915e28c3d3a8bbfb90136f674dd0db1ea9e7494c0497c2e21a8960353f937d",
+      "bytes": 4613
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE.txt",
+      "source_url": "https://raw.githubusercontent.com/dananau/GTPyhop/1ca7773963443476d0e83d03f10efab325327565/LICENSE.txt",
+      "web_url": "https://github.com/dananau/GTPyhop/blob/1ca7773963443476d0e83d03f10efab325327565/LICENSE.txt",
+      "local_path": "docs/research/sources/dananau__GTPyhop/LICENSE.txt",
+      "sha256": "48a52f2176539c5e0187b497bfb84d6c37f133f602ba79574f2e754369978c4e",
+      "bytes": 1726
+    }
+  ],
+  "errors": [],
+  "head_sha": "1ca7773963443476d0e83d03f10efab325327565",
+  "head_commit_author_date": "Thu, 29 Jul 2021 14:28:52 -0400",
+  "commit_date_source": "https://github.com/dananau/GTPyhop/commit/1ca7773963443476d0e83d03f10efab325327565.patch"
+}

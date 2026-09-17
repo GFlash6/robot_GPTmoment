@@ -1,0 +1,30 @@
+{
+  "repo": "isl-org/Open3D",
+  "group": "data_memory",
+  "url": "https://github.com/isl-org/Open3D",
+  "observed_at": "2026-09-05T06:06:51.401994+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/isl-org/Open3D/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda/README.md",
+      "web_url": "https://github.com/isl-org/Open3D/blob/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda/README.md",
+      "local_path": "docs/research/sources/isl-org__Open3D/README.md",
+      "sha256": "9e5efafff825f967ac5eaa51daf17dbae9220c14215e48fe5e85337f6f2462cf",
+      "bytes": 6673
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/isl-org/Open3D/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda/LICENSE",
+      "web_url": "https://github.com/isl-org/Open3D/blob/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda/LICENSE",
+      "local_path": "docs/research/sources/isl-org__Open3D/LICENSE",
+      "sha256": "e2105d24aa1dae0fb5450f5b974dbf369b44d3c91a100d1b134922edb0647175",
+      "bytes": 1139
+    }
+  ],
+  "errors": [],
+  "head_sha": "cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda",
+  "head_commit_author_date": "Mon, 31 Aug 2026 02:38:30 +0900",
+  "commit_date_source": "https://github.com/isl-org/Open3D/commit/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda.patch"
+}

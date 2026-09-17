@@ -1,0 +1,30 @@
+{
+  "repo": "ros2/rosbag2",
+  "group": "data_memory",
+  "url": "https://github.com/ros2/rosbag2",
+  "observed_at": "2026-09-05T06:06:47.664382+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/ros2/rosbag2/96eddfa7f5ea42ac75c4a882893d89ac969532f9/README.md",
+      "web_url": "https://github.com/ros2/rosbag2/blob/96eddfa7f5ea42ac75c4a882893d89ac969532f9/README.md",
+      "local_path": "docs/research/sources/ros2__rosbag2/README.md",
+      "sha256": "f98bba9c707a9d19273ae183ec07a7e0d46da1ffd830d9d6618c216cc8e525d9",
+      "bytes": 39691
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/ros2/rosbag2/96eddfa7f5ea42ac75c4a882893d89ac969532f9/LICENSE",
+      "web_url": "https://github.com/ros2/rosbag2/blob/96eddfa7f5ea42ac75c4a882893d89ac969532f9/LICENSE",
+      "local_path": "docs/research/sources/ros2__rosbag2/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    }
+  ],
+  "errors": [],
+  "head_sha": "96eddfa7f5ea42ac75c4a882893d89ac969532f9",
+  "head_commit_author_date": "Fri, 4 Sep 2026 10:26:53 +0200",
+  "commit_date_source": "https://github.com/ros2/rosbag2/commit/96eddfa7f5ea42ac75c4a882893d89ac969532f9.patch"
+}

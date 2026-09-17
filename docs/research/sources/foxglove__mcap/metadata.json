@@ -1,0 +1,30 @@
+{
+  "repo": "foxglove/mcap",
+  "group": "data_memory",
+  "url": "https://github.com/foxglove/mcap",
+  "observed_at": "2026-09-05T06:06:47.582355+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/foxglove/mcap/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515/README.md",
+      "web_url": "https://github.com/foxglove/mcap/blob/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515/README.md",
+      "local_path": "docs/research/sources/foxglove__mcap/README.md",
+      "sha256": "d666ab2171490ce69d7b8aa2f6c850fcdf1a310a8d88424e07cfb81e5f5dfcab",
+      "bytes": 3759
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/foxglove/mcap/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515/LICENSE",
+      "web_url": "https://github.com/foxglove/mcap/blob/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515/LICENSE",
+      "local_path": "docs/research/sources/foxglove__mcap/LICENSE",
+      "sha256": "da11235665c17d4c1634072dae92b8ba1b38d6fdde2ccf19a6bbede33253f58d",
+      "bytes": 1077
+    }
+  ],
+  "errors": [],
+  "head_sha": "75aa8c8329fcdb2c5c86c2ba019b785f63fb7515",
+  "head_commit_author_date": "Tue, 1 Sep 2026 15:32:48 -0400",
+  "commit_date_source": "https://github.com/foxglove/mcap/commit/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515.patch"
+}

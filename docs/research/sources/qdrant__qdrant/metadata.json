@@ -1,0 +1,30 @@
+{
+  "repo": "qdrant/qdrant",
+  "group": "data_memory",
+  "url": "https://github.com/qdrant/qdrant",
+  "observed_at": "2026-09-05T06:06:49.553794+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/README.md",
+      "web_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/README.md",
+      "local_path": "docs/research/sources/qdrant__qdrant/README.md",
+      "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4",
+      "bytes": 11560
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+      "web_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+      "local_path": "docs/research/sources/qdrant__qdrant/LICENSE",
+      "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f",
+      "bytes": 11351
+    }
+  ],
+  "errors": [],
+  "head_sha": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+  "head_commit_author_date": "Thu, 3 Sep 2026 14:36:18 +0200",
+  "commit_date_source": "https://github.com/qdrant/qdrant/commit/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de.patch"
+}

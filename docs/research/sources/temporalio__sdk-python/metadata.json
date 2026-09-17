@@ -1,0 +1,30 @@
+{
+  "repo": "temporalio/sdk-python",
+  "group": "durable_agent",
+  "url": "https://github.com/temporalio/sdk-python",
+  "observed_at": "2026-09-05T06:06:45.454843+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/temporalio/sdk-python/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d/README.md",
+      "web_url": "https://github.com/temporalio/sdk-python/blob/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d/README.md",
+      "local_path": "docs/research/sources/temporalio__sdk-python/README.md",
+      "sha256": "8ec11868a76adce81b39a59c215defe1a70c7da65f170e8a41add57ca1091e10",
+      "bytes": 104587
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/temporalio/sdk-python/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d/LICENSE",
+      "web_url": "https://github.com/temporalio/sdk-python/blob/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d/LICENSE",
+      "local_path": "docs/research/sources/temporalio__sdk-python/LICENSE",
+      "sha256": "d7706f28d144dabf07e4946553a4d117d1dab5cda6bf34a602959b4a2fa86b38",
+      "bytes": 1108
+    }
+  ],
+  "errors": [],
+  "head_sha": "22a9e41fd857261ee0a9bb5ce57f439d93e7f88d",
+  "head_commit_author_date": "Fri, 4 Sep 2026 17:48:13 -0400",
+  "commit_date_source": "https://github.com/temporalio/sdk-python/commit/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d.patch"
+}

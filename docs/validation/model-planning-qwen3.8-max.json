@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-07",
+  "model": "qwen3.8-max",
+  "credential_source": "API_KEY environment variable",
+  "endpoint_recorded": false,
+  "secret_recorded": false,
+  "validation_root": ".runtime/model-validation",
+  "attempts": [
+    {
+      "model": "qwen3.8plus",
+      "http_status": 404,
+      "status": "rejected",
+      "provider_error_code": "model_not_found"
+    },
+    {
+      "model": "qwen3.8-max",
+      "http_status": 200,
+      "status": "rejected",
+      "reason": "verification was returned as an object instead of a step ID string"
+    },
+    {
+      "model": "qwen3.8-max",
+      "http_status": 200,
+      "status": "validated",
+      "local_evidence_record": "43265af6-8fcf-4fbb-afb9-e96022a49932",
+      "provider_response_id": "chatcmpl-5a31965e-d634-988c-aa08-9bc0e4b1d3fa",
+      "actual_model": "qwen3.8-max",
+      "step_ids": [
+        "ingest_readme",
+        "verify_readme_asset"
+      ],
+      "verification": "verify_readme_asset"
+    }
+  ],
+  "raw_response_location": ".runtime/model-validation/ledger.sqlite",
+  "raw_response_versioned": false,
+  "live_qa_validation": {
+    "test": "tests/test_live_model.py::test_actual_model_answers_independently_checkable_question",
+    "question": "37 boxes times 29 parts, minus 428 used",
+    "independently_calculated_answer": 645,
+    "observed_answer": 645,
+    "result": "passed",
+    "duration_seconds": 7.15
+  },
+  "plan_executed": false,
+  "scope": "Actual model transport, independently checkable question answering, response parsing, and plan-contract acceptance; not task execution or robot validation."
+}

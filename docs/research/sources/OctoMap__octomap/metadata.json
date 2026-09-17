@@ -1,0 +1,32 @@
+{
+  "repo": "OctoMap/octomap",
+  "group": "data_memory",
+  "url": "https://github.com/OctoMap/octomap",
+  "observed_at": "2026-09-05T06:06:51.435070+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/OctoMap/octomap/21a8871d7bbd0aa13c73bbdb4e128821d8279af4/README.md",
+      "web_url": "https://github.com/OctoMap/octomap/blob/21a8871d7bbd0aa13c73bbdb4e128821d8279af4/README.md",
+      "local_path": "docs/research/sources/OctoMap__octomap/README.md",
+      "sha256": "64da9308bd1d94841e4f5bb88d6316c52ee83c8641ca0b7924961abff76c0276",
+      "bytes": 2634
+    },
+    {
+      "kind": "license",
+      "upstream_path": "octomap/LICENSE.txt",
+      "source_url": "https://raw.githubusercontent.com/OctoMap/octomap/21a8871d7bbd0aa13c73bbdb4e128821d8279af4/octomap/LICENSE.txt",
+      "web_url": "https://github.com/OctoMap/octomap/blob/21a8871d7bbd0aa13c73bbdb4e128821d8279af4/octomap/LICENSE.txt",
+      "local_path": "docs/research/sources/OctoMap__octomap/octomap/LICENSE.txt",
+      "sha256": "8a9ce1eadc1dd0fc4ee57a6016cb40eddc7003d2da824c58d55463f2b9ceb4ca",
+      "bytes": 1698
+    }
+  ],
+  "errors": [
+    "license: HTTP Error 404: Not Found"
+  ],
+  "head_sha": "21a8871d7bbd0aa13c73bbdb4e128821d8279af4",
+  "head_commit_author_date": "Sun, 2 Aug 2026 19:47:50 +0200",
+  "commit_date_source": "https://github.com/OctoMap/octomap/commit/21a8871d7bbd0aa13c73bbdb4e128821d8279af4.patch"
+}

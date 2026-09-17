@@ -1,0 +1,59 @@
+{
+  "repo": "RobotecAI/rai",
+  "group": "robot_frameworks",
+  "url": "https://github.com/RobotecAI/rai",
+  "observed_at": "2026-09-05T06:06:41.067415+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/README.md",
+      "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/README.md",
+      "local_path": "docs/research/sources/RobotecAI__rai/README.md",
+      "sha256": "11d112a35a74030658deebbbc9b198f88c8ebacc8119e46892196feb41a4d7f2",
+      "bytes": 6173
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/LICENSE",
+      "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/LICENSE",
+      "local_path": "docs/research/sources/RobotecAI__rai/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "pyproject.toml",
+      "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/pyproject.toml",
+      "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/pyproject.toml",
+      "local_path": "docs/research/sources/RobotecAI__rai/pyproject.toml",
+      "sha256": "75d06b23be54413170513f9f67b406a4783ea13fd999725fb40707d443a941a4",
+      "bytes": 2059
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "src/rai_core/rai/agents/langchain/core/plan_agent.py",
+      "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/src/rai_core/rai/agents/langchain/core/plan_agent.py",
+      "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/src/rai_core/rai/agents/langchain/core/plan_agent.py",
+      "local_path": "docs/research/sources/RobotecAI__rai/src/rai_core/rai/agents/langchain/core/plan_agent.py",
+      "sha256": "5d10a86ad029497e6126e9fc08b2a345f910e874b16553fb3278ee709b174f92",
+      "bytes": 9142
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "src/rai_core/rai/communication/ros2/connectors/action_mixin.py",
+      "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/src/rai_core/rai/communication/ros2/connectors/action_mixin.py",
+      "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/src/rai_core/rai/communication/ros2/connectors/action_mixin.py",
+      "local_path": "docs/research/sources/RobotecAI__rai/src/rai_core/rai/communication/ros2/connectors/action_mixin.py",
+      "sha256": "ce9b2e85c6309acfcbe1d24ad081102eb438c365d6b1742295a7f363256de073",
+      "bytes": 2338
+    }
+  ],
+  "errors": [],
+  "head_sha": "54f2423f5980b59c59d32f9bd133ebe4be86fe52",
+  "head_commit_author_date": "Wed, 12 Aug 2026 16:16:40 +0200",
+  "commit_date_source": "https://github.com/RobotecAI/rai/commit/54f2423f5980b59c59d32f9bd133ebe4be86fe52.patch",
+  "default_branch": "main",
+  "head_commit_committer_date": "2026-08-12T16:16:40+02:00"
+}

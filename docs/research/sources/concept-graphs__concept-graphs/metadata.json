@@ -1,0 +1,30 @@
+{
+  "repo": "concept-graphs/concept-graphs",
+  "group": "data_memory",
+  "url": "https://github.com/concept-graphs/concept-graphs",
+  "observed_at": "2026-09-05T06:06:50.445697+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/concept-graphs/concept-graphs/93277a02bd89171f8121e84203121cf7af9ebb5d/README.md",
+      "web_url": "https://github.com/concept-graphs/concept-graphs/blob/93277a02bd89171f8121e84203121cf7af9ebb5d/README.md",
+      "local_path": "docs/research/sources/concept-graphs__concept-graphs/README.md",
+      "sha256": "96a3f679dc57042b41772d59c88ec569fc2226d6db253abf00fb273f41e83032",
+      "bytes": 20640
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/concept-graphs/concept-graphs/93277a02bd89171f8121e84203121cf7af9ebb5d/LICENSE",
+      "web_url": "https://github.com/concept-graphs/concept-graphs/blob/93277a02bd89171f8121e84203121cf7af9ebb5d/LICENSE",
+      "local_path": "docs/research/sources/concept-graphs__concept-graphs/LICENSE",
+      "sha256": "bbb50dd0e42f0180461db2088dc07e6374d3ad4fe6961167b07093000894a509",
+      "bytes": 1071
+    }
+  ],
+  "errors": [],
+  "head_sha": "93277a02bd89171f8121e84203121cf7af9ebb5d",
+  "head_commit_author_date": "Wed, 15 Jan 2025 11:12:09 -0500",
+  "commit_date_source": "https://github.com/concept-graphs/concept-graphs/commit/93277a02bd89171f8121e84203121cf7af9ebb5d.patch"
+}

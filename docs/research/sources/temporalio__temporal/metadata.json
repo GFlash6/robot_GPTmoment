@@ -1,0 +1,30 @@
+{
+  "repo": "temporalio/temporal",
+  "group": "durable_agent",
+  "url": "https://github.com/temporalio/temporal",
+  "observed_at": "2026-09-05T06:06:45.245620+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/temporalio/temporal/891d1b648b7252925142cc36f13e40a0e2ed4244/README.md",
+      "web_url": "https://github.com/temporalio/temporal/blob/891d1b648b7252925142cc36f13e40a0e2ed4244/README.md",
+      "local_path": "docs/research/sources/temporalio__temporal/README.md",
+      "sha256": "269838d3de5da90d4c2c0b45bf7fc745b384a5a05c0932582e923638e8994189",
+      "bytes": 3888
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/temporalio/temporal/891d1b648b7252925142cc36f13e40a0e2ed4244/LICENSE",
+      "web_url": "https://github.com/temporalio/temporal/blob/891d1b648b7252925142cc36f13e40a0e2ed4244/LICENSE",
+      "local_path": "docs/research/sources/temporalio__temporal/LICENSE",
+      "sha256": "6aab9afd99ceb1dcaf6a0d91386b46baef9bce17ae4006044e0f231e31430b69",
+      "bytes": 1152
+    }
+  ],
+  "errors": [],
+  "head_sha": "891d1b648b7252925142cc36f13e40a0e2ed4244",
+  "head_commit_author_date": "Fri, 4 Sep 2026 22:19:39 -0700",
+  "commit_date_source": "https://github.com/temporalio/temporal/commit/891d1b648b7252925142cc36f13e40a0e2ed4244.patch"
+}

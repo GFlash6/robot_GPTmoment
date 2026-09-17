@@ -1,0 +1,12 @@
+{
+  "repo": "SkiROS2/skiros2",
+  "group": "robot_frameworks",
+  "url": "https://github.com/SkiROS2/skiros2",
+  "observed_at": "2026-09-05T06:06:41.068619+00:00",
+  "files": [],
+  "errors": [
+    "HEAD unresolved: remote: Repository not found.\nfatal: 仓库 'https://github.com/SkiROS2/skiros2.git/' 未找到\n",
+    "readme: HTTP Error 404: Not Found",
+    "license: HTTP Error 404: Not Found"
+  ]
+}

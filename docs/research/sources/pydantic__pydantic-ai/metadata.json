@@ -1,0 +1,30 @@
+{
+  "repo": "pydantic/pydantic-ai",
+  "group": "durable_agent",
+  "url": "https://github.com/pydantic/pydantic-ai",
+  "observed_at": "2026-09-05T06:06:46.423365+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/26467f6f3002784265709335a9dc5cb636b15d53/README.md",
+      "web_url": "https://github.com/pydantic/pydantic-ai/blob/26467f6f3002784265709335a9dc5cb636b15d53/README.md",
+      "local_path": "docs/research/sources/pydantic__pydantic-ai/README.md",
+      "sha256": "c867272606b72649dc6159195af8f805539c71cdaee7b68e9f07a31f84452793",
+      "bytes": 20809
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/26467f6f3002784265709335a9dc5cb636b15d53/LICENSE",
+      "web_url": "https://github.com/pydantic/pydantic-ai/blob/26467f6f3002784265709335a9dc5cb636b15d53/LICENSE",
+      "local_path": "docs/research/sources/pydantic__pydantic-ai/LICENSE",
+      "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "bytes": 1100
+    }
+  ],
+  "errors": [],
+  "head_sha": "26467f6f3002784265709335a9dc5cb636b15d53",
+  "head_commit_author_date": "Fri, 4 Sep 2026 18:01:07 -0600",
+  "commit_date_source": "https://github.com/pydantic/pydantic-ai/commit/26467f6f3002784265709335a9dc5cb636b15d53.patch"
+}

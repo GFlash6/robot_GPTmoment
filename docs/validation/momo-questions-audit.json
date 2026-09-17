@@ -1,0 +1,18 @@
+{
+  "workspaceKey": "workspace-robot-agent-framework",
+  "revision": 11,
+  "projects": [
+    {
+      "projectKey": "project-robot-agent-framework",
+      "semanticRelationCount": 17,
+      "eligibleObjectCount": 18,
+      "isolatedObjectKeys": [],
+      "invalidRelationKeys": [],
+      "zeroRelationWarning": false,
+      "staleEvidenceRelationKeys": [],
+      "zeroRelationDisposition": "requires_review",
+      "zeroRelationRationale": "单一项目已有完整语义路径；本轮依据 OPEN_QUESTIONS 修正模块状态并映射问题，关系保留，整体继续进行。",
+      "effectiveZeroRelationWarning": false
+    }
+  ]
+}

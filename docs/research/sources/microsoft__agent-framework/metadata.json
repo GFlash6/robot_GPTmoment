@@ -1,0 +1,30 @@
+{
+  "repo": "microsoft/agent-framework",
+  "group": "durable_agent",
+  "url": "https://github.com/microsoft/agent-framework",
+  "observed_at": "2026-09-05T06:06:47.461871+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/microsoft/agent-framework/2c49f50cf08ebb6c1687146336f039051f159333/README.md",
+      "web_url": "https://github.com/microsoft/agent-framework/blob/2c49f50cf08ebb6c1687146336f039051f159333/README.md",
+      "local_path": "docs/research/sources/microsoft__agent-framework/README.md",
+      "sha256": "5f1783b1cbc09d64a69465091c68ab6ea8b18546987c5e0bb23ea221a0ed70d7",
+      "bytes": 13312
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/microsoft/agent-framework/2c49f50cf08ebb6c1687146336f039051f159333/LICENSE",
+      "web_url": "https://github.com/microsoft/agent-framework/blob/2c49f50cf08ebb6c1687146336f039051f159333/LICENSE",
+      "local_path": "docs/research/sources/microsoft__agent-framework/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    }
+  ],
+  "errors": [],
+  "head_sha": "2c49f50cf08ebb6c1687146336f039051f159333",
+  "head_commit_author_date": "Fri, 4 Sep 2026 21:08:04 +0000",
+  "commit_date_source": "https://github.com/microsoft/agent-framework/commit/2c49f50cf08ebb6c1687146336f039051f159333.patch"
+}

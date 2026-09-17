@@ -1,0 +1,30 @@
+{
+  "repo": "MIT-SPARK/Spark-DSG",
+  "group": "data_memory",
+  "url": "https://github.com/MIT-SPARK/Spark-DSG",
+  "observed_at": "2026-09-05T06:06:50.127562+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/MIT-SPARK/Spark-DSG/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64/README.md",
+      "web_url": "https://github.com/MIT-SPARK/Spark-DSG/blob/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64/README.md",
+      "local_path": "docs/research/sources/MIT-SPARK__Spark-DSG/README.md",
+      "sha256": "6ebcedfd801c7f336aebf9937100b98c15045e900f3279da430b59ec7d536cec",
+      "bytes": 2893
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/MIT-SPARK/Spark-DSG/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64/LICENSE",
+      "web_url": "https://github.com/MIT-SPARK/Spark-DSG/blob/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64/LICENSE",
+      "local_path": "docs/research/sources/MIT-SPARK__Spark-DSG/LICENSE",
+      "sha256": "3e35425d350360b5c68b8ec42db32775e7293a8953b104fb973ff40dbe2b4991",
+      "bytes": 1291
+    }
+  ],
+  "errors": [],
+  "head_sha": "3c40997e4ae739c56ed3cdd6ef5e882d403d8b64",
+  "head_commit_author_date": "Sat, 11 Apr 2026 14:31:34 -0400",
+  "commit_date_source": "https://github.com/MIT-SPARK/Spark-DSG/commit/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64.patch"
+}

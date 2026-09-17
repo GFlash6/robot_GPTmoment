@@ -1,0 +1,50 @@
+# Product
+
+<!-- impeccable:product-schema 1 -->
+
+## Platform
+
+web
+
+## Users
+
+主要用户是本机开发者和机器人系统操作者。他们在开发、联调和验收时查看任务、资源、证据与模型响应，并需要从浏览器主动发起真实模型测试。
+
+## Product Purpose
+
+机器人 Agent 框架把任务规划、技能执行、资源控制、恢复和多模态证据组织成可追溯流程。运行台让操作者区分请求成功、模型回答正确、计划契约通过、技能执行成功与机器人目标完成等不同证据层级。
+
+## Positioning
+
+产品不以模型自述或 HTTP 成功代替机器人结果，而是保存原始响应、结构化校验、执行 ID、后置条件和来源证据。测试能力必须展示真实调用及其可验证结果，不生成示例成功数据。
+
+## Operating Context
+
+第一版运行在本机 loopback 环境。Python worker、只读观察服务和 React/Vite 前端可独立启动；运行账本位于 `.runtime`。模型使用显式 Chat Completions URL、`qwen3.8-max`，API 密钥从服务端进程的 `API_KEY` 环境变量读取。
+
+## Capabilities and Constraints
+
+- 当前观察 API 是 GET-only，只读账本，不导入 Runtime 或模型调用代码。
+- 新模型测试面允许自由输入问题并真实调用 `qwen3.8-max`。
+- API 密钥不得进入浏览器、前端构建、URL、响应正文或版本化文件。
+- 每次调用必须明确显示请求中、成功、内容校验失败、HTTP 失败和超时；UI 不能把模型回答标成机器人完成。
+- 远程身份认证与公网部署尚未实现；可调用测试面只允许 loopback 使用。
+- 模型调用会产生外部费用，必须由操作者显式点击触发，不自动轮询或重试。
+
+## Evidence on Hand
+
+- `docs/validation/model-planning-qwen3.8-max.json`：实际模型问答与合法两步计划摘要。
+- `.runtime/model-validation/ledger.sqlite`：本机原始模型响应账本，不进入版本控制。
+- `docs/UI_VALIDATION.md`：既有只读运行台的浏览器验证边界。
+
+## Product Principles
+
+- 证据层级清晰，不把较弱证据包装成较强结论。
+- 密钥只留在服务端环境，浏览器永远不可见。
+- 所有外部调用由用户明确触发，并显示费用与状态边界。
+- 观察、测试和机器人控制保持独立权限与进程边界。
+- 空状态、失败和未知状态均真实呈现，不填充模拟数据。
+
+## Accessibility & Inclusion
+
+核心表单、调用按钮、状态和响应区域应支持键盘操作、清晰焦点、可读标签及不依赖颜色的状态表达；中文为主要界面语言，原始模型和协议字段可保留英文。

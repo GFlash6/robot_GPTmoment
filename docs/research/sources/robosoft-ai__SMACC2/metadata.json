@@ -1,0 +1,30 @@
+{
+  "repo": "robosoft-ai/SMACC2",
+  "group": "execution_planning",
+  "url": "https://github.com/robosoft-ai/SMACC2",
+  "observed_at": "2026-09-05T06:06:43.448144+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/robosoft-ai/SMACC2/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db/README.md",
+      "web_url": "https://github.com/robosoft-ai/SMACC2/blob/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db/README.md",
+      "local_path": "docs/research/sources/robosoft-ai__SMACC2/README.md",
+      "sha256": "6c8d0f9698a3e04163be2a12a4f5dc7a90c04bbd3ae8e3a94a1f649c37a95f85",
+      "bytes": 11504
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/robosoft-ai/SMACC2/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db/LICENSE",
+      "web_url": "https://github.com/robosoft-ai/SMACC2/blob/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db/LICENSE",
+      "local_path": "docs/research/sources/robosoft-ai__SMACC2/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    }
+  ],
+  "errors": [],
+  "head_sha": "29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db",
+  "head_commit_author_date": "Mon, 17 Aug 2026 00:42:19 -0700",
+  "commit_date_source": "https://github.com/robosoft-ai/SMACC2/commit/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db.patch"
+}

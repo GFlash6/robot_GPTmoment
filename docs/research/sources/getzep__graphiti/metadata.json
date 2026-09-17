@@ -1,0 +1,30 @@
+{
+  "repo": "getzep/graphiti",
+  "group": "data_memory",
+  "url": "https://github.com/getzep/graphiti",
+  "observed_at": "2026-09-05T06:06:51.743977+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/getzep/graphiti/547422865cca9fb5a82915c074d899428c145ff4/README.md",
+      "web_url": "https://github.com/getzep/graphiti/blob/547422865cca9fb5a82915c074d899428c145ff4/README.md",
+      "local_path": "docs/research/sources/getzep__graphiti/README.md",
+      "sha256": "ce1628c02b3c6fd5b59e3e48dc61c958f07824033b4d0b989bb8d433932b6b3f",
+      "bytes": 28280
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/getzep/graphiti/547422865cca9fb5a82915c074d899428c145ff4/LICENSE",
+      "web_url": "https://github.com/getzep/graphiti/blob/547422865cca9fb5a82915c074d899428c145ff4/LICENSE",
+      "local_path": "docs/research/sources/getzep__graphiti/LICENSE",
+      "sha256": "2825300b20d7b951209835a4a331f29e24725a39d65168e4b831df53aa372650",
+      "bytes": 11325
+    }
+  ],
+  "errors": [],
+  "head_sha": "547422865cca9fb5a82915c074d899428c145ff4",
+  "head_commit_author_date": "Fri, 4 Sep 2026 17:52:52 +0000",
+  "commit_date_source": "https://github.com/getzep/graphiti/commit/547422865cca9fb5a82915c074d899428c145ff4.patch"
+}

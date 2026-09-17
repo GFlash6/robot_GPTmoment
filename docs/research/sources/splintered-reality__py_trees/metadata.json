@@ -1,0 +1,48 @@
+{
+  "repo": "splintered-reality/py_trees",
+  "group": "execution_planning",
+  "url": "https://github.com/splintered-reality/py_trees",
+  "observed_at": "2026-09-05T06:06:42.997744+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees/4f7f8f60ddf45778905e8fa80401df14783b203b/README.md",
+      "web_url": "https://github.com/splintered-reality/py_trees/blob/4f7f8f60ddf45778905e8fa80401df14783b203b/README.md",
+      "local_path": "docs/research/sources/splintered-reality__py_trees/README.md",
+      "sha256": "6f73510a089b1a1aba6c06e362b4a395109b2ac15021ed0aee4664d3ac27551c",
+      "bytes": 10446
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees/4f7f8f60ddf45778905e8fa80401df14783b203b/LICENSE",
+      "web_url": "https://github.com/splintered-reality/py_trees/blob/4f7f8f60ddf45778905e8fa80401df14783b203b/LICENSE",
+      "local_path": "docs/research/sources/splintered-reality__py_trees/LICENSE",
+      "sha256": "c4255fdd7fd911f40c2eb3a629b8e9ca8647cb946489d569ac54dce26eb39779",
+      "bytes": 1630
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "py_trees/composites.py",
+      "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees/4f7f8f60ddf45778905e8fa80401df14783b203b/py_trees/composites.py",
+      "web_url": "https://github.com/splintered-reality/py_trees/blob/4f7f8f60ddf45778905e8fa80401df14783b203b/py_trees/composites.py",
+      "local_path": "docs/research/sources/splintered-reality__py_trees/py_trees/composites.py",
+      "sha256": "15b1c65f1add4ae82b063c80f057b594201968bd04aefadfc05db9b2453ecfc6",
+      "bytes": 31302
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "py_trees/behaviour.py",
+      "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees/4f7f8f60ddf45778905e8fa80401df14783b203b/py_trees/behaviour.py",
+      "web_url": "https://github.com/splintered-reality/py_trees/blob/4f7f8f60ddf45778905e8fa80401df14783b203b/py_trees/behaviour.py",
+      "local_path": "docs/research/sources/splintered-reality__py_trees/py_trees/behaviour.py",
+      "sha256": "741f65b9dfb7a51bc551141dfe4984af4043da09f50395156403e3edf0722ad4",
+      "bytes": 18131
+    }
+  ],
+  "errors": [],
+  "head_sha": "4f7f8f60ddf45778905e8fa80401df14783b203b",
+  "head_commit_author_date": "Wed, 26 Aug 2026 17:02:46 -0400",
+  "commit_date_source": "https://github.com/splintered-reality/py_trees/commit/4f7f8f60ddf45778905e8fa80401df14783b203b.patch"
+}

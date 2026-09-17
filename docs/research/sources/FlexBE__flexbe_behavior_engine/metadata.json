@@ -1,0 +1,30 @@
+{
+  "repo": "FlexBE/flexbe_behavior_engine",
+  "group": "execution_planning",
+  "url": "https://github.com/FlexBE/flexbe_behavior_engine",
+  "observed_at": "2026-09-05T06:06:43.340018+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/FlexBE/flexbe_behavior_engine/0e9c0ae6f9fea7c435099dfa2419a7a1373617de/README.md",
+      "web_url": "https://github.com/FlexBE/flexbe_behavior_engine/blob/0e9c0ae6f9fea7c435099dfa2419a7a1373617de/README.md",
+      "local_path": "docs/research/sources/FlexBE__flexbe_behavior_engine/README.md",
+      "sha256": "cdd2373418bfc5f9ab750d19379e669ced0aac2d0599d1ce5ee686f6e4bf4ea8",
+      "bytes": 6994
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/FlexBE/flexbe_behavior_engine/0e9c0ae6f9fea7c435099dfa2419a7a1373617de/LICENSE",
+      "web_url": "https://github.com/FlexBE/flexbe_behavior_engine/blob/0e9c0ae6f9fea7c435099dfa2419a7a1373617de/LICENSE",
+      "local_path": "docs/research/sources/FlexBE__flexbe_behavior_engine/LICENSE",
+      "sha256": "72c6f45ff8dbd205e03503494725944dd8e943ba0a9b8f9396cdb4402b612267",
+      "bytes": 1610
+    }
+  ],
+  "errors": [],
+  "head_sha": "0e9c0ae6f9fea7c435099dfa2419a7a1373617de",
+  "head_commit_author_date": "Tue, 19 May 2026 20:10:17 -0400",
+  "commit_date_source": "https://github.com/FlexBE/flexbe_behavior_engine/commit/0e9c0ae6f9fea7c435099dfa2419a7a1373617de.patch"
+}

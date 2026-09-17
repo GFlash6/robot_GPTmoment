@@ -1,0 +1,30 @@
+{
+  "repo": "restatedev/restate",
+  "group": "durable_agent",
+  "url": "https://github.com/restatedev/restate",
+  "observed_at": "2026-09-05T06:06:45.603643+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/restatedev/restate/c359c138d34562530f64e5453626cb278ee20db3/README.md",
+      "web_url": "https://github.com/restatedev/restate/blob/c359c138d34562530f64e5453626cb278ee20db3/README.md",
+      "local_path": "docs/research/sources/restatedev__restate/README.md",
+      "sha256": "1033d88af95352d4ee9d5781576716212bb9f34b12ae9036c0f976713046bb3a",
+      "bytes": 7080
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/restatedev/restate/c359c138d34562530f64e5453626cb278ee20db3/LICENSE",
+      "web_url": "https://github.com/restatedev/restate/blob/c359c138d34562530f64e5453626cb278ee20db3/LICENSE",
+      "local_path": "docs/research/sources/restatedev__restate/LICENSE",
+      "sha256": "ea4fd504ffe508ce7ece0727a714a4fffc7208ad5a9618ae33f794d713450f02",
+      "bytes": 6352
+    }
+  ],
+  "errors": [],
+  "head_sha": "c359c138d34562530f64e5453626cb278ee20db3",
+  "head_commit_author_date": "Sat, 5 Sep 2026 00:08:35 +0200",
+  "commit_date_source": "https://github.com/restatedev/restate/commit/c359c138d34562530f64e5453626cb278ee20db3.patch"
+}

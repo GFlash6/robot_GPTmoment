@@ -1,0 +1,30 @@
+{
+  "repo": "OpenMind/OM1",
+  "group": "robot_frameworks",
+  "url": "https://github.com/OpenMind/OM1",
+  "observed_at": "2026-09-05T06:06:41.066976+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/OpenMind/OM1/d94acc774e03327d6882a060d2fceebb89096649/README.md",
+      "web_url": "https://github.com/OpenMind/OM1/blob/d94acc774e03327d6882a060d2fceebb89096649/README.md",
+      "local_path": "docs/research/sources/OpenMind__OM1/README.md",
+      "sha256": "b9a9bb3a9cf647cbcb7727e456be2c69b9638b06b58794a7f86d50bda60c795b",
+      "bytes": 11404
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/OpenMind/OM1/d94acc774e03327d6882a060d2fceebb89096649/LICENSE",
+      "web_url": "https://github.com/OpenMind/OM1/blob/d94acc774e03327d6882a060d2fceebb89096649/LICENSE",
+      "local_path": "docs/research/sources/OpenMind__OM1/LICENSE",
+      "sha256": "346d8a3f9ea734e02cbce9ebcc9969b18f28242badd1078360168a09e0e2f37c",
+      "bytes": 1091
+    }
+  ],
+  "errors": [],
+  "head_sha": "d94acc774e03327d6882a060d2fceebb89096649",
+  "head_commit_author_date": "Mon, 31 Aug 2026 14:21:21 -0700",
+  "commit_date_source": "https://github.com/OpenMind/OM1/commit/d94acc774e03327d6882a060d2fceebb89096649.patch"
+}

@@ -1,0 +1,18 @@
+{
+  "workspaceKey": "workspace-robot-agent-framework",
+  "revision": 10,
+  "projects": [
+    {
+      "projectKey": "project-robot-agent-framework",
+      "semanticRelationCount": 17,
+      "eligibleObjectCount": 18,
+      "isolatedObjectKeys": [],
+      "invalidRelationKeys": [],
+      "zeroRelationWarning": false,
+      "staleEvidenceRelationKeys": [],
+      "zeroRelationDisposition": "requires_review",
+      "zeroRelationRationale": "单一项目已有语义关系；本轮新增真实 UI 验证证据对 UI 工作项的支持，项目总体仍进行中。",
+      "effectiveZeroRelationWarning": false
+    }
+  ]
+}

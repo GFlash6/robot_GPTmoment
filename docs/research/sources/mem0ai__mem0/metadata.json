@@ -1,0 +1,30 @@
+{
+  "repo": "mem0ai/mem0",
+  "group": "data_memory",
+  "url": "https://github.com/mem0ai/mem0",
+  "observed_at": "2026-09-05T06:06:52.406251+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/mem0ai/mem0/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3/README.md",
+      "web_url": "https://github.com/mem0ai/mem0/blob/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3/README.md",
+      "local_path": "docs/research/sources/mem0ai__mem0/README.md",
+      "sha256": "7509347d34a767a2ef37ceb6cf6c714de9e8d84fe66ad5eea92bbae824a8fbeb",
+      "bytes": 11914
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/mem0ai/mem0/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3/LICENSE",
+      "web_url": "https://github.com/mem0ai/mem0/blob/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3/LICENSE",
+      "local_path": "docs/research/sources/mem0ai__mem0/LICENSE",
+      "sha256": "0bbcbe931c353293a2fafce08326181dfeea0e568c566afd4ce8337a70f5e219",
+      "bytes": 11349
+    }
+  ],
+  "errors": [],
+  "head_sha": "dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3",
+  "head_commit_author_date": "Fri, 4 Sep 2026 20:32:23 +0530",
+  "commit_date_source": "https://github.com/mem0ai/mem0/commit/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3.patch"
+}

@@ -1,0 +1,30 @@
+{
+  "repo": "BehaviorTree/BehaviorTree.CPP",
+  "group": "execution_planning",
+  "url": "https://github.com/BehaviorTree/BehaviorTree.CPP",
+  "observed_at": "2026-09-05T06:06:41.069495+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.CPP/9b63b505983f76e46d90d71c87d21fad0001f8a3/README.md",
+      "web_url": "https://github.com/BehaviorTree/BehaviorTree.CPP/blob/9b63b505983f76e46d90d71c87d21fad0001f8a3/README.md",
+      "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.CPP/README.md",
+      "sha256": "e7ddcee6c64330f43f9257ebf9a1c3d646333a5c0e74d1e70de3edc60b9ee51a",
+      "bytes": 6399
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.CPP/9b63b505983f76e46d90d71c87d21fad0001f8a3/LICENSE",
+      "web_url": "https://github.com/BehaviorTree/BehaviorTree.CPP/blob/9b63b505983f76e46d90d71c87d21fad0001f8a3/LICENSE",
+      "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.CPP/LICENSE",
+      "sha256": "73619551b110524235fd4272e7236a6b6e2e162770b1d79cb929022d165e8706",
+      "bytes": 1095
+    }
+  ],
+  "errors": [],
+  "head_sha": "9b63b505983f76e46d90d71c87d21fad0001f8a3",
+  "head_commit_author_date": "Mon, 31 Aug 2026 13:18:39 +0530",
+  "commit_date_source": "https://github.com/BehaviorTree/BehaviorTree.CPP/commit/9b63b505983f76e46d90d71c87d21fad0001f8a3.patch"
+}

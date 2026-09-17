@@ -1,0 +1,64 @@
+.clarification-input {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e7ece7;
+}
+
+.clarification-input .semantic-secondary {
+  margin-top: 10px;
+}
+
+.clarification-input textarea {
+  min-height: 82px;
+}
+
+/* Keep operational metadata readable on the light observer surfaces. */
+.semantic-head p,
+.semantic-cost,
+.semantic-empty,
+.semantic-empty p,
+.semantic-loading p,
+.semantic-fact span,
+.allocation-strip span,
+.fragment-list article p,
+.plan-proof span,
+.semantic-ids dt {
+  color: #58685e;
+}
+
+.semantic-steps > div,
+.semantic-tabs button,
+.semantic-tabs button:disabled {
+  color: #5d6c63;
+}
+
+.semantic-tabs button:disabled {
+  opacity: 1;
+}
+
+.semantic-primary,
+.semantic-secondary {
+  min-height: 44px;
+}
+
+.semantic-primary:disabled,
+.semantic-secondary:disabled {
+  color: #56645b;
+}
+
+.semantic-workbench textarea::placeholder {
+  color: #627168;
+}
+
+@media (max-width: 700px) {
+  .semantic-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .semantic-tabs button {
+    min-height: 44px;
+    justify-content: center;
+  }
+}

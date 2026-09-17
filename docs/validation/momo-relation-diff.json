@@ -1,0 +1,266 @@
+{
+  "workspaceKey": "workspace-robot-agent-framework",
+  "revision": 3,
+  "candidates": [
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "single-scope",
+      "action": "add",
+      "status": "auto_applied",
+      "disposition": "applied",
+      "relation": {
+        "key": "relation-3ac8b90d2c205f7a",
+        "sourceKey": "single",
+        "targetKey": "goal",
+        "type": "supports"
+      },
+      "eligible": false,
+      "failures": [
+        "relation-already-present"
+      ]
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "orchestration-requirement",
+      "action": "add",
+      "status": "auto_applied",
+      "disposition": "applied",
+      "relation": {
+        "key": "relation-23d075ab01747412",
+        "sourceKey": "orchestration",
+        "targetKey": "goal",
+        "type": "supports"
+      },
+      "eligible": false,
+      "failures": [
+        "relation-already-present"
+      ]
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "memory-requirement",
+      "action": "add",
+      "status": "auto_applied",
+      "disposition": "applied",
+      "relation": {
+        "key": "relation-e77a7651269374a8",
+        "sourceKey": "memory",
+        "targetKey": "goal",
+        "type": "supports"
+      },
+      "eligible": false,
+      "failures": [
+        "relation-already-present"
+      ]
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "truth-requirement",
+      "action": "add",
+      "status": "auto_applied",
+      "disposition": "applied",
+      "relation": {
+        "key": "relation-eaa03768cb223c5b",
+        "sourceKey": "truth",
+        "targetKey": "goal",
+        "type": "supports"
+      },
+      "eligible": false,
+      "failures": [
+        "relation-already-present"
+      ]
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "research-before-implementation",
+      "action": "update",
+      "status": "proposed",
+      "disposition": "eligible",
+      "relation": {
+        "key": "relation-fd6f7d3c30895d42",
+        "sourceKey": "research",
+        "targetKey": "kernel",
+        "type": "supports"
+      },
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "track-unknowns",
+      "action": "add",
+      "status": "auto_applied",
+      "disposition": "applied",
+      "relation": {
+        "key": "relation-316d9f0385a81825",
+        "sourceKey": "questions",
+        "targetKey": "goal",
+        "type": "supports"
+      },
+      "eligible": false,
+      "failures": [
+        "relation-already-present"
+      ]
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "project-maintenance",
+      "action": "add",
+      "status": "auto_applied",
+      "disposition": "applied",
+      "relation": {
+        "key": "relation-6ffd674cbb28f0bc",
+        "sourceKey": "momo",
+        "targetKey": "goal",
+        "type": "supports"
+      },
+      "eligible": false,
+      "failures": [
+        "relation-already-present"
+      ]
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "real-validation",
+      "action": "add",
+      "status": "auto_applied",
+      "disposition": "applied",
+      "relation": {
+        "key": "relation-1eccb04a3cf44bc8",
+        "sourceKey": "verification",
+        "targetKey": "truth",
+        "type": "supports"
+      },
+      "eligible": false,
+      "failures": [
+        "relation-already-present"
+      ]
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "implementation-not-verified",
+      "action": "add",
+      "status": "rejected",
+      "disposition": "proposal",
+      "relation": {
+        "key": "relation-71c4a6ec3d0c7e1c",
+        "sourceKey": "initial-tests",
+        "targetKey": "kernel",
+        "type": "supports"
+      },
+      "eligible": false,
+      "failures": [
+        "原 supports 实现关系语义不足；保留历史提案，采用软件验证 derived_from 初始测试的准确关系。",
+        "confidence-not-high",
+        "competing-alternatives",
+        "insufficient-independent-evidence"
+      ]
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "adopted-components",
+      "action": "add",
+      "status": "proposed",
+      "disposition": "eligible",
+      "relation": {
+        "key": "relation-369b137c81c1be79",
+        "sourceKey": "selection",
+        "targetKey": "kernel",
+        "type": "supports"
+      },
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "implemented-control-contracts",
+      "action": "add",
+      "status": "proposed",
+      "disposition": "eligible",
+      "relation": {
+        "key": "relation-17e63ef6216b1f1f",
+        "sourceKey": "core-execution",
+        "targetKey": "orchestration",
+        "type": "supports"
+      },
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "implemented-data-evidence",
+      "action": "add",
+      "status": "proposed",
+      "disposition": "eligible",
+      "relation": {
+        "key": "relation-99bedfec76d5fd33",
+        "sourceKey": "multimodal-storage",
+        "targetKey": "memory",
+        "type": "supports"
+      },
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "actual-model-boundary",
+      "action": "add",
+      "status": "proposed",
+      "disposition": "eligible",
+      "relation": {
+        "key": "relation-9a4c82b2b887d853",
+        "sourceKey": "model-adapter",
+        "targetKey": "orchestration",
+        "type": "supports"
+      },
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "software-results",
+      "action": "add",
+      "status": "proposed",
+      "disposition": "eligible",
+      "relation": {
+        "key": "relation-1a8060fe213077e7",
+        "sourceKey": "software-validation",
+        "targetKey": "kernel",
+        "type": "supports"
+      },
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "baseline-regressions",
+      "action": "add",
+      "status": "proposed",
+      "disposition": "eligible",
+      "relation": {
+        "key": "relation-7678dfc1725f0ac1",
+        "sourceKey": "software-validation",
+        "targetKey": "initial-tests",
+        "type": "derived_from"
+      },
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "projectKey": "project-robot-agent-framework",
+      "claimKey": "first-framework-increment",
+      "action": "add",
+      "status": "proposed",
+      "disposition": "eligible",
+      "relation": {
+        "key": "relation-30461971cb9aa5e7",
+        "sourceKey": "kernel",
+        "targetKey": "goal",
+        "type": "supports"
+      },
+      "eligible": true,
+      "failures": []
+    }
+  ],
+  "warnings": []
+}

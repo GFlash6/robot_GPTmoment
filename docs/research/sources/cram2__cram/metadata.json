@@ -1,0 +1,30 @@
+{
+  "repo": "cram2/cram",
+  "group": "robot_frameworks",
+  "url": "https://github.com/cram2/cram",
+  "observed_at": "2026-09-05T06:06:41.069048+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/cram2/cram/d6a084e9341d4298a92fad219ef4033f8100b0de/README.md",
+      "web_url": "https://github.com/cram2/cram/blob/d6a084e9341d4298a92fad219ef4033f8100b0de/README.md",
+      "local_path": "docs/research/sources/cram2__cram/README.md",
+      "sha256": "497ed2d6df51bcaba0c34ad7b35bb620181d588083a1061ff5bce761e5ea0e59",
+      "bytes": 1998
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/cram2/cram/d6a084e9341d4298a92fad219ef4033f8100b0de/LICENSE",
+      "web_url": "https://github.com/cram2/cram/blob/d6a084e9341d4298a92fad219ef4033f8100b0de/LICENSE",
+      "local_path": "docs/research/sources/cram2__cram/LICENSE",
+      "sha256": "efccaa8984491992ef357eb53a3bfcd6a89aa5d8bcc609230073bc98257b0c53",
+      "bytes": 1678
+    }
+  ],
+  "errors": [],
+  "head_sha": "d6a084e9341d4298a92fad219ef4033f8100b0de",
+  "head_commit_author_date": "Wed, 1 Oct 2025 16:59:19 +0200",
+  "commit_date_source": "https://github.com/cram2/cram/commit/d6a084e9341d4298a92fad219ef4033f8100b0de.patch"
+}

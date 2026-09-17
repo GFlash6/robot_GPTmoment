@@ -1,0 +1,43 @@
+{
+  "repo": "BehaviorTree/BehaviorTree.ROS2",
+  "group": "execution_planning",
+  "url": "https://github.com/BehaviorTree/BehaviorTree.ROS2",
+  "observed_at": "2026-09-05T06:06:42.966793+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.ROS2/6c6aa078ee7bc52fec98984bed4964556abf5beb/README.md",
+      "web_url": "https://github.com/BehaviorTree/BehaviorTree.ROS2/blob/6c6aa078ee7bc52fec98984bed4964556abf5beb/README.md",
+      "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.ROS2/README.md",
+      "sha256": "f56d2165d4291d53f8ee4803fa1a10c31900f9de435d17c1eef930edd1c88696",
+      "bytes": 1181
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.ROS2/6c6aa078ee7bc52fec98984bed4964556abf5beb/LICENSE",
+      "web_url": "https://github.com/BehaviorTree/BehaviorTree.ROS2/blob/6c6aa078ee7bc52fec98984bed4964556abf5beb/LICENSE",
+      "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.ROS2/LICENSE",
+      "sha256": "e79f5fae08351b969f33aca04e7c3fbe62c3174a9aabc98d37dc51c363033cec",
+      "bytes": 10310
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp",
+      "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.ROS2/6c6aa078ee7bc52fec98984bed4964556abf5beb/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp",
+      "web_url": "https://github.com/BehaviorTree/BehaviorTree.ROS2/blob/6c6aa078ee7bc52fec98984bed4964556abf5beb/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp",
+      "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.ROS2/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp",
+      "sha256": "4f8e6b270ab7a70921dc551a36df26ad8873948e7bb7d430f9279f83155cd144",
+      "bytes": 17122
+    }
+  ],
+  "errors": [
+    "include/behaviortree_ros2/bt_action_node.hpp: HTTP Error 404: Not Found"
+  ],
+  "head_sha": "6c6aa078ee7bc52fec98984bed4964556abf5beb",
+  "head_commit_author_date": "Tue, 25 Nov 2025 04:22:51 -0500",
+  "commit_date_source": "https://github.com/BehaviorTree/BehaviorTree.ROS2/commit/6c6aa078ee7bc52fec98984bed4964556abf5beb.patch",
+  "default_branch": "humble",
+  "head_commit_committer_date": "2025-11-25T10:22:51+01:00"
+}

@@ -1,0 +1,302 @@
+{
+  "format": "momo-relation-assessment",
+  "version": 1,
+  "generatedAt": "2026-09-05T06:08:28.603463+00:00",
+  "workspaceKey": "workspace-robot-agent-framework",
+  "baseRevision": 1,
+  "projects": [
+    {
+      "projectKey": "project-robot-agent-framework",
+      "zeroRelationDisposition": "requires_review",
+      "zeroRelationRationale": "初始候选只有 containment，确认后由 relation-audit 应用语义边；不是有意空图。",
+      "graphHealth": {
+        "semanticRelationCount": 0,
+        "eligibleObjectCount": 12,
+        "isolatedObjectKeys": [
+          "goal",
+          "single",
+          "orchestration",
+          "memory",
+          "truth",
+          "research",
+          "selection",
+          "kernel",
+          "questions",
+          "verification",
+          "momo",
+          "initial-tests"
+        ],
+        "invalidRelationKeys": [],
+        "staleEvidenceRelationKeys": [],
+        "zeroRelationWarning": true
+      },
+      "candidates": [
+        {
+          "claimKey": "single-scope",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-3ac8b90d2c205f7a",
+            "sourceKey": "single",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "single-scope",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "orchestration-requirement",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-23d075ab01747412",
+            "sourceKey": "orchestration",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "orchestration-requirement",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "memory-requirement",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-e77a7651269374a8",
+            "sourceKey": "memory",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "memory-requirement",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "truth-requirement",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-eaa03768cb223c5b",
+            "sourceKey": "truth",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "truth-requirement",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "research-before-implementation",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-fd6f7d3c30895d42",
+            "sourceKey": "research",
+            "targetKey": "kernel",
+            "type": "blocks"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "research-before-implementation",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "track-unknowns",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-316d9f0385a81825",
+            "sourceKey": "questions",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "track-unknowns",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "project-maintenance",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-6ffd674cbb28f0bc",
+            "sourceKey": "momo",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "project-maintenance",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "real-validation",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-1eccb04a3cf44bc8",
+            "sourceKey": "verification",
+            "targetKey": "truth",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "real-validation",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "implementation-not-verified",
+          "action": "add",
+          "confidence": "low",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-71c4a6ec3d0c7e1c",
+            "sourceKey": "initial-tests",
+            "targetKey": "kernel",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "a4066f2100f4454a2a3669a1b449f1ce47bc6b7a3a35a9ca55ff472a659c97a1",
+              "claim": "implementation-not-verified",
+              "authority": "repository",
+              "observedAt": "2026-09-05T06:08:28.603463+00:00"
+            }
+          ],
+          "alternatives": [
+            "失败测试只能证明尚未通过验收，不足以支持框架实现这一工作项；保留为待审议，不自动连边。"
+          ],
+          "blockingReasons": [
+            "关系方向与 supports 语义不足，等待关系审议"
+          ],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        }
+      ]
+    }
+  ]
+}

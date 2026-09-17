@@ -1,0 +1,98 @@
+digraph TaskDecomposition {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad="0.25",
+    nodesep="0.35",
+    ranksep="0.55",
+    fontname="Noto Sans CJK SC",
+    label="当前 Robot Agent 任务拆分流程（2026-09-11）",
+    labelloc="t",
+    fontsize=20
+  ];
+  node [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=11, color="#287a55", fillcolor="#e7f5ee", margin="0.14,0.08"];
+  edge [fontname="Noto Sans CJK SC", fontsize=10, color="#52606d", arrowsize=0.75];
+
+  subgraph cluster_entry {
+    label="1. 入口";
+    color="#b9c4ce";
+    agent [label="CLI agent\n生成并提交"];
+    plan [label="CLI plan\n只生成计划"];
+    recover [label="Runtime.recover_plan\n失败后重规划"];
+  }
+
+  subgraph cluster_input {
+    label="2. 输入与上下文";
+    color="#b9c4ce";
+    goal [label="自然语言 goal"];
+    catalog [label="Skill Catalog\n裁剪为可规划能力"];
+    context [label="首次：无自动上下文\n重规划：previous_plan +\nstep_results + revision"];
+  }
+
+  subgraph cluster_model {
+    label="3. 模型规划";
+    color="#b9c4ce";
+    config [label="验证 ModelConfig"];
+    record [label="model_responses\nstatus=requesting"];
+    prompt [label="PlanningMethod\n要求 JSON DAG"];
+    budget [label="ContextAllocator\n分配输入/输出预算"];
+    request [label="Chat Completions\n实际 HTTP 请求"];
+  }
+
+  subgraph cluster_validate {
+    label="4. 确定性校验";
+    color="#b9c4ce";
+    response [shape=diamond, fillcolor="#fff4d6", color="#a66b00", label="HTTP 与响应\n完整有效？"];
+    json [label="解析 JSON"];
+    dag [label="validate_plan\n步骤/技能/依赖/DAG/$ref/\n重试/fallback/verification"];
+    verifier [shape=diamond, fillcolor="#fff4d6", color="#a66b00", label="最终步骤是注册的\nverifier 技能？"];
+    validated [label="记录 validated\n返回 Plan"];
+    rejected [label="记录 rejected\n抛出 ContractError", fillcolor="#fde8e7", color="#b33a32"];
+  }
+
+  subgraph cluster_output {
+    label="5. 输出";
+    color="#b9c4ce";
+    route [shape=diamond, fillcolor="#fff4d6", color="#a66b00", label="调用入口？"];
+    print [label="CLI 输出计划\n不创建 Task"];
+    submit [label="Runtime.submit\n再次校验目录与资源"];
+    freeze [label="冻结 plan + catalog\nrevision=0 / generation=0"];
+    queued [label="持久化 queued Task\n写 submitted 事件"];
+    execute [label="DBOS / Runtime 执行 DAG\n任务拆分阶段结束", fillcolor="#e9efff", color="#3f63a8"];
+  }
+
+  subgraph cluster_replan {
+    label="6. 有界重规划";
+    color="#b9c4ce";
+    failed [label="执行后 Task=failed"];
+    quota [shape=diamond, fillcolor="#fff4d6", color="#a66b00", label="有 goal 且\n重规划预算未耗尽？"];
+    replanning [label="Task=replanning\nreplans + 1"];
+    revise [label="Runtime.revise\n停止/generation/取消竞争校验"];
+    revision [label="保存旧版本\nrevision + 1\ngeneration + 1"];
+    stop [label="保持 failed / paused / canceled", fillcolor="#fde8e7", color="#b33a32"];
+  }
+
+  agent -> goal;
+  plan -> goal;
+  recover -> goal;
+  goal -> catalog -> context -> config -> record -> prompt -> budget -> request -> response;
+  response -> rejected [label="否"];
+  response -> json [label="是"];
+  json -> dag -> verifier;
+  verifier -> rejected [label="否"];
+  verifier -> validated [label="是"];
+  validated -> route;
+  route -> print [label="plan"];
+  route -> submit [label="agent"];
+  submit -> freeze -> queued -> execute;
+
+  execute -> failed [style=dashed, label="执行失败"];
+  failed -> quota;
+  quota -> stop [label="否"];
+  quota -> replanning [label="是"];
+  replanning -> recover [style=dashed];
+  route -> revise [label="recover_plan"];
+  revise -> stop [label="拒绝"];
+  revise -> revision [label="接受"];
+  revision -> execute;
+}

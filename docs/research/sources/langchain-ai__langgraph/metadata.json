@@ -1,0 +1,39 @@
+{
+  "repo": "langchain-ai/langgraph",
+  "group": "durable_agent",
+  "url": "https://github.com/langchain-ai/langgraph",
+  "observed_at": "2026-09-05T06:06:45.959305+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/README.md",
+      "web_url": "https://github.com/langchain-ai/langgraph/blob/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/README.md",
+      "local_path": "docs/research/sources/langchain-ai__langgraph/README.md",
+      "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+      "bytes": 6395
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/LICENSE",
+      "web_url": "https://github.com/langchain-ai/langgraph/blob/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/LICENSE",
+      "local_path": "docs/research/sources/langchain-ai__langgraph/LICENSE",
+      "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+      "bytes": 1072
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "libs/langgraph/pyproject.toml",
+      "source_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/libs/langgraph/pyproject.toml",
+      "web_url": "https://github.com/langchain-ai/langgraph/blob/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/libs/langgraph/pyproject.toml",
+      "local_path": "docs/research/sources/langchain-ai__langgraph/libs/langgraph/pyproject.toml",
+      "sha256": "d5e0706f1c3cba845757379ffcbf4bd54b34b9d69ccf6158555a40697903b019",
+      "bytes": 4466
+    }
+  ],
+  "errors": [],
+  "head_sha": "81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1",
+  "head_commit_author_date": "Thu, 3 Sep 2026 11:23:25 -0400",
+  "commit_date_source": "https://github.com/langchain-ai/langgraph/commit/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1.patch"
+}

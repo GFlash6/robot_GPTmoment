@@ -1,0 +1,586 @@
+{
+  "format": "momo-relation-assessment",
+  "version": 1,
+  "generatedAt": "2026-09-05T08:01:36.463259+00:00",
+  "workspaceKey": "workspace-robot-agent-framework",
+  "baseRevision": 3,
+  "projects": [
+    {
+      "projectKey": "project-robot-agent-framework",
+      "zeroRelationDisposition": "requires_review",
+      "zeroRelationRationale": "正式图已有语义关系；本轮更新研究门槛并新增实际实现与验证关系。",
+      "graphHealth": {
+        "semanticRelationCount": 8,
+        "eligibleObjectCount": 16,
+        "isolatedObjectKeys": [
+          "core-execution",
+          "initial-tests",
+          "model-adapter",
+          "multimodal-storage",
+          "selection",
+          "software-validation"
+        ],
+        "invalidRelationKeys": [],
+        "staleEvidenceRelationKeys": [],
+        "zeroRelationWarning": false
+      },
+      "candidates": [
+        {
+          "claimKey": "single-scope",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-3ac8b90d2c205f7a",
+            "sourceKey": "single",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "single-scope",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-05T07:12:01.267Z"
+        },
+        {
+          "claimKey": "orchestration-requirement",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-23d075ab01747412",
+            "sourceKey": "orchestration",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "orchestration-requirement",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-05T07:12:01.267Z"
+        },
+        {
+          "claimKey": "memory-requirement",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-e77a7651269374a8",
+            "sourceKey": "memory",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "memory-requirement",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-05T07:12:01.267Z"
+        },
+        {
+          "claimKey": "truth-requirement",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-eaa03768cb223c5b",
+            "sourceKey": "truth",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "truth-requirement",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-05T07:12:01.267Z"
+        },
+        {
+          "claimKey": "research-before-implementation",
+          "action": "update",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-fd6f7d3c30895d42",
+            "sourceKey": "research",
+            "targetKey": "kernel",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "docs/USER_REQUIREMENTS.md",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "用户已批准开始具体实现",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            },
+            {
+              "sourceId": "docs/research/REPORT.md",
+              "path": "docs/research/REPORT.md",
+              "fingerprint": "39d54f5a1f9979473e8c80759cd9cead22c7a7c8bdd9c317f60376641fc545d4",
+              "claim": "首轮研究已完成并形成复用建议",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-05T07:12:01.267Z",
+          "previousRelation": {
+            "key": "relation-fd6f7d3c30895d42",
+            "sourceKey": "research",
+            "targetKey": "kernel",
+            "type": "blocks"
+          }
+        },
+        {
+          "claimKey": "track-unknowns",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-316d9f0385a81825",
+            "sourceKey": "questions",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "track-unknowns",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-05T07:12:01.267Z"
+        },
+        {
+          "claimKey": "project-maintenance",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-6ffd674cbb28f0bc",
+            "sourceKey": "momo",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "project-maintenance",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-05T07:12:01.267Z"
+        },
+        {
+          "claimKey": "real-validation",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": true,
+          "relation": {
+            "key": "relation-1eccb04a3cf44bc8",
+            "sourceKey": "verification",
+            "targetKey": "truth",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "real-validation",
+              "authority": "user-confirmed",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-05T07:12:01.267Z"
+        },
+        {
+          "claimKey": "implementation-not-verified",
+          "action": "add",
+          "confidence": "low",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-71c4a6ec3d0c7e1c",
+            "sourceKey": "initial-tests",
+            "targetKey": "kernel",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "user-requirements",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "implementation-not-verified",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [
+            "失败测试只能证明尚未通过验收，不足以支持框架实现这一工作项；保留为待审议，不自动连边。"
+          ],
+          "blockingReasons": [
+            "原 supports 实现关系语义不足；保留历史提案，采用软件验证 derived_from 初始测试的准确关系。"
+          ],
+          "status": "rejected",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": false
+        },
+        {
+          "claimKey": "adopted-components",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-369b137c81c1be79",
+            "sourceKey": "selection",
+            "targetKey": "kernel",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "docs/ARCHITECTURE.md",
+              "path": "docs/ARCHITECTURE.md",
+              "fingerprint": "9c80da395b8e2aad1bd25efa6239d9143dbedc0bd2dfafb23ceff8a4def47932",
+              "claim": "adopted-components",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            },
+            {
+              "sourceId": "pyproject.toml",
+              "path": "pyproject.toml",
+              "fingerprint": "0620d18241dcadf26fd6614e39c424fb32f9813f2608fec60281e0b9b87e40ca",
+              "claim": "adopted-components",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "implemented-control-contracts",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-17e63ef6216b1f1f",
+            "sourceKey": "core-execution",
+            "targetKey": "orchestration",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "robot_agent/runtime.py",
+              "path": "robot_agent/runtime.py",
+              "fingerprint": "8f76bbe6e6214bc8e98c10c1e76d10063b5c69ad73268abe66f4dc08744134ae",
+              "claim": "implemented-control-contracts",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            },
+            {
+              "sourceId": "tests/test_runtime.py",
+              "path": "tests/test_runtime.py",
+              "fingerprint": "04b881e069719162bcce1a22c531e37586985c49e54579c990615ac1e18e3616",
+              "claim": "implemented-control-contracts",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "implemented-data-evidence",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-99bedfec76d5fd33",
+            "sourceKey": "multimodal-storage",
+            "targetKey": "memory",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "robot_agent/memory.py",
+              "path": "robot_agent/memory.py",
+              "fingerprint": "a170896a2079b4b2b4e16ff02592d3b62190c5872f9c0357437679135532d51e",
+              "claim": "implemented-data-evidence",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            },
+            {
+              "sourceId": "tests/test_contracts_memory.py",
+              "path": "tests/test_contracts_memory.py",
+              "fingerprint": "ffde8a1ab5b9b5b7f0b6d33c8e4bb5744dc531babd3e4f1cd7fd6e76e40346e3",
+              "claim": "implemented-data-evidence",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "actual-model-boundary",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-9a4c82b2b887d853",
+            "sourceKey": "model-adapter",
+            "targetKey": "orchestration",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "robot_agent/planner.py",
+              "path": "robot_agent/planner.py",
+              "fingerprint": "b4e1a13fed7f5b2941c44a8d7d1c391fd9b9aea7c2b207d85745e81e2d6b58df",
+              "claim": "actual-model-boundary",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            },
+            {
+              "sourceId": "tests/test_durable_planner.py",
+              "path": "tests/test_durable_planner.py",
+              "fingerprint": "70dbdcc436ebd3d13ae32ec0c96126b7747a99e7dc6da1c39883eaa6bdc61f28",
+              "claim": "actual-model-boundary",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "software-results",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-1a8060fe213077e7",
+            "sourceKey": "software-validation",
+            "targetKey": "kernel",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "docs/validation/pytest.xml",
+              "path": "docs/validation/pytest.xml",
+              "fingerprint": "eb689718302bc7fd0fe4672dfe9f2870832c4af46b856e11ff24e7fc5cdbad03",
+              "claim": "software-results",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            },
+            {
+              "sourceId": "tests/test_http_execution.py",
+              "path": "tests/test_http_execution.py",
+              "fingerprint": "8ee5cf0ae95ca820272484bc070a11d75740590f1018ab17be353e1dde4f219f",
+              "claim": "software-results",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "baseline-regressions",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-7678dfc1725f0ac1",
+            "sourceKey": "software-validation",
+            "targetKey": "initial-tests",
+            "type": "derived_from"
+          },
+          "evidence": [
+            {
+              "sourceId": "docs/USER_REQUIREMENTS.md",
+              "path": "docs/USER_REQUIREMENTS.md",
+              "fingerprint": "f86357dc2ea189e52af2a18e3c0354d881f98d68d8ff3d8339b42ab95ba70b69",
+              "claim": "baseline-regressions",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            },
+            {
+              "sourceId": "tests/test_contracts_memory.py",
+              "path": "tests/test_contracts_memory.py",
+              "fingerprint": "ffde8a1ab5b9b5b7f0b6d33c8e4bb5744dc531babd3e4f1cd7fd6e76e40346e3",
+              "claim": "baseline-regressions",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        },
+        {
+          "claimKey": "first-framework-increment",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-30461971cb9aa5e7",
+            "sourceKey": "kernel",
+            "targetKey": "goal",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "docs/ARCHITECTURE.md",
+              "path": "docs/ARCHITECTURE.md",
+              "fingerprint": "9c80da395b8e2aad1bd25efa6239d9143dbedc0bd2dfafb23ceff8a4def47932",
+              "claim": "first-framework-increment",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            },
+            {
+              "sourceId": "robot_agent/runtime.py",
+              "path": "robot_agent/runtime.py",
+              "fingerprint": "8f76bbe6e6214bc8e98c10c1e76d10063b5c69ad73268abe66f4dc08744134ae",
+              "claim": "first-framework-increment",
+              "authority": "repository",
+              "observedAt": "2026-09-05T08:01:36.463259+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false
+        }
+      ]
+    }
+  ]
+}

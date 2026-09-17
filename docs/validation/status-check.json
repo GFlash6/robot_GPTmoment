@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-09-06T14:46:33.000663+00:00",
+  "scope": "工程状态同步；读取代码、既有测试报告和当前只读 HTTP 服务，未重跑功能测试",
+  "canonical_revision_before": 9,
+  "historical_validation": {
+    "docs/validation/pytest.xml": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "33",
+        "time": "16.538",
+        "timestamp": "2026-09-05T15:56:58.670849+08:00",
+        "hostname": "gflash"
+      }
+    ],
+    "docs/validation/pytest-ui.xml": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "39",
+        "time": "17.177",
+        "timestamp": "2026-09-06T14:18:31.911995+08:00",
+        "hostname": "gflash"
+      }
+    ]
+  },
+  "http_checks": [
+    {
+      "url": "http://127.0.0.1:8766/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8766/api/v1/overview",
+      "status": 200,
+      "api_version": "1",
+      "observed_at": "2026-09-06T14:46:33.003447+00:00",
+      "task_counts": {
+        "failed": 1,
+        "paused": 1,
+        "succeeded": 2
+      },
+      "collections": {
+        "assets": 2,
+        "controls": 1,
+        "copy_jobs": 1,
+        "executions": 7,
+        "local_results": 7,
+        "memories": 1,
+        "skills": 3,
+        "tasks": 4
+      },
+      "lease_count": 0,
+      "worker_status": "unobserved",
+      "robot_status": "unobserved"
+    }
+  ],
+  "evidence_fingerprints": {
+    "robot_agent/planner.py": "b4e1a13fed7f5b2941c44a8d7d1c391fd9b9aea7c2b207d85745e81e2d6b58df",
+    "robot_agent/runtime.py": "8f76bbe6e6214bc8e98c10c1e76d10063b5c69ad73268abe66f4dc08744134ae",
+    "robot_agent/durable.py": "0c15a9fe8ad2d16ab9775dee2c5c115e06782a2e94bbab67d329091e2d16dcfa",
+    "robot_agent/memory.py": "a170896a2079b4b2b4e16ff02592d3b62190c5872f9c0357437679135532d51e",
+    "robot_agent_observer/ledger.py": "22972453c7b5c7e32983bae1e656ed8fc15561944ff6c22668091c1b53bc0f1f",
+    "robot_agent_observer/server.py": "57be3149a1ac5d02aa779d31de4799958f8101963036b7ef31dd50508f3bdf50",
+    "ui/src/App.tsx": "a1e13684154bb0c28e1b394dede42f1a3ce6613e154603683f9e1e183245b385",
+    "ui/src/TaskView.tsx": "1526f5d75b4dfad7a15651dc240c63238ba6e442b91b80b7d971a128e31948e4",
+    "ui/tests/observer.spec.ts": "6c704c88c0f4ff6d8123b337ecb936a0758e435bc51efaf4f9c87f3a7322f50c",
+    "docs/validation/pytest.xml": "eb689718302bc7fd0fe4672dfe9f2870832c4af46b856e11ff24e7fc5cdbad03",
+    "docs/validation/pytest-ui.xml": "da1b02814fd9f3d612f4d0de4666a9971d71414cc1a95b2f0a466c4b7cf99fff",
+    "ui/package-lock.json": "f7d3c3cf6a31958e4d305e471fcf8302a837a2230f5d42305a2655681a8dcf4f"
+  }
+}

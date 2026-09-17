@@ -1,0 +1,30 @@
+{
+  "repo": "aiplan4eu/unified-planning",
+  "group": "execution_planning",
+  "url": "https://github.com/aiplan4eu/unified-planning",
+  "observed_at": "2026-09-05T06:06:43.584179+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/aiplan4eu/unified-planning/a4eac91a4f9904ace6811a601e05b2485636efbb/README.md",
+      "web_url": "https://github.com/aiplan4eu/unified-planning/blob/a4eac91a4f9904ace6811a601e05b2485636efbb/README.md",
+      "local_path": "docs/research/sources/aiplan4eu__unified-planning/README.md",
+      "sha256": "2451f4e32c91b23e17b769200465f2383b7fd165731d1941a1fc27ca7b4e3433",
+      "bytes": 4773
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/aiplan4eu/unified-planning/a4eac91a4f9904ace6811a601e05b2485636efbb/LICENSE",
+      "web_url": "https://github.com/aiplan4eu/unified-planning/blob/a4eac91a4f9904ace6811a601e05b2485636efbb/LICENSE",
+      "local_path": "docs/research/sources/aiplan4eu__unified-planning/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    }
+  ],
+  "errors": [],
+  "head_sha": "a4eac91a4f9904ace6811a601e05b2485636efbb",
+  "head_commit_author_date": "Mon, 24 Aug 2026 08:43:59 +0200",
+  "commit_date_source": "https://github.com/aiplan4eu/unified-planning/commit/a4eac91a4f9904ace6811a601e05b2485636efbb.patch"
+}

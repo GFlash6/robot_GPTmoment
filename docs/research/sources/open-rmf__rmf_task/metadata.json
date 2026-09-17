@@ -1,0 +1,39 @@
+{
+  "repo": "open-rmf/rmf_task",
+  "group": "execution_planning",
+  "url": "https://github.com/open-rmf/rmf_task",
+  "observed_at": "2026-09-05T06:06:45.186916+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/open-rmf/rmf_task/3943e852dc44414bdb38c57c10da6c8e29618c06/README.md",
+      "web_url": "https://github.com/open-rmf/rmf_task/blob/3943e852dc44414bdb38c57c10da6c8e29618c06/README.md",
+      "local_path": "docs/research/sources/open-rmf__rmf_task/README.md",
+      "sha256": "8c0a6c9e3412545848cd0edea11303013421d3bdf197083c580895f038aef5e3",
+      "bytes": 7558
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE.md",
+      "source_url": "https://raw.githubusercontent.com/open-rmf/rmf_task/3943e852dc44414bdb38c57c10da6c8e29618c06/LICENSE.md",
+      "web_url": "https://github.com/open-rmf/rmf_task/blob/3943e852dc44414bdb38c57c10da6c8e29618c06/LICENSE.md",
+      "local_path": "docs/research/sources/open-rmf__rmf_task/LICENSE.md",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "rmf_task/include/rmf_task/Task.hpp",
+      "source_url": "https://raw.githubusercontent.com/open-rmf/rmf_task/3943e852dc44414bdb38c57c10da6c8e29618c06/rmf_task/include/rmf_task/Task.hpp",
+      "web_url": "https://github.com/open-rmf/rmf_task/blob/3943e852dc44414bdb38c57c10da6c8e29618c06/rmf_task/include/rmf_task/Task.hpp",
+      "local_path": "docs/research/sources/open-rmf__rmf_task/rmf_task/include/rmf_task/Task.hpp",
+      "sha256": "3bf45e55d1d5b0f40f33818c6dd039823e67dfa8c13bf8c695328aa9453eb92c",
+      "bytes": 12017
+    }
+  ],
+  "errors": [],
+  "head_sha": "3943e852dc44414bdb38c57c10da6c8e29618c06",
+  "head_commit_author_date": "Tue, 16 Jun 2026 15:12:20 +0800",
+  "commit_date_source": "https://github.com/open-rmf/rmf_task/commit/3943e852dc44414bdb38c57c10da6c8e29618c06.patch"
+}

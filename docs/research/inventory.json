@@ -1,0 +1,1518 @@
+{
+  "observed_at": "2026-09-05T06:06:55.213644+00:00",
+  "method": "git ls-remote HEAD then raw files pinned to SHA; anonymous GitHub API rate-limited; no stars or current release inferred",
+  "repositories": [
+    {
+      "repo": "dimensionalOS/dimos",
+      "group": "robot_frameworks",
+      "url": "https://github.com/dimensionalOS/dimos",
+      "observed_at": "2026-09-05T06:06:41.066808+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/README.md",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/README.md",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/README.md",
+          "sha256": "0a8449454d63622ed834a257780071704bdbc55d30ce6f7c38414748b6cfc52a",
+          "bytes": 13806
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/LICENSE",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/LICENSE",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/LICENSE",
+          "sha256": "ab463ad5ae0dcd7a4fc55871e64d061d6b40ceffe3faaa2b7037e08b2b28b21f",
+          "bytes": 745
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/core/module.py",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/module.py",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/module.py",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/core/module.py",
+          "sha256": "f5c529e1caf3bf17d8ce6936abfb2ac3ae954a6dac6a5cf44a7a33d36c43ccb8",
+          "bytes": 33159
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/agents/skill_result.py",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/skill_result.py",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/skill_result.py",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/agents/skill_result.py",
+          "sha256": "5b4482b48b84777eb8745f403a1717be7b6b62058a1d4ccb03558bc746a86082",
+          "bytes": 3364
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/agents/vlm_agent.py",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/vlm_agent.py",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/vlm_agent.py",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/agents/vlm_agent.py",
+          "sha256": "8933d651a410ec3f0fd3fba3e6083ac5c60ebd728195a618be48dd3bde731741",
+          "bytes": 4426
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/core/resource.py",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/resource.py",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/resource.py",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/core/resource.py",
+          "sha256": "f84d86a5127705408d07480ec6ba0105ff308d8c349d3de06a26daef6141c5fa",
+          "bytes": 2448
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/memory/architecture.md",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/architecture.md",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/architecture.md",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/architecture.md",
+          "sha256": "ec3c3194ccaf3203c414b61642f9223e664d3e180861bf62feb3a8e5d6f0b8da",
+          "bytes": 6327
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/memory/intro.md",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/intro.md",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/intro.md",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/intro.md",
+          "sha256": "44eee0118a43a5d55b5cccbe00bdb40216ac518a53a9d619f5e5ea8910c269ac",
+          "bytes": 4738
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/memory/store/README.md",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/store/README.md",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/store/README.md",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/store/README.md",
+          "sha256": "397d78a9ba92dd5b62553af031319e7bcb8849aca29548a287c42377872977d3",
+          "bytes": 7338
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/memory/store/mcap.py",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/store/mcap.py",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/store/mcap.py",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/store/mcap.py",
+          "sha256": "e3864957f9ef747e5dede279c1781da12dc111fe3067f6a0781c8e02585e8d6e",
+          "bytes": 9442
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/memory/observationstore/sqlite.py",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/observationstore/sqlite.py",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/observationstore/sqlite.py",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/observationstore/sqlite.py",
+          "sha256": "a7023e258cae863de3017e834ac8ad50ed2112e7665ba214f54e35baa44dfbcf",
+          "bytes": 15347
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/memory/blobstore/blobstore.md",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/blobstore/blobstore.md",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/blobstore/blobstore.md",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/blobstore/blobstore.md",
+          "sha256": "9b8848076a59cf53bfe6de395d98934e14069eeded74c72e5517aaceed80bd13",
+          "bytes": 3125
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/core/coordination/blueprints.py",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/coordination/blueprints.py",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/coordination/blueprints.py",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/core/coordination/blueprints.py",
+          "sha256": "e25c6d0a7656942885fcf6e6cee44d4c7e9d00fcdcb1980b894f5e37516730bb",
+          "bytes": 17057
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dimos/agents/capabilities.py",
+          "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/capabilities.py",
+          "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/capabilities.py",
+          "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/agents/capabilities.py",
+          "sha256": "e7f694181815bf341b70fb61635c4722196308cef4526d8142ce4d8532bbe534",
+          "bytes": 5687
+        }
+      ],
+      "errors": [
+        "dimos/core/blueprints.py: HTTP Error 404: Not Found",
+        "dimos/agents/agent.py: HTTP Error 404: Not Found"
+      ],
+      "head_sha": "b1d60fe07f2db727d192286dd4b214e8f5813f1c",
+      "head_commit_author_date": "Sat, 5 Sep 2026 01:46:08 +0000",
+      "commit_date_source": "https://github.com/dimensionalOS/dimos/commit/b1d60fe07f2db727d192286dd4b214e8f5813f1c.patch",
+      "default_branch": "main",
+      "head_commit_committer_date": "2026-09-05T01:46:08+00:00"
+    },
+    {
+      "repo": "OpenMind/OM1",
+      "group": "robot_frameworks",
+      "url": "https://github.com/OpenMind/OM1",
+      "observed_at": "2026-09-05T06:06:41.066976+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/OpenMind/OM1/d94acc774e03327d6882a060d2fceebb89096649/README.md",
+          "web_url": "https://github.com/OpenMind/OM1/blob/d94acc774e03327d6882a060d2fceebb89096649/README.md",
+          "local_path": "docs/research/sources/OpenMind__OM1/README.md",
+          "sha256": "b9a9bb3a9cf647cbcb7727e456be2c69b9638b06b58794a7f86d50bda60c795b",
+          "bytes": 11404
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/OpenMind/OM1/d94acc774e03327d6882a060d2fceebb89096649/LICENSE",
+          "web_url": "https://github.com/OpenMind/OM1/blob/d94acc774e03327d6882a060d2fceebb89096649/LICENSE",
+          "local_path": "docs/research/sources/OpenMind__OM1/LICENSE",
+          "sha256": "346d8a3f9ea734e02cbce9ebcc9969b18f28242badd1078360168a09e0e2f37c",
+          "bytes": 1091
+        }
+      ],
+      "errors": [],
+      "head_sha": "d94acc774e03327d6882a060d2fceebb89096649",
+      "head_commit_author_date": "Mon, 31 Aug 2026 14:21:21 -0700",
+      "commit_date_source": "https://github.com/OpenMind/OM1/commit/d94acc774e03327d6882a060d2fceebb89096649.patch"
+    },
+    {
+      "repo": "RobotecAI/rai",
+      "group": "robot_frameworks",
+      "url": "https://github.com/RobotecAI/rai",
+      "observed_at": "2026-09-05T06:06:41.067415+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/README.md",
+          "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/README.md",
+          "local_path": "docs/research/sources/RobotecAI__rai/README.md",
+          "sha256": "11d112a35a74030658deebbbc9b198f88c8ebacc8119e46892196feb41a4d7f2",
+          "bytes": 6173
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/LICENSE",
+          "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/LICENSE",
+          "local_path": "docs/research/sources/RobotecAI__rai/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "pyproject.toml",
+          "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/pyproject.toml",
+          "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/pyproject.toml",
+          "local_path": "docs/research/sources/RobotecAI__rai/pyproject.toml",
+          "sha256": "75d06b23be54413170513f9f67b406a4783ea13fd999725fb40707d443a941a4",
+          "bytes": 2059
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "src/rai_core/rai/agents/langchain/core/plan_agent.py",
+          "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/src/rai_core/rai/agents/langchain/core/plan_agent.py",
+          "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/src/rai_core/rai/agents/langchain/core/plan_agent.py",
+          "local_path": "docs/research/sources/RobotecAI__rai/src/rai_core/rai/agents/langchain/core/plan_agent.py",
+          "sha256": "5d10a86ad029497e6126e9fc08b2a345f910e874b16553fb3278ee709b174f92",
+          "bytes": 9142
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "src/rai_core/rai/communication/ros2/connectors/action_mixin.py",
+          "source_url": "https://raw.githubusercontent.com/RobotecAI/rai/54f2423f5980b59c59d32f9bd133ebe4be86fe52/src/rai_core/rai/communication/ros2/connectors/action_mixin.py",
+          "web_url": "https://github.com/RobotecAI/rai/blob/54f2423f5980b59c59d32f9bd133ebe4be86fe52/src/rai_core/rai/communication/ros2/connectors/action_mixin.py",
+          "local_path": "docs/research/sources/RobotecAI__rai/src/rai_core/rai/communication/ros2/connectors/action_mixin.py",
+          "sha256": "ce9b2e85c6309acfcbe1d24ad081102eb438c365d6b1742295a7f363256de073",
+          "bytes": 2338
+        }
+      ],
+      "errors": [],
+      "head_sha": "54f2423f5980b59c59d32f9bd133ebe4be86fe52",
+      "head_commit_author_date": "Wed, 12 Aug 2026 16:16:40 +0200",
+      "commit_date_source": "https://github.com/RobotecAI/rai/commit/54f2423f5980b59c59d32f9bd133ebe4be86fe52.patch",
+      "default_branch": "main",
+      "head_commit_committer_date": "2026-08-12T16:16:40+02:00"
+    },
+    {
+      "repo": "nasa-jpl/rosa",
+      "group": "robot_frameworks",
+      "url": "https://github.com/nasa-jpl/rosa",
+      "observed_at": "2026-09-05T06:06:41.067785+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/README.md",
+          "web_url": "https://github.com/nasa-jpl/rosa/blob/e7e53754bed673e2ce36d1fa311e04e51bfbacad/README.md",
+          "local_path": "docs/research/sources/nasa-jpl__rosa/README.md",
+          "sha256": "e8645d3d4c0fe22f9b7335537c02f2bd01b137594b774861f0601b19a84f5f95",
+          "bytes": 5599
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/LICENSE",
+          "web_url": "https://github.com/nasa-jpl/rosa/blob/e7e53754bed673e2ce36d1fa311e04e51bfbacad/LICENSE",
+          "local_path": "docs/research/sources/nasa-jpl__rosa/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        }
+      ],
+      "errors": [],
+      "head_sha": "e7e53754bed673e2ce36d1fa311e04e51bfbacad",
+      "head_commit_author_date": "Tue, 17 Mar 2026 10:50:17 -0700",
+      "commit_date_source": "https://github.com/nasa-jpl/rosa/commit/e7e53754bed673e2ce36d1fa311e04e51bfbacad.patch"
+    },
+    {
+      "repo": "automatika-robotics/embodied-agents",
+      "group": "robot_frameworks",
+      "url": "https://github.com/automatika-robotics/embodied-agents",
+      "observed_at": "2026-09-05T06:06:41.068219+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/README.md",
+          "web_url": "https://github.com/automatika-robotics/embodied-agents/blob/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/README.md",
+          "local_path": "docs/research/sources/automatika-robotics__embodied-agents/README.md",
+          "sha256": "606fab4f1da5a72578ac61994760d254a99a16c52694055e64c9512bc56300b7",
+          "bytes": 6416
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/LICENSE",
+          "web_url": "https://github.com/automatika-robotics/embodied-agents/blob/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/LICENSE",
+          "local_path": "docs/research/sources/automatika-robotics__embodied-agents/LICENSE",
+          "sha256": "5e73597f4cf6a051df304ea0c0d0923d2ba7276ee74fc69454904e2273a44a65",
+          "bytes": 1076
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "pyproject.toml",
+          "source_url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/pyproject.toml",
+          "web_url": "https://github.com/automatika-robotics/embodied-agents/blob/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/pyproject.toml",
+          "local_path": "docs/research/sources/automatika-robotics__embodied-agents/pyproject.toml",
+          "sha256": "ab8c8088586d47307bbfe1e235e16f3c3728b3ecd018a8b46d99c29a4350ad32",
+          "bytes": 1508
+        }
+      ],
+      "errors": [],
+      "head_sha": "29898459a7fc80ed1a5f6cbbfdc0f9459b68321f",
+      "head_commit_author_date": "Fri, 31 Jul 2026 16:18:27 +0200",
+      "commit_date_source": "https://github.com/automatika-robotics/embodied-agents/commit/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f.patch"
+    },
+    {
+      "repo": "SkiROS2/skiros2",
+      "group": "robot_frameworks",
+      "url": "https://github.com/SkiROS2/skiros2",
+      "observed_at": "2026-09-05T06:06:41.068619+00:00",
+      "files": [],
+      "errors": [
+        "HEAD unresolved: remote: Repository not found.\nfatal: 仓库 'https://github.com/SkiROS2/skiros2.git/' 未找到\n",
+        "readme: HTTP Error 404: Not Found",
+        "license: HTTP Error 404: Not Found"
+      ]
+    },
+    {
+      "repo": "cram2/cram",
+      "group": "robot_frameworks",
+      "url": "https://github.com/cram2/cram",
+      "observed_at": "2026-09-05T06:06:41.069048+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/cram2/cram/d6a084e9341d4298a92fad219ef4033f8100b0de/README.md",
+          "web_url": "https://github.com/cram2/cram/blob/d6a084e9341d4298a92fad219ef4033f8100b0de/README.md",
+          "local_path": "docs/research/sources/cram2__cram/README.md",
+          "sha256": "497ed2d6df51bcaba0c34ad7b35bb620181d588083a1061ff5bce761e5ea0e59",
+          "bytes": 1998
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/cram2/cram/d6a084e9341d4298a92fad219ef4033f8100b0de/LICENSE",
+          "web_url": "https://github.com/cram2/cram/blob/d6a084e9341d4298a92fad219ef4033f8100b0de/LICENSE",
+          "local_path": "docs/research/sources/cram2__cram/LICENSE",
+          "sha256": "efccaa8984491992ef357eb53a3bfcd6a89aa5d8bcc609230073bc98257b0c53",
+          "bytes": 1678
+        }
+      ],
+      "errors": [],
+      "head_sha": "d6a084e9341d4298a92fad219ef4033f8100b0de",
+      "head_commit_author_date": "Wed, 1 Oct 2025 16:59:19 +0200",
+      "commit_date_source": "https://github.com/cram2/cram/commit/d6a084e9341d4298a92fad219ef4033f8100b0de.patch"
+    },
+    {
+      "repo": "BehaviorTree/BehaviorTree.CPP",
+      "group": "execution_planning",
+      "url": "https://github.com/BehaviorTree/BehaviorTree.CPP",
+      "observed_at": "2026-09-05T06:06:41.069495+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.CPP/9b63b505983f76e46d90d71c87d21fad0001f8a3/README.md",
+          "web_url": "https://github.com/BehaviorTree/BehaviorTree.CPP/blob/9b63b505983f76e46d90d71c87d21fad0001f8a3/README.md",
+          "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.CPP/README.md",
+          "sha256": "e7ddcee6c64330f43f9257ebf9a1c3d646333a5c0e74d1e70de3edc60b9ee51a",
+          "bytes": 6399
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.CPP/9b63b505983f76e46d90d71c87d21fad0001f8a3/LICENSE",
+          "web_url": "https://github.com/BehaviorTree/BehaviorTree.CPP/blob/9b63b505983f76e46d90d71c87d21fad0001f8a3/LICENSE",
+          "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.CPP/LICENSE",
+          "sha256": "73619551b110524235fd4272e7236a6b6e2e162770b1d79cb929022d165e8706",
+          "bytes": 1095
+        }
+      ],
+      "errors": [],
+      "head_sha": "9b63b505983f76e46d90d71c87d21fad0001f8a3",
+      "head_commit_author_date": "Mon, 31 Aug 2026 13:18:39 +0530",
+      "commit_date_source": "https://github.com/BehaviorTree/BehaviorTree.CPP/commit/9b63b505983f76e46d90d71c87d21fad0001f8a3.patch"
+    },
+    {
+      "repo": "BehaviorTree/BehaviorTree.ROS2",
+      "group": "execution_planning",
+      "url": "https://github.com/BehaviorTree/BehaviorTree.ROS2",
+      "observed_at": "2026-09-05T06:06:42.966793+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.ROS2/6c6aa078ee7bc52fec98984bed4964556abf5beb/README.md",
+          "web_url": "https://github.com/BehaviorTree/BehaviorTree.ROS2/blob/6c6aa078ee7bc52fec98984bed4964556abf5beb/README.md",
+          "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.ROS2/README.md",
+          "sha256": "f56d2165d4291d53f8ee4803fa1a10c31900f9de435d17c1eef930edd1c88696",
+          "bytes": 1181
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.ROS2/6c6aa078ee7bc52fec98984bed4964556abf5beb/LICENSE",
+          "web_url": "https://github.com/BehaviorTree/BehaviorTree.ROS2/blob/6c6aa078ee7bc52fec98984bed4964556abf5beb/LICENSE",
+          "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.ROS2/LICENSE",
+          "sha256": "e79f5fae08351b969f33aca04e7c3fbe62c3174a9aabc98d37dc51c363033cec",
+          "bytes": 10310
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp",
+          "source_url": "https://raw.githubusercontent.com/BehaviorTree/BehaviorTree.ROS2/6c6aa078ee7bc52fec98984bed4964556abf5beb/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp",
+          "web_url": "https://github.com/BehaviorTree/BehaviorTree.ROS2/blob/6c6aa078ee7bc52fec98984bed4964556abf5beb/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp",
+          "local_path": "docs/research/sources/BehaviorTree__BehaviorTree.ROS2/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp",
+          "sha256": "4f8e6b270ab7a70921dc551a36df26ad8873948e7bb7d430f9279f83155cd144",
+          "bytes": 17122
+        }
+      ],
+      "errors": [
+        "include/behaviortree_ros2/bt_action_node.hpp: HTTP Error 404: Not Found"
+      ],
+      "head_sha": "6c6aa078ee7bc52fec98984bed4964556abf5beb",
+      "head_commit_author_date": "Tue, 25 Nov 2025 04:22:51 -0500",
+      "commit_date_source": "https://github.com/BehaviorTree/BehaviorTree.ROS2/commit/6c6aa078ee7bc52fec98984bed4964556abf5beb.patch",
+      "default_branch": "humble",
+      "head_commit_committer_date": "2025-11-25T10:22:51+01:00"
+    },
+    {
+      "repo": "splintered-reality/py_trees",
+      "group": "execution_planning",
+      "url": "https://github.com/splintered-reality/py_trees",
+      "observed_at": "2026-09-05T06:06:42.997744+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees/4f7f8f60ddf45778905e8fa80401df14783b203b/README.md",
+          "web_url": "https://github.com/splintered-reality/py_trees/blob/4f7f8f60ddf45778905e8fa80401df14783b203b/README.md",
+          "local_path": "docs/research/sources/splintered-reality__py_trees/README.md",
+          "sha256": "6f73510a089b1a1aba6c06e362b4a395109b2ac15021ed0aee4664d3ac27551c",
+          "bytes": 10446
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees/4f7f8f60ddf45778905e8fa80401df14783b203b/LICENSE",
+          "web_url": "https://github.com/splintered-reality/py_trees/blob/4f7f8f60ddf45778905e8fa80401df14783b203b/LICENSE",
+          "local_path": "docs/research/sources/splintered-reality__py_trees/LICENSE",
+          "sha256": "c4255fdd7fd911f40c2eb3a629b8e9ca8647cb946489d569ac54dce26eb39779",
+          "bytes": 1630
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "py_trees/composites.py",
+          "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees/4f7f8f60ddf45778905e8fa80401df14783b203b/py_trees/composites.py",
+          "web_url": "https://github.com/splintered-reality/py_trees/blob/4f7f8f60ddf45778905e8fa80401df14783b203b/py_trees/composites.py",
+          "local_path": "docs/research/sources/splintered-reality__py_trees/py_trees/composites.py",
+          "sha256": "15b1c65f1add4ae82b063c80f057b594201968bd04aefadfc05db9b2453ecfc6",
+          "bytes": 31302
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "py_trees/behaviour.py",
+          "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees/4f7f8f60ddf45778905e8fa80401df14783b203b/py_trees/behaviour.py",
+          "web_url": "https://github.com/splintered-reality/py_trees/blob/4f7f8f60ddf45778905e8fa80401df14783b203b/py_trees/behaviour.py",
+          "local_path": "docs/research/sources/splintered-reality__py_trees/py_trees/behaviour.py",
+          "sha256": "741f65b9dfb7a51bc551141dfe4984af4043da09f50395156403e3edf0722ad4",
+          "bytes": 18131
+        }
+      ],
+      "errors": [],
+      "head_sha": "4f7f8f60ddf45778905e8fa80401df14783b203b",
+      "head_commit_author_date": "Wed, 26 Aug 2026 17:02:46 -0400",
+      "commit_date_source": "https://github.com/splintered-reality/py_trees/commit/4f7f8f60ddf45778905e8fa80401df14783b203b.patch"
+    },
+    {
+      "repo": "splintered-reality/py_trees_ros",
+      "group": "execution_planning",
+      "url": "https://github.com/splintered-reality/py_trees_ros",
+      "observed_at": "2026-09-05T06:06:43.330173+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees_ros/435a415e806165d23b3abbc5042391a714c97e23/README.md",
+          "web_url": "https://github.com/splintered-reality/py_trees_ros/blob/435a415e806165d23b3abbc5042391a714c97e23/README.md",
+          "local_path": "docs/research/sources/splintered-reality__py_trees_ros/README.md",
+          "sha256": "79f504ca6e9efe754e1412cefcc206dd53918c1d19942f79579d788602da7bdb",
+          "bytes": 28659
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees_ros/435a415e806165d23b3abbc5042391a714c97e23/LICENSE",
+          "web_url": "https://github.com/splintered-reality/py_trees_ros/blob/435a415e806165d23b3abbc5042391a714c97e23/LICENSE",
+          "local_path": "docs/research/sources/splintered-reality__py_trees_ros/LICENSE",
+          "sha256": "faa37f7a553a7b99157fbda00919ff9b84d8baaeef0a3952e33211bf70f5e7df",
+          "bytes": 1621
+        }
+      ],
+      "errors": [],
+      "head_sha": "435a415e806165d23b3abbc5042391a714c97e23",
+      "commit_date_unknown": "HTTP Error 403: Forbidden"
+    },
+    {
+      "repo": "FlexBE/flexbe_behavior_engine",
+      "group": "execution_planning",
+      "url": "https://github.com/FlexBE/flexbe_behavior_engine",
+      "observed_at": "2026-09-05T06:06:43.340018+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/FlexBE/flexbe_behavior_engine/0e9c0ae6f9fea7c435099dfa2419a7a1373617de/README.md",
+          "web_url": "https://github.com/FlexBE/flexbe_behavior_engine/blob/0e9c0ae6f9fea7c435099dfa2419a7a1373617de/README.md",
+          "local_path": "docs/research/sources/FlexBE__flexbe_behavior_engine/README.md",
+          "sha256": "cdd2373418bfc5f9ab750d19379e669ced0aac2d0599d1ce5ee686f6e4bf4ea8",
+          "bytes": 6994
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/FlexBE/flexbe_behavior_engine/0e9c0ae6f9fea7c435099dfa2419a7a1373617de/LICENSE",
+          "web_url": "https://github.com/FlexBE/flexbe_behavior_engine/blob/0e9c0ae6f9fea7c435099dfa2419a7a1373617de/LICENSE",
+          "local_path": "docs/research/sources/FlexBE__flexbe_behavior_engine/LICENSE",
+          "sha256": "72c6f45ff8dbd205e03503494725944dd8e943ba0a9b8f9396cdb4402b612267",
+          "bytes": 1610
+        }
+      ],
+      "errors": [],
+      "head_sha": "0e9c0ae6f9fea7c435099dfa2419a7a1373617de",
+      "head_commit_author_date": "Tue, 19 May 2026 20:10:17 -0400",
+      "commit_date_source": "https://github.com/FlexBE/flexbe_behavior_engine/commit/0e9c0ae6f9fea7c435099dfa2419a7a1373617de.patch"
+    },
+    {
+      "repo": "robosoft-ai/SMACC2",
+      "group": "execution_planning",
+      "url": "https://github.com/robosoft-ai/SMACC2",
+      "observed_at": "2026-09-05T06:06:43.448144+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/robosoft-ai/SMACC2/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db/README.md",
+          "web_url": "https://github.com/robosoft-ai/SMACC2/blob/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db/README.md",
+          "local_path": "docs/research/sources/robosoft-ai__SMACC2/README.md",
+          "sha256": "6c8d0f9698a3e04163be2a12a4f5dc7a90c04bbd3ae8e3a94a1f649c37a95f85",
+          "bytes": 11504
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/robosoft-ai/SMACC2/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db/LICENSE",
+          "web_url": "https://github.com/robosoft-ai/SMACC2/blob/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db/LICENSE",
+          "local_path": "docs/research/sources/robosoft-ai__SMACC2/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ],
+      "errors": [],
+      "head_sha": "29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db",
+      "head_commit_author_date": "Mon, 17 Aug 2026 00:42:19 -0700",
+      "commit_date_source": "https://github.com/robosoft-ai/SMACC2/commit/29673cbdd4f6b808cf8239ab9a5dc2c9d885e0db.patch"
+    },
+    {
+      "repo": "PlanSys2/ros2_planning_system",
+      "group": "execution_planning",
+      "url": "https://github.com/PlanSys2/ros2_planning_system",
+      "observed_at": "2026-09-05T06:06:43.552166+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/PlanSys2/ros2_planning_system/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be/README.md",
+          "web_url": "https://github.com/PlanSys2/ros2_planning_system/blob/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be/README.md",
+          "local_path": "docs/research/sources/PlanSys2__ros2_planning_system/README.md",
+          "sha256": "b3622d03c2afffd11d1fbb5276f7a15d1314af5c336a6cefc470f45cd0b8bcd5",
+          "bytes": 2381
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/PlanSys2/ros2_planning_system/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be/LICENSE",
+          "web_url": "https://github.com/PlanSys2/ros2_planning_system/blob/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be/LICENSE",
+          "local_path": "docs/research/sources/PlanSys2__ros2_planning_system/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        }
+      ],
+      "errors": [],
+      "head_sha": "c44cf3dff6abc0d0a95ea554b2bace597bf5f9be",
+      "head_commit_author_date": "Tue, 28 Jul 2026 13:49:17 +0200",
+      "commit_date_source": "https://github.com/PlanSys2/ros2_planning_system/commit/c44cf3dff6abc0d0a95ea554b2bace597bf5f9be.patch"
+    },
+    {
+      "repo": "aiplan4eu/unified-planning",
+      "group": "execution_planning",
+      "url": "https://github.com/aiplan4eu/unified-planning",
+      "observed_at": "2026-09-05T06:06:43.584179+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/aiplan4eu/unified-planning/a4eac91a4f9904ace6811a601e05b2485636efbb/README.md",
+          "web_url": "https://github.com/aiplan4eu/unified-planning/blob/a4eac91a4f9904ace6811a601e05b2485636efbb/README.md",
+          "local_path": "docs/research/sources/aiplan4eu__unified-planning/README.md",
+          "sha256": "2451f4e32c91b23e17b769200465f2383b7fd165731d1941a1fc27ca7b4e3433",
+          "bytes": 4773
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/aiplan4eu/unified-planning/a4eac91a4f9904ace6811a601e05b2485636efbb/LICENSE",
+          "web_url": "https://github.com/aiplan4eu/unified-planning/blob/a4eac91a4f9904ace6811a601e05b2485636efbb/LICENSE",
+          "local_path": "docs/research/sources/aiplan4eu__unified-planning/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        }
+      ],
+      "errors": [],
+      "head_sha": "a4eac91a4f9904ace6811a601e05b2485636efbb",
+      "head_commit_author_date": "Mon, 24 Aug 2026 08:43:59 +0200",
+      "commit_date_source": "https://github.com/aiplan4eu/unified-planning/commit/a4eac91a4f9904ace6811a601e05b2485636efbb.patch"
+    },
+    {
+      "repo": "dananau/GTPyhop",
+      "group": "execution_planning",
+      "url": "https://github.com/dananau/GTPyhop",
+      "observed_at": "2026-09-05T06:06:44.895309+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/dananau/GTPyhop/1ca7773963443476d0e83d03f10efab325327565/README.md",
+          "web_url": "https://github.com/dananau/GTPyhop/blob/1ca7773963443476d0e83d03f10efab325327565/README.md",
+          "local_path": "docs/research/sources/dananau__GTPyhop/README.md",
+          "sha256": "e0915e28c3d3a8bbfb90136f674dd0db1ea9e7494c0497c2e21a8960353f937d",
+          "bytes": 4613
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE.txt",
+          "source_url": "https://raw.githubusercontent.com/dananau/GTPyhop/1ca7773963443476d0e83d03f10efab325327565/LICENSE.txt",
+          "web_url": "https://github.com/dananau/GTPyhop/blob/1ca7773963443476d0e83d03f10efab325327565/LICENSE.txt",
+          "local_path": "docs/research/sources/dananau__GTPyhop/LICENSE.txt",
+          "sha256": "48a52f2176539c5e0187b497bfb84d6c37f133f602ba79574f2e754369978c4e",
+          "bytes": 1726
+        }
+      ],
+      "errors": [],
+      "head_sha": "1ca7773963443476d0e83d03f10efab325327565",
+      "head_commit_author_date": "Thu, 29 Jul 2021 14:28:52 -0400",
+      "commit_date_source": "https://github.com/dananau/GTPyhop/commit/1ca7773963443476d0e83d03f10efab325327565.patch"
+    },
+    {
+      "repo": "open-rmf/rmf_task",
+      "group": "execution_planning",
+      "url": "https://github.com/open-rmf/rmf_task",
+      "observed_at": "2026-09-05T06:06:45.186916+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/open-rmf/rmf_task/3943e852dc44414bdb38c57c10da6c8e29618c06/README.md",
+          "web_url": "https://github.com/open-rmf/rmf_task/blob/3943e852dc44414bdb38c57c10da6c8e29618c06/README.md",
+          "local_path": "docs/research/sources/open-rmf__rmf_task/README.md",
+          "sha256": "8c0a6c9e3412545848cd0edea11303013421d3bdf197083c580895f038aef5e3",
+          "bytes": 7558
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE.md",
+          "source_url": "https://raw.githubusercontent.com/open-rmf/rmf_task/3943e852dc44414bdb38c57c10da6c8e29618c06/LICENSE.md",
+          "web_url": "https://github.com/open-rmf/rmf_task/blob/3943e852dc44414bdb38c57c10da6c8e29618c06/LICENSE.md",
+          "local_path": "docs/research/sources/open-rmf__rmf_task/LICENSE.md",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "rmf_task/include/rmf_task/Task.hpp",
+          "source_url": "https://raw.githubusercontent.com/open-rmf/rmf_task/3943e852dc44414bdb38c57c10da6c8e29618c06/rmf_task/include/rmf_task/Task.hpp",
+          "web_url": "https://github.com/open-rmf/rmf_task/blob/3943e852dc44414bdb38c57c10da6c8e29618c06/rmf_task/include/rmf_task/Task.hpp",
+          "local_path": "docs/research/sources/open-rmf__rmf_task/rmf_task/include/rmf_task/Task.hpp",
+          "sha256": "3bf45e55d1d5b0f40f33818c6dd039823e67dfa8c13bf8c695328aa9453eb92c",
+          "bytes": 12017
+        }
+      ],
+      "errors": [],
+      "head_sha": "3943e852dc44414bdb38c57c10da6c8e29618c06",
+      "head_commit_author_date": "Tue, 16 Jun 2026 15:12:20 +0800",
+      "commit_date_source": "https://github.com/open-rmf/rmf_task/commit/3943e852dc44414bdb38c57c10da6c8e29618c06.patch"
+    },
+    {
+      "repo": "temporalio/temporal",
+      "group": "durable_agent",
+      "url": "https://github.com/temporalio/temporal",
+      "observed_at": "2026-09-05T06:06:45.245620+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/temporalio/temporal/891d1b648b7252925142cc36f13e40a0e2ed4244/README.md",
+          "web_url": "https://github.com/temporalio/temporal/blob/891d1b648b7252925142cc36f13e40a0e2ed4244/README.md",
+          "local_path": "docs/research/sources/temporalio__temporal/README.md",
+          "sha256": "269838d3de5da90d4c2c0b45bf7fc745b384a5a05c0932582e923638e8994189",
+          "bytes": 3888
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/temporalio/temporal/891d1b648b7252925142cc36f13e40a0e2ed4244/LICENSE",
+          "web_url": "https://github.com/temporalio/temporal/blob/891d1b648b7252925142cc36f13e40a0e2ed4244/LICENSE",
+          "local_path": "docs/research/sources/temporalio__temporal/LICENSE",
+          "sha256": "6aab9afd99ceb1dcaf6a0d91386b46baef9bce17ae4006044e0f231e31430b69",
+          "bytes": 1152
+        }
+      ],
+      "errors": [],
+      "head_sha": "891d1b648b7252925142cc36f13e40a0e2ed4244",
+      "head_commit_author_date": "Fri, 4 Sep 2026 22:19:39 -0700",
+      "commit_date_source": "https://github.com/temporalio/temporal/commit/891d1b648b7252925142cc36f13e40a0e2ed4244.patch"
+    },
+    {
+      "repo": "temporalio/sdk-python",
+      "group": "durable_agent",
+      "url": "https://github.com/temporalio/sdk-python",
+      "observed_at": "2026-09-05T06:06:45.454843+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/temporalio/sdk-python/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d/README.md",
+          "web_url": "https://github.com/temporalio/sdk-python/blob/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d/README.md",
+          "local_path": "docs/research/sources/temporalio__sdk-python/README.md",
+          "sha256": "8ec11868a76adce81b39a59c215defe1a70c7da65f170e8a41add57ca1091e10",
+          "bytes": 104587
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/temporalio/sdk-python/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d/LICENSE",
+          "web_url": "https://github.com/temporalio/sdk-python/blob/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d/LICENSE",
+          "local_path": "docs/research/sources/temporalio__sdk-python/LICENSE",
+          "sha256": "d7706f28d144dabf07e4946553a4d117d1dab5cda6bf34a602959b4a2fa86b38",
+          "bytes": 1108
+        }
+      ],
+      "errors": [],
+      "head_sha": "22a9e41fd857261ee0a9bb5ce57f439d93e7f88d",
+      "head_commit_author_date": "Fri, 4 Sep 2026 17:48:13 -0400",
+      "commit_date_source": "https://github.com/temporalio/sdk-python/commit/22a9e41fd857261ee0a9bb5ce57f439d93e7f88d.patch"
+    },
+    {
+      "repo": "dbos-inc/dbos-transact-py",
+      "group": "durable_agent",
+      "url": "https://github.com/dbos-inc/dbos-transact-py",
+      "observed_at": "2026-09-05T06:06:45.556595+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/README.md",
+          "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/README.md",
+          "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/README.md",
+          "sha256": "b9c4054b97dfb86e6c0cc1fa3b32b35f2366db42a0a7bda1408ed5340ecf7ef8",
+          "bytes": 13111
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/LICENSE",
+          "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/LICENSE",
+          "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/LICENSE",
+          "sha256": "546662b7f6b9fa4770f564fa7d8e63c40595c0643380b1723d6adc55552154d5",
+          "bytes": 1067
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dbos/_core.py",
+          "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_core.py",
+          "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_core.py",
+          "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/dbos/_core.py",
+          "sha256": "2547659d33826ece694c05427b6ddda64f5833b51b5d34659f69b5ce3d5214e3",
+          "bytes": 137834
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dbos/_dbos.py",
+          "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_dbos.py",
+          "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_dbos.py",
+          "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/dbos/_dbos.py",
+          "sha256": "74a3c21171e994a91e1234b1ddb70e50ba9fa6ea44228a882cef7be70c5c9327",
+          "bytes": 154426
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "dbos/_queue.py",
+          "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_queue.py",
+          "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_queue.py",
+          "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/dbos/_queue.py",
+          "sha256": "86c6fdff8679a6247b986e39dcac956d56620c886e9042439a1429c0c07c09cf",
+          "bytes": 49934
+        }
+      ],
+      "errors": [],
+      "head_sha": "833794f7a1138bacf75ff6d88647a33eb5e35e52",
+      "head_commit_author_date": "Fri, 4 Sep 2026 14:03:31 -0700",
+      "commit_date_source": "https://github.com/dbos-inc/dbos-transact-py/commit/833794f7a1138bacf75ff6d88647a33eb5e35e52.patch"
+    },
+    {
+      "repo": "restatedev/restate",
+      "group": "durable_agent",
+      "url": "https://github.com/restatedev/restate",
+      "observed_at": "2026-09-05T06:06:45.603643+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/restatedev/restate/c359c138d34562530f64e5453626cb278ee20db3/README.md",
+          "web_url": "https://github.com/restatedev/restate/blob/c359c138d34562530f64e5453626cb278ee20db3/README.md",
+          "local_path": "docs/research/sources/restatedev__restate/README.md",
+          "sha256": "1033d88af95352d4ee9d5781576716212bb9f34b12ae9036c0f976713046bb3a",
+          "bytes": 7080
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/restatedev/restate/c359c138d34562530f64e5453626cb278ee20db3/LICENSE",
+          "web_url": "https://github.com/restatedev/restate/blob/c359c138d34562530f64e5453626cb278ee20db3/LICENSE",
+          "local_path": "docs/research/sources/restatedev__restate/LICENSE",
+          "sha256": "ea4fd504ffe508ce7ece0727a714a4fffc7208ad5a9618ae33f794d713450f02",
+          "bytes": 6352
+        }
+      ],
+      "errors": [],
+      "head_sha": "c359c138d34562530f64e5453626cb278ee20db3",
+      "head_commit_author_date": "Sat, 5 Sep 2026 00:08:35 +0200",
+      "commit_date_source": "https://github.com/restatedev/restate/commit/c359c138d34562530f64e5453626cb278ee20db3.patch"
+    },
+    {
+      "repo": "langchain-ai/langgraph",
+      "group": "durable_agent",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "observed_at": "2026-09-05T06:06:45.959305+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/README.md",
+          "web_url": "https://github.com/langchain-ai/langgraph/blob/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/README.md",
+          "local_path": "docs/research/sources/langchain-ai__langgraph/README.md",
+          "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+          "bytes": 6395
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/LICENSE",
+          "web_url": "https://github.com/langchain-ai/langgraph/blob/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/LICENSE",
+          "local_path": "docs/research/sources/langchain-ai__langgraph/LICENSE",
+          "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+          "bytes": 1072
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "libs/langgraph/pyproject.toml",
+          "source_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/libs/langgraph/pyproject.toml",
+          "web_url": "https://github.com/langchain-ai/langgraph/blob/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1/libs/langgraph/pyproject.toml",
+          "local_path": "docs/research/sources/langchain-ai__langgraph/libs/langgraph/pyproject.toml",
+          "sha256": "d5e0706f1c3cba845757379ffcbf4bd54b34b9d69ccf6158555a40697903b019",
+          "bytes": 4466
+        }
+      ],
+      "errors": [],
+      "head_sha": "81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1",
+      "head_commit_author_date": "Thu, 3 Sep 2026 11:23:25 -0400",
+      "commit_date_source": "https://github.com/langchain-ai/langgraph/commit/81bf17b23123e4ef8b9d5f49fa09a0122fc2edd1.patch"
+    },
+    {
+      "repo": "pydantic/pydantic-ai",
+      "group": "durable_agent",
+      "url": "https://github.com/pydantic/pydantic-ai",
+      "observed_at": "2026-09-05T06:06:46.423365+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/26467f6f3002784265709335a9dc5cb636b15d53/README.md",
+          "web_url": "https://github.com/pydantic/pydantic-ai/blob/26467f6f3002784265709335a9dc5cb636b15d53/README.md",
+          "local_path": "docs/research/sources/pydantic__pydantic-ai/README.md",
+          "sha256": "c867272606b72649dc6159195af8f805539c71cdaee7b68e9f07a31f84452793",
+          "bytes": 20809
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/26467f6f3002784265709335a9dc5cb636b15d53/LICENSE",
+          "web_url": "https://github.com/pydantic/pydantic-ai/blob/26467f6f3002784265709335a9dc5cb636b15d53/LICENSE",
+          "local_path": "docs/research/sources/pydantic__pydantic-ai/LICENSE",
+          "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+          "bytes": 1100
+        }
+      ],
+      "errors": [],
+      "head_sha": "26467f6f3002784265709335a9dc5cb636b15d53",
+      "head_commit_author_date": "Fri, 4 Sep 2026 18:01:07 -0600",
+      "commit_date_source": "https://github.com/pydantic/pydantic-ai/commit/26467f6f3002784265709335a9dc5cb636b15d53.patch"
+    },
+    {
+      "repo": "microsoft/agent-framework",
+      "group": "durable_agent",
+      "url": "https://github.com/microsoft/agent-framework",
+      "observed_at": "2026-09-05T06:06:47.461871+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/microsoft/agent-framework/2c49f50cf08ebb6c1687146336f039051f159333/README.md",
+          "web_url": "https://github.com/microsoft/agent-framework/blob/2c49f50cf08ebb6c1687146336f039051f159333/README.md",
+          "local_path": "docs/research/sources/microsoft__agent-framework/README.md",
+          "sha256": "5f1783b1cbc09d64a69465091c68ab6ea8b18546987c5e0bb23ea221a0ed70d7",
+          "bytes": 13312
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/microsoft/agent-framework/2c49f50cf08ebb6c1687146336f039051f159333/LICENSE",
+          "web_url": "https://github.com/microsoft/agent-framework/blob/2c49f50cf08ebb6c1687146336f039051f159333/LICENSE",
+          "local_path": "docs/research/sources/microsoft__agent-framework/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "bytes": 1141
+        }
+      ],
+      "errors": [],
+      "head_sha": "2c49f50cf08ebb6c1687146336f039051f159333",
+      "head_commit_author_date": "Fri, 4 Sep 2026 21:08:04 +0000",
+      "commit_date_source": "https://github.com/microsoft/agent-framework/commit/2c49f50cf08ebb6c1687146336f039051f159333.patch"
+    },
+    {
+      "repo": "crewAIInc/crewAI",
+      "group": "durable_agent",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "observed_at": "2026-09-05T06:06:47.484451+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/crewAIInc/crewAI/143e902178a07d0f13f9db2308f983aaacaaf0f8/README.md",
+          "web_url": "https://github.com/crewAIInc/crewAI/blob/143e902178a07d0f13f9db2308f983aaacaaf0f8/README.md",
+          "local_path": "docs/research/sources/crewAIInc__crewAI/README.md",
+          "sha256": "b0f39843f93676b12883d5821a34555e2146e62bd2c42dc12733fc41222de013",
+          "bytes": 32755
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/crewAIInc/crewAI/143e902178a07d0f13f9db2308f983aaacaaf0f8/LICENSE",
+          "web_url": "https://github.com/crewAIInc/crewAI/blob/143e902178a07d0f13f9db2308f983aaacaaf0f8/LICENSE",
+          "local_path": "docs/research/sources/crewAIInc__crewAI/LICENSE",
+          "sha256": "28868731966f4aa37f02879839aabc797137e27ddde4e274ef9cf965f9a71774",
+          "bytes": 1055
+        }
+      ],
+      "errors": [],
+      "head_sha": "143e902178a07d0f13f9db2308f983aaacaaf0f8",
+      "head_commit_author_date": "Fri, 4 Sep 2026 13:26:07 -0700",
+      "commit_date_source": "https://github.com/crewAIInc/crewAI/commit/143e902178a07d0f13f9db2308f983aaacaaf0f8.patch"
+    },
+    {
+      "repo": "foxglove/mcap",
+      "group": "data_memory",
+      "url": "https://github.com/foxglove/mcap",
+      "observed_at": "2026-09-05T06:06:47.582355+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/foxglove/mcap/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515/README.md",
+          "web_url": "https://github.com/foxglove/mcap/blob/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515/README.md",
+          "local_path": "docs/research/sources/foxglove__mcap/README.md",
+          "sha256": "d666ab2171490ce69d7b8aa2f6c850fcdf1a310a8d88424e07cfb81e5f5dfcab",
+          "bytes": 3759
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/foxglove/mcap/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515/LICENSE",
+          "web_url": "https://github.com/foxglove/mcap/blob/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515/LICENSE",
+          "local_path": "docs/research/sources/foxglove__mcap/LICENSE",
+          "sha256": "da11235665c17d4c1634072dae92b8ba1b38d6fdde2ccf19a6bbede33253f58d",
+          "bytes": 1077
+        }
+      ],
+      "errors": [],
+      "head_sha": "75aa8c8329fcdb2c5c86c2ba019b785f63fb7515",
+      "head_commit_author_date": "Tue, 1 Sep 2026 15:32:48 -0400",
+      "commit_date_source": "https://github.com/foxglove/mcap/commit/75aa8c8329fcdb2c5c86c2ba019b785f63fb7515.patch"
+    },
+    {
+      "repo": "ros2/rosbag2",
+      "group": "data_memory",
+      "url": "https://github.com/ros2/rosbag2",
+      "observed_at": "2026-09-05T06:06:47.664382+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/ros2/rosbag2/96eddfa7f5ea42ac75c4a882893d89ac969532f9/README.md",
+          "web_url": "https://github.com/ros2/rosbag2/blob/96eddfa7f5ea42ac75c4a882893d89ac969532f9/README.md",
+          "local_path": "docs/research/sources/ros2__rosbag2/README.md",
+          "sha256": "f98bba9c707a9d19273ae183ec07a7e0d46da1ffd830d9d6618c216cc8e525d9",
+          "bytes": 39691
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/ros2/rosbag2/96eddfa7f5ea42ac75c4a882893d89ac969532f9/LICENSE",
+          "web_url": "https://github.com/ros2/rosbag2/blob/96eddfa7f5ea42ac75c4a882893d89ac969532f9/LICENSE",
+          "local_path": "docs/research/sources/ros2__rosbag2/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ],
+      "errors": [],
+      "head_sha": "96eddfa7f5ea42ac75c4a882893d89ac969532f9",
+      "head_commit_author_date": "Fri, 4 Sep 2026 10:26:53 +0200",
+      "commit_date_source": "https://github.com/ros2/rosbag2/commit/96eddfa7f5ea42ac75c4a882893d89ac969532f9.patch"
+    },
+    {
+      "repo": "rerun-io/rerun",
+      "group": "data_memory",
+      "url": "https://github.com/rerun-io/rerun",
+      "observed_at": "2026-09-05T06:06:47.938467+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/rerun-io/rerun/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/README.md",
+          "web_url": "https://github.com/rerun-io/rerun/blob/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/README.md",
+          "local_path": "docs/research/sources/rerun-io__rerun/README.md",
+          "sha256": "a017a1d85e73a738eec0a94b9ab524fc0d0daabda0de8191f71a50fafdd6e573",
+          "bytes": 12081
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE-MIT",
+          "source_url": "https://raw.githubusercontent.com/rerun-io/rerun/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/LICENSE-MIT",
+          "web_url": "https://github.com/rerun-io/rerun/blob/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/LICENSE-MIT",
+          "local_path": "docs/research/sources/rerun-io__rerun/LICENSE-MIT",
+          "sha256": "7d3db59468f92d70f176170deacf8ac6858b6d78010a30ae01eba42bac302940",
+          "bytes": 1087
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE-APACHE",
+          "source_url": "https://raw.githubusercontent.com/rerun-io/rerun/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/LICENSE-APACHE",
+          "web_url": "https://github.com/rerun-io/rerun/blob/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/LICENSE-APACHE",
+          "local_path": "docs/research/sources/rerun-io__rerun/LICENSE-APACHE",
+          "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90",
+          "bytes": 10850
+        }
+      ],
+      "errors": [
+        "license: HTTP Error 404: Not Found"
+      ],
+      "head_sha": "655ac442d2a3aa3d6ad8ffbe906e74d125bf9702",
+      "head_commit_author_date": "Fri, 4 Sep 2026 15:07:19 +0000",
+      "commit_date_source": "https://github.com/rerun-io/rerun/commit/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702.patch"
+    },
+    {
+      "repo": "zarr-developers/zarr-python",
+      "group": "data_memory",
+      "url": "https://github.com/zarr-developers/zarr-python",
+      "observed_at": "2026-09-05T06:06:48.162264+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/zarr-developers/zarr-python/a50d791c5a02319a451db024552d15e67732dbd1/README.md",
+          "web_url": "https://github.com/zarr-developers/zarr-python/blob/a50d791c5a02319a451db024552d15e67732dbd1/README.md",
+          "local_path": "docs/research/sources/zarr-developers__zarr-python/README.md",
+          "sha256": "2cf2e111cb92b2b6d6236bca9629e32d901e88234a2bb05b225aede20f817b28",
+          "bytes": 3533
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE.txt",
+          "source_url": "https://raw.githubusercontent.com/zarr-developers/zarr-python/a50d791c5a02319a451db024552d15e67732dbd1/LICENSE.txt",
+          "web_url": "https://github.com/zarr-developers/zarr-python/blob/a50d791c5a02319a451db024552d15e67732dbd1/LICENSE.txt",
+          "local_path": "docs/research/sources/zarr-developers__zarr-python/LICENSE.txt",
+          "sha256": "1d7756f33d3da20d53b162c2eb9beba91ee0dc1aeb4659728b6dc8f2f75941cb",
+          "bytes": 1124
+        }
+      ],
+      "errors": [],
+      "head_sha": "a50d791c5a02319a451db024552d15e67732dbd1",
+      "head_commit_author_date": "Fri, 4 Sep 2026 18:02:18 +0200",
+      "commit_date_source": "https://github.com/zarr-developers/zarr-python/commit/a50d791c5a02319a451db024552d15e67732dbd1.patch"
+    },
+    {
+      "repo": "lancedb/lancedb",
+      "group": "data_memory",
+      "url": "https://github.com/lancedb/lancedb",
+      "observed_at": "2026-09-05T06:06:49.481561+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/lancedb/lancedb/8c9c5c5a5f98b789d1f7a6a0943c37e6e144d14d/README.md",
+          "web_url": "https://github.com/lancedb/lancedb/blob/8c9c5c5a5f98b789d1f7a6a0943c37e6e144d14d/README.md",
+          "local_path": "docs/research/sources/lancedb__lancedb/README.md",
+          "sha256": "c4dd477c2183dc83c57a74f75915397dadd5993e4ce2f55c237d34188a0ec1ca",
+          "bytes": 5801
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/lancedb/lancedb/8c9c5c5a5f98b789d1f7a6a0943c37e6e144d14d/LICENSE",
+          "web_url": "https://github.com/lancedb/lancedb/blob/8c9c5c5a5f98b789d1f7a6a0943c37e6e144d14d/LICENSE",
+          "local_path": "docs/research/sources/lancedb__lancedb/LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "bytes": 11357
+        }
+      ],
+      "errors": [],
+      "head_sha": "8c9c5c5a5f98b789d1f7a6a0943c37e6e144d14d",
+      "head_commit_author_date": "Thu, 3 Sep 2026 23:52:15 -0700",
+      "commit_date_source": "https://github.com/lancedb/lancedb/commit/8c9c5c5a5f98b789d1f7a6a0943c37e6e144d14d.patch"
+    },
+    {
+      "repo": "qdrant/qdrant",
+      "group": "data_memory",
+      "url": "https://github.com/qdrant/qdrant",
+      "observed_at": "2026-09-05T06:06:49.553794+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/README.md",
+          "web_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/README.md",
+          "local_path": "docs/research/sources/qdrant__qdrant/README.md",
+          "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4",
+          "bytes": 11560
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+          "web_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+          "local_path": "docs/research/sources/qdrant__qdrant/LICENSE",
+          "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f",
+          "bytes": 11351
+        }
+      ],
+      "errors": [],
+      "head_sha": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+      "head_commit_author_date": "Thu, 3 Sep 2026 14:36:18 +0200",
+      "commit_date_source": "https://github.com/qdrant/qdrant/commit/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de.patch"
+    },
+    {
+      "repo": "MIT-SPARK/Hydra",
+      "group": "data_memory",
+      "url": "https://github.com/MIT-SPARK/Hydra",
+      "observed_at": "2026-09-05T06:06:49.618981+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/MIT-SPARK/Hydra/2e58a35baea629eee8838409771876acff015daf/README.md",
+          "web_url": "https://github.com/MIT-SPARK/Hydra/blob/2e58a35baea629eee8838409771876acff015daf/README.md",
+          "local_path": "docs/research/sources/MIT-SPARK__Hydra/README.md",
+          "sha256": "1dc5c76afe2333383d07b9abe5b2a37202655a422687a195121f6113363cd98d",
+          "bytes": 6329
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/MIT-SPARK/Hydra/2e58a35baea629eee8838409771876acff015daf/LICENSE",
+          "web_url": "https://github.com/MIT-SPARK/Hydra/blob/2e58a35baea629eee8838409771876acff015daf/LICENSE",
+          "local_path": "docs/research/sources/MIT-SPARK__Hydra/LICENSE",
+          "sha256": "3e35425d350360b5c68b8ec42db32775e7293a8953b104fb973ff40dbe2b4991",
+          "bytes": 1291
+        }
+      ],
+      "errors": [],
+      "head_sha": "2e58a35baea629eee8838409771876acff015daf",
+      "head_commit_author_date": "Wed, 14 Jan 2026 10:47:11 -0500",
+      "commit_date_source": "https://github.com/MIT-SPARK/Hydra/commit/2e58a35baea629eee8838409771876acff015daf.patch"
+    },
+    {
+      "repo": "MIT-SPARK/Spark-DSG",
+      "group": "data_memory",
+      "url": "https://github.com/MIT-SPARK/Spark-DSG",
+      "observed_at": "2026-09-05T06:06:50.127562+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/MIT-SPARK/Spark-DSG/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64/README.md",
+          "web_url": "https://github.com/MIT-SPARK/Spark-DSG/blob/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64/README.md",
+          "local_path": "docs/research/sources/MIT-SPARK__Spark-DSG/README.md",
+          "sha256": "6ebcedfd801c7f336aebf9937100b98c15045e900f3279da430b59ec7d536cec",
+          "bytes": 2893
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/MIT-SPARK/Spark-DSG/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64/LICENSE",
+          "web_url": "https://github.com/MIT-SPARK/Spark-DSG/blob/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64/LICENSE",
+          "local_path": "docs/research/sources/MIT-SPARK__Spark-DSG/LICENSE",
+          "sha256": "3e35425d350360b5c68b8ec42db32775e7293a8953b104fb973ff40dbe2b4991",
+          "bytes": 1291
+        }
+      ],
+      "errors": [],
+      "head_sha": "3c40997e4ae739c56ed3cdd6ef5e882d403d8b64",
+      "head_commit_author_date": "Sat, 11 Apr 2026 14:31:34 -0400",
+      "commit_date_source": "https://github.com/MIT-SPARK/Spark-DSG/commit/3c40997e4ae739c56ed3cdd6ef5e882d403d8b64.patch"
+    },
+    {
+      "repo": "concept-graphs/concept-graphs",
+      "group": "data_memory",
+      "url": "https://github.com/concept-graphs/concept-graphs",
+      "observed_at": "2026-09-05T06:06:50.445697+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/concept-graphs/concept-graphs/93277a02bd89171f8121e84203121cf7af9ebb5d/README.md",
+          "web_url": "https://github.com/concept-graphs/concept-graphs/blob/93277a02bd89171f8121e84203121cf7af9ebb5d/README.md",
+          "local_path": "docs/research/sources/concept-graphs__concept-graphs/README.md",
+          "sha256": "96a3f679dc57042b41772d59c88ec569fc2226d6db253abf00fb273f41e83032",
+          "bytes": 20640
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/concept-graphs/concept-graphs/93277a02bd89171f8121e84203121cf7af9ebb5d/LICENSE",
+          "web_url": "https://github.com/concept-graphs/concept-graphs/blob/93277a02bd89171f8121e84203121cf7af9ebb5d/LICENSE",
+          "local_path": "docs/research/sources/concept-graphs__concept-graphs/LICENSE",
+          "sha256": "bbb50dd0e42f0180461db2088dc07e6374d3ad4fe6961167b07093000894a509",
+          "bytes": 1071
+        }
+      ],
+      "errors": [],
+      "head_sha": "93277a02bd89171f8121e84203121cf7af9ebb5d",
+      "head_commit_author_date": "Wed, 15 Jan 2025 11:12:09 -0500",
+      "commit_date_source": "https://github.com/concept-graphs/concept-graphs/commit/93277a02bd89171f8121e84203121cf7af9ebb5d.patch"
+    },
+    {
+      "repo": "isl-org/Open3D",
+      "group": "data_memory",
+      "url": "https://github.com/isl-org/Open3D",
+      "observed_at": "2026-09-05T06:06:51.401994+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/isl-org/Open3D/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda/README.md",
+          "web_url": "https://github.com/isl-org/Open3D/blob/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda/README.md",
+          "local_path": "docs/research/sources/isl-org__Open3D/README.md",
+          "sha256": "9e5efafff825f967ac5eaa51daf17dbae9220c14215e48fe5e85337f6f2462cf",
+          "bytes": 6673
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/isl-org/Open3D/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda/LICENSE",
+          "web_url": "https://github.com/isl-org/Open3D/blob/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda/LICENSE",
+          "local_path": "docs/research/sources/isl-org__Open3D/LICENSE",
+          "sha256": "e2105d24aa1dae0fb5450f5b974dbf369b44d3c91a100d1b134922edb0647175",
+          "bytes": 1139
+        }
+      ],
+      "errors": [],
+      "head_sha": "cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda",
+      "head_commit_author_date": "Mon, 31 Aug 2026 02:38:30 +0900",
+      "commit_date_source": "https://github.com/isl-org/Open3D/commit/cf1516ab6d0095903a4ea0ff9a6e64e3121b6eda.patch"
+    },
+    {
+      "repo": "OctoMap/octomap",
+      "group": "data_memory",
+      "url": "https://github.com/OctoMap/octomap",
+      "observed_at": "2026-09-05T06:06:51.435070+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/OctoMap/octomap/21a8871d7bbd0aa13c73bbdb4e128821d8279af4/README.md",
+          "web_url": "https://github.com/OctoMap/octomap/blob/21a8871d7bbd0aa13c73bbdb4e128821d8279af4/README.md",
+          "local_path": "docs/research/sources/OctoMap__octomap/README.md",
+          "sha256": "64da9308bd1d94841e4f5bb88d6316c52ee83c8641ca0b7924961abff76c0276",
+          "bytes": 2634
+        },
+        {
+          "kind": "license",
+          "upstream_path": "octomap/LICENSE.txt",
+          "source_url": "https://raw.githubusercontent.com/OctoMap/octomap/21a8871d7bbd0aa13c73bbdb4e128821d8279af4/octomap/LICENSE.txt",
+          "web_url": "https://github.com/OctoMap/octomap/blob/21a8871d7bbd0aa13c73bbdb4e128821d8279af4/octomap/LICENSE.txt",
+          "local_path": "docs/research/sources/OctoMap__octomap/octomap/LICENSE.txt",
+          "sha256": "8a9ce1eadc1dd0fc4ee57a6016cb40eddc7003d2da824c58d55463f2b9ceb4ca",
+          "bytes": 1698
+        }
+      ],
+      "errors": [
+        "license: HTTP Error 404: Not Found"
+      ],
+      "head_sha": "21a8871d7bbd0aa13c73bbdb4e128821d8279af4",
+      "head_commit_author_date": "Sun, 2 Aug 2026 19:47:50 +0200",
+      "commit_date_source": "https://github.com/OctoMap/octomap/commit/21a8871d7bbd0aa13c73bbdb4e128821d8279af4.patch"
+    },
+    {
+      "repo": "nvidia-isaac/nvblox",
+      "group": "data_memory",
+      "url": "https://github.com/nvidia-isaac/nvblox",
+      "observed_at": "2026-09-05T06:06:51.526817+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/nvidia-isaac/nvblox/24eee4948768682fa1ffb969b881efee4fca29c2/README.md",
+          "web_url": "https://github.com/nvidia-isaac/nvblox/blob/24eee4948768682fa1ffb969b881efee4fca29c2/README.md",
+          "local_path": "docs/research/sources/nvidia-isaac__nvblox/README.md",
+          "sha256": "ab681799fe04e7bd66c03f48a6708914e7f1f60d0d2b5dbf816a5166e64adefa",
+          "bytes": 1075
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE.md",
+          "source_url": "https://raw.githubusercontent.com/nvidia-isaac/nvblox/24eee4948768682fa1ffb969b881efee4fca29c2/LICENSE.md",
+          "web_url": "https://github.com/nvidia-isaac/nvblox/blob/24eee4948768682fa1ffb969b881efee4fca29c2/LICENSE.md",
+          "local_path": "docs/research/sources/nvidia-isaac__nvblox/LICENSE.md",
+          "sha256": "14057ce18486761049d17e6f1ae2c1335da887d47b668544934050e8b02543e1",
+          "bytes": 13048
+        }
+      ],
+      "errors": [],
+      "head_sha": "24eee4948768682fa1ffb969b881efee4fca29c2",
+      "head_commit_author_date": "Fri, 3 Jul 2026 09:27:36 +0200",
+      "commit_date_source": "https://github.com/nvidia-isaac/nvblox/commit/24eee4948768682fa1ffb969b881efee4fca29c2.patch"
+    },
+    {
+      "repo": "getzep/graphiti",
+      "group": "data_memory",
+      "url": "https://github.com/getzep/graphiti",
+      "observed_at": "2026-09-05T06:06:51.743977+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/getzep/graphiti/547422865cca9fb5a82915c074d899428c145ff4/README.md",
+          "web_url": "https://github.com/getzep/graphiti/blob/547422865cca9fb5a82915c074d899428c145ff4/README.md",
+          "local_path": "docs/research/sources/getzep__graphiti/README.md",
+          "sha256": "ce1628c02b3c6fd5b59e3e48dc61c958f07824033b4d0b989bb8d433932b6b3f",
+          "bytes": 28280
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/getzep/graphiti/547422865cca9fb5a82915c074d899428c145ff4/LICENSE",
+          "web_url": "https://github.com/getzep/graphiti/blob/547422865cca9fb5a82915c074d899428c145ff4/LICENSE",
+          "local_path": "docs/research/sources/getzep__graphiti/LICENSE",
+          "sha256": "2825300b20d7b951209835a4a331f29e24725a39d65168e4b831df53aa372650",
+          "bytes": 11325
+        }
+      ],
+      "errors": [],
+      "head_sha": "547422865cca9fb5a82915c074d899428c145ff4",
+      "head_commit_author_date": "Fri, 4 Sep 2026 17:52:52 +0000",
+      "commit_date_source": "https://github.com/getzep/graphiti/commit/547422865cca9fb5a82915c074d899428c145ff4.patch"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "group": "data_memory",
+      "url": "https://github.com/mem0ai/mem0",
+      "observed_at": "2026-09-05T06:06:52.406251+00:00",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/mem0ai/mem0/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3/README.md",
+          "web_url": "https://github.com/mem0ai/mem0/blob/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3/README.md",
+          "local_path": "docs/research/sources/mem0ai__mem0/README.md",
+          "sha256": "7509347d34a767a2ef37ceb6cf6c714de9e8d84fe66ad5eea92bbae824a8fbeb",
+          "bytes": 11914
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/mem0ai/mem0/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3/LICENSE",
+          "web_url": "https://github.com/mem0ai/mem0/blob/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3/LICENSE",
+          "local_path": "docs/research/sources/mem0ai__mem0/LICENSE",
+          "sha256": "0bbcbe931c353293a2fafce08326181dfeea0e568c566afd4ce8337a70f5e219",
+          "bytes": 11349
+        }
+      ],
+      "errors": [],
+      "head_sha": "dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3",
+      "head_commit_author_date": "Fri, 4 Sep 2026 20:32:23 +0530",
+      "commit_date_source": "https://github.com/mem0ai/mem0/commit/dae67f74f5cc7bf138c7d7d6f9cec5ce4b4373b3.patch"
+    },
+    {
+      "repo": "RobotLabLTH/SkiROS2",
+      "group": "robot_frameworks",
+      "url": "https://github.com/RobotLabLTH/SkiROS2",
+      "observed_at": "2026-09-05T06:12:23.158222+00:00",
+      "head_sha": "c4438e71a25978b14c30191539e4de68943fe863",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/RobotLabLTH/SkiROS2/c4438e71a25978b14c30191539e4de68943fe863/README.md",
+          "web_url": "https://github.com/RobotLabLTH/SkiROS2/blob/c4438e71a25978b14c30191539e4de68943fe863/README.md",
+          "local_path": "docs/research/sources/RobotLabLTH__SkiROS2/README.md",
+          "sha256": "aef3368cbeacd9c0180d357a881aaace1274f280c580361b407cd5843dbc19bd",
+          "bytes": 6325
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE.md",
+          "source_url": "https://raw.githubusercontent.com/RobotLabLTH/SkiROS2/c4438e71a25978b14c30191539e4de68943fe863/LICENSE.md",
+          "web_url": "https://github.com/RobotLabLTH/SkiROS2/blob/c4438e71a25978b14c30191539e4de68943fe863/LICENSE.md",
+          "local_path": "docs/research/sources/RobotLabLTH__SkiROS2/LICENSE.md",
+          "sha256": "13e6675ee6f20f6fef85525955502144b4642db77b26887fbfa059627c20af3c",
+          "bytes": 8364
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "skiros2_common/src/skiros2_common/core/abstract_skill.py",
+          "source_url": "https://raw.githubusercontent.com/RobotLabLTH/SkiROS2/c4438e71a25978b14c30191539e4de68943fe863/skiros2_common/src/skiros2_common/core/abstract_skill.py",
+          "web_url": "https://github.com/RobotLabLTH/SkiROS2/blob/c4438e71a25978b14c30191539e4de68943fe863/skiros2_common/src/skiros2_common/core/abstract_skill.py",
+          "local_path": "docs/research/sources/RobotLabLTH__SkiROS2/skiros2_common/src/skiros2_common/core/abstract_skill.py",
+          "sha256": "3c46375e7c248f600c7187e405af926cce1e5eaa9e19c83cd9a785de0dec6eac",
+          "bytes": 20069
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "skiros2_skill/src/skiros2_skill/core/processors.py",
+          "source_url": "https://raw.githubusercontent.com/RobotLabLTH/SkiROS2/c4438e71a25978b14c30191539e4de68943fe863/skiros2_skill/src/skiros2_skill/core/processors.py",
+          "web_url": "https://github.com/RobotLabLTH/SkiROS2/blob/c4438e71a25978b14c30191539e4de68943fe863/skiros2_skill/src/skiros2_skill/core/processors.py",
+          "local_path": "docs/research/sources/RobotLabLTH__SkiROS2/skiros2_skill/src/skiros2_skill/core/processors.py",
+          "sha256": "a52e62fd7ca8532a11bd91784f004fb8008098e009c445304784a621db8b3ecf",
+          "bytes": 6296
+        }
+      ],
+      "errors": [
+        "LICENSE: HTTP Error 404: Not Found"
+      ],
+      "head_commit_author_date": "Tue, 24 Sep 2024 20:30:57 +0000",
+      "commit_date_source": "https://github.com/RobotLabLTH/SkiROS2/commit/c4438e71a25978b14c30191539e4de68943fe863.patch",
+      "default_branch": "master",
+      "head_commit_committer_date": "2024-09-24T22:37:39+02:00"
+    },
+    {
+      "repo": "automatika-robotics/sugarcoat",
+      "group": "robot_frameworks",
+      "url": "https://github.com/automatika-robotics/sugarcoat",
+      "observed_at": "2026-09-05T06:17:34.659095+00:00",
+      "head_sha": "d61cb39db0ebf8bd4386c82fb9a5181656873ad7",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/automatika-robotics/sugarcoat/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/README.md",
+          "web_url": "https://github.com/automatika-robotics/sugarcoat/blob/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/README.md",
+          "local_path": "docs/research/sources/automatika-robotics__sugarcoat/README.md",
+          "sha256": "16d91836abbd42f82bf9cf3708413ac2e46a5dcf1e99daf7d59fcc4f2fe31c59",
+          "bytes": 8729
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/automatika-robotics/sugarcoat/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/LICENSE",
+          "web_url": "https://github.com/automatika-robotics/sugarcoat/blob/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/LICENSE",
+          "local_path": "docs/research/sources/automatika-robotics__sugarcoat/LICENSE",
+          "sha256": "5e73597f4cf6a051df304ea0c0d0923d2ba7276ee74fc69454904e2273a44a65",
+          "bytes": 1076
+        },
+        {
+          "kind": "implementation",
+          "upstream_path": "ros_sugar/core/fallbacks.py",
+          "source_url": "https://raw.githubusercontent.com/automatika-robotics/sugarcoat/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/ros_sugar/core/fallbacks.py",
+          "web_url": "https://github.com/automatika-robotics/sugarcoat/blob/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/ros_sugar/core/fallbacks.py",
+          "local_path": "docs/research/sources/automatika-robotics__sugarcoat/ros_sugar/core/fallbacks.py",
+          "sha256": "12a653ac6394898d1cf7b5638c7698e88a93d6a61c9d3ec14a2f625ebfdcc085",
+          "bytes": 12581
+        }
+      ],
+      "errors": [],
+      "default_branch": "main",
+      "head_commit_committer_date": "2026-08-15T19:20:50+08:00"
+    },
+    {
+      "repo": "automatika-robotics/emos",
+      "group": "robot_frameworks",
+      "url": "https://github.com/automatika-robotics/emos",
+      "observed_at": "2026-09-05T06:17:34.662655+00:00",
+      "head_sha": "31b82958e7a1646b9af606184518333c97290f58",
+      "files": [
+        {
+          "kind": "readme",
+          "upstream_path": "README.md",
+          "source_url": "https://raw.githubusercontent.com/automatika-robotics/emos/31b82958e7a1646b9af606184518333c97290f58/README.md",
+          "web_url": "https://github.com/automatika-robotics/emos/blob/31b82958e7a1646b9af606184518333c97290f58/README.md",
+          "local_path": "docs/research/sources/automatika-robotics__emos/README.md",
+          "sha256": "e4513b9a9d560069551bee2de4bad3b333736d12cb55db45fe6a3eddc2db0d31",
+          "bytes": 12519
+        },
+        {
+          "kind": "license",
+          "upstream_path": "LICENSE",
+          "source_url": "https://raw.githubusercontent.com/automatika-robotics/emos/31b82958e7a1646b9af606184518333c97290f58/LICENSE",
+          "web_url": "https://github.com/automatika-robotics/emos/blob/31b82958e7a1646b9af606184518333c97290f58/LICENSE",
+          "local_path": "docs/research/sources/automatika-robotics__emos/LICENSE",
+          "sha256": "5e73597f4cf6a051df304ea0c0d0923d2ba7276ee74fc69454904e2273a44a65",
+          "bytes": 1076
+        }
+      ],
+      "errors": [],
+      "default_branch": "main",
+      "head_commit_committer_date": "2026-06-23T13:07:10+02:00"
+    }
+  ]
+}

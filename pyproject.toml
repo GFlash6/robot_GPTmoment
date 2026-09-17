@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robot-agent-framework"
+version = "0.1.0"
+description = "Evidence-based robot task orchestration and multimodal asset memory"
+requires-python = ">=3.10"
+dependencies = ["dbos==2.31.0", "py-trees==2.5.0", "mcap==1.4.0", "jsonschema==4.26.0", "httpx==0.28.1"]
+
+[project.scripts]
+robot-agent = "robot_agent.cli:main"
+robot-agent-observer = "robot_agent_observer.server:main"
+
+[tool.setuptools.packages.find]
+include = ["robot_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live_model: calls the configured external model and consumes API quota"]

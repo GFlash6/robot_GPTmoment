@@ -1,0 +1,41 @@
+{
+  "repo": "rerun-io/rerun",
+  "group": "data_memory",
+  "url": "https://github.com/rerun-io/rerun",
+  "observed_at": "2026-09-05T06:06:47.938467+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/rerun-io/rerun/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/README.md",
+      "web_url": "https://github.com/rerun-io/rerun/blob/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/README.md",
+      "local_path": "docs/research/sources/rerun-io__rerun/README.md",
+      "sha256": "a017a1d85e73a738eec0a94b9ab524fc0d0daabda0de8191f71a50fafdd6e573",
+      "bytes": 12081
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE-MIT",
+      "source_url": "https://raw.githubusercontent.com/rerun-io/rerun/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/LICENSE-MIT",
+      "web_url": "https://github.com/rerun-io/rerun/blob/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/LICENSE-MIT",
+      "local_path": "docs/research/sources/rerun-io__rerun/LICENSE-MIT",
+      "sha256": "7d3db59468f92d70f176170deacf8ac6858b6d78010a30ae01eba42bac302940",
+      "bytes": 1087
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE-APACHE",
+      "source_url": "https://raw.githubusercontent.com/rerun-io/rerun/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/LICENSE-APACHE",
+      "web_url": "https://github.com/rerun-io/rerun/blob/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702/LICENSE-APACHE",
+      "local_path": "docs/research/sources/rerun-io__rerun/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90",
+      "bytes": 10850
+    }
+  ],
+  "errors": [
+    "license: HTTP Error 404: Not Found"
+  ],
+  "head_sha": "655ac442d2a3aa3d6ad8ffbe906e74d125bf9702",
+  "head_commit_author_date": "Fri, 4 Sep 2026 15:07:19 +0000",
+  "commit_date_source": "https://github.com/rerun-io/rerun/commit/655ac442d2a3aa3d6ad8ffbe906e74d125bf9702.patch"
+}

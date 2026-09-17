@@ -1,0 +1,1175 @@
+{
+  "format": "momo-workspace",
+  "version": 2,
+  "workspace": {
+    "key": "workspace-robot-agent-framework",
+    "title": "机器人 Agent 框架",
+    "revision": 14,
+    "updatedAt": "2026-09-07T03:25:40.704Z",
+    "confirmedBy": "momo-skill",
+    "confirmedAt": "2026-09-06T06:26:00.748Z"
+  },
+  "snapshot": {
+    "schemaVersion": 4,
+    "objects": [
+      {
+        "id": "project-robot-agent-framework",
+        "projectId": "project-robot-agent-framework",
+        "type": "project",
+        "schemaVersion": 1,
+        "title": "机器人 Agent 框架",
+        "lifecycle": "in_progress",
+        "summary": "第一版框架及只读 UI 可运行；当前按 BUILD_ROADMAP 阶段 1 推进。qwen3.8-max 已通过真实问答和两步计划契约校验，但计划执行闭环尚未完成。",
+        "properties": {
+          "workspaceKey": "workspace-robot-agent-framework",
+          "ownership": "owned",
+          "workspaceRole": "primary",
+          "detailPolicy": "full",
+          "phase": "implementation",
+          "evidenceStatus": "Confirmed",
+          "statusSource": "docs/PROJECT_STATUS.md",
+          "statusSourceFingerprint": "f8257837970b869f28e61db872c35819221f9b735ef3247210702dbe751aab3b",
+          "statusCheckSource": "docs/validation/status-check.json",
+          "openQuestionsStatusSource": ".momo/intake/open-questions-status.json",
+          "roadmapSource": "docs/BUILD_ROADMAP.md",
+          "roadmapSourceFingerprint": "7785a9ed06b3e5be6209c5c42d7828c67d4b47110db3f1d1cb00febade261c25",
+          "currentBuildPhase": "phase-1-execution-authority-and-recovery"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-07T03:29:58.160Z"
+      },
+      {
+        "id": "goal",
+        "projectId": "project-robot-agent-framework",
+        "type": "outcome",
+        "schemaVersion": 1,
+        "title": "机器人 Agent 通用框架",
+        "lifecycle": "in_progress",
+        "summary": "通用机器人 Agent 框架部分完成；继续完善控制权隔离、补偿、地图失效、记忆与存储策略等，并完成实际模型/机器人验收。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+      },
+      {
+        "id": "single",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "单机器人多任务与多资源",
+        "lifecycle": "in_progress",
+        "summary": "单机器人任务与容量账本已实现；真实资源清单、跨资源约束及控制端隔离待完善，多机器人只预留接口。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md",
+          "openQuestionIds": [
+            "Q05"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+      },
+      {
+        "id": "orchestration",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "任务分解、编排、技能、恢复与打断",
+        "lifecycle": "in_progress",
+        "summary": "DAG、fallback、重规划和打断已有第一版；任务族验证技能、补偿、地图失效重校验与行为后端扩展仍待完善。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md",
+          "openQuestionIds": [
+            "Q04",
+            "R04",
+            "R08"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+      },
+      {
+        "id": "memory",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "多模态数据与地图记忆",
+        "lifecycle": "in_progress",
+        "summary": "多模态资产目录与记录管道已实现；实际输入、地图对齐/失效、分类/合并/遗忘、容量与检索分层仍待完善。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md",
+          "openQuestionIds": [
+            "Q09",
+            "Q10",
+            "Q11",
+            "R03",
+            "R08",
+            "R09",
+            "U03"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+      },
+      {
+        "id": "truth",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "实际返回与证据判定",
+        "lifecycle": "in_progress",
+        "summary": "真实返回、schema 和来源证据检查已有软件验证；机器人后置条件与独立目标验证仍缺真实验收。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md",
+          "openQuestionIds": [
+            "Q03"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+      },
+      {
+        "id": "research",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "开源资源广泛调研",
+        "lifecycle": "done",
+        "summary": "首轮 41 个仓库研究已完成，结论支持第一版组件组合。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/research/REPORT.md",
+          "researchReport": "docs/research/REPORT.md",
+          "sourceManifest": "docs/research/inventory.json"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "selection",
+        "projectId": "project-robot-agent-framework",
+        "type": "decision",
+        "schemaVersion": 1,
+        "title": "框架底座与复用组合",
+        "lifecycle": "done",
+        "summary": "第一版实际采用 DBOS、py_trees 条件链、MCAP、jsonschema 和 httpx；后续部署与深层复用仍待验证。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/ARCHITECTURE.md",
+          "proposal": "docs/research/REPORT.md",
+          "openQuestionIds": [
+            "Q13",
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R09",
+            "R10"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+      },
+      {
+        "id": "kernel",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "框架实现",
+        "lifecycle": "in_progress",
+        "summary": "第一版内核可运行；当前按路线图阶段 1 推进，历史版本契约已完成，下一项为控制权 fencing，之后是补偿和统一重试责任。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/VALIDATION.md",
+          "openQuestionIds": [
+            "Q13",
+            "R01",
+            "U02",
+            "U04"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
+          "roadmapSource": "docs/BUILD_ROADMAP.md",
+          "currentBuildPhase": "phase-1-execution-authority-and-recovery"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-06T16:19:06.511Z"
+      },
+      {
+        "id": "questions",
+        "projectId": "project-robot-agent-framework",
+        "type": "artifact",
+        "schemaVersion": 1,
+        "title": "模块待决问题台账",
+        "lifecycle": "in_progress",
+        "summary": "OPEN_QUESTIONS 保存 30 条问题原文；Q01 已取得真实问答和合法短计划证据，仍开放长程执行与自动重规划；U05 已关闭。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/OPEN_QUESTIONS.md",
+          "questionStatus": [
+            {
+              "id": "Q01",
+              "section": "待完善问题",
+              "module": "AI",
+              "sourceLine": 21,
+              "sourceText": "| AI | 使用哪个服务、模型、鉴权环境变量？ | 已确认显式 Chat Completions URL、`qwen3.8-max` 与 `API_KEY` 环境鉴权；实际响应和合法两步 DAG 已通过，长程计划、执行闭环和自动重规划仍待验收 | [模型规划记录](validation/model-planning-qwen3.8-max.json)；后续需长程执行与最终验证证据 |",
+              "question": "使用哪个服务、模型、鉴权环境变量？",
+              "state": "真实问答和两步计划已通过，待长程执行与重规划",
+              "objectIds": [
+                "model-adapter",
+                "verification"
+              ],
+              "closureEvidence": "已有实际端点/模型、真实问答、成功原始响应和合法短计划；仍需长程执行及有界自动重规划结果。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q02",
+              "section": "待完善问题",
+              "module": "技能",
+              "sourceLine": 22,
+              "sourceText": "| 技能 | 现有机器人服务如何反馈终态、取消、查询执行 ID？ | 已有 HTTP 执行/查询/取消协议及真实文件技能；固定能力契约，机器人和 ROS2 Action 适配仍待接入 | 真实服务接口和至少一项实际执行 |",
+              "question": "现有机器人服务如何反馈终态、取消、查询执行 ID？",
+              "state": "已实现协议，待机器人适配",
+              "objectIds": [
+                "core-execution",
+                "verification"
+              ],
+              "closureEvidence": "接入至少一项机器人技能，取得同执行 ID 的执行、查询、取消及终态证据。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q03",
+              "section": "待完善问题",
+              "module": "成功判定",
+              "sourceLine": 23,
+              "sourceText": "| 成功判定 | 导航/抓取等技能的可测后置条件是什么？ | 输出 JSON Schema、声明式结果检查、来源证据；HTTP 状态不算完成 | 适配器独立观测及测量阈值 |",
+              "question": "导航/抓取等技能的可测后置条件是什么？",
+              "state": "已实现校验框架，待任务条件",
+              "objectIds": [
+                "truth",
+                "verification"
+              ],
+              "closureEvidence": "定义独立可测后置条件、阈值与观测来源，并通过真实任务验证。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q04",
+              "section": "待完善问题",
+              "module": "任务目标",
+              "sourceLine": 24,
+              "sourceText": "| 任务目标 | 用户高层目标的独立完成验证技能是什么？ | 计划必须指定最终验证节点；所有必需步骤和验证节点成功才完成 | 各任务族的验证技能，不能把 LLM 自述当证据 |",
+              "question": "用户高层目标的独立完成验证技能是什么？",
+              "state": "已实现验证节点，待任务验证技能",
+              "objectIds": [
+                "orchestration",
+                "verification"
+              ],
+              "closureEvidence": "为任务族提供独立目标验证技能，实际执行全部必需步骤和验证节点。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q05",
+              "section": "待完善问题",
+              "module": "资源",
+              "sourceLine": 25,
+              "sourceText": "| 资源 | 底盘/双臂/夹爪/相机/GPU 的能力和容量？ | 配置资源容量，技能声明需求；机器人资源带 ID | 真机资源清单及跨资源约束 |",
+              "question": "底盘/双臂/夹爪/相机/GPU 的能力和容量？",
+              "state": "已实现容量账本，待资源配置",
+              "objectIds": [
+                "single",
+                "core-execution"
+              ],
+              "closureEvidence": "取得机器人资源清单、容量及跨资源约束，验证实际竞争和释放。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q06",
+              "section": "待完善问题",
+              "module": "打断",
+              "sourceLine": 26,
+              "sourceText": "| 打断 | 哪些技能可取消、可重入、可恢复？ | 暂停先取消活动技能，确认停止后才释放；仅可安全重入技能自动恢复 | 机械动作停止和持物状态证据 |",
+              "question": "哪些技能可取消、可重入、可恢复？",
+              "state": "已实现暂停恢复，待停止证据",
+              "objectIds": [
+                "core-execution",
+                "verification"
+              ],
+              "closureEvidence": "明确可取消/可重入/可恢复契约，取得机械停止及持物状态证据。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q07",
+              "section": "待完善问题",
+              "module": "紧急停止",
+              "sourceLine": 27,
+              "sourceText": "| 紧急停止 | 硬件急停接口和独立于 Agent 的安全链路？ | 软件 stop-all 不是硬件急停，结果未知时保留资源 | 硬件接口和停止回执 |",
+              "question": "硬件急停接口和独立于 Agent 的安全链路？",
+              "state": "待硬件接口与验收",
+              "objectIds": [
+                "verification"
+              ],
+              "closureEvidence": "明确独立硬件急停链路、接口及实际停止回执；软件取消不能关闭此项。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q08",
+              "section": "待完善问题",
+              "module": "恢复",
+              "sourceLine": 28,
+              "sourceText": "| 恢复 | 哪些副作用可补偿、哪些必须人工处理？ | 有界重试、契约兼容替代、持久化重规划；补偿以真实技能建模 | 技能恢复契约和补偿动作清单 |",
+              "question": "哪些副作用可补偿、哪些必须人工处理？",
+              "state": "部分实现，待补偿机制",
+              "objectIds": [
+                "core-execution"
+              ],
+              "closureEvidence": "定义并接入实际补偿技能、恢复前提和人工处理条件，验证副作用恢复。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q09",
+              "section": "待完善问题",
+              "module": "数据接入",
+              "sourceLine": 29,
+              "sourceText": "| 数据接入 | RGB/深度/点云流来源、频率、保存预算？ | 优先复用现有 ROS2 topic 和 MCAP，保持原始编码和元数据 | 真实 ROS2 topic、标定与数据样例 |",
+              "question": "RGB/深度/点云流来源、频率、保存预算？",
+              "state": "已实现记录通路，待实际输入",
+              "objectIds": [
+                "memory",
+                "multimodal-storage"
+              ],
+              "closureEvidence": "取得真实 topics、标定、频率和样本，核对录制字节与时空元数据。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q10",
+              "section": "待完善问题",
+              "module": "地图",
+              "sourceLine": 30,
+              "sourceText": "| 地图 | 不同地图如何对齐、版本更新及失效？ | 显式 frame、clock、版本、派生资产引用；不推断坐标变换 | 地图坐标系、TF 版本、生成算法版本 |",
+              "question": "不同地图如何对齐、版本更新及失效？",
+              "state": "已有版本元数据，待对齐与失效策略",
+              "objectIds": [
+                "memory",
+                "multimodal-storage"
+              ],
+              "closureEvidence": "明确地图/TF/算法版本关系，验证对齐和版本变更后的关联有效性。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q11",
+              "section": "待完善问题",
+              "module": "记忆",
+              "sourceLine": 31,
+              "sourceText": "| 记忆 | 对象合并、矛盾处理、遗忘和语义分类策略？ | 人工/算法提供分类，保存证据和有效时间，支持结构化与文本检索 | 经证据支持的分类器/实体合并策略 |",
+              "question": "对象合并、矛盾处理、遗忘和语义分类策略？",
+              "state": "已有目录检索，待语义策略",
+              "objectIds": [
+                "memory",
+                "multimodal-storage"
+              ],
+              "closureEvidence": "明确分类、矛盾、实体合并及遗忘策略，并用可追溯实际数据验证。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q12",
+              "section": "待完善问题",
+              "module": "存储",
+              "sourceLine": 32,
+              "sourceText": "| 存储 | 保存周期、磁盘额度、压缩、归档、隐私策略？ | MCAP、rosbag2 SQLite 录制及资产哈希目录已实现；DimOS memory 未集成，保留策略与容量控制待完善 | 数据预算与保留策略 |",
+              "question": "保存周期、磁盘额度、压缩、归档、隐私策略？",
+              "state": "部分实现，待保留与容量策略",
+              "objectIds": [
+                "multimodal-storage"
+              ],
+              "closureEvidence": "明确预算、保留周期、压缩归档及隐私规则，验证容量控制和清理。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "Q13",
+              "section": "待完善问题",
+              "module": "部署",
+              "sourceLine": 33,
+              "sourceText": "| 部署 | 多进程/多机器高可用是否进入下一版？ | 已采用 DBOS 本地 SQLite 和单 worker，实际进程被杀恢复已验证；Postgres、跨机器与高可用待验证 | 部署和吞吐要求 |",
+              "question": "多进程/多机器高可用是否进入下一版？",
+              "state": "本地单 worker 已验证，扩展待定",
+              "objectIds": [
+                "kernel",
+                "selection"
+              ],
+              "closureEvidence": "确定下一版部署范围，再验证所需 Postgres/高可用/跨机器与吞吐能力。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R01",
+              "section": "调研新增问题",
+              "module": "状态权威",
+              "sourceLine": 39,
+              "sourceText": "| 状态权威 | 已采用 DBOS 2.31.0；生产 Postgres 部署、吞吐和升级恢复仍待验证。 | 本地 SQLite 和真实工作进程恢复已验证；分布式数据库尚未验收 |",
+              "question": "已采用 DBOS 2.31.0；生产 Postgres 部署、吞吐和升级恢复仍待验证。",
+              "state": "已选 DBOS，本地通过，生产待验证",
+              "objectIds": [
+                "kernel",
+                "selection"
+              ],
+              "closureEvidence": "使用目标生产配置验证 Postgres、恢复、升级与实际吞吐。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R02",
+              "section": "调研新增问题",
+              "module": "版本",
+              "sourceLine": 40,
+              "sourceText": "| 版本 | 本机 OS/ROS2/Python 与各候选发布版能否兼容？ | 安装依赖解析、编译和实际消息通信；HEAD 不等于发行版 |",
+              "question": "本机 OS/ROS2/Python 与各候选发布版能否兼容？",
+              "state": "当前组合已有验证，候选兼容待核对",
+              "objectIds": [
+                "selection"
+              ],
+              "closureEvidence": "对实际选用版本完成依赖、安装/编译及真实消息通信检查。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R03",
+              "section": "调研新增问题",
+              "module": "复用粒度",
+              "sourceLine": 41,
+              "sourceText": "| 复用粒度 | DimOS memory 可否独立引入，是否需整个运行时？ | 依赖树、真实数据编解码和持久查询；MCAP store 只读限制 |",
+              "question": "DimOS memory 可否独立引入，是否需整个运行时？",
+              "state": "待独立复用评估",
+              "objectIds": [
+                "selection",
+                "memory"
+              ],
+              "closureEvidence": "检查 DimOS memory 依赖边界，完成真实数据读写/查询后决定是否引入。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R04",
+              "section": "调研新增问题",
+              "module": "行为后端",
+              "sourceLine": 42,
+              "sourceText": "| 行为后端 | 已采用 py_trees 结果条件链；是否需要完整行为树或 BT.CPP/ROS2 执行后端？ | 真实 action 结果、halt 超时与取消终态 |",
+              "question": "已采用 py_trees 结果条件链；是否需要完整行为树或 BT.CPP/ROS2 执行后端？",
+              "state": "已有条件链，完整行为后端待定",
+              "objectIds": [
+                "selection",
+                "orchestration"
+              ],
+              "closureEvidence": "根据实际技能需求决定是否扩展；采用时验证 action、halt 和取消终态。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R05",
+              "section": "调研新增问题",
+              "module": "资源协调",
+              "sourceLine": 43,
+              "sourceText": "| 资源协调 | 已有 SQLite 多资源原子分配；控制端如何隔离旧执行者？ | 真实并发和故障后的控制权验证；租约超时不是停机证明 |",
+              "question": "已有 SQLite 多资源原子分配；控制端如何隔离旧执行者？",
+              "state": "已有原子分配，控制端隔离待实现",
+              "objectIds": [
+                "core-execution"
+              ],
+              "closureEvidence": "实现控制端拒绝旧执行者，并以并发、重启和故障记录验证控制权。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R06",
+              "section": "调研新增问题",
+              "module": "重试归属",
+              "sourceLine": 44,
+              "sourceText": "| 重试归属 | 框架已有有界技能重试与重规划预算；接入驱动后如何避免各层重复重试？ | 明确一个权威重试预算；不可重入动作查询原执行 |",
+              "question": "框架已有有界技能重试与重规划预算；接入驱动后如何避免各层重复重试？",
+              "state": "已有框架预算，跨层归属待定义",
+              "objectIds": [
+                "core-execution",
+                "model-adapter"
+              ],
+              "closureEvidence": "明确驱动/行为/引擎/模型的重试归属，验证无重复副作用及查询原执行。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R07",
+              "section": "调研新增问题",
+              "module": "数据压力",
+              "sourceLine": 45,
+              "sourceText": "| 数据压力 | 录制与检索如何处理背压、磁盘满与数据保留？ | 实际传感器吞吐、丢帧记录与存储容量 |",
+              "question": "录制与检索如何处理背压、磁盘满与数据保留？",
+              "state": "待背压与容量故障处理",
+              "objectIds": [
+                "multimodal-storage"
+              ],
+              "closureEvidence": "明确背压、磁盘满、丢帧和保留行为，以实际负载和故障记录验证。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R08",
+              "section": "调研新增问题",
+              "module": "地图失效",
+              "sourceLine": 46,
+              "sourceText": "| 地图失效 | 重定位、回环及新地图版本如何使旧计划/记忆失效？ | 真实 TF/地图版本关系，重新校验策略 |",
+              "question": "重定位、回环及新地图版本如何使旧计划/记忆失效？",
+              "state": "待失效传播与重校验",
+              "objectIds": [
+                "memory",
+                "orchestration"
+              ],
+              "closureEvidence": "建立 TF/地图版本到计划和记忆的失效关系，并验证重定位/回环后的重校验。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R09",
+              "section": "调研新增问题",
+              "module": "记忆分层",
+              "sourceLine": 47,
+              "sourceText": "| 记忆分层 | 现有索引是否足够，何时需要向量库或场景图？ | 真实检索问题、延迟与数据规模，而非默认安装所有组件 |",
+              "question": "现有索引是否足够，何时需要向量库或场景图？",
+              "state": "已有文本索引，扩展待需求验证",
+              "objectIds": [
+                "memory",
+                "selection"
+              ],
+              "closureEvidence": "用真实检索问题与规模评估延迟，再决定向量库/场景图及其接入边界。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R10",
+              "section": "调研新增问题",
+              "module": "许可证",
+              "sourceLine": 48,
+              "sourceText": "| 许可证 | 选定模块及其依赖可否按项目分发方式使用？ | 固定版本逐文件/依赖审查；ReState BSL 与 SkiROS2 LGPL 已单列 |",
+              "question": "选定模块及其依赖可否按项目分发方式使用？",
+              "state": "待选定版本的分发审查",
+              "objectIds": [
+                "selection"
+              ],
+              "closureEvidence": "确定实际分发范围，核对采用文件及依赖的固定版本许可；研究记录不替代审查。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "R11",
+              "section": "调研新增问题",
+              "module": "Momo",
+              "sourceLine": 49,
+              "sourceText": "| Momo | 已正式确认并注册；持续维护验证证据与模块缺口 | 本轮正式图与 lifecycle 文件；不得把局部测试通过写成整体真机完成 |",
+              "question": "已正式确认并注册；持续维护验证证据与模块缺口",
+              "state": "已注册，持续维护",
+              "objectIds": [
+                "momo"
+              ],
+              "closureEvidence": "持续同步实现、证据、未决问题与关系；每轮核对来源指纹，不作为一次性缺陷关闭。",
+              "closed": false,
+              "trackingMode": "continuous"
+            },
+            {
+              "id": "U01",
+              "section": "UI 后续模块问题",
+              "module": "任务控制与编辑",
+              "sourceLine": 73,
+              "sourceText": "- 任务控制与编辑：独立 command API 的身份权限、请求幂等、控制请求与执行停止结果的呈现；现有 UI 没有控制功能。",
+              "question": "独立 command API 的身份权限、请求幂等、控制请求与执行停止结果的呈现；现有 UI 没有控制功能。",
+              "state": "未实现，待控制 API 与权限",
+              "objectIds": [
+                "workflow-ui"
+              ],
+              "closureEvidence": "定义独立 command API、权限与幂等，验证请求状态和真实停止结果分别呈现。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "U02",
+              "section": "UI 后续模块问题",
+              "module": "运行健康",
+              "sourceLine": 74,
+              "sourceText": "- 运行健康：worker 和机器人心跳由谁提供，如何区分在线、失联与停止确认；当前只显示 API 连接和未观测的运行端状态。",
+              "question": "worker 和机器人心跳由谁提供，如何区分在线、失联与停止确认；当前只显示 API 连接和未观测的运行端状态。",
+              "state": "未实现，待心跳契约",
+              "objectIds": [
+                "workflow-ui",
+                "kernel"
+              ],
+              "closureEvidence": "明确 worker/机器人心跳来源，验证在线、失联与停止确认的不同语义。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "U03",
+              "section": "UI 后续模块问题",
+              "module": "数据预览",
+              "sourceLine": 75,
+              "sourceText": "- 数据预览：RGB/深度、点云和多类地图的实际解码器、坐标标定、版本切换、流量限制；当前只展示登记元数据及来源关系。",
+              "question": "RGB/深度、点云和多类地图的实际解码器、坐标标定、版本切换、流量限制；当前只展示登记元数据及来源关系。",
+              "state": "未实现，待真实数据解码与预览",
+              "objectIds": [
+                "workflow-ui",
+                "memory"
+              ],
+              "closureEvidence": "对实际 RGB/深度/点云/地图完成解码、坐标标定、版本和流量限制验证。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "U04",
+              "section": "UI 后续模块问题",
+              "module": "大规模查询",
+              "sourceLine": 76,
+              "sourceText": "- 大规模查询：任务执行与历史详情分页、SQLite JSON 查询索引、分页一致性和事件推送；当前任务详情读取全部尝试，事件画面保留最近读取的 1000 条。",
+              "question": "任务执行与历史详情分页、SQLite JSON 查询索引、分页一致性和事件推送；当前任务详情读取全部尝试，事件画面保留最近读取的 1000 条。",
+              "state": "部分分页已有，大规模查询待完善",
+              "objectIds": [
+                "workflow-ui",
+                "kernel"
+              ],
+              "closureEvidence": "完善执行/历史分页与索引，确定一致性及推送需求，验证大规模账本查询。",
+              "closed": false,
+              "trackingMode": "open"
+            },
+            {
+              "id": "U05",
+              "section": "UI 后续模块问题",
+              "module": "历史契约",
+              "sourceLine": 77,
+              "sourceText": "- 历史契约（已完成，2026-09-07）：内核修订快照保存当时的 plan、steps、catalog、revision、generation 和时间；UI 显示对应版本契约，旧记录缺字段时明确标记不可用。",
+              "question": "内核修订快照保存当时的 plan、steps、catalog、revision、generation 和时间；UI 显示对应版本契约，旧记录缺字段时明确标记不可用。",
+              "state": "已完成并验证",
+              "objectIds": [
+                "core-execution",
+                "workflow-ui"
+              ],
+              "closureEvidence": "robot_agent/runtime.py 保存完整版本快照；tests/test_runtime.py 验证修订后 catalog 隔离；ui/src/TaskView.tsx 使用历史 catalog 并兼容旧记录；31 tests / 9 subtests、前端构建和 4 项 Chromium 回归通过。",
+              "closed": true,
+              "trackingMode": "closed"
+            },
+            {
+              "id": "U06",
+              "section": "UI 后续模块问题",
+              "module": "部署访问",
+              "sourceLine": 78,
+              "sourceText": "- 部署访问：跨机器只读权限、认证代理、任意模型原文的敏感内容策略；当前观察服务仅 loopback。",
+              "question": "跨机器只读权限、认证代理、任意模型原文的敏感内容策略；当前观察服务仅 loopback。",
+              "state": "未实现，待跨机器访问边界",
+              "objectIds": [
+                "workflow-ui"
+              ],
+              "closureEvidence": "确定只读访问权限、认证代理及模型原文策略，在实际部署中验证。",
+              "closed": false,
+              "trackingMode": "open"
+            }
+          ],
+          "questionStatusSourceFingerprint": "a3ac4f5cb45d73e32cd264cc2ac3aace0f170703ee91026da51fd1e1fc6f39ca",
+          "statusDocument": "docs/PROJECT_STATUS.md",
+          "statusDocumentFingerprint": "f8257837970b869f28e61db872c35819221f9b735ef3247210702dbe751aab3b",
+          "questionStatusCounts": {
+            "tracked": 30,
+            "open": 28,
+            "continuous": 1,
+            "newlyClosed": 1
+          }
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-07T03:29:58.160Z"
+      },
+      {
+        "id": "verification",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "实际 AI 与机器人技能联调",
+        "lifecycle": "in_progress",
+        "summary": "qwen3.8-max 真实问答与两步计划校验已通过；计划执行、自动重规划和机器人技能/停止回执仍未验收。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/VALIDATION.md",
+          "latestSoftwareValidation": "docs/UI_VALIDATION.md",
+          "openQuestionIds": [
+            "Q01",
+            "Q02",
+            "Q03",
+            "Q04",
+            "Q06",
+            "Q07"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
+          "latestModelValidation": "docs/validation/model-planning-qwen3.8-max.json"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-07T03:24:29.379Z"
+      },
+      {
+        "id": "momo",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "Momo 项目生命周期维护",
+        "lifecycle": "in_progress",
+        "summary": "正式单一项目持续维护；PROJECT_STATUS 记录细项状态，BUILD_ROADMAP 记录构建顺序，Momo 保留项目真相、问题映射、证据与交接。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md",
+          "openQuestionIds": [
+            "R11"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-06T16:19:06.511Z"
+      },
+      {
+        "id": "initial-tests",
+        "projectId": "project-robot-agent-framework",
+        "type": "evidence",
+        "schemaVersion": 1,
+        "title": "历史初始契约测试失败基线",
+        "lifecycle": "done",
+        "summary": "调研阶段失败基线保留；当前回归已通过，历史失败不代表当前状态。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T08:00:31.921946+00:00"
+      },
+      {
+        "id": "core-execution",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "任务执行与控制权",
+        "lifecycle": "in_progress",
+        "summary": "第一版执行与资源机制及历史版本契约已有验证；广义模块仍需控制端旧执行者隔离、补偿与恢复契约及跨层重试归属。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "robot_agent/runtime.py",
+          "openQuestionIds": [
+            "Q02",
+            "Q05",
+            "Q06",
+            "Q08",
+            "R05",
+            "R06"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
+          "firstVersionSoftwareValidation": "done"
+        },
+        "createdAt": "2026-09-05T08:00:31.921946+00:00",
+        "updatedAt": "2026-09-06T16:19:06.511Z"
+      },
+      {
+        "id": "multimodal-storage",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "原始记录与证据目录",
+        "lifecycle": "in_progress",
+        "summary": "MCAP/rosbag2 与资产证据目录已有验证；完整模块仍需数据保留/容量/背压、实际多模态输入、地图与记忆策略。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "robot_agent/memory.py",
+          "openQuestionIds": [
+            "Q09",
+            "Q10",
+            "Q11",
+            "Q12",
+            "R07"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
+          "firstVersionSoftwareValidation": "done"
+        },
+        "createdAt": "2026-09-05T08:00:31.921946+00:00",
+        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+      },
+      {
+        "id": "model-adapter",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "真实模型规划与有界重规划",
+        "lifecycle": "in_progress",
+        "summary": "实际 HTTP 适配、内容校验和预算已有实现；qwen3.8-max 真实问答与两步计划契约校验通过，长程执行、自动重规划和跨层重试边界仍待联调。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "robot_agent/planner.py",
+          "openQuestionIds": [
+            "Q01",
+            "R06"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
+          "latestModelValidation": "docs/validation/model-planning-qwen3.8-max.json",
+          "configuredModel": "qwen3.8-max"
+        },
+        "createdAt": "2026-09-05T08:00:31.921946+00:00",
+        "updatedAt": "2026-09-07T03:24:29.379Z"
+      },
+      {
+        "id": "software-validation",
+        "projectId": "project-robot-agent-framework",
+        "type": "evidence",
+        "schemaVersion": 1,
+        "title": "软件实际验证记录",
+        "lifecycle": "done",
+        "summary": "最新本地回归为 32 tests 与 9 subtests 通过；另有 qwen3.8-max 真实问答 1 项通过。软件与模型短计划证据仍不代表机器人或长程执行验收。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/VALIDATION.md",
+          "latestIncrementalReport": "docs/validation/pytest-roadmap.xml",
+          "latestModelValidation": "docs/validation/model-planning-qwen3.8-max.json"
+        },
+        "createdAt": "2026-09-05T08:00:31.921946+00:00",
+        "updatedAt": "2026-09-07T03:24:29.379Z"
+      },
+      {
+        "id": "workflow-ui",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "解耦流程可视化 UI",
+        "lifecycle": "done",
+        "summary": "独立 React/TypeScript 只读流程 UI 与观察 API 已实现；任务 DAG、结果、fallback、停止证据、资源、记忆和模型记录均读取真实账本。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/UI_DESIGN.md",
+          "designStatus": "implemented",
+          "validationSource": "docs/UI_VALIDATION.md",
+          "apiSource": "docs/UI_API.md",
+          "openQuestionIds": [
+            "U01",
+            "U02",
+            "U03",
+            "U04",
+            "U06"
+          ],
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
+          "completedScope": "第一版独立只读观察界面",
+          "followupStatus": "open"
+        },
+        "createdAt": "2026-09-05T16:03:17.080903+00:00",
+        "updatedAt": "2026-09-06T16:19:06.511Z"
+      },
+      {
+        "id": "ui-validation",
+        "projectId": "project-robot-agent-framework",
+        "type": "evidence",
+        "schemaVersion": 1,
+        "title": "解耦 UI 实际账本与浏览器验证",
+        "lifecycle": "done",
+        "summary": "30 tests、9 subtests 和 4 项 Chromium 检查通过；构建通过。使用真实文件操作账本，无机器人或模型成功声明。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/UI_VALIDATION.md"
+        },
+        "createdAt": "2026-09-06T06:24:43.478330+00:00",
+        "updatedAt": "2026-09-06T06:24:43.478330+00:00"
+      }
+    ],
+    "relations": [
+      {
+        "id": "contains-goal",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "goal",
+        "type": "contains"
+      },
+      {
+        "id": "contains-single",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "single",
+        "type": "contains"
+      },
+      {
+        "id": "contains-orchestration",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "orchestration",
+        "type": "contains"
+      },
+      {
+        "id": "contains-memory",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "memory",
+        "type": "contains"
+      },
+      {
+        "id": "contains-truth",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "truth",
+        "type": "contains"
+      },
+      {
+        "id": "contains-research",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "research",
+        "type": "contains"
+      },
+      {
+        "id": "contains-selection",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "selection",
+        "type": "contains"
+      },
+      {
+        "id": "contains-kernel",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "kernel",
+        "type": "contains"
+      },
+      {
+        "id": "contains-questions",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "questions",
+        "type": "contains"
+      },
+      {
+        "id": "contains-verification",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "verification",
+        "type": "contains"
+      },
+      {
+        "id": "contains-momo",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "momo",
+        "type": "contains"
+      },
+      {
+        "id": "contains-initial-tests",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "initial-tests",
+        "type": "contains"
+      },
+      {
+        "id": "relation-3ac8b90d2c205f7a",
+        "sourceObjectId": "single",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-23d075ab01747412",
+        "sourceObjectId": "orchestration",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-e77a7651269374a8",
+        "sourceObjectId": "memory",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-eaa03768cb223c5b",
+        "sourceObjectId": "truth",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-fd6f7d3c30895d42",
+        "sourceObjectId": "research",
+        "targetObjectId": "kernel",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-316d9f0385a81825",
+        "sourceObjectId": "questions",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-6ffd674cbb28f0bc",
+        "sourceObjectId": "momo",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "relation-1eccb04a3cf44bc8",
+        "sourceObjectId": "verification",
+        "targetObjectId": "truth",
+        "type": "supports",
+        "createdAt": "2026-09-05T07:12:01.267Z"
+      },
+      {
+        "id": "contains-core-execution",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "core-execution",
+        "type": "contains"
+      },
+      {
+        "id": "contains-multimodal-storage",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "multimodal-storage",
+        "type": "contains"
+      },
+      {
+        "id": "contains-model-adapter",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "model-adapter",
+        "type": "contains"
+      },
+      {
+        "id": "contains-software-validation",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "software-validation",
+        "type": "contains"
+      },
+      {
+        "id": "relation-369b137c81c1be79",
+        "sourceObjectId": "selection",
+        "targetObjectId": "kernel",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-17e63ef6216b1f1f",
+        "sourceObjectId": "core-execution",
+        "targetObjectId": "orchestration",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-99bedfec76d5fd33",
+        "sourceObjectId": "multimodal-storage",
+        "targetObjectId": "memory",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-9a4c82b2b887d853",
+        "sourceObjectId": "model-adapter",
+        "targetObjectId": "orchestration",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-1a8060fe213077e7",
+        "sourceObjectId": "software-validation",
+        "targetObjectId": "kernel",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-7678dfc1725f0ac1",
+        "sourceObjectId": "software-validation",
+        "targetObjectId": "initial-tests",
+        "type": "derived_from",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "relation-30461971cb9aa5e7",
+        "sourceObjectId": "kernel",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T08:01:36.514Z"
+      },
+      {
+        "id": "contains-workflow-ui",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "workflow-ui",
+        "type": "contains"
+      },
+      {
+        "id": "relation-1aa8f8ad3465a47b",
+        "sourceObjectId": "workflow-ui",
+        "targetObjectId": "goal",
+        "type": "supports",
+        "createdAt": "2026-09-05T16:03:17.142Z"
+      },
+      {
+        "id": "contains-ui-validation",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "ui-validation",
+        "type": "contains"
+      },
+      {
+        "id": "relation-c121c20e2e451223",
+        "sourceObjectId": "ui-validation",
+        "targetObjectId": "workflow-ui",
+        "type": "supports",
+        "createdAt": "2026-09-06T06:26:00.748Z"
+      }
+    ],
+    "proposals": [],
+    "views": [],
+    "objectTypes": [
+      {
+        "id": "artifact",
+        "label": "artifact",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "decision",
+        "label": "decision",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "evidence",
+        "label": "evidence",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "outcome",
+        "label": "outcome",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "requirement",
+        "label": "requirement",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "work_item",
+        "label": "work_item",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      }
+    ],
+    "contents": [],
+    "activity": [],
+    "assets": [],
+    "attachmentRefs": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "repo": "RobotLabLTH/SkiROS2",
+  "group": "robot_frameworks",
+  "url": "https://github.com/RobotLabLTH/SkiROS2",
+  "observed_at": "2026-09-05T06:12:23.158222+00:00",
+  "head_sha": "c4438e71a25978b14c30191539e4de68943fe863",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/RobotLabLTH/SkiROS2/c4438e71a25978b14c30191539e4de68943fe863/README.md",
+      "web_url": "https://github.com/RobotLabLTH/SkiROS2/blob/c4438e71a25978b14c30191539e4de68943fe863/README.md",
+      "local_path": "docs/research/sources/RobotLabLTH__SkiROS2/README.md",
+      "sha256": "aef3368cbeacd9c0180d357a881aaace1274f280c580361b407cd5843dbc19bd",
+      "bytes": 6325
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE.md",
+      "source_url": "https://raw.githubusercontent.com/RobotLabLTH/SkiROS2/c4438e71a25978b14c30191539e4de68943fe863/LICENSE.md",
+      "web_url": "https://github.com/RobotLabLTH/SkiROS2/blob/c4438e71a25978b14c30191539e4de68943fe863/LICENSE.md",
+      "local_path": "docs/research/sources/RobotLabLTH__SkiROS2/LICENSE.md",
+      "sha256": "13e6675ee6f20f6fef85525955502144b4642db77b26887fbfa059627c20af3c",
+      "bytes": 8364
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "skiros2_common/src/skiros2_common/core/abstract_skill.py",
+      "source_url": "https://raw.githubusercontent.com/RobotLabLTH/SkiROS2/c4438e71a25978b14c30191539e4de68943fe863/skiros2_common/src/skiros2_common/core/abstract_skill.py",
+      "web_url": "https://github.com/RobotLabLTH/SkiROS2/blob/c4438e71a25978b14c30191539e4de68943fe863/skiros2_common/src/skiros2_common/core/abstract_skill.py",
+      "local_path": "docs/research/sources/RobotLabLTH__SkiROS2/skiros2_common/src/skiros2_common/core/abstract_skill.py",
+      "sha256": "3c46375e7c248f600c7187e405af926cce1e5eaa9e19c83cd9a785de0dec6eac",
+      "bytes": 20069
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "skiros2_skill/src/skiros2_skill/core/processors.py",
+      "source_url": "https://raw.githubusercontent.com/RobotLabLTH/SkiROS2/c4438e71a25978b14c30191539e4de68943fe863/skiros2_skill/src/skiros2_skill/core/processors.py",
+      "web_url": "https://github.com/RobotLabLTH/SkiROS2/blob/c4438e71a25978b14c30191539e4de68943fe863/skiros2_skill/src/skiros2_skill/core/processors.py",
+      "local_path": "docs/research/sources/RobotLabLTH__SkiROS2/skiros2_skill/src/skiros2_skill/core/processors.py",
+      "sha256": "a52e62fd7ca8532a11bd91784f004fb8008098e009c445304784a621db8b3ecf",
+      "bytes": 6296
+    }
+  ],
+  "errors": [
+    "LICENSE: HTTP Error 404: Not Found"
+  ],
+  "head_commit_author_date": "Tue, 24 Sep 2024 20:30:57 +0000",
+  "commit_date_source": "https://github.com/RobotLabLTH/SkiROS2/commit/c4438e71a25978b14c30191539e4de68943fe863.patch",
+  "default_branch": "master",
+  "head_commit_committer_date": "2024-09-24T22:37:39+02:00"
+}

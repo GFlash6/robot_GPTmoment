@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({testDir:'./tests',use:{baseURL:'http://127.0.0.1:18765',viewport:{width:1512,height:1000}},workers:1,retries:0,reporter:'list',webServer:{command:'../.venv/bin/python -m robot_agent_observer.server --root ../.runtime/ui-validation --port 18765 --static dist',url:'http://127.0.0.1:18765',reuseExistingServer:false,timeout:15000}});

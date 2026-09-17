@@ -1,0 +1,13 @@
+{
+  "classification": "single-owned-project",
+  "authority": "user-confirmed",
+  "confirmation": "用户明确要求 momo 正式建立并注册这个单一项目；开始具体实现",
+  "scope": "robot_agent_framework",
+  "externalSources": [
+    "OM1",
+    "DimOS",
+    "existing ROS2 backend",
+    "docs/research/inventory.json"
+  ],
+  "review": "docs/research/MOMO_INTAKE_PREVIEW.md"
+}

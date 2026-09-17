@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-06T15:18:09.894658+00:00",
+  "revision": 11,
+  "source": "docs/OPEN_QUESTIONS.md",
+  "sourceFingerprint": "a71fcac6312b616685733883abf0bac04a06b428499972e5bef69208c4c451f5",
+  "mappedItems": 30,
+  "openItems": 29,
+  "continuousItems": 1,
+  "newlyClosedItems": 0,
+  "allSourceRowsMatched": true,
+  "allObjectMappingsMatched": true,
+  "allProjectRowsMatched": true,
+  "staleEvidence": [],
+  "brokenLinks": [],
+  "relationWarnings": [],
+  "functionalTestsRerun": false,
+  "serviceOnlineRechecked": false
+}

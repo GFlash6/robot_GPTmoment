@@ -1,0 +1,143 @@
+{
+  "repo": "dimensionalOS/dimos",
+  "group": "robot_frameworks",
+  "url": "https://github.com/dimensionalOS/dimos",
+  "observed_at": "2026-09-05T06:06:41.066808+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/README.md",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/README.md",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/README.md",
+      "sha256": "0a8449454d63622ed834a257780071704bdbc55d30ce6f7c38414748b6cfc52a",
+      "bytes": 13806
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/LICENSE",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/LICENSE",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/LICENSE",
+      "sha256": "ab463ad5ae0dcd7a4fc55871e64d061d6b40ceffe3faaa2b7037e08b2b28b21f",
+      "bytes": 745
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/core/module.py",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/module.py",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/module.py",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/core/module.py",
+      "sha256": "f5c529e1caf3bf17d8ce6936abfb2ac3ae954a6dac6a5cf44a7a33d36c43ccb8",
+      "bytes": 33159
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/agents/skill_result.py",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/skill_result.py",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/skill_result.py",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/agents/skill_result.py",
+      "sha256": "5b4482b48b84777eb8745f403a1717be7b6b62058a1d4ccb03558bc746a86082",
+      "bytes": 3364
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/agents/vlm_agent.py",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/vlm_agent.py",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/vlm_agent.py",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/agents/vlm_agent.py",
+      "sha256": "8933d651a410ec3f0fd3fba3e6083ac5c60ebd728195a618be48dd3bde731741",
+      "bytes": 4426
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/core/resource.py",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/resource.py",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/resource.py",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/core/resource.py",
+      "sha256": "f84d86a5127705408d07480ec6ba0105ff308d8c349d3de06a26daef6141c5fa",
+      "bytes": 2448
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/memory/architecture.md",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/architecture.md",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/architecture.md",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/architecture.md",
+      "sha256": "ec3c3194ccaf3203c414b61642f9223e664d3e180861bf62feb3a8e5d6f0b8da",
+      "bytes": 6327
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/memory/intro.md",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/intro.md",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/intro.md",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/intro.md",
+      "sha256": "44eee0118a43a5d55b5cccbe00bdb40216ac518a53a9d619f5e5ea8910c269ac",
+      "bytes": 4738
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/memory/store/README.md",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/store/README.md",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/store/README.md",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/store/README.md",
+      "sha256": "397d78a9ba92dd5b62553af031319e7bcb8849aca29548a287c42377872977d3",
+      "bytes": 7338
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/memory/store/mcap.py",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/store/mcap.py",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/store/mcap.py",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/store/mcap.py",
+      "sha256": "e3864957f9ef747e5dede279c1781da12dc111fe3067f6a0781c8e02585e8d6e",
+      "bytes": 9442
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/memory/observationstore/sqlite.py",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/observationstore/sqlite.py",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/observationstore/sqlite.py",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/observationstore/sqlite.py",
+      "sha256": "a7023e258cae863de3017e834ac8ad50ed2112e7665ba214f54e35baa44dfbcf",
+      "bytes": 15347
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/memory/blobstore/blobstore.md",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/blobstore/blobstore.md",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/memory/blobstore/blobstore.md",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/memory/blobstore/blobstore.md",
+      "sha256": "9b8848076a59cf53bfe6de395d98934e14069eeded74c72e5517aaceed80bd13",
+      "bytes": 3125
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/core/coordination/blueprints.py",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/coordination/blueprints.py",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/core/coordination/blueprints.py",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/core/coordination/blueprints.py",
+      "sha256": "e25c6d0a7656942885fcf6e6cee44d4c7e9d00fcdcb1980b894f5e37516730bb",
+      "bytes": 17057
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dimos/agents/capabilities.py",
+      "source_url": "https://raw.githubusercontent.com/dimensionalOS/dimos/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/capabilities.py",
+      "web_url": "https://github.com/dimensionalOS/dimos/blob/b1d60fe07f2db727d192286dd4b214e8f5813f1c/dimos/agents/capabilities.py",
+      "local_path": "docs/research/sources/dimensionalOS__dimos/dimos/agents/capabilities.py",
+      "sha256": "e7f694181815bf341b70fb61635c4722196308cef4526d8142ce4d8532bbe534",
+      "bytes": 5687
+    }
+  ],
+  "errors": [
+    "dimos/core/blueprints.py: HTTP Error 404: Not Found",
+    "dimos/agents/agent.py: HTTP Error 404: Not Found"
+  ],
+  "head_sha": "b1d60fe07f2db727d192286dd4b214e8f5813f1c",
+  "head_commit_author_date": "Sat, 5 Sep 2026 01:46:08 +0000",
+  "commit_date_source": "https://github.com/dimensionalOS/dimos/commit/b1d60fe07f2db727d192286dd4b214e8f5813f1c.patch",
+  "default_branch": "main",
+  "head_commit_committer_date": "2026-09-05T01:46:08+00:00"
+}

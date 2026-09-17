@@ -1,0 +1,30 @@
+{
+  "repo": "nasa-jpl/rosa",
+  "group": "robot_frameworks",
+  "url": "https://github.com/nasa-jpl/rosa",
+  "observed_at": "2026-09-05T06:06:41.067785+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/README.md",
+      "web_url": "https://github.com/nasa-jpl/rosa/blob/e7e53754bed673e2ce36d1fa311e04e51bfbacad/README.md",
+      "local_path": "docs/research/sources/nasa-jpl__rosa/README.md",
+      "sha256": "e8645d3d4c0fe22f9b7335537c02f2bd01b137594b774861f0601b19a84f5f95",
+      "bytes": 5599
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/LICENSE",
+      "web_url": "https://github.com/nasa-jpl/rosa/blob/e7e53754bed673e2ce36d1fa311e04e51bfbacad/LICENSE",
+      "local_path": "docs/research/sources/nasa-jpl__rosa/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    }
+  ],
+  "errors": [],
+  "head_sha": "e7e53754bed673e2ce36d1fa311e04e51bfbacad",
+  "head_commit_author_date": "Tue, 17 Mar 2026 10:50:17 -0700",
+  "commit_date_source": "https://github.com/nasa-jpl/rosa/commit/e7e53754bed673e2ce36d1fa311e04e51bfbacad.patch"
+}

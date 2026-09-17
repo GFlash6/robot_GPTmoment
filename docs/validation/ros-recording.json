@@ -1,0 +1,30 @@
+{
+  "robot_id": "local-diagnostics",
+  "storage": "sqlite3",
+  "topics": {
+    "/parameter_events": [
+      "rcl_interfaces/msg/ParameterEvent"
+    ],
+    "/rosout": [
+      "rcl_interfaces/msg/Log"
+    ]
+  },
+  "message_counts": {
+    "/rosout": 25
+  },
+  "files": [
+    {
+      "file": "metadata.yaml",
+      "sha256": "264523f1a993c1b9e7e19f41a9516c473ae840e8a156c1da205cdff73afe5cf7",
+      "size": 1244
+    },
+    {
+      "file": "recording_0.db3",
+      "sha256": "f61f4c0c18680734f7f796e2a2003c97a381707e6fe386f35df4413f12178bb8",
+      "size": 32768
+    }
+  ],
+  "use_sim_time": false,
+  "status": "succeeded",
+  "scope": "Actual ROS2 diagnostic log recording of file hash observations; not a sensor or robot-motion validation"
+}

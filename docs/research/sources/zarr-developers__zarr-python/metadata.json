@@ -1,0 +1,30 @@
+{
+  "repo": "zarr-developers/zarr-python",
+  "group": "data_memory",
+  "url": "https://github.com/zarr-developers/zarr-python",
+  "observed_at": "2026-09-05T06:06:48.162264+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/zarr-developers/zarr-python/a50d791c5a02319a451db024552d15e67732dbd1/README.md",
+      "web_url": "https://github.com/zarr-developers/zarr-python/blob/a50d791c5a02319a451db024552d15e67732dbd1/README.md",
+      "local_path": "docs/research/sources/zarr-developers__zarr-python/README.md",
+      "sha256": "2cf2e111cb92b2b6d6236bca9629e32d901e88234a2bb05b225aede20f817b28",
+      "bytes": 3533
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE.txt",
+      "source_url": "https://raw.githubusercontent.com/zarr-developers/zarr-python/a50d791c5a02319a451db024552d15e67732dbd1/LICENSE.txt",
+      "web_url": "https://github.com/zarr-developers/zarr-python/blob/a50d791c5a02319a451db024552d15e67732dbd1/LICENSE.txt",
+      "local_path": "docs/research/sources/zarr-developers__zarr-python/LICENSE.txt",
+      "sha256": "1d7756f33d3da20d53b162c2eb9beba91ee0dc1aeb4659728b6dc8f2f75941cb",
+      "bytes": 1124
+    }
+  ],
+  "errors": [],
+  "head_sha": "a50d791c5a02319a451db024552d15e67732dbd1",
+  "head_commit_author_date": "Fri, 4 Sep 2026 18:02:18 +0200",
+  "commit_date_source": "https://github.com/zarr-developers/zarr-python/commit/a50d791c5a02319a451db024552d15e67732dbd1.patch"
+}

@@ -1,0 +1,57 @@
+{
+  "repo": "dbos-inc/dbos-transact-py",
+  "group": "durable_agent",
+  "url": "https://github.com/dbos-inc/dbos-transact-py",
+  "observed_at": "2026-09-05T06:06:45.556595+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/README.md",
+      "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/README.md",
+      "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/README.md",
+      "sha256": "b9c4054b97dfb86e6c0cc1fa3b32b35f2366db42a0a7bda1408ed5340ecf7ef8",
+      "bytes": 13111
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/LICENSE",
+      "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/LICENSE",
+      "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/LICENSE",
+      "sha256": "546662b7f6b9fa4770f564fa7d8e63c40595c0643380b1723d6adc55552154d5",
+      "bytes": 1067
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dbos/_core.py",
+      "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_core.py",
+      "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_core.py",
+      "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/dbos/_core.py",
+      "sha256": "2547659d33826ece694c05427b6ddda64f5833b51b5d34659f69b5ce3d5214e3",
+      "bytes": 137834
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dbos/_dbos.py",
+      "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_dbos.py",
+      "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_dbos.py",
+      "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/dbos/_dbos.py",
+      "sha256": "74a3c21171e994a91e1234b1ddb70e50ba9fa6ea44228a882cef7be70c5c9327",
+      "bytes": 154426
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "dbos/_queue.py",
+      "source_url": "https://raw.githubusercontent.com/dbos-inc/dbos-transact-py/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_queue.py",
+      "web_url": "https://github.com/dbos-inc/dbos-transact-py/blob/833794f7a1138bacf75ff6d88647a33eb5e35e52/dbos/_queue.py",
+      "local_path": "docs/research/sources/dbos-inc__dbos-transact-py/dbos/_queue.py",
+      "sha256": "86c6fdff8679a6247b986e39dcac956d56620c886e9042439a1429c0c07c09cf",
+      "bytes": 49934
+    }
+  ],
+  "errors": [],
+  "head_sha": "833794f7a1138bacf75ff6d88647a33eb5e35e52",
+  "head_commit_author_date": "Fri, 4 Sep 2026 14:03:31 -0700",
+  "commit_date_source": "https://github.com/dbos-inc/dbos-transact-py/commit/833794f7a1138bacf75ff6d88647a33eb5e35e52.patch"
+}

@@ -1,0 +1,30 @@
+{
+  "repo": "nvidia-isaac/nvblox",
+  "group": "data_memory",
+  "url": "https://github.com/nvidia-isaac/nvblox",
+  "observed_at": "2026-09-05T06:06:51.526817+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/nvidia-isaac/nvblox/24eee4948768682fa1ffb969b881efee4fca29c2/README.md",
+      "web_url": "https://github.com/nvidia-isaac/nvblox/blob/24eee4948768682fa1ffb969b881efee4fca29c2/README.md",
+      "local_path": "docs/research/sources/nvidia-isaac__nvblox/README.md",
+      "sha256": "ab681799fe04e7bd66c03f48a6708914e7f1f60d0d2b5dbf816a5166e64adefa",
+      "bytes": 1075
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE.md",
+      "source_url": "https://raw.githubusercontent.com/nvidia-isaac/nvblox/24eee4948768682fa1ffb969b881efee4fca29c2/LICENSE.md",
+      "web_url": "https://github.com/nvidia-isaac/nvblox/blob/24eee4948768682fa1ffb969b881efee4fca29c2/LICENSE.md",
+      "local_path": "docs/research/sources/nvidia-isaac__nvblox/LICENSE.md",
+      "sha256": "14057ce18486761049d17e6f1ae2c1335da887d47b668544934050e8b02543e1",
+      "bytes": 13048
+    }
+  ],
+  "errors": [],
+  "head_sha": "24eee4948768682fa1ffb969b881efee4fca29c2",
+  "head_commit_author_date": "Fri, 3 Jul 2026 09:27:36 +0200",
+  "commit_date_source": "https://github.com/nvidia-isaac/nvblox/commit/24eee4948768682fa1ffb969b881efee4fca29c2.patch"
+}

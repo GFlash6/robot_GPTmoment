@@ -1,0 +1,8 @@
+{
+  "scope": "downloaded research source integrity, not runtime functionality",
+  "repositories_resolved": 41,
+  "failed_identity_queries": 1,
+  "files_checked": 110,
+  "hash_mismatches_or_missing": [],
+  "passed": true
+}

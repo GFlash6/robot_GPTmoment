@@ -1,0 +1,39 @@
+{
+  "repo": "automatika-robotics/embodied-agents",
+  "group": "robot_frameworks",
+  "url": "https://github.com/automatika-robotics/embodied-agents",
+  "observed_at": "2026-09-05T06:06:41.068219+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/README.md",
+      "web_url": "https://github.com/automatika-robotics/embodied-agents/blob/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/README.md",
+      "local_path": "docs/research/sources/automatika-robotics__embodied-agents/README.md",
+      "sha256": "606fab4f1da5a72578ac61994760d254a99a16c52694055e64c9512bc56300b7",
+      "bytes": 6416
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/LICENSE",
+      "web_url": "https://github.com/automatika-robotics/embodied-agents/blob/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/LICENSE",
+      "local_path": "docs/research/sources/automatika-robotics__embodied-agents/LICENSE",
+      "sha256": "5e73597f4cf6a051df304ea0c0d0923d2ba7276ee74fc69454904e2273a44a65",
+      "bytes": 1076
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "pyproject.toml",
+      "source_url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/pyproject.toml",
+      "web_url": "https://github.com/automatika-robotics/embodied-agents/blob/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/pyproject.toml",
+      "local_path": "docs/research/sources/automatika-robotics__embodied-agents/pyproject.toml",
+      "sha256": "ab8c8088586d47307bbfe1e235e16f3c3728b3ecd018a8b46d99c29a4350ad32",
+      "bytes": 1508
+    }
+  ],
+  "errors": [],
+  "head_sha": "29898459a7fc80ed1a5f6cbbfdc0f9459b68321f",
+  "head_commit_author_date": "Fri, 31 Jul 2026 16:18:27 +0200",
+  "commit_date_source": "https://github.com/automatika-robotics/embodied-agents/commit/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f.patch"
+}

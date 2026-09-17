@@ -1,0 +1,343 @@
+{
+  "format": "momo-workspace",
+  "version": 2,
+  "workspace": {
+    "key": "workspace-robot-agent-framework",
+    "title": "机器人 Agent 框架",
+    "revision": 0,
+    "updatedAt": "2026-09-05T06:08:28.603463+00:00",
+    "confirmedBy": "momo-skill",
+    "confirmedAt": "2026-09-05T07:09:28.004868+00:00"
+  },
+  "snapshot": {
+    "schemaVersion": 4,
+    "objects": [
+      {
+        "id": "project-robot-agent-framework",
+        "projectId": "project-robot-agent-framework",
+        "type": "project",
+        "schemaVersion": 1,
+        "title": "机器人 Agent 框架",
+        "lifecycle": "in_progress",
+        "summary": "调研优先，最大化复用；聚焦单机器人多任务多资源、可验证执行与多模态记忆。",
+        "properties": {
+          "workspaceKey": "workspace-robot-agent-framework",
+          "ownership": "owned",
+          "workspaceRole": "primary",
+          "detailPolicy": "full",
+          "phase": "research",
+          "evidenceStatus": "Confirmed"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "goal",
+        "projectId": "project-robot-agent-framework",
+        "type": "outcome",
+        "schemaVersion": 1,
+        "title": "机器人 Agent 通用框架",
+        "lifecycle": "open",
+        "summary": "长程任务、多任务资源、恢复打断与多模态记忆；实现尚未开始。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "single",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "单机器人多任务与多资源",
+        "lifecycle": "open",
+        "summary": "第一版边界已由用户确认；预留多机器人接口。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "orchestration",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "任务分解、编排、技能、恢复与打断",
+        "lifecycle": "open",
+        "summary": "框架核心要求，不绑定特定探索算法。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "memory",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "多模态数据与地图记忆",
+        "lifecycle": "open",
+        "summary": "覆盖 RGB、深度、点云、点云地图、占据地图、体素地图。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "truth",
+        "projectId": "project-robot-agent-framework",
+        "type": "requirement",
+        "schemaVersion": 1,
+        "title": "实际返回与证据判定",
+        "lifecycle": "open",
+        "summary": "禁止将传输成功或模型自述替代真实技能结果。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "research",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "开源资源广泛调研",
+        "lifecycle": "in_progress",
+        "summary": "首轮 41 个仓库研究与 110 份来源哈希核验完成；实际集成与选型验证待做。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md",
+          "researchReport": "docs/research/REPORT.md",
+          "sourceManifest": "docs/research/inventory.json"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "selection",
+        "projectId": "project-robot-agent-framework",
+        "type": "decision",
+        "schemaVersion": 1,
+        "title": "框架底座与复用组合",
+        "lifecycle": "open",
+        "summary": "优先验证现有 ROS2 后端加组件组合；持久引擎、行为树和记忆复用粒度未选定。",
+        "properties": {
+          "evidenceStatus": "Unknown",
+          "source": "docs/USER_REQUIREMENTS.md",
+          "proposal": "docs/research/REPORT.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "kernel",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "框架实现",
+        "lifecycle": "blocked",
+        "summary": "用户要求调研先行，尚无生产模块。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "questions",
+        "projectId": "project-robot-agent-framework",
+        "type": "artifact",
+        "schemaVersion": 1,
+        "title": "模块待决问题台账",
+        "lifecycle": "in_progress",
+        "summary": "docs/OPEN_QUESTIONS.md 已存在，持续维护。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "verification",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "实际 AI 与机器人技能联调",
+        "lifecycle": "blocked",
+        "summary": "缺少已验证服务信息，尚无成功证据。",
+        "properties": {
+          "evidenceStatus": "Unknown",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "momo",
+        "projectId": "project-robot-agent-framework",
+        "type": "work_item",
+        "schemaVersion": 1,
+        "title": "Momo 项目生命周期维护",
+        "lifecycle": "in_progress",
+        "summary": "建立单一项目图、证据、决策、未知项；初次写入待预览确认。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      },
+      {
+        "id": "initial-tests",
+        "projectId": "project-robot-agent-framework",
+        "type": "evidence",
+        "schemaVersion": 1,
+        "title": "初始契约测试尚未通过",
+        "lifecycle": "open",
+        "summary": "6 项测试：1 failure、5 errors；生产模块不存在，不作为验证成功。",
+        "properties": {
+          "evidenceStatus": "Confirmed",
+          "source": "docs/USER_REQUIREMENTS.md"
+        },
+        "createdAt": "2026-09-05T06:08:28.603463+00:00",
+        "updatedAt": "2026-09-05T06:08:28.603463+00:00"
+      }
+    ],
+    "relations": [
+      {
+        "id": "contains-goal",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "goal",
+        "type": "contains"
+      },
+      {
+        "id": "contains-single",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "single",
+        "type": "contains"
+      },
+      {
+        "id": "contains-orchestration",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "orchestration",
+        "type": "contains"
+      },
+      {
+        "id": "contains-memory",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "memory",
+        "type": "contains"
+      },
+      {
+        "id": "contains-truth",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "truth",
+        "type": "contains"
+      },
+      {
+        "id": "contains-research",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "research",
+        "type": "contains"
+      },
+      {
+        "id": "contains-selection",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "selection",
+        "type": "contains"
+      },
+      {
+        "id": "contains-kernel",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "kernel",
+        "type": "contains"
+      },
+      {
+        "id": "contains-questions",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "questions",
+        "type": "contains"
+      },
+      {
+        "id": "contains-verification",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "verification",
+        "type": "contains"
+      },
+      {
+        "id": "contains-momo",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "momo",
+        "type": "contains"
+      },
+      {
+        "id": "contains-initial-tests",
+        "sourceObjectId": "project-robot-agent-framework",
+        "targetObjectId": "initial-tests",
+        "type": "contains"
+      }
+    ],
+    "proposals": [],
+    "views": [],
+    "objectTypes": [
+      {
+        "id": "artifact",
+        "label": "artifact",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "decision",
+        "label": "decision",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "evidence",
+        "label": "evidence",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "outcome",
+        "label": "outcome",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "requirement",
+        "label": "requirement",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      },
+      {
+        "id": "work_item",
+        "label": "work_item",
+        "schemaVersion": 1,
+        "category": "custom",
+        "supportsContent": true
+      }
+    ],
+    "contents": [],
+    "activity": [],
+    "assets": [],
+    "attachmentRefs": []
+  }
+}

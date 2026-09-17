@@ -1,0 +1,30 @@
+{
+  "repo": "MIT-SPARK/Hydra",
+  "group": "data_memory",
+  "url": "https://github.com/MIT-SPARK/Hydra",
+  "observed_at": "2026-09-05T06:06:49.618981+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/MIT-SPARK/Hydra/2e58a35baea629eee8838409771876acff015daf/README.md",
+      "web_url": "https://github.com/MIT-SPARK/Hydra/blob/2e58a35baea629eee8838409771876acff015daf/README.md",
+      "local_path": "docs/research/sources/MIT-SPARK__Hydra/README.md",
+      "sha256": "1dc5c76afe2333383d07b9abe5b2a37202655a422687a195121f6113363cd98d",
+      "bytes": 6329
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/MIT-SPARK/Hydra/2e58a35baea629eee8838409771876acff015daf/LICENSE",
+      "web_url": "https://github.com/MIT-SPARK/Hydra/blob/2e58a35baea629eee8838409771876acff015daf/LICENSE",
+      "local_path": "docs/research/sources/MIT-SPARK__Hydra/LICENSE",
+      "sha256": "3e35425d350360b5c68b8ec42db32775e7293a8953b104fb973ff40dbe2b4991",
+      "bytes": 1291
+    }
+  ],
+  "errors": [],
+  "head_sha": "2e58a35baea629eee8838409771876acff015daf",
+  "head_commit_author_date": "Wed, 14 Jan 2026 10:47:11 -0500",
+  "commit_date_source": "https://github.com/MIT-SPARK/Hydra/commit/2e58a35baea629eee8838409771876acff015daf.patch"
+}

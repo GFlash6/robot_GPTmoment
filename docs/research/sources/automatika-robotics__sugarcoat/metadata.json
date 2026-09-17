@@ -1,0 +1,39 @@
+{
+  "repo": "automatika-robotics/sugarcoat",
+  "group": "robot_frameworks",
+  "url": "https://github.com/automatika-robotics/sugarcoat",
+  "observed_at": "2026-09-05T06:17:34.659095+00:00",
+  "head_sha": "d61cb39db0ebf8bd4386c82fb9a5181656873ad7",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/automatika-robotics/sugarcoat/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/README.md",
+      "web_url": "https://github.com/automatika-robotics/sugarcoat/blob/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/README.md",
+      "local_path": "docs/research/sources/automatika-robotics__sugarcoat/README.md",
+      "sha256": "16d91836abbd42f82bf9cf3708413ac2e46a5dcf1e99daf7d59fcc4f2fe31c59",
+      "bytes": 8729
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/automatika-robotics/sugarcoat/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/LICENSE",
+      "web_url": "https://github.com/automatika-robotics/sugarcoat/blob/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/LICENSE",
+      "local_path": "docs/research/sources/automatika-robotics__sugarcoat/LICENSE",
+      "sha256": "5e73597f4cf6a051df304ea0c0d0923d2ba7276ee74fc69454904e2273a44a65",
+      "bytes": 1076
+    },
+    {
+      "kind": "implementation",
+      "upstream_path": "ros_sugar/core/fallbacks.py",
+      "source_url": "https://raw.githubusercontent.com/automatika-robotics/sugarcoat/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/ros_sugar/core/fallbacks.py",
+      "web_url": "https://github.com/automatika-robotics/sugarcoat/blob/d61cb39db0ebf8bd4386c82fb9a5181656873ad7/ros_sugar/core/fallbacks.py",
+      "local_path": "docs/research/sources/automatika-robotics__sugarcoat/ros_sugar/core/fallbacks.py",
+      "sha256": "12a653ac6394898d1cf7b5638c7698e88a93d6a61c9d3ec14a2f625ebfdcc085",
+      "bytes": 12581
+    }
+  ],
+  "errors": [],
+  "default_branch": "main",
+  "head_commit_committer_date": "2026-08-15T19:20:50+08:00"
+}

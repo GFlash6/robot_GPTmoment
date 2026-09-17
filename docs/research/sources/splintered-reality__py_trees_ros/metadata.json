@@ -1,0 +1,29 @@
+{
+  "repo": "splintered-reality/py_trees_ros",
+  "group": "execution_planning",
+  "url": "https://github.com/splintered-reality/py_trees_ros",
+  "observed_at": "2026-09-05T06:06:43.330173+00:00",
+  "files": [
+    {
+      "kind": "readme",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees_ros/435a415e806165d23b3abbc5042391a714c97e23/README.md",
+      "web_url": "https://github.com/splintered-reality/py_trees_ros/blob/435a415e806165d23b3abbc5042391a714c97e23/README.md",
+      "local_path": "docs/research/sources/splintered-reality__py_trees_ros/README.md",
+      "sha256": "79f504ca6e9efe754e1412cefcc206dd53918c1d19942f79579d788602da7bdb",
+      "bytes": 28659
+    },
+    {
+      "kind": "license",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/splintered-reality/py_trees_ros/435a415e806165d23b3abbc5042391a714c97e23/LICENSE",
+      "web_url": "https://github.com/splintered-reality/py_trees_ros/blob/435a415e806165d23b3abbc5042391a714c97e23/LICENSE",
+      "local_path": "docs/research/sources/splintered-reality__py_trees_ros/LICENSE",
+      "sha256": "faa37f7a553a7b99157fbda00919ff9b84d8baaeef0a3952e33211bf70f5e7df",
+      "bytes": 1621
+    }
+  ],
+  "errors": [],
+  "head_sha": "435a415e806165d23b3abbc5042391a714c97e23",
+  "commit_date_unknown": "HTTP Error 403: Forbidden"
+}
