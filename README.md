@@ -2,6 +2,12 @@
 
 ### 把机器人的每一种能力，编排成完成任务的行动。
 
+## 项目演示视频
+
+**[▶ 观看 GPTmoment for robot 宣传演示视频](video/GPT_moment_for_robot_demo_web.mp4)**
+
+[打开原始 MP4 视频](https://github.com/GFlash6/robot_GPTmoment/raw/refs/heads/master/video/GPT_moment_for_robot_demo_web.mp4)
+
 **面向多场景任务的机器人 Agent 与技能编排系统 · Local-first Physical Agent & Skill Orchestration**
 
 GPTmoment for robot 的核心理念是：将机器人具备的导航、感知、操作、交互以及其他设备能力统一表达为 Skill，由 Agent 围绕任务目标选择、组合和协调这些技能。任务决定技能如何组织，机器人与现场环境决定有哪些技能可用，同一项能力可以在不同场景中反复复用。
