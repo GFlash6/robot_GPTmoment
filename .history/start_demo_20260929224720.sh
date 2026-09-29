@@ -3,7 +3,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 export MODEL_ENDPOINT="${MODEL_ENDPOINT:-http://127.0.0.1:8000/v1/chat/completions}"
-export MODEL_NAME="${MODEL_NAME:-Qwen/Qwen3.8-27B}"
+export MODEL_NAME="${MODEL_NAME:-Qwen/Qwen2.5-VL-7B-Instruct}"
 
 echo "GPTmoment for robot portable physical-agent runtime"
 echo "UI:    http://$(hostname -I 2>/dev/null | awk '{print $1}'):${PORT:-3030}"

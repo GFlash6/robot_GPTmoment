@@ -1,5 +1,5 @@
 ---
-name: "FieldMind"
+name: "GPTmoment for robot"
 description: "A local-first, portable, evidence-driven Physical Agent Runtime for robots."
 colors:
   phosphor-green: "#76b900"
@@ -88,13 +88,13 @@ components:
     padding: "24px"
 ---
 
-# Design System: FieldMind
+# Design System: GPTmoment for robot
 
 ## Overview
 
 **Creative North Star: "The Edge Evidence Bay"**
 
-FieldMind should feel like a disciplined workstation installed beside the robot, not a cloud dashboard wearing industrial colors. Its near-black canvas, instrument-like telemetry, and sharp evidence viewport create a calm operating bay where the user can issue one mission, inspect what the robot actually saw, and follow the chain from skill invocation to independent verification.
+GPTmoment for robot should feel like a disciplined workstation installed beside the robot, not a cloud dashboard wearing industrial colors. Its near-black canvas, instrument-like telemetry, and sharp evidence viewport create a calm operating bay where the user can issue one mission, inspect what the robot actually saw, and follow the chain from skill invocation to independent verification.
 
 The visual system communicates three durable product truths: computation can stay local, the runtime can move between edge hosts, and claims only become conclusions when evidence survives verification. DGX Spark belongs in deployment copy as a high-performance reference node; it is never treated as a required device or the identity of the product. Density is purposeful rather than decorative: large type states the promise, compact labels expose machine state, and green appears only where it carries action, availability, progress, or verified success.
 
@@ -135,7 +135,7 @@ The palette is an edge-compute night mode: green-black surfaces reduce glare, co
 
 **The Honest State Rule.** Failure uses coral, constrained or skipped states use amber, and unknown or waiting states remain neutral. Never turn every state green.
 
-**The Portable Runtime Rule.** Host and accelerator identity may be visible telemetry, but no vendor color or device name may overtake FieldMind's product identity.
+**The Portable Runtime Rule.** Host and accelerator identity may be visible telemetry, but no vendor color or device name may overtake GPTmoment for robot's product identity.
 
 ## Typography
 
@@ -174,13 +174,13 @@ Spacing follows compact operational increments from 7px to 28px. Internal workbe
 
 ## Elevation & Depth
 
-FieldMind is flat by default. Depth comes from nested green-black tones, 1px borders, and contained clipping rather than a stack of floating cards. The primary action is the lone raised control, while live status uses a small optical glow. Evidence overlays use a nearly opaque dark backing so machine metadata remains legible over imagery.
+GPTmoment for robot is flat by default. Depth comes from nested green-black tones, 1px borders, and contained clipping rather than a stack of floating cards. The primary action is the lone raised control, while live status uses a small optical glow. Evidence overlays use a nearly opaque dark backing so machine metadata remains legible over imagery.
 
 ### Shadow Vocabulary
 
 - **Action Lift** (`0 7px 22px rgba(47, 76, 11, 0.32)`): only the enabled primary execution button.
 - **Runtime Glow** (`0 0 12px rgba(118, 185, 0, 0.55)`): the live runtime dot; never apply this glow to decorative text or entire panels.
-- **Brand Offset** (`7px 7px 0 #395b18`): the square FieldMind mark's physical offset; it is a signature silhouette, not a general card shadow.
+- **Brand Offset** (`7px 7px 0 #395b18`): the square GPTmoment for robot mark's physical offset; it is a signature silhouette, not a general card shadow.
 
 ### Named Rules
 
@@ -224,7 +224,7 @@ Thin borders are structural, not ornamental. Dashed borders are reserved for fil
 
 ### Navigation
 
-The product bar is a minimal identity-and-status rail rather than global navigation: FieldMind and its Physical Agent descriptor sit left, and runtime state sits right. On mobile, hide the descriptor but retain both the brand and runtime state. The live dot never appears without adjacent text.
+The product bar is a minimal identity-and-status rail rather than global navigation: GPTmoment for robot and its Physical Agent descriptor sit left, and runtime state sits right. On mobile, hide the descriptor but retain both the brand and runtime state. The live dot never appears without adjacent text.
 
 ### Evidence Viewport
 

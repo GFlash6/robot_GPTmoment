@@ -3,7 +3,7 @@
   "version": 2,
   "workspace": {
     "key": "workspace-robot-agent-framework",
-    "title": "机器人 Agent 框架",
+    "title": "GPTmoment for robot",
     "revision": 156,
     "updatedAt": "2026-09-22T02:40:09.810Z",
     "confirmedBy": "momo-skill",
@@ -17,7 +17,7 @@
         "projectId": "project-robot-agent-framework",
         "type": "project",
         "schemaVersion": 1,
-        "title": "机器人 Agent 框架",
+        "title": "GPTmoment for robot",
         "lifecycle": "in_progress",
         "summary": "应用协作、持久执行、上下文追溯与文件任务恢复已验证；真实世界状态、物理实体和真机闭环仍待接入。",
         "properties": {

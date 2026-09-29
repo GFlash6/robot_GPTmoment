@@ -1,6 +1,6 @@
-"""FieldMind portable physical-agent entry point."""
+"""Compatibility entry point for GPTmoment for robot."""
 
-from hackathon_mvp import main
+from gptmoment import main
 
 
 if __name__ == "__main__":

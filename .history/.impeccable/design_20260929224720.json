@@ -123,7 +123,7 @@
       "name": "Telemetry Metric",
       "kind": "card",
       "description": "A compact machine-state cell inside the joined telemetry rail.",
-      "html": "<div class=\"ds-metric\"><span>MODEL</span><strong>Qwen/Qwen3.8-27B</strong></div>",
+      "html": "<div class=\"ds-metric\"><span>MODEL</span><strong>Qwen/Qwen2.5-VL-7B-Instruct</strong></div>",
       "css": ".ds-metric { min-width: 0; border: 1px solid var(--line, #283129); border-radius: 0; background: var(--panel, #101411); padding: 15px 18px; color: var(--ink, #f4f7f2); font-family: Aptos, 'Noto Sans SC', sans-serif; } .ds-metric span { display: block; color: var(--dim, #909d93); font-size: 11px; letter-spacing: .12em; margin-bottom: 6px; } .ds-metric strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; font-variant-numeric: tabular-nums; } .ds-metric:hover { background: #151a16; } .ds-metric:focus-within { outline: 2px solid var(--green2, #b7e36f); outline-offset: -2px; }"
     },
     {

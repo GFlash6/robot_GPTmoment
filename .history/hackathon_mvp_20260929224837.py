@@ -81,7 +81,7 @@ class InspectionAgent:
             "MODEL_ENDPOINT", "http://127.0.0.1:8000/v1/chat/completions"
         )
         self.model_name = os.getenv(
-            "MODEL_NAME", "Qwen/Qwen3.8-27B"
+            "MODEL_NAME", "Qwen/Qwen2.5-VL-7B-Instruct"
         )
         self.model_api_key = os.getenv("MODEL_API_KEY", "")
         self.robot_skill_url = os.getenv("ROBOT_SKILL_URL", "")
