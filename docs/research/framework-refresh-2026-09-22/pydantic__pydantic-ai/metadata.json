@@ -1,0 +1,44 @@
+{
+  "repo": "pydantic/pydantic-ai",
+  "retrieved_at": "2026-09-22T08:37:41.583099+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/README.md",
+      "sha256": "824afc40e65f540906bcfe8c361b1a5305dcc70bc8c231487912d289566a3a1a",
+      "retrieved_at": "2026-09-22T08:39:25.214056+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/LICENSE",
+      "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "retrieved_at": "2026-09-22T08:39:26.300490+00:00"
+    },
+    {
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/pyproject.toml",
+      "sha256": "c7672aba513b7210e2ce4343600e5c039aacd277ecda22c69982aff84bfc8cb1",
+      "retrieved_at": "2026-09-22T08:39:27.054387+00:00"
+    },
+    {
+      "path": "pydantic_ai_slim/pyproject.toml",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/pydantic_ai_slim/pyproject.toml",
+      "sha256": "d937caa3974b2c51737c51b232019d70fafe8edfedc64334c2391004acfb76cb",
+      "retrieved_at": "2026-09-22T08:39:27.559682+00:00"
+    },
+    {
+      "path": "docs/durable_execution/dbos.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/docs/durable_execution/dbos.md",
+      "sha256": "413c2ca85e52519d3496b3d74be0cddcc092602ae52191fe7574ad9b8e1ba00e",
+      "retrieved_at": "2026-09-22T08:39:28.169557+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    }
+  ],
+  "sha": "e8895d2905d78ccf570edc491a27ad505e8d4b5a",
+  "revision_method": "git ls-remote HEAD"
+}

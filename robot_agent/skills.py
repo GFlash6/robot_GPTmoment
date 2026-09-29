@@ -1,6 +1,8 @@
 """Real local data skills and explicit remote execution protocol."""
 
 import os
+import hashlib
+import json
 from pathlib import Path
 from urllib.parse import urlparse
 import httpx
@@ -9,6 +11,25 @@ from .memory import Memory
 
 
 LOCAL_SPECS = {
+    "asset.verify-set": {
+        "adapter": "local",
+        "input_schema": {
+            "type": "object", "required": ["items"], "additionalProperties": False,
+            "properties": {"items": {"type": "array", "minItems": 1, "maxItems": 100,
+                "items": {"type": "object", "required": ["asset_id", "sha256"], "additionalProperties": False,
+                    "properties": {"asset_id": {"type": "string", "minLength": 1},
+                                   "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}}}},
+        },
+        "output_schema": {
+            "type": "object", "required": ["verified", "count", "items"], "additionalProperties": False,
+            "properties": {"verified": {"type": "boolean"}, "count": {"type": "integer", "minimum": 1},
+                "items": {"type": "array", "minItems": 1, "items": {
+                    "type": "object", "required": ["asset_id", "sha256", "size"], "additionalProperties": False,
+                    "properties": {"asset_id": {"type": "string"}, "sha256": {"type": "string"},
+                                   "size": {"type": "integer", "minimum": 0}}}}},
+        },
+        "checks": [{"path": "verified", "op": "eq", "value": True}],
+    },
     "file.copy": {
         "adapter": "local",
         "input_schema": {
@@ -32,7 +53,9 @@ LOCAL_SPECS = {
             "properties": {"path": {"type": "string"}, "metadata": {"type": "object"}},
             "additionalProperties": False,
         },
-        "output_schema": {"type": "object", "required": ["asset_id", "sha256"]},
+        "output_schema": {"type": "object", "required": ["asset_id", "sha256", "size"],
+            "properties": {"asset_id": {"type": "string"}, "sha256": {"type": "string"},
+                           "size": {"type": "integer", "minimum": 0}}, "additionalProperties": False},
         "checks": [{"path": "asset_id", "op": "nonempty"}],
     },
     "asset.verify": {
@@ -43,7 +66,9 @@ LOCAL_SPECS = {
             "properties": {"asset_id": {"type": "string"}},
             "additionalProperties": False,
         },
-        "output_schema": {"type": "object", "required": ["sha256", "size", "verified"]},
+        "output_schema": {"type": "object", "required": ["sha256", "size", "verified"],
+            "properties": {"sha256": {"type": "string"}, "size": {"type": "integer", "minimum": 0},
+                           "verified": {"type": "boolean"}}, "additionalProperties": False},
         "checks": [{"path": "verified", "op": "eq", "value": True}],
     },
 }
@@ -52,6 +77,9 @@ LOCAL_SPECS = {
 def validate_spec(name, spec):
     require(isinstance(name, str) and bool(name), "skill name required")
     require(spec.get("adapter") in {"local", "http"}, "adapter must be local or http")
+    if 'fencing_domain' in spec:
+        from .fencing import validate_domain
+        validate_domain(spec['fencing_domain'])
     for key in ("input_schema", "output_schema"):
         require(isinstance(spec.get(key), dict), f"{key} required")
         import jsonschema
@@ -113,9 +141,13 @@ class Skills:
         self.store = store
         self.memory = Memory(store)
 
-    def call(self, operation, name, spec, execution_id, args, robot_id):
+    def call(self, operation, name, spec, execution_id, args, robot_id, *, authority=None):
         if spec["adapter"] == "http":
             headers = {}
+            if spec.get('fencing_domain'):
+                from .fencing import validate_authority
+                validate_authority(authority, spec['fencing_domain'])
+                headers['X-Execution-Authority'] = json.dumps(authority, ensure_ascii=True)
             if spec.get("token_env"):
                 token = os.environ.get(spec["token_env"])
                 require(
@@ -136,6 +168,7 @@ class Skills:
                             "skill": name,
                             "robot_id": robot_id,
                             "args": args,
+                            **({'authority': authority} if authority is not None else {}),
                         },
                     )
                 elif operation == "cancel":
@@ -143,7 +176,13 @@ class Skills:
                 else:
                     response = client.get(url, headers=headers)
                 response.raise_for_status()
-                return response.json()
+                result = response.json()
+                if spec.get('fencing_domain'):
+                    require(isinstance(result, dict), 'invalid execution authority response')
+                    validate_authority(result.get('authority'), spec['fencing_domain'])
+                    require(isinstance(result, dict) and result.get('authority') == authority,
+                            'execution response authority mismatch')
+                return result
         if name == "file.copy":
             from .file_copy import copy_step
 
@@ -174,6 +213,19 @@ class Skills:
                 evidence = [
                     {"source": "asset:" + asset["id"], "sha256": asset["sha256"]}
                 ]
+            elif name == "asset.verify-set":
+                items = args["items"]
+                require(len({item['asset_id'] for item in items}) == len(items), 'duplicate asset in verification set')
+                verified, evidence = [], []
+                for item in items:
+                    data = self.memory.read(item['asset_id'])
+                    asset = self.store.get('assets', item['asset_id'])
+                    require(asset['metadata'].get('robot_id') in {None, robot_id}, 'verification asset robot mismatch')
+                    digest = hashlib.sha256(data).hexdigest()
+                    require(digest == item['sha256'], 'verification asset differs from expected sha256')
+                    verified.append({'asset_id': asset['id'], 'sha256': digest, 'size': len(data)})
+                    evidence.append({'source': 'asset:' + asset['id'], 'sha256': digest})
+                output = {'verified': True, 'count': len(verified), 'items': verified}
             else:
                 data = self.memory.read(args["asset_id"])
                 asset = self.store.get("assets", args["asset_id"])

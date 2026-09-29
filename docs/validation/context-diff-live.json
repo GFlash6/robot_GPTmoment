@@ -1,0 +1,779 @@
+{
+  "status": "passed_after_test_expectation_correction",
+  "mock_used": false,
+  "simulation_used": false,
+  "new_model_calls": 0,
+  "source_report": ".runtime/context-diff-validation/1146cfcf-453f-43e6-aba9-67994e0c2109/report.json",
+  "source_report_sha256": "bc334e58c3851846f731e0fda5fe943be52f44fbe2f9e6d0113ac4e93d8e92e8",
+  "test_result": "8 passed in 2.12s",
+  "test_command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q tests/test_context_diff_live.py tests/test_observer_context.py tests/test_observer.py",
+  "prior_attempts": [
+    {
+      "stage": "pytest startup",
+      "result": "launch_testing plugin incompatible with installed pytest; no tests executed; disabled unrelated plugin autoload"
+    },
+    {
+      "source_report": ".runtime/context-diff-validation/3a008d90-45f5-4b95-b2ff-c9a26b6d34a3/report.json",
+      "result": "failed expectation that capability fragment was unchanged; actual source changes from skill_registry to frozen_skill_catalog while content is unchanged"
+    }
+  ],
+  "model_evidence": [
+    {
+      "id": "6bc4d096-8863-446d-9d1b-c1d79c3d2ee5",
+      "method": "planning",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-13abdd8a-ed08-9995-a2ca-0fdcb9627167",
+      "status": "validated",
+      "context_bundle_hash": "91b24c661b2092e9edb992d629ae6b1f7721be6e5a20a5d0eb39c42f438ea210",
+      "request_sha256": "a74d63b1d19ab24a0628b3a898e1fd535604e428c632da654bbf5a9f9dd43e42",
+      "raw_sha256": "3284d33d6b419eb9ec0dedf39bb4ffd48b8860ab478fe54e32bf86b0e33a3fd5"
+    },
+    {
+      "id": "b3c5050c-b28f-48cc-93ad-360a7b3e0a5b",
+      "method": "goal_analysis",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-e16ae3c9-ba8c-9dda-b547-c151ff352643",
+      "status": "validated",
+      "context_bundle_hash": "c35cb9f2df6ed365a705b7b911f036e1dfb59f241d46d6ebe0d2b5d9587b1e5d",
+      "request_sha256": "c7be78e0003921294b1d4e312d656ea973eb5ea1f870b7bc9d45e459ed47fc00",
+      "raw_sha256": "9af68da5b9106f5425fd05f6c5706b2636e43c607aa131c8da5d2f536eba60f2"
+    },
+    {
+      "id": "b3ce8055-b676-4ec7-8fdc-510a0edb969c",
+      "method": "planning",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-15db15db-24f7-93e2-a8a1-5616dbd1d701",
+      "status": "validated",
+      "context_bundle_hash": "3e406675a914f630f10c2b8d21c009f19c9589c7ed2e1f8cdaac14f2333e2599",
+      "request_sha256": "88a09efd774935677e511dafbc1f3c7ec5a8be073db26c8c0057808c41cc2554",
+      "raw_sha256": "55593fc3898700bf0cf7d24b76837b7c57e560526f05c62781f3a9244a08e056"
+    },
+    {
+      "id": "f78d96d4-e323-4a15-a4cd-ba304a59955a",
+      "method": "session_summary",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-4e2ffa7f-2262-9114-8e12-4d01a742b02e",
+      "status": "validated",
+      "context_bundle_hash": "0be24fa29ba565f5b9af35a516e7f8f739a20e3e690d1b26e0bfe78c3e174be9",
+      "request_sha256": "55bb4125f5ae64d5bb621023220159912854e1d73a751815a8e0d8855ad2492d",
+      "raw_sha256": "ed00820d1e8b5f5c93d57b054e2392af5c171bcbdf874982b56bf16dbe87e508"
+    }
+  ],
+  "source_logical_ledger_sha256": "92950a1ca466d8f3714fc95e654f85dd92718eb339ac18c13ed540882e1eda43",
+  "restored_copy_logical_ledger_sha256": "92950a1ca466d8f3714fc95e654f85dd92718eb339ac18c13ed540882e1eda43",
+  "report": {
+    "source_ledger": ".runtime/replanning-context-validation/93593234-4e6a-44a8-8bf0-e4ba3ae8ade9/ledger/ledger.sqlite",
+    "source_report": ".runtime/replanning-context-validation/93593234-4e6a-44a8-8bf0-e4ba3ae8ade9/report.json",
+    "source_report_sha256": "adb0bf8a458e1b31d852bfe83b29436497f6f1a976068e2be98633057ddf433d",
+    "mock_used": false,
+    "simulation_used": false,
+    "new_model_calls": 0,
+    "actual_response_ids": [
+      "chatcmpl-13abdd8a-ed08-9995-a2ca-0fdcb9627167",
+      "chatcmpl-e16ae3c9-ba8c-9dda-b547-c151ff352643",
+      "chatcmpl-15db15db-24f7-93e2-a8a1-5616dbd1d701",
+      "chatcmpl-4e2ffa7f-2262-9114-8e12-4d01a742b02e"
+    ],
+    "pairs_checked": 16,
+    "planning_to_recovery": {
+      "before": {
+        "model_record_id": "b3ce8055-b676-4ec7-8fdc-510a0edb969c",
+        "method": "planning",
+        "model_status": "validated",
+        "bundle_id": "b3ce8055-b676-4ec7-8fdc-510a0edb969c",
+        "manifest_id": "8167c845-29c9-4d29-89c2-b8960de7667e",
+        "integrity": {
+          "status": "matched",
+          "issues": [],
+          "expected_bundle_hash": "3e406675a914f630f10c2b8d21c009f19c9589c7ed2e1f8cdaac14f2333e2599",
+          "actual_bundle_hash": "3e406675a914f630f10c2b8d21c009f19c9589c7ed2e1f8cdaac14f2333e2599",
+          "scope": "persisted_links_and_bundle_hash_only"
+        },
+        "comparison_issues": []
+      },
+      "after": {
+        "model_record_id": "6bc4d096-8863-446d-9d1b-c1d79c3d2ee5",
+        "method": "planning",
+        "model_status": "validated",
+        "bundle_id": "6bc4d096-8863-446d-9d1b-c1d79c3d2ee5",
+        "manifest_id": "6a5beeee-7369-450d-98ca-69eb3c71f3a4",
+        "integrity": {
+          "status": "matched",
+          "issues": [],
+          "expected_bundle_hash": "91b24c661b2092e9edb992d629ae6b1f7721be6e5a20a5d0eb39c42f438ea210",
+          "actual_bundle_hash": "91b24c661b2092e9edb992d629ae6b1f7721be6e5a20a5d0eb39c42f438ea210",
+          "scope": "persisted_links_and_bundle_hash_only"
+        },
+        "comparison_issues": []
+      },
+      "status": "compared",
+      "changes": {
+        "request": [
+          {
+            "field": "context_snapshot_id",
+            "before_present": true,
+            "after_present": true,
+            "before": null,
+            "after": "54d2f49d-57bc-4c36-b71f-dea443f24e18"
+          },
+          {
+            "field": "phase",
+            "before_present": true,
+            "after_present": true,
+            "before": "planning",
+            "after": "replanning"
+          },
+          {
+            "field": "request_id",
+            "before_present": true,
+            "after_present": true,
+            "before": "7270818c-9c3b-495d-a6a9-df50c788bb83",
+            "after": "136267d5-df81-4452-be54-a82be1372bf4"
+          },
+          {
+            "field": "task_id",
+            "before_present": true,
+            "after_present": true,
+            "before": null,
+            "after": "c0314b16-3e4b-44a2-86a4-a42ff70e2d1e"
+          }
+        ],
+        "fragments": {
+          "added": [
+            {
+              "id": "session-summary",
+              "authority": "data",
+              "evidence_ids": [],
+              "kind": "memory",
+              "metadata": {
+                "covered_turns": [
+                  {
+                    "id": "cc4c1cfa-7338-4a48-b804-ddf97ababe82",
+                    "record_hash": "ae3a6f9dc0956b29b20d9797181cb26f8b875e9dbbaacc9640d5148a29200ed3"
+                  },
+                  {
+                    "id": "7b70413e-58e8-4341-9cce-2ec05d2b081d",
+                    "record_hash": "6d85e7b3065030631f6ea0090b479c6f5ffd9a4438d8d395c735b92d886de2dc"
+                  },
+                  {
+                    "id": "f71ffedd-a565-4ce1-bc86-300273f9e00e",
+                    "record_hash": "8f1ee448cc4a46d3455e7744cb6488c6550e0d4343e8b43523763f2a67908ad9"
+                  }
+                ],
+                "model_response_id": "f78d96d4-e323-4a15-a4cd-ba304a59955a",
+                "model_response_ids": [
+                  "f78d96d4-e323-4a15-a4cd-ba304a59955a"
+                ],
+                "pinned_turn_ids": [
+                  "73644f44-3e28-408f-89f2-8fc05b35e557"
+                ],
+                "provider": "session",
+                "provider_contract_version": 1,
+                "record_hash": "c76b6a9d9fd1f9467d1f1bc83d81541f22c6a8eaab2978d53ae612975febfe38",
+                "summary_id": "e0494e67-6eeb-4f28-acd9-066e97bb2343"
+              },
+              "priority": 86,
+              "required": true,
+              "source": "session_summary",
+              "content_sha256": "327eff7d54aa9bcc6d221a531a33aaeab496478dab0ec396cbf8d157fd2b2ea6",
+              "allocation": {
+                "status": "included"
+              }
+            },
+            {
+              "id": "task-state",
+              "authority": "data",
+              "evidence_ids": [],
+              "kind": "task_state",
+              "metadata": {
+                "provider": "task-state",
+                "provider_contract_version": 1
+              },
+              "priority": 95,
+              "required": true,
+              "source": "runtime_ledger",
+              "content_sha256": "6b57e5566a6aa9f02e2613bf02eec531e1b0cb04c88967ba57ecfd241144a576",
+              "allocation": {
+                "status": "included"
+              }
+            }
+          ],
+          "removed": [],
+          "changed": [
+            {
+              "id": "capabilities",
+              "fields": [
+                {
+                  "field": "source",
+                  "before_present": true,
+                  "after_present": true,
+                  "before": "skill_registry",
+                  "after": "frozen_skill_catalog"
+                }
+              ]
+            },
+            {
+              "id": "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0",
+              "fields": [
+                {
+                  "field": "metadata",
+                  "before_present": true,
+                  "after_present": true,
+                  "before": {
+                    "provider": "memory",
+                    "provider_contract_version": 1,
+                    "record_hash": "934adccc4e184c2a2f2596c748606e67df51a6b40e7ba323eed4c1217c39c617",
+                    "valid_until": null,
+                    "verified_at": 1790035126.6609697
+                  },
+                  "after": {
+                    "provider": "memory",
+                    "provider_contract_version": 1,
+                    "record_hash": "934adccc4e184c2a2f2596c748606e67df51a6b40e7ba323eed4c1217c39c617",
+                    "valid_until": null,
+                    "verified_at": 1790035163.3821797
+                  }
+                }
+              ]
+            },
+            {
+              "id": "session",
+              "fields": [
+                {
+                  "field": "content_sha256",
+                  "before_present": true,
+                  "after_present": true,
+                  "before": "3b2c64d637313de0c0dc4be04e943842236313ef8556300cf04909330fa92bd3",
+                  "after": "dd09ccb667b46fb6104f0e84c93a9f67972d3b61b8d458cd16ec6f2ecf3fab78"
+                },
+                {
+                  "field": "metadata",
+                  "before_present": true,
+                  "after_present": true,
+                  "before": {
+                    "provider": "session",
+                    "provider_contract_version": 1,
+                    "revision": 7,
+                    "session_id": "5c2e9c47-de19-4c57-991c-4fdf3fbff4c0",
+                    "snapshot_id": null
+                  },
+                  "after": {
+                    "provider": "session",
+                    "provider_contract_version": 1,
+                    "revision": 7,
+                    "session_id": "5c2e9c47-de19-4c57-991c-4fdf3fbff4c0",
+                    "snapshot_id": "54d2f49d-57bc-4c36-b71f-dea443f24e18"
+                  }
+                }
+              ]
+            }
+          ],
+          "unchanged_ids": [
+            "goal"
+          ],
+          "order": {
+            "changed": true,
+            "before": [
+              "goal",
+              "capabilities",
+              "session",
+              "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+            ],
+            "after": [
+              "goal",
+              "capabilities",
+              "task-state",
+              "session-summary",
+              "session",
+              "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+            ]
+          }
+        },
+        "manifest": [
+          {
+            "field": "estimated_input_tokens",
+            "before_present": true,
+            "after_present": true,
+            "before": 18479,
+            "after": 13648
+          },
+          {
+            "field": "id",
+            "before_present": true,
+            "after_present": true,
+            "before": "8167c845-29c9-4d29-89c2-b8960de7667e",
+            "after": "6a5beeee-7369-450d-98ca-69eb3c71f3a4"
+          },
+          {
+            "field": "included",
+            "before_present": true,
+            "after_present": true,
+            "before": [
+              "goal",
+              "capabilities",
+              "session",
+              "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+            ],
+            "after": [
+              "goal",
+              "task-state",
+              "capabilities",
+              "session-summary",
+              "session",
+              "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+            ]
+          },
+          {
+            "field": "input_token_limit",
+            "before_present": true,
+            "after_present": true,
+            "before": 32768,
+            "after": 18719
+          },
+          {
+            "field": "phase",
+            "before_present": true,
+            "after_present": true,
+            "before": "planning",
+            "after": "replanning"
+          },
+          {
+            "field": "provider_diagnostics",
+            "before_present": true,
+            "after_present": true,
+            "before": [
+              {
+                "dropped": [],
+                "fragment_ids": [
+                  "goal",
+                  "capabilities"
+                ],
+                "included": [
+                  "goal",
+                  "capabilities"
+                ],
+                "provider": "goal-capabilities",
+                "status": "collected"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [],
+                "included": [],
+                "provider": "task-state",
+                "status": "empty"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [
+                  "session"
+                ],
+                "included": [
+                  "session"
+                ],
+                "provider": "session",
+                "status": "collected"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [
+                  "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+                ],
+                "included": [
+                  "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+                ],
+                "provider": "memory",
+                "status": "collected"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [],
+                "included": [],
+                "provider": "assets",
+                "status": "empty"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [],
+                "included": [],
+                "provider": "selection",
+                "status": "empty"
+              }
+            ],
+            "after": [
+              {
+                "dropped": [],
+                "fragment_ids": [
+                  "goal",
+                  "capabilities"
+                ],
+                "included": [
+                  "goal",
+                  "capabilities"
+                ],
+                "provider": "goal-capabilities",
+                "status": "collected"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [
+                  "task-state"
+                ],
+                "included": [
+                  "task-state"
+                ],
+                "provider": "task-state",
+                "status": "collected"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [
+                  "session-summary",
+                  "session"
+                ],
+                "included": [
+                  "session-summary",
+                  "session"
+                ],
+                "provider": "session",
+                "status": "collected"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [
+                  "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+                ],
+                "included": [
+                  "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+                ],
+                "provider": "memory",
+                "status": "collected"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [],
+                "included": [],
+                "provider": "assets",
+                "status": "empty"
+              },
+              {
+                "dropped": [],
+                "fragment_ids": [],
+                "included": [],
+                "provider": "selection",
+                "status": "empty"
+              }
+            ]
+          },
+          {
+            "field": "request_id",
+            "before_present": true,
+            "after_present": true,
+            "before": "7270818c-9c3b-495d-a6a9-df50c788bb83",
+            "after": "136267d5-df81-4452-be54-a82be1372bf4"
+          },
+          {
+            "field": "sources",
+            "before_present": true,
+            "after_present": true,
+            "before": [
+              {
+                "authority": "operator",
+                "evidence_ids": [],
+                "id": "goal",
+                "metadata": {
+                  "provider": "goal-capabilities",
+                  "provider_contract_version": 1
+                },
+                "source": "goal_context"
+              },
+              {
+                "authority": "framework",
+                "evidence_ids": [],
+                "id": "capabilities",
+                "metadata": {
+                  "provider": "goal-capabilities",
+                  "provider_contract_version": 1
+                },
+                "source": "skill_registry"
+              },
+              {
+                "authority": "data",
+                "evidence_ids": [],
+                "id": "session",
+                "metadata": {
+                  "provider": "session",
+                  "provider_contract_version": 1,
+                  "revision": 7,
+                  "session_id": "5c2e9c47-de19-4c57-991c-4fdf3fbff4c0",
+                  "snapshot_id": null
+                },
+                "source": "session_ledger"
+              },
+              {
+                "authority": "data",
+                "evidence_ids": [
+                  "f8340de7-26b2-49ea-8235-4fa2988350a6"
+                ],
+                "id": "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0",
+                "metadata": {
+                  "provider": "memory",
+                  "provider_contract_version": 1,
+                  "record_hash": "934adccc4e184c2a2f2596c748606e67df51a6b40e7ba323eed4c1217c39c617",
+                  "valid_until": null,
+                  "verified_at": 1790035126.6609697
+                },
+                "source": "scoped_memory_catalog"
+              }
+            ],
+            "after": [
+              {
+                "authority": "operator",
+                "evidence_ids": [],
+                "id": "goal",
+                "metadata": {
+                  "provider": "goal-capabilities",
+                  "provider_contract_version": 1
+                },
+                "source": "goal_context"
+              },
+              {
+                "authority": "data",
+                "evidence_ids": [],
+                "id": "task-state",
+                "metadata": {
+                  "provider": "task-state",
+                  "provider_contract_version": 1
+                },
+                "source": "runtime_ledger"
+              },
+              {
+                "authority": "framework",
+                "evidence_ids": [],
+                "id": "capabilities",
+                "metadata": {
+                  "provider": "goal-capabilities",
+                  "provider_contract_version": 1
+                },
+                "source": "frozen_skill_catalog"
+              },
+              {
+                "authority": "data",
+                "evidence_ids": [],
+                "id": "session-summary",
+                "metadata": {
+                  "covered_turns": [
+                    {
+                      "id": "cc4c1cfa-7338-4a48-b804-ddf97ababe82",
+                      "record_hash": "ae3a6f9dc0956b29b20d9797181cb26f8b875e9dbbaacc9640d5148a29200ed3"
+                    },
+                    {
+                      "id": "7b70413e-58e8-4341-9cce-2ec05d2b081d",
+                      "record_hash": "6d85e7b3065030631f6ea0090b479c6f5ffd9a4438d8d395c735b92d886de2dc"
+                    },
+                    {
+                      "id": "f71ffedd-a565-4ce1-bc86-300273f9e00e",
+                      "record_hash": "8f1ee448cc4a46d3455e7744cb6488c6550e0d4343e8b43523763f2a67908ad9"
+                    }
+                  ],
+                  "model_response_id": "f78d96d4-e323-4a15-a4cd-ba304a59955a",
+                  "model_response_ids": [
+                    "f78d96d4-e323-4a15-a4cd-ba304a59955a"
+                  ],
+                  "pinned_turn_ids": [
+                    "73644f44-3e28-408f-89f2-8fc05b35e557"
+                  ],
+                  "provider": "session",
+                  "provider_contract_version": 1,
+                  "record_hash": "c76b6a9d9fd1f9467d1f1bc83d81541f22c6a8eaab2978d53ae612975febfe38",
+                  "summary_id": "e0494e67-6eeb-4f28-acd9-066e97bb2343"
+                },
+                "source": "session_summary"
+              },
+              {
+                "authority": "data",
+                "evidence_ids": [],
+                "id": "session",
+                "metadata": {
+                  "provider": "session",
+                  "provider_contract_version": 1,
+                  "revision": 7,
+                  "session_id": "5c2e9c47-de19-4c57-991c-4fdf3fbff4c0",
+                  "snapshot_id": "54d2f49d-57bc-4c36-b71f-dea443f24e18"
+                },
+                "source": "session_ledger"
+              },
+              {
+                "authority": "data",
+                "evidence_ids": [
+                  "f8340de7-26b2-49ea-8235-4fa2988350a6"
+                ],
+                "id": "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0",
+                "metadata": {
+                  "provider": "memory",
+                  "provider_contract_version": 1,
+                  "record_hash": "934adccc4e184c2a2f2596c748606e67df51a6b40e7ba323eed4c1217c39c617",
+                  "valid_until": null,
+                  "verified_at": 1790035163.3821797
+                },
+                "source": "scoped_memory_catalog"
+              }
+            ]
+          }
+        ],
+        "allocation": [
+          {
+            "field": "value",
+            "before_present": true,
+            "after_present": true,
+            "before": {
+              "drop_details": [],
+              "dropped": [],
+              "estimated_input_tokens": 18479,
+              "estimator": "utf8_bytes_v1",
+              "included": [
+                "goal",
+                "capabilities",
+                "session",
+                "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+              ],
+              "input_token_limit": 32768,
+              "reserved_output_tokens": 2048
+            },
+            "after": {
+              "drop_details": [],
+              "dropped": [],
+              "estimated_input_tokens": 13648,
+              "estimator": "utf8_bytes_v1",
+              "included": [
+                "goal",
+                "task-state",
+                "capabilities",
+                "session-summary",
+                "session",
+                "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+              ],
+              "input_token_limit": 18719,
+              "reserved_output_tokens": 2048
+            }
+          }
+        ],
+        "provider_diagnostics": [
+          {
+            "field": "diagnostics",
+            "before_present": true,
+            "after_present": true,
+            "before": [
+              {
+                "fragment_ids": [
+                  "goal",
+                  "capabilities"
+                ],
+                "provider": "goal-capabilities",
+                "status": "collected"
+              },
+              {
+                "fragment_ids": [],
+                "provider": "task-state",
+                "status": "empty"
+              },
+              {
+                "fragment_ids": [
+                  "session"
+                ],
+                "provider": "session",
+                "status": "collected"
+              },
+              {
+                "fragment_ids": [
+                  "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+                ],
+                "provider": "memory",
+                "status": "collected"
+              },
+              {
+                "fragment_ids": [],
+                "provider": "assets",
+                "status": "empty"
+              },
+              {
+                "fragment_ids": [],
+                "provider": "selection",
+                "status": "empty"
+              }
+            ],
+            "after": [
+              {
+                "fragment_ids": [
+                  "goal",
+                  "capabilities"
+                ],
+                "provider": "goal-capabilities",
+                "status": "collected"
+              },
+              {
+                "fragment_ids": [
+                  "task-state"
+                ],
+                "provider": "task-state",
+                "status": "collected"
+              },
+              {
+                "fragment_ids": [
+                  "session-summary",
+                  "session"
+                ],
+                "provider": "session",
+                "status": "collected"
+              },
+              {
+                "fragment_ids": [
+                  "memory:13f4d8c7-269e-449a-8495-7d75e1f569d0"
+                ],
+                "provider": "memory",
+                "status": "collected"
+              },
+              {
+                "fragment_ids": [],
+                "provider": "assets",
+                "status": "empty"
+              },
+              {
+                "fragment_ids": [],
+                "provider": "selection",
+                "status": "empty"
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "redacted_persisted_context_only",
+      "lineage": "explicit_pair_not_verified",
+      "content_hash_encoding": "sha256_of_display_json_ensure_ascii_false_sort_keys_default_separators",
+      "scope_differences": [
+        "task_id"
+      ]
+    },
+    "legacy_response_id": "chatcmpl-428435c6-8cb2-9dbc-b8ac-73544d8c008a",
+    "status": "passed",
+    "checks": [
+      "all ordered genuine model pairs and self comparison",
+      "actual task-state and summary addition",
+      "actual session content and budget changes",
+      "reverse direction",
+      "invalid query and missing records",
+      "GET only and unchanged ledger",
+      "real copied-bundle corruption rejected",
+      "duplicate allocation rejected",
+      "concurrent actual commit preserves SQLite read snapshot",
+      "actual legacy evidence unavailable",
+      "original copied ledger fully restored"
+    ]
+  },
+  "limits": [
+    "Reads existing genuine model inputs and responses; no new model call or robot execution.",
+    "Explicit pair comparison does not verify lineage or authorize dispatch.",
+    "Content hashes compare redacted display JSON; original bundle integrity hashes have a different scope.",
+    "Manifest structure and links are checked, not independent authenticity or model correctness.",
+    "No browser diff UI in this increment; existing single-record context panel remains available."
+  ]
+}

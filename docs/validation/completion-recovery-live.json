@@ -1,0 +1,253 @@
+{
+  "status": "passed",
+  "source_report": ".runtime/completion-recovery-validation/a23b26e5-acb3-44d1-a151-f036135bf6b0/report.json",
+  "source_report_sha256": "99e956f3e52361089036f448229f035e093cb38454b56b967fcda43485ad03e5",
+  "configured_model": "qwen3.7-plus",
+  "mock_used": false,
+  "simulation_used": false,
+  "contract": {
+    "schema_version": 1,
+    "verifier_skill": "asset.verify",
+    "checks": [
+      {
+        "id": "expected-hash",
+        "path": "sha256",
+        "op": "eq",
+        "value": "376db8e44aa1349f71ee7cfdfeede0639c4c038d0a6da8649208f3002930dbd0"
+      },
+      {
+        "id": "expected-size",
+        "path": "size",
+        "op": "eq",
+        "value": 6822
+      },
+      {
+        "id": "integrity",
+        "path": "verified",
+        "op": "eq",
+        "value": true
+      }
+    ]
+  },
+  "operator_read_hashes": {
+    "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/completion-recovery-validation/a23b26e5-acb3-44d1-a151-f036135bf6b0/primary.md": "376db8e44aa1349f71ee7cfdfeede0639c4c038d0a6da8649208f3002930dbd0",
+    "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/completion-recovery-validation/a23b26e5-acb3-44d1-a151-f036135bf6b0/backup.md": "376db8e44aa1349f71ee7cfdfeede0639c4c038d0a6da8649208f3002930dbd0"
+  },
+  "task_id": "99c969df-84ce-4696-b49b-c25bfb8ff7ff",
+  "initial_plan": {
+    "steps": [
+      {
+        "args": {
+          "metadata": {
+            "encoding": "utf8",
+            "kind": "document",
+            "source": "completion-recovery"
+          },
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/completion-recovery-validation/a23b26e5-acb3-44d1-a151-f036135bf6b0/primary.md"
+        },
+        "deps": [],
+        "id": "ingest_primary",
+        "skill": "file.ingest"
+      },
+      {
+        "args": {
+          "asset_id": {
+            "$ref": "ingest_primary.asset_id"
+          }
+        },
+        "deps": [
+          "ingest_primary"
+        ],
+        "id": "verify_asset",
+        "skill": "asset.verify"
+      }
+    ],
+    "verification": "verify_asset"
+  },
+  "failure_task_status": "replanning",
+  "actual_failed_verification": {
+    "execution_id": "4be95823-25b8-448f-86c7-dc439ec5c4d1",
+    "status": "failed",
+    "quiescent": true,
+    "output": {
+      "sha256": "f936d1bc85d6656613c246e8108b26e95581bf23e6605f8a0b7327d070551966",
+      "size": 6860,
+      "verified": true
+    },
+    "evidence": [
+      {
+        "source": "asset:e1d8b386-93d9-4cc6-b3e5-6096bc16d335",
+        "sha256": "f936d1bc85d6656613c246e8108b26e95581bf23e6605f8a0b7327d070551966"
+      }
+    ],
+    "reported_status": "succeeded",
+    "completion_evaluation": {
+      "schema_version": 1,
+      "contract_hash": "ea8d35a42fcf94f3b022dd1c56cd342581d926d13c890faf29386cf3538dbb38",
+      "execution_id": "4be95823-25b8-448f-86c7-dc439ec5c4d1",
+      "verifier_skill": "asset.verify",
+      "checks": [
+        {
+          "id": "expected-hash",
+          "op": "eq",
+          "path": "sha256",
+          "value": "376db8e44aa1349f71ee7cfdfeede0639c4c038d0a6da8649208f3002930dbd0",
+          "status": "failed",
+          "actual": "f936d1bc85d6656613c246e8108b26e95581bf23e6605f8a0b7327d070551966"
+        },
+        {
+          "id": "expected-size",
+          "op": "eq",
+          "path": "size",
+          "value": 6822,
+          "status": "failed",
+          "actual": 6860
+        },
+        {
+          "id": "integrity",
+          "op": "eq",
+          "path": "verified",
+          "value": true,
+          "status": "passed",
+          "actual": true
+        }
+      ],
+      "status": "failed"
+    },
+    "error": "task completion criteria failed"
+  },
+  "recovered_plan": {
+    "steps": [
+      {
+        "args": {
+          "metadata": {
+            "encoding": "utf8",
+            "kind": "document",
+            "source": "completion-recovery"
+          },
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/completion-recovery-validation/a23b26e5-acb3-44d1-a151-f036135bf6b0/backup.md"
+        },
+        "deps": [],
+        "id": "ingest_backup",
+        "skill": "file.ingest"
+      },
+      {
+        "args": {
+          "asset_id": {
+            "$ref": "ingest_backup.asset_id"
+          }
+        },
+        "deps": [
+          "ingest_backup"
+        ],
+        "id": "verify_asset",
+        "skill": "asset.verify"
+      }
+    ],
+    "verification": "verify_asset"
+  },
+  "final_task_status": "succeeded",
+  "replans": 1,
+  "actual_final_verification": {
+    "completion_evaluation": {
+      "checks": [
+        {
+          "actual": "376db8e44aa1349f71ee7cfdfeede0639c4c038d0a6da8649208f3002930dbd0",
+          "id": "expected-hash",
+          "op": "eq",
+          "path": "sha256",
+          "status": "passed",
+          "value": "376db8e44aa1349f71ee7cfdfeede0639c4c038d0a6da8649208f3002930dbd0"
+        },
+        {
+          "actual": 6822,
+          "id": "expected-size",
+          "op": "eq",
+          "path": "size",
+          "status": "passed",
+          "value": 6822
+        },
+        {
+          "actual": true,
+          "id": "integrity",
+          "op": "eq",
+          "path": "verified",
+          "status": "passed",
+          "value": true
+        }
+      ],
+      "contract_hash": "ea8d35a42fcf94f3b022dd1c56cd342581d926d13c890faf29386cf3538dbb38",
+      "execution_id": "eb0f46fb-9a57-4ca4-9b1a-ec31ea4b9877",
+      "schema_version": 1,
+      "status": "passed",
+      "verifier_skill": "asset.verify"
+    },
+    "evidence": [
+      {
+        "sha256": "376db8e44aa1349f71ee7cfdfeede0639c4c038d0a6da8649208f3002930dbd0",
+        "source": "asset:01971a54-d13d-4024-baa0-3abea29da766"
+      }
+    ],
+    "execution_id": "eb0f46fb-9a57-4ca4-9b1a-ec31ea4b9877",
+    "output": {
+      "sha256": "376db8e44aa1349f71ee7cfdfeede0639c4c038d0a6da8649208f3002930dbd0",
+      "size": 6822,
+      "verified": true
+    },
+    "quiescent": true,
+    "reported_status": "succeeded",
+    "status": "succeeded"
+  },
+  "model_records": [
+    {
+      "id": "252ba2a3-2c28-4313-b427-443a4779a3fa",
+      "method": "planning",
+      "response_id": "chatcmpl-f950d5ef-a5ef-9969-b046-ea990d5b87d3",
+      "actual_model": "qwen3.7-plus",
+      "context_bundle_hash": "420fd11975832473e61a77bd6515d9e5c2a3e8e7da036516ca71f8209a752abb",
+      "request_sha256": "0422642454fc22a307e1c5dc4a8aae5888077cee87e1770da15fad50dc71c849",
+      "raw_sha256": "5cecea1679afd0562e206d9e98cea4134764413e5830884847a2fde360b5486b",
+      "exact_input_reconstruction": true
+    },
+    {
+      "id": "576f3bd1-a705-427e-b52c-0316013759f8",
+      "method": "goal_analysis",
+      "response_id": "chatcmpl-238eb063-fbc1-957b-bd51-9a29cdc93c7f",
+      "actual_model": "qwen3.7-plus",
+      "context_bundle_hash": "c2165ce6d3ac8008518849baabf96d9c95b8c6284ff16bc78c711c87e74d5399",
+      "request_sha256": "6004148aa26df98b0b9f4cb5dc2fa079980bf8e196e8f16d4dc0a117e803c384",
+      "raw_sha256": "de69383f3c4333879875617736359a62e84eb95816b23b222ee6536920e83e31",
+      "exact_input_reconstruction": true
+    },
+    {
+      "id": "68f6cfb8-3d92-4b3e-a148-cb80fb7b4694",
+      "method": "planning",
+      "response_id": "chatcmpl-9bc0b272-c3db-9f97-a7dd-0f10e29826b2",
+      "actual_model": "qwen3.7-plus",
+      "context_bundle_hash": "8ebff572e08f73ac4edbef9875a21bef12ffa324838369003ca513abaf17d4d4",
+      "request_sha256": "319c34e66833dd5fe84b2f31b542565113486eed6ca6d32960ab9de4bbf6c407",
+      "raw_sha256": "8bac0b62d7c39c4762609e176e99ba6a8a3e732070351ac75949aaa9bd132be0",
+      "exact_input_reconstruction": true
+    }
+  ],
+  "elapsed_seconds": 70.72196359199006,
+  "validated_behaviors": [
+    "Real source bytes changed after accepted model plan; both file skills succeed but explicit task checks fail.",
+    "Actual mismatch evidence and frozen operator contract are required fragments of the real recovery request.",
+    "Clearing the current session contract does not change the accepted task or recovery requirements.",
+    "Real model chooses the authorized unchanged backup; independent worker archives and verifies original bytes.",
+    "All three saved actual model inputs, response formats and allocation records reconstruct exactly.",
+    "Original changed source remains changed; backup bytes remain original; no leases remain."
+  ],
+  "validation": {
+    "live_command": "RUN_LIVE_MODEL_TESTS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q -s tests/test_completion_recovery_live.py",
+    "live_result": "1 passed in 70.85s",
+    "regression_command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q tests/test_completion_contract.py tests/test_application_actions.py tests/test_context_providers.py tests/test_context_codec.py tests/test_context_assets.py",
+    "regression_result": "40 passed in 7.76s"
+  },
+  "limits": [
+    "One explicitly constrained file recovery scenario; not general autonomous recovery success rate.",
+    "No physical robot, WorldState, hardware stop or perception validation.",
+    "No production behavior changes were needed; this increment adds reproducible live coverage and evidence."
+  ]
+}

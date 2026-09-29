@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "actual_preexisting_snapshots": [
+    {
+      "ledger": ".runtime/memory-validation/db95b834-a6ec-4664-95fd-fa973b7ee20b/ledger",
+      "snapshot_id": "398f611d-faa8-4afb-a546-35a2979da29d",
+      "record_hash": "130fa3ba5a6b7e4fc2113cd623cba2f4e2e2142810c83c8172e7801c07a8099a",
+      "legacy_version": 0,
+      "derived": false
+    },
+    {
+      "ledger": ".runtime/memory-validation/db95b834-a6ec-4664-95fd-fa973b7ee20b/ledger",
+      "snapshot_id": "5a8b43b1-c28b-45d5-b383-5e7345f97cf7",
+      "record_hash": "4185ca00fd9bf354bb613d3c8df5f5e0ed3de0d04a0d964390203f6ec33e83c5",
+      "legacy_version": 0,
+      "derived": false
+    },
+    {
+      "ledger": ".runtime/replanning-context-validation/007a2d6f-9604-4acd-b3ea-06eade15d2bd/ledger",
+      "snapshot_id": "ee02c0cf-a12a-4974-91a0-39a2f4c54a46",
+      "record_hash": "600d47f177b1e46ccdbd80a5127b980a2a46c42b7b2e6cb7699a66e205da7c74",
+      "legacy_version": 0,
+      "derived": false
+    },
+    {
+      "ledger": ".runtime/replanning-context-validation/007a2d6f-9604-4acd-b3ea-06eade15d2bd/ledger",
+      "snapshot_id": "f3af5f6d-7641-446c-b124-f57329c2ae50",
+      "record_hash": "91df8d4f5a82cab0080a636cf91f2c95ae58e6189fc5d77298976fe1f331721d",
+      "legacy_version": 0,
+      "derived": true
+    }
+  ],
+  "records_rewritten": false,
+  "model_calls": 0
+}

@@ -1,0 +1,74 @@
+{
+  "status": "discovery_completed_device_unavailable_in_observed_graph",
+  "source_report": ".runtime/world-source-discovery/61298f66-099d-4336-8d3e-058e4a0f2a8f/report.json",
+  "source_report_sha256": "ff10a27207df793f41ae54054c12bcb806e215aa4f76aba8e1d59313d039f779",
+  "actual_report": {
+    "schema_version": 1,
+    "started_at_unix_ns": 1790043786625740803,
+    "finished_at_unix_ns": 1790043789630838503,
+    "collector_node": "/robot_agent_source_audit",
+    "topics": [
+      {
+        "name": "/parameter_events",
+        "types": [
+          "rcl_interfaces/msg/ParameterEvent"
+        ],
+        "publishers": [
+          {
+            "node_name": "robot_agent_source_audit",
+            "node_namespace": "/",
+            "topic_type": "rcl_interfaces/msg/ParameterEvent"
+          }
+        ]
+      },
+      {
+        "name": "/rosout",
+        "types": [
+          "rcl_interfaces/msg/Log"
+        ],
+        "publishers": [
+          {
+            "node_name": "robot_agent_source_audit",
+            "node_namespace": "/",
+            "topic_type": "rcl_interfaces/msg/Log"
+          }
+        ]
+      }
+    ],
+    "actions": [],
+    "nodes": [
+      {
+        "name": "robot_agent_source_audit",
+        "namespace": "/"
+      }
+    ],
+    "sensor_messages_received": 0,
+    "sensor_subscription_attempted": false,
+    "scope": "ROS graph metadata only; diagnostic publishers may include this collector; no robot state or device identity established",
+    "mock_used": false,
+    "simulation_started": false,
+    "sources": {
+      "/home/gflash/agents/unitree_sim_isaaclab/holoagent_bridge/g1_state_bridge.py": {
+        "sha256": "928b9a63e7a986f1d7d994e779d851beecf4c757f3aaeeebadb64d9790908493",
+        "size": 6050
+      },
+      "/home/gflash/agents/unitree_sim_isaaclab/holoagent_bridge/g1_cmd_vel_adapter.py": {
+        "sha256": "ae5c024e874f1dcbb95d558d1481a7629282bc3999a791fe2778950ac13d1e76",
+        "size": 11117
+      },
+      "/home/gflash/agents/unitree_sim_isaaclab/holoagent_bridge/real_robot_launch/05_g1_state_bridge.sh": {
+        "sha256": "9d46f33c5dd3582f42a119bac68a179c29ae9c19249b9be626b29c167ad4cb0c",
+        "size": 532
+      },
+      "/home/gflash/agents/unitree_sim_isaaclab/holoagent_bridge/real_robot_launch/06_g1_motion_bridge.sh": {
+        "sha256": "eb5a8294814e561d6f40fb38685c721c6cabd827e2a297d24a789bda216e9453",
+        "size": 711
+      }
+    }
+  },
+  "limitations": [
+    "Graph discovery in current local ROS domain only, not proof of physical device availability elsewhere.",
+    "No sensor data consumed, no bridge started, no model call, no motion or dry-run.",
+    "Source review identifies candidate interfaces, not accepted device contracts or physical validation."
+  ]
+}

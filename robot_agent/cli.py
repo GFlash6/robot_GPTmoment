@@ -9,6 +9,7 @@ from .store import Store
 from .runtime import Runtime
 from .memory import Memory
 from .contracts import ContractError
+from .actions import Actions, local_principal
 
 
 def read_json(path):
@@ -31,8 +32,15 @@ def parser():
     submit.add_argument("plan")
     submit.add_argument("--robot", required=True)
     submit.add_argument("--priority", type=int, default=0)
+    submit.add_argument("--idempotency-key")
     for cmd in ("status", "events", "pause", "cancel", "resume", "preempt"):
-        sub.add_parser(cmd).add_argument("task")
+        control = sub.add_parser(cmd)
+        control.add_argument("task")
+        control.add_argument("--idempotency-key")
+    action = sub.add_parser("action", help="invoke the shared application action registry")
+    action.add_argument("name")
+    action.add_argument("input", help="JSON argument file")
+    action.add_argument("--idempotency-key")
     sub.add_parser("tasks")
     sub.add_parser("skills")
     sub.add_parser("leases")
@@ -40,6 +48,9 @@ def parser():
     serve.add_argument("--port", type=int, default=8088)
     runner = sub.add_parser("run")
     runner.add_argument("--until")
+    automation = sub.add_parser("automation-worker", help="run owned event diagnostics independently of execution")
+    automation.add_argument("--once", action="store_true")
+    automation.add_argument("--scan-only", action="store_true", help="persist pending event jobs without model calls")
     agent = sub.add_parser("agent")
     agent.add_argument("goal")
     agent.add_argument("--robot", required=True)
@@ -105,6 +116,15 @@ def main(argv=None):
     memory = Memory(store)
     try:
         cmd = args.command
+        actions = Actions(store)
+        principal = local_principal()
+        def invoke(name, body):
+            import uuid
+            return actions.call(name, body, principal,
+                idempotency_key=getattr(args, "idempotency_key", None) or str(uuid.uuid4()))["result"]
+        def versioned():
+            task = actions.task(args.task, principal)
+            return {"task_id": task["id"], "expected_revision": task["revision"], "expected_generation": task["generation"]}
         if cmd == "init":
             rt.install_local_skills([str(Path(p).resolve()) for p in args.allow_read])
             result = {"root": str(store.root), "skills": list(rt.catalog())}
@@ -115,29 +135,26 @@ def main(argv=None):
             store.set_capacity(args.name, args.units)
             result = {"resource": args.name, "capacity": args.units}
         elif cmd == "submit":
-            result = rt.submit(read_json(args.plan), args.robot, args.priority)
+            result = invoke("task.submit", {"plan": read_json(args.plan), "robot_id": args.robot, "priority": args.priority})
+            result["id"] = result["task_id"]
+        elif cmd == "action":
+            result = invoke(args.name, read_json(args.input))
         elif cmd == "status":
-            result = store.get("tasks", args.task)
-            if result is None:
-                raise ContractError("unknown task")
+            result = invoke("task.get", {"task_id": args.task})["task"]
         elif cmd == "events":
-            result = store.events(args.task)
+            result = invoke("task.events", {"task_id": args.task})["events"]
         elif cmd == "tasks":
-            result = store.list("tasks")
+            result = invoke("task.list", {})["items"]
         elif cmd == "skills":
             result = rt.catalog()
         elif cmd == "leases":
             result = store.leases()
         elif cmd in {"pause", "cancel"}:
-            rt.interrupt(args.task, cmd)
-            result = {"task": args.task, "requested": cmd, "confirmed_stopped": False}
+            result = invoke("task." + cmd, versioned())
         elif cmd == "resume":
-            result = rt.resume(args.task)
+            result = invoke("task.resume", versioned())
         elif cmd == "preempt":
-            result = {
-                "pause_requested": rt.preempt(args.task),
-                "confirmed_stopped": False,
-            }
+            result = invoke("task.preempt", versioned())
         elif cmd == "serve-skills":
             from .service import skill_server
 
@@ -147,18 +164,29 @@ def main(argv=None):
             finally:
                 server.server_close()
             result = {"stopped": True}
+        elif cmd == "automation-worker":
+            from .automations import run_once
+            while True:
+                result = run_once(store, principal, scan_only=args.scan_only)
+                if args.once or args.scan_only:
+                    break
+                time.sleep(1)
         elif cmd == "run":
             from .durable import run
 
             result = run(store.root, args.until)
         elif cmd == "agent":
-            result = rt.submit_goal(
-                args.goal,
-                args.robot,
-                read_json(args.model_config),
-                args.priority,
-                args.max_replans,
-            )
+            actions = Actions(store, model_config=read_json(args.model_config))
+            session = invoke("session.create", {"robot_id": args.robot, "goal": args.goal,
+                             "priority": args.priority, "max_replans": args.max_replans})["session"]
+            session = invoke("goal.analyze", {"session_id": session["id"], "expected_revision": session["revision"]})["session"]
+            analysis = session["analysis"]
+            if analysis["status"] == "needs_clarification" or analysis["questions"]:
+                result = {"session_id": session["id"], "analysis": analysis, "status": "needs_clarification"}
+            else:
+                version = {"session_id": session["id"], "expected_revision": session["revision"]}
+                draft = invoke("plan.propose", version)["draft"]
+                result = invoke("plan.submit", {**version, "draft_id": draft["id"], "plan_hash": draft["plan_hash"]})
         elif cmd == "analyze-goal":
             result = rt.analyze_goal(
                 args.goal,
@@ -186,7 +214,7 @@ def main(argv=None):
                 body = Planner(store, read_json(args.model_config)).plan(
                     args.goal, rt.catalog(), task
                 )
-            result = rt.revise(args.task, body)
+            result = invoke("task.revise", {**versioned(), "plan": body})
         elif cmd == "assets":
             result = memory.query_assets(
                 args.kind,

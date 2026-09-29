@@ -142,6 +142,7 @@ def validate_plan(plan, catalog):
         "unique nonempty step IDs required",
     )
     graph = {}
+    by_id = {step["id"]: step for step in steps}
     for s in steps:
         require(s.get("skill") in catalog, f"unknown skill: {s.get('skill')}")
         deps = s.get("deps", [])
@@ -182,6 +183,22 @@ def validate_plan(plan, catalog):
                         origin in deps and bool(path),
                         "output reference must name a direct dependency",
                     )
+                    source_skill = by_id[origin].get("skill")
+                    require(source_skill in catalog, f"unknown skill: {source_skill}")
+                    schema = catalog[source_skill].get("output_schema", {})
+                    for component in path.split("."):
+                        require(bool(component), "empty output reference component")
+                        # Only reject paths the declared schema rules out. Open
+                        # or composite schemas still receive runtime validation.
+                        if not isinstance(schema, dict) or any(k in schema for k in ("$ref", "anyOf", "oneOf", "allOf", "patternProperties")):
+                            break
+                        properties = schema.get("properties", {})
+                        if component in properties:
+                            schema = properties[component]
+                        else:
+                            require(schema.get("additionalProperties") is not False,
+                                    f"output reference field not declared: {value['$ref']}")
+                            break
                 else:
                     for v in value.values():
                         refs(v)

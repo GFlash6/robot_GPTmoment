@@ -1,0 +1,403 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/report.json",
+  "source_report_sha256": "4e1b386a6c6cca45010156dd99bee27f44e69a19a03cba5a4bc03be432b37a5d",
+  "regression": "41 passed in 9.03s",
+  "live_test": "1 passed in 82.48s",
+  "report": {
+    "configured_model": "qwen3.7-plus",
+    "mock_used": false,
+    "simulation_used": false,
+    "inputs": [
+      {
+        "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/SKILL_PROTOCOL.md",
+        "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-SKILL_PROTOCOL.md",
+        "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5"
+      },
+      {
+        "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/ARCHITECTURE.md",
+        "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-ARCHITECTURE.md",
+        "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3"
+      },
+      {
+        "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/CONTEXT_PROVIDERS.md",
+        "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-CONTEXT_PROVIDERS.md",
+        "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa"
+      }
+    ],
+    "scenario": "three_file_copy_archive_set_verification",
+    "plan": {
+      "steps": [
+        {
+          "id": "copy_skill_protocol",
+          "skill": "file.copy",
+          "args": {
+            "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/SKILL_PROTOCOL.md",
+            "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-SKILL_PROTOCOL.md"
+          },
+          "deps": [],
+          "retries": 0,
+          "fallback": []
+        },
+        {
+          "id": "copy_architecture",
+          "skill": "file.copy",
+          "args": {
+            "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/ARCHITECTURE.md",
+            "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-ARCHITECTURE.md"
+          },
+          "deps": [],
+          "retries": 0,
+          "fallback": []
+        },
+        {
+          "id": "copy_context_providers",
+          "skill": "file.copy",
+          "args": {
+            "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/CONTEXT_PROVIDERS.md",
+            "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-CONTEXT_PROVIDERS.md"
+          },
+          "deps": [],
+          "retries": 0,
+          "fallback": []
+        },
+        {
+          "id": "ingest_skill_protocol",
+          "skill": "file.ingest",
+          "args": {
+            "path": {
+              "$ref": "copy_skill_protocol.path"
+            },
+            "metadata": {
+              "kind": "document",
+              "encoding": "utf8",
+              "robot_id": "r1",
+              "source": "batch-archive"
+            }
+          },
+          "deps": [
+            "copy_skill_protocol"
+          ],
+          "retries": 0,
+          "fallback": []
+        },
+        {
+          "id": "ingest_architecture",
+          "skill": "file.ingest",
+          "args": {
+            "path": {
+              "$ref": "copy_architecture.path"
+            },
+            "metadata": {
+              "kind": "document",
+              "encoding": "utf8",
+              "robot_id": "r1",
+              "source": "batch-archive"
+            }
+          },
+          "deps": [
+            "copy_architecture"
+          ],
+          "retries": 0,
+          "fallback": []
+        },
+        {
+          "id": "ingest_context_providers",
+          "skill": "file.ingest",
+          "args": {
+            "path": {
+              "$ref": "copy_context_providers.path"
+            },
+            "metadata": {
+              "kind": "document",
+              "encoding": "utf8",
+              "robot_id": "r1",
+              "source": "batch-archive"
+            }
+          },
+          "deps": [
+            "copy_context_providers"
+          ],
+          "retries": 0,
+          "fallback": []
+        },
+        {
+          "id": "verify_set",
+          "skill": "asset.verify-set",
+          "args": {
+            "items": [
+              {
+                "asset_id": {
+                  "$ref": "ingest_skill_protocol.asset_id"
+                },
+                "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5"
+              },
+              {
+                "asset_id": {
+                  "$ref": "ingest_architecture.asset_id"
+                },
+                "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3"
+              },
+              {
+                "asset_id": {
+                  "$ref": "ingest_context_providers.asset_id"
+                },
+                "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa"
+              }
+            ]
+          },
+          "deps": [
+            "ingest_skill_protocol",
+            "ingest_architecture",
+            "ingest_context_providers"
+          ],
+          "retries": 0,
+          "fallback": []
+        }
+      ],
+      "verification": "verify_set"
+    },
+    "status": "passed",
+    "task_id": "bb6d7e3d-9230-4ca2-a500-643b7882cfd6",
+    "actual_result": {
+      "evidence": [
+        {
+          "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+          "source": "asset:d711094a-d684-4cc0-a626-f0afc8d9a45a"
+        },
+        {
+          "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+          "source": "asset:dd1a7be8-7222-412b-aa62-0e6736873aa4"
+        },
+        {
+          "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+          "source": "asset:f0542c53-b47d-4616-9e3f-9ac4555508c3"
+        }
+      ],
+      "execution_id": "5303b685-04e4-467c-886b-52f41b31e82a",
+      "output": {
+        "count": 3,
+        "items": [
+          {
+            "asset_id": "d711094a-d684-4cc0-a626-f0afc8d9a45a",
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "size": 2669
+          },
+          {
+            "asset_id": "dd1a7be8-7222-412b-aa62-0e6736873aa4",
+            "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+            "size": 4572
+          },
+          {
+            "asset_id": "f0542c53-b47d-4616-9e3f-9ac4555508c3",
+            "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+            "size": 8093
+          }
+        ],
+        "verified": true
+      },
+      "quiescent": true,
+      "status": "succeeded"
+    },
+    "step_results": {
+      "copy_architecture": {
+        "evidence": [
+          {
+            "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-ARCHITECTURE.md"
+          },
+          {
+            "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/ARCHITECTURE.md"
+          }
+        ],
+        "execution_id": "191a9ba4-d061-461c-af93-6ce03389bb9f",
+        "output": {
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-ARCHITECTURE.md",
+          "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+          "size": 4572,
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "copy_context_providers": {
+        "evidence": [
+          {
+            "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-CONTEXT_PROVIDERS.md"
+          },
+          {
+            "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/CONTEXT_PROVIDERS.md"
+          }
+        ],
+        "execution_id": "e0af4282-531e-4ef3-9773-4a6d8c8c5fab",
+        "output": {
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-CONTEXT_PROVIDERS.md",
+          "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+          "size": 8093,
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "copy_skill_protocol": {
+        "evidence": [
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-SKILL_PROTOCOL.md"
+          },
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/SKILL_PROTOCOL.md"
+          }
+        ],
+        "execution_id": "ba2b5f30-7534-496c-af05-42eca30dc60e",
+        "output": {
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/ed0b7007-7726-4ee9-b4e3-4fd96d9fb96a/copied-SKILL_PROTOCOL.md",
+          "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+          "size": 2669,
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "ingest_architecture": {
+        "evidence": [
+          {
+            "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+            "source": "asset:dd1a7be8-7222-412b-aa62-0e6736873aa4"
+          }
+        ],
+        "execution_id": "ea094bb0-b488-4a62-af0b-1cdd37f571ed",
+        "output": {
+          "asset_id": "dd1a7be8-7222-412b-aa62-0e6736873aa4",
+          "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+          "size": 4572
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "ingest_context_providers": {
+        "evidence": [
+          {
+            "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+            "source": "asset:f0542c53-b47d-4616-9e3f-9ac4555508c3"
+          }
+        ],
+        "execution_id": "f044a95b-1a7e-4215-ad74-5205a2b448df",
+        "output": {
+          "asset_id": "f0542c53-b47d-4616-9e3f-9ac4555508c3",
+          "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+          "size": 8093
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "ingest_skill_protocol": {
+        "evidence": [
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "asset:d711094a-d684-4cc0-a626-f0afc8d9a45a"
+          }
+        ],
+        "execution_id": "b3f9cf26-994b-4c9f-b5b7-1ea1a324a337",
+        "output": {
+          "asset_id": "d711094a-d684-4cc0-a626-f0afc8d9a45a",
+          "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+          "size": 2669
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "verify_set": {
+        "evidence": [
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "asset:d711094a-d684-4cc0-a626-f0afc8d9a45a"
+          },
+          {
+            "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+            "source": "asset:dd1a7be8-7222-412b-aa62-0e6736873aa4"
+          },
+          {
+            "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+            "source": "asset:f0542c53-b47d-4616-9e3f-9ac4555508c3"
+          }
+        ],
+        "execution_id": "5303b685-04e4-467c-886b-52f41b31e82a",
+        "output": {
+          "count": 3,
+          "items": [
+            {
+              "asset_id": "d711094a-d684-4cc0-a626-f0afc8d9a45a",
+              "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+              "size": 2669
+            },
+            {
+              "asset_id": "dd1a7be8-7222-412b-aa62-0e6736873aa4",
+              "sha256": "3460e8eb9b341c283dd15e5f76d6ad926fe6586519659f79b3149c68d0ef79e3",
+              "size": 4572
+            },
+            {
+              "asset_id": "f0542c53-b47d-4616-9e3f-9ac4555508c3",
+              "sha256": "30572109fbd61100f03cc76e0f4925cdf18e2647b549cd9d9fabfa6ef0dd58fa",
+              "size": 8093
+            }
+          ],
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      }
+    },
+    "model_records": [
+      {
+        "id": "156ab31c-ca42-405a-98bc-63fd866c20ca",
+        "method": "planning",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-dc8359cf-b71f-9340-b038-246b07b6651c",
+        "context_bundle_id": "156ab31c-ca42-405a-98bc-63fd866c20ca",
+        "context_bundle_hash": "287c0e48d51274c10c1de27b95d166aa084843a276800874b63aa4f58ec41290"
+      },
+      {
+        "id": "9527eef4-0111-4cbf-a1dd-ec8c295889a6",
+        "method": "goal_analysis",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-b8f9ec3a-c7e9-9de4-ab83-09600db3a764",
+        "context_bundle_id": null,
+        "context_bundle_hash": null
+      }
+    ],
+    "elapsed_seconds": 82.34428701805882
+  },
+  "verified_model_records": [
+    {
+      "id": "156ab31c-ca42-405a-98bc-63fd866c20ca",
+      "method": "planning",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-dc8359cf-b71f-9340-b038-246b07b6651c",
+      "request_sha256": "d0c758188b8a03616b6add57fa0451fbe8d196f61873a6d964400b38460c5fc6",
+      "raw_sha256": "c8f3cdd699eff10455302a3c5dd7517f767e0f5274a4493d08608524d16f507c",
+      "context_bundle_id": "156ab31c-ca42-405a-98bc-63fd866c20ca"
+    },
+    {
+      "id": "9527eef4-0111-4cbf-a1dd-ec8c295889a6",
+      "method": "goal_analysis",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-b8f9ec3a-c7e9-9de4-ab83-09600db3a764",
+      "request_sha256": "a2b98211901fe0d22c0ac98156c3a1aad031724ec67dcf23a6a26e3c8649f164",
+      "raw_sha256": "d40b845c9b2f9eb76e2fd521bedf4c4a4331fb0fe418e09c7d73ed966351d9ae",
+      "context_bundle_id": null
+    }
+  ],
+  "limits": [
+    "One constrained seven-node file task, not a statistical planning benchmark",
+    "No physical robot validation",
+    "Set verification reads assets sequentially, not an atomic filesystem snapshot",
+    "Expected-set completeness checked against the task specification by this evaluator"
+  ]
+}

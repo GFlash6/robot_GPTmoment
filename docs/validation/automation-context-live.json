@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "live_test": "4 passed in 97.42s",
+  "regression": "23 passed in 7.32s",
+  "counts": {
+    "validated_responses": 5,
+    "unresolved_requests": 2,
+    "reconstructed_requests": 7
+  },
+  "sources": [
+    {
+      "report": ".runtime/automation-validation/9c534f6d-be26-42d5-9de7-3f14dd778761/report.json",
+      "sha256": "a86026da63ef897b38ada9607b5881366056d4ecd3bbcf2a498ec6a24b9fb423",
+      "records": [
+        {
+          "id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+          "status": "validated",
+          "job_status": "completed",
+          "bundle_hash": "1fee337b8dec92139237ecba82d76658017ab2e49c9b078d1e4c70def8c60e97",
+          "response_id": "chatcmpl-68373219-877c-979c-89a6-75084284ef3d",
+          "actual_model": "qwen3.7-plus",
+          "raw_sha256": "17ccb63908042c0cf60f0f90c39dbda50510ac6268a6abd7591e1824c5869801"
+        }
+      ],
+      "stop_signal": null,
+      "context_evidence": {
+        "context_evidence": {
+          "record_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+          "bundle_hash": "1fee337b8dec92139237ecba82d76658017ab2e49c9b078d1e4c70def8c60e97",
+          "manifest_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+          "reconstruction": "exact_messages_response_format_and_allocation",
+          "event_snapshot_match": true
+        }
+      }
+    },
+    {
+      "report": ".runtime/automation-crash-validation/2f9e5d59-aa68-4edd-8955-fa8a48c7aa21/report.json",
+      "sha256": "7cd76690d35c690d0ccc0adbaaf9d092a3d656a42c31d75b6dd6f719b8e536af",
+      "records": [
+        {
+          "id": "0e0844fff29b553dc8944e3060acd04fa806d84b5747a0d7f6dc24915550d487",
+          "status": "validated",
+          "job_status": "completed",
+          "bundle_hash": "48e2d53163d30accd2d9d81555891ad4bbb580fdf105103ab0ca3413bb4e0262",
+          "response_id": "chatcmpl-2a061047-8b0b-9671-9c43-e73a755d923a",
+          "actual_model": "qwen3.7-plus",
+          "raw_sha256": "20485828a9362444c8318de1c7cb81fece43f1bee5b6251ffaacb9b8edefe09a"
+        },
+        {
+          "id": "3964a7f0ad323d5def7655eb2c3594d49cd8b5e4119954c9c4334f26ee9c8405",
+          "status": "requesting",
+          "job_status": "unresolved",
+          "bundle_hash": "78d4710cd54beb4925b5f72105c97d27ee757f90b1a90997b2842f95936d596c",
+          "response_id": null,
+          "actual_model": null,
+          "raw_sha256": null
+        },
+        {
+          "id": "900599794c4fdbeea577790268e5084f03c709658a1f6013bbd59ee74f9467d5",
+          "status": "validated",
+          "job_status": "completed",
+          "bundle_hash": "7ab3323b8d73a20e34ef4c66cfc41ce488c625bef1d45e1b0a11c9c53245ea58",
+          "response_id": "chatcmpl-a75804ae-87b8-9923-a65a-ae2f8e0b38f2",
+          "actual_model": "qwen3.7-plus",
+          "raw_sha256": "a904f46d793914156885ba4859e7a1c8ab50db4e4f32d55d07f5fe75709fdf35"
+        }
+      ],
+      "stop_signal": "kill",
+      "context_evidence": {
+        "interrupted_context_evidence": {
+          "record_id": "3964a7f0ad323d5def7655eb2c3594d49cd8b5e4119954c9c4334f26ee9c8405",
+          "bundle_hash": "78d4710cd54beb4925b5f72105c97d27ee757f90b1a90997b2842f95936d596c",
+          "manifest_id": "3964a7f0ad323d5def7655eb2c3594d49cd8b5e4119954c9c4334f26ee9c8405",
+          "reconstruction": "exact_messages_response_format_and_allocation",
+          "event_snapshot_match": true
+        },
+        "completed_context_evidence": {
+          "record_id": "900599794c4fdbeea577790268e5084f03c709658a1f6013bbd59ee74f9467d5",
+          "bundle_hash": "7ab3323b8d73a20e34ef4c66cfc41ce488c625bef1d45e1b0a11c9c53245ea58",
+          "manifest_id": "900599794c4fdbeea577790268e5084f03c709658a1f6013bbd59ee74f9467d5",
+          "reconstruction": "exact_messages_response_format_and_allocation",
+          "event_snapshot_match": true
+        },
+        "retry_context_evidence": {
+          "record_id": "0e0844fff29b553dc8944e3060acd04fa806d84b5747a0d7f6dc24915550d487",
+          "bundle_hash": "48e2d53163d30accd2d9d81555891ad4bbb580fdf105103ab0ca3413bb4e0262",
+          "manifest_id": "0e0844fff29b553dc8944e3060acd04fa806d84b5747a0d7f6dc24915550d487",
+          "reconstruction": "exact_messages_response_format_and_allocation",
+          "event_snapshot_match": true
+        }
+      }
+    },
+    {
+      "report": ".runtime/automation-crash-validation/7b039594-5757-4b35-820a-92e9c892eaa2/report.json",
+      "sha256": "2e7e4c89484cb27cea5f64c994246b5a299a798d32f9a54a3475bec0395f56c6",
+      "records": [
+        {
+          "id": "0e0844fff29b553dc8944e3060acd04fa806d84b5747a0d7f6dc24915550d487",
+          "status": "validated",
+          "job_status": "completed",
+          "bundle_hash": "6d1df8677b3f7350cea689e4306d4bec7acea34bfb35cb2cefe9563fd26e0e16",
+          "response_id": "chatcmpl-beca424a-b976-920a-8d29-bf7ca1984275",
+          "actual_model": "qwen3.7-plus",
+          "raw_sha256": "f777e6644a61483327585bc1a0f9925667092d5fa9b3e6465b0ad75579728a3d"
+        },
+        {
+          "id": "3964a7f0ad323d5def7655eb2c3594d49cd8b5e4119954c9c4334f26ee9c8405",
+          "status": "requesting",
+          "job_status": "unresolved",
+          "bundle_hash": "13544a72f2c1c197e9a63fe0a6abd7e921b51d3446ffdc157acebc5c562ac0de",
+          "response_id": null,
+          "actual_model": null,
+          "raw_sha256": null
+        },
+        {
+          "id": "900599794c4fdbeea577790268e5084f03c709658a1f6013bbd59ee74f9467d5",
+          "status": "validated",
+          "job_status": "completed",
+          "bundle_hash": "7fe9cf1e915dff43710eba7f54fc8b264816acf7bf0dae340bdaca7a3b77fca9",
+          "response_id": "chatcmpl-36c9bf42-611b-96ca-941a-98eb15577832",
+          "actual_model": "qwen3.7-plus",
+          "raw_sha256": "785dfb51660889712d9ea33f5fad0a5a064a1cb169dbb482c97cded378e61349"
+        }
+      ],
+      "stop_signal": "interrupt",
+      "context_evidence": {
+        "interrupted_context_evidence": {
+          "record_id": "3964a7f0ad323d5def7655eb2c3594d49cd8b5e4119954c9c4334f26ee9c8405",
+          "bundle_hash": "13544a72f2c1c197e9a63fe0a6abd7e921b51d3446ffdc157acebc5c562ac0de",
+          "manifest_id": "3964a7f0ad323d5def7655eb2c3594d49cd8b5e4119954c9c4334f26ee9c8405",
+          "reconstruction": "exact_messages_response_format_and_allocation",
+          "event_snapshot_match": true
+        },
+        "completed_context_evidence": {
+          "record_id": "900599794c4fdbeea577790268e5084f03c709658a1f6013bbd59ee74f9467d5",
+          "bundle_hash": "7fe9cf1e915dff43710eba7f54fc8b264816acf7bf0dae340bdaca7a3b77fca9",
+          "manifest_id": "900599794c4fdbeea577790268e5084f03c709658a1f6013bbd59ee74f9467d5",
+          "reconstruction": "exact_messages_response_format_and_allocation",
+          "event_snapshot_match": true
+        },
+        "retry_context_evidence": {
+          "record_id": "0e0844fff29b553dc8944e3060acd04fa806d84b5747a0d7f6dc24915550d487",
+          "bundle_hash": "6d1df8677b3f7350cea689e4306d4bec7acea34bfb35cb2cefe9563fd26e0e16",
+          "manifest_id": "0e0844fff29b553dc8944e3060acd04fa806d84b5747a0d7f6dc24915550d487",
+          "reconstruction": "exact_messages_response_format_and_allocation",
+          "event_snapshot_match": true
+        }
+      }
+    }
+  ],
+  "read_only_audit": "All seven context packages reconstruct exact messages/response_format/allocation; original event hashes match the ledger; five actual responses copy recorded errors; two interrupted requests remain unresolved without fabricated responses.",
+  "limits": [
+    "Interrupted provider receipt and response generation remain unknown.",
+    "Event snapshots are historical evidence, not current task versions or WorldState.",
+    "Explicit retry is a separate bounded request; no automatic replay or exactly-once network guarantee.",
+    "Bundle v1 now permits automation_diagnosis; old readers unaware of this phase reject it.",
+    "Summary calls are not yet fully migrated; robot validation and Momo synchronization remain outstanding."
+  ]
+}

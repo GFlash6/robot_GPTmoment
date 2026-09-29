@@ -1,0 +1,36 @@
+{
+  "repo": "microsoft/agent-framework",
+  "retrieved_at": "2026-09-22T08:37:42.228844+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/microsoft/agent-framework/a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91/README.md",
+      "sha256": "4a628aa224c014ff326587cc543a4991e483e11723a226f6fcdb22664224c58a",
+      "retrieved_at": "2026-09-22T08:39:24.790686+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/microsoft/agent-framework/a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "retrieved_at": "2026-09-22T08:39:25.791884+00:00"
+    },
+    {
+      "path": "python/packages/core/pyproject.toml",
+      "url": "https://raw.githubusercontent.com/microsoft/agent-framework/a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91/python/packages/core/pyproject.toml",
+      "sha256": "2af9bf9be2b91f122999e1176e39a2ce91b42c69db36c9941223f9d25c92ddea",
+      "retrieved_at": "2026-09-22T08:39:27.326843+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "resource": "https://raw.githubusercontent.com/microsoft/agent-framework/a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91/pyproject.toml",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "sha": "a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91",
+  "revision_method": "git ls-remote HEAD"
+}

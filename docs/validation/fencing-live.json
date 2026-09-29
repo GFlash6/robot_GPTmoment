@@ -1,0 +1,194 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/report.json",
+  "source_report_sha256": "44998b9670b01cc154e86a55c8fed14f92b82744f47d2cd7cd94584ec0e23b50",
+  "regression": "17 passed in 38.56s",
+  "worker_restart_and_next_token": "1 passed in 30.85s",
+  "live_test": "1 passed in 37.15s",
+  "regression_sources": [
+    "tests/test_fencing_http.py",
+    "tests/test_http_execution.py",
+    "tests/test_asset_verify_set.py",
+    "tests/test_application_actions.py"
+  ],
+  "verified_behaviors": [
+    "Old GET/PUT/cancel rejected after higher token; old file remains 64 bytes",
+    "Same token different execution rejected before creating target",
+    "Service restart retains fencing ownership",
+    "Stale Runtime execution remains unknown and retains leases",
+    "Killed worker resumes same execution and token without redispatch",
+    "Subsequent worker issues token 2 and completes actual file copy"
+  ],
+  "report": {
+    "configured_model": "qwen3.7-plus",
+    "mock_used": false,
+    "simulation_used": false,
+    "expected_sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+    "status": "passed",
+    "task_id": "bb098cff-1d88-41db-a314-cf61df6d8dd5",
+    "plan": {
+      "steps": [
+        {
+          "id": "copy_file",
+          "skill": "file.copy",
+          "args": {
+            "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/source.md",
+            "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/copy.md",
+            "chunk_bytes": 512
+          },
+          "deps": []
+        }
+      ],
+      "verification": "copy_file"
+    },
+    "execution": {
+      "args": {
+        "chunk_bytes": 512,
+        "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/source.md",
+        "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/copy.md"
+      },
+      "authority": {
+        "domain": "disk",
+        "token": 1
+      },
+      "created_at": 1790028904.5730083,
+      "id": "07e31761-7b3c-4c7a-8bac-6b4ccf86b63c",
+      "result": {
+        "authority": {
+          "domain": "disk",
+          "token": 1
+        },
+        "evidence": [
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/copy.md"
+          },
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/source.md"
+          }
+        ],
+        "execution_id": "07e31761-7b3c-4c7a-8bac-6b4ccf86b63c",
+        "output": {
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/copy.md",
+          "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+          "size": 2669,
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "skill": "file.copy",
+      "status": "succeeded",
+      "step": "copy_file",
+      "task_id": "bb098cff-1d88-41db-a314-cf61df6d8dd5"
+    },
+    "service_request": {
+      "body": {
+        "args": {
+          "chunk_bytes": 512,
+          "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/source.md",
+          "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa/copy.md"
+        },
+        "authority": {
+          "domain": "disk",
+          "token": 1
+        },
+        "execution_id": "07e31761-7b3c-4c7a-8bac-6b4ccf86b63c",
+        "robot_id": "r1",
+        "skill": "file.copy"
+      },
+      "spec": {
+        "adapter": "local",
+        "allowed_roots": [
+          "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/73abdf59-404e-4a97-a9bc-406c94257caa"
+        ],
+        "cancelable": true,
+        "checks": [
+          {
+            "op": "eq",
+            "path": "verified",
+            "value": true
+          }
+        ],
+        "fencing_domain": "disk",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "chunk_bytes": {
+              "maximum": 8388608,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "source": {
+              "type": "string"
+            },
+            "target": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "source",
+            "target"
+          ],
+          "type": "object"
+        },
+        "name": "file.copy",
+        "output_schema": {
+          "required": [
+            "sha256",
+            "verified",
+            "path"
+          ],
+          "type": "object"
+        },
+        "replay_safe": false,
+        "resources": {},
+        "verifier": true
+      }
+    },
+    "model_records": [
+      {
+        "id": "83aa3b10-d39f-4f6e-8914-587a1aede81d",
+        "method": "planning",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-d1953644-487e-9022-80e9-4b3ea0cceec0",
+        "context_bundle_id": "83aa3b10-d39f-4f6e-8914-587a1aede81d"
+      },
+      {
+        "id": "d080d1ac-0405-4805-ab99-8b8e47ef284c",
+        "method": "goal_analysis",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-7de6e0e3-d15b-9664-8dce-54be0e8f305d",
+        "context_bundle_id": null
+      }
+    ]
+  },
+  "verified_model_records": [
+    {
+      "id": "83aa3b10-d39f-4f6e-8914-587a1aede81d",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-d1953644-487e-9022-80e9-4b3ea0cceec0",
+      "method": "planning",
+      "request_sha256": "c46c7aca3ab345f6ca0a48fa8bfb865b2b0a22bd1e1343d0bb8bfd8256a317b2",
+      "raw_sha256": "e01b556dc7e51a2032e910f5bafbe362f418c2b86f634ac9de062c3f25e259cb"
+    },
+    {
+      "id": "d080d1ac-0405-4805-ab99-8b8e47ef284c",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-7de6e0e3-d15b-9664-8dce-54be0e8f305d",
+      "method": "goal_analysis",
+      "request_sha256": "c4af083afb5b4aa088b97315e2cd08d764194dfac791defb025227e3e5cb5530",
+      "raw_sha256": "d01e7893412915b598d427bab81e121cae4a5241ac145fe6a04c6211f1524fe1"
+    }
+  ],
+  "limits": [
+    "Single persistent issuer ledger; no distributed lease arbitration",
+    "Loopback file service, not robot controller validation",
+    "Stale-request rejection is not physical stop evidence",
+    "Fencing token is not an authentication credential",
+    "Asynchronous hardware effects require fencing enforcement in the driver"
+  ]
+}

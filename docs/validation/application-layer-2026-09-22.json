@@ -1,0 +1,89 @@
+{
+  "validated_at": "2026-09-21T17:58:34.657484+00:00",
+  "scope": "application actions, actual model sessions, actual file execution, browser workflows",
+  "mock_used": false,
+  "simulation_used": false,
+  "robot_hardware_verified": false,
+  "reports": [
+    {
+      "path": ".runtime/application-validation/178f56d0-bc12-4e06-bd4d-ef6b4d7762a0/report.json",
+      "sha256": "8dfe0f45c28a24cc5275e67d39ee5d8e42f44e2c1e36b5dcccf81b8770e24b6a",
+      "status": "passed",
+      "kind": "live-plan-execution",
+      "task_id": "10c91214-3b5d-4802-ba49-536230b2f6b9",
+      "model_records": [
+        {
+          "id": "b7925c73-2fe8-41aa-b887-d1286c47be5f",
+          "method": "planning",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-a084b41c-cc3d-91cd-bedf-232dffcb6988"
+        },
+        {
+          "id": "fe6e2a20-7c16-4f4b-bc91-fd906d385343",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-5d3a5b97-18f2-9174-967b-3db4763b2334"
+        }
+      ]
+    },
+    {
+      "path": ".runtime/application-validation/0bc34faf-d9dd-4619-b1b3-07fa4999d064/report.json",
+      "sha256": "7eb113d71f3c52a556b27dbf51dd6b32a6f77714e88661848ad9a169af274ff3",
+      "status": "passed",
+      "kind": "clarification-and-failure-explanation",
+      "task_id": "9bd08d0f-bda6-4015-938b-59147389c204",
+      "model_records": [
+        {
+          "id": "85cd546c-345f-4fcf-9d34-24a67d66acee",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-7b1f465d-1d9e-97c9-a276-d0d5fde48a9d"
+        },
+        {
+          "id": "b4f669df-b624-4ea2-81f0-01a1b2ef3400",
+          "method": "task_explanation",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-024517d0-4981-95e8-81b8-368d8ddb839f"
+        },
+        {
+          "id": "d9abd346-5188-480b-b956-b30fd3d82a9f",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-7bba0067-5158-98b9-882e-5d144a4b5dd5"
+        },
+        {
+          "id": "dfb64efa-8b8c-42f7-a99d-7c1577b82f92",
+          "method": "goal_clarification",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-09164349-a4e7-94e3-8350-c7ad58f18b29"
+        }
+      ]
+    },
+    {
+      "path": ".runtime/application-validation/0bc34faf-d9dd-4619-b1b3-07fa4999d064/browser/report.json",
+      "sha256": "fe610b102992d2b7b4cbab42a8f9b0e83845164248e92cba63a48ce537242f94",
+      "status": "passed",
+      "kind": "browser-node-explanation",
+      "task_id": "9bd08d0f-bda6-4015-938b-59147389c204",
+      "model_records": []
+    },
+    {
+      "path": ".runtime/application-validation/0bc34faf-d9dd-4619-b1b3-07fa4999d064/browser/execution-report.json",
+      "sha256": "0392045b2eccfe11e2c2051d8f2e4e10187a0240c73a5390e9d23696049f148e",
+      "status": "passed",
+      "kind": "browser-plan-and-real-execution",
+      "task_id": "d9ff4a61-cec4-4aa1-b94b-e7904e88bccb",
+      "model_records": []
+    }
+  ],
+  "regression": {
+    "passed": 26,
+    "subtests_passed": 9,
+    "files": [
+      "tests/test_application_actions.py",
+      "tests/test_runtime.py",
+      "tests/test_contracts_memory.py",
+      "tests/test_http_execution.py"
+    ]
+  }
+}

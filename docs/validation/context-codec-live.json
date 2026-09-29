@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/memory-validation/83872251-288f-402a-b821-592ce3297033/report.json",
+  "source_report_sha256": "934417a23cc648b7dd0a47bb97c1d62b09724308e058558e33458db998b6bafd",
+  "regression": "36 passed in 8.64s",
+  "live_test": "1 passed in 80.98s",
+  "task_id": "81dddb7a-403d-47d9-abf5-07db7e020fdd",
+  "task_status": "succeeded",
+  "actual_result": {
+    "evidence": [
+      {
+        "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+        "source": "asset:6f83d3c7-43a4-4199-9a84-a75b2fc6af22"
+      }
+    ],
+    "execution_id": "48a69930-f466-420a-9db6-c32fd169f651",
+    "output": {
+      "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+      "size": 2669,
+      "verified": true
+    },
+    "quiescent": true,
+    "status": "succeeded"
+  },
+  "changed_snapshot_command": {
+    "command_id": "8dba071de02cec4f8034d5bf03960ab6cb61848085a2f648388304e94c2c4e52",
+    "status": "rejected",
+    "error": {
+      "code": "INVALID_STATE",
+      "message": "planning snapshot binding changed"
+    }
+  },
+  "model_records": [
+    {
+      "id": "2c0070a0-8449-45cc-88fe-22b929cb390b",
+      "method": "goal_analysis",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-428435c6-8cb2-9dbc-b8ac-73544d8c008a",
+      "status": "validated",
+      "raw_sha256": "89e2985d295082a9f2bd4e7d742f93044f54a48e606ac2ad14b0d40c1b40ecea",
+      "request_sha256": "da6feac5df7bee5974b1d334d79aef4a17ba7d121e9a3cc009825c2d12c14dd3"
+    },
+    {
+      "id": "43e09595-d03a-4129-851f-0373d4a44345",
+      "method": "planning",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-a282da3c-f6c0-9f9e-aa6f-89374d91e503",
+      "status": "validated",
+      "raw_sha256": "2d6fd1fe7a5979afb23db57b2bbb19e001a49a704cfab3e59d2a25775d805e95",
+      "request_sha256": "af1e9990447f2e20db6f5e65e976b682dbf68d3237576710b30f0aab9308c4d8",
+      "context_bundle_id": "43e09595-d03a-4129-851f-0373d4a44345",
+      "context_bundle_hash": "00f8c7d872dd22bbe2e9441a76f644924ec63875b6d1c8bf4facbc1cfb274282",
+      "schema_version": 1,
+      "actual_input_reconstruction": "exact_messages_and_response_format"
+    },
+    {
+      "id": "c596e10d-8fd6-4bc6-b754-a8e621df9117",
+      "method": "planning",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-dedb8f8d-1be6-9921-9d50-e90790458562",
+      "status": "validated",
+      "raw_sha256": "1cf3984e3b50d2fb30e1b5b6b7ff38282f690eb931cefa8d529ad193d37475b0",
+      "request_sha256": "af1e9990447f2e20db6f5e65e976b682dbf68d3237576710b30f0aab9308c4d8",
+      "context_bundle_id": "c596e10d-8fd6-4bc6-b754-a8e621df9117",
+      "context_bundle_hash": "dbc1b9b1c24f2994072380133fa46eea2f9e89dedc7ed66b1d52244dea704e1b",
+      "schema_version": 1,
+      "actual_input_reconstruction": "exact_messages_and_response_format"
+    }
+  ],
+  "limits": [
+    "No robot or world-state validation",
+    "Bundle decoding is evidence reconstruction, not permission to dispatch",
+    "Exact input reconstruction verified with current environment configuration and prompt implementation",
+    "Existing model records without bundle references are not retroactively reconstructed"
+  ]
+}

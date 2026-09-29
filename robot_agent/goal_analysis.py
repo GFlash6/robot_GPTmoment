@@ -5,10 +5,14 @@ import json
 import time
 import uuid
 
-from .context_models import GoalContext
+from .context_models import ContextBundle, ContextRequest, GoalContext
+from .context_codec import encode_bundle, decode_bundle
+from .context_evidence import context_manifest
+from .context_memory import record_hash
 from .contracts import ContractError, require
 from .model_call import ModelCaller
 from .model_transport import ModelCallError
+from .store import dumps
 
 
 @dataclass(frozen=True)
@@ -35,10 +39,20 @@ class GoalAnalyzer:
         self.store = store
         self.caller = caller or ModelCaller(config)
 
-    def analyze(self, original_input, conversation=()):
+    def analyze(self, original_input, conversation=(), *, context=(), context_bundle=None):
+        require(context_bundle is None or not context, "provide fragments or a context bundle, not both")
+        if context_bundle is None:
+            context_bundle = ContextBundle(
+                ContextRequest(str(uuid.uuid4()), "planning", GoalContext.from_input(original_input)),
+                tuple(context),
+            )
+        require(context_bundle.request.goal.original_input == original_input, "analysis context goal mismatch")
+        encoded_bundle = encode_bundle(context_bundle)
+        bundle = decode_bundle(encoded_bundle)
         analysis_result, analysis_id = self._call(
             "goal_analysis",
             {"original_input": original_input, "conversation": list(conversation)},
+            bundle=bundle,
         )
         try:
             analysis = json.loads(analysis_result.content)
@@ -57,7 +71,7 @@ class GoalAnalyzer:
             return GoalAnalysisResult(goal, (), analysis_id)
 
         question_result, question_id = self._call(
-            "goal_clarification", {"goal_context": goal.as_dict()}
+            "goal_clarification", {"goal_context": goal.as_dict()}, bundle=bundle
         )
         try:
             questions = self._validate_questions(json.loads(question_result.content))
@@ -69,7 +83,7 @@ class GoalAnalyzer:
         self._accept(question_id, question_result, {"questions": list(questions)})
         return GoalAnalysisResult(goal, questions, analysis_id, question_id)
 
-    def _call(self, method, arguments):
+    def _call(self, method, arguments, *, bundle):
         key = str(uuid.uuid4())
         record = {
             "id": key,
@@ -80,7 +94,30 @@ class GoalAnalyzer:
         }
         self.store.put("model_responses", key, record)
         try:
-            return self.caller.call(method, arguments), key
+            # Use persisted JSON ordering on the first request as well as replay.
+            # Clarification includes nested objects from the actual model response.
+            arguments = json.loads(dumps(arguments))
+            encoded_bundle = encode_bundle(bundle)
+            prepared = self.caller.prepare(method, arguments, context=bundle.fragments)
+            manifest = context_manifest(bundle, prepared, self.caller._renderer.version)
+            record["request"] = {"messages": list(prepared.request.messages),
+                                 "response_format": prepared.request.response_format,
+                                 "model": self.caller.config.model}
+            record.update(context_bundle_id=key, context_bundle_hash=record_hash(encoded_bundle),
+                          context_manifest_id=key, context_allocation=prepared.allocation.as_dict(),
+                          preparation={"method": method, "arguments": arguments},
+                          session_id=bundle.request.session_id)
+            with self.store.transaction():
+                self.store.put("context_bundles", key, encoded_bundle)
+                self.store.put("context_manifests", key, {"id": key, **manifest.as_dict()})
+                self.store.put("model_responses", key, record)
+            result = self.caller.send_prepared(prepared)
+            # Preserve actual responses even when semantic parsing later rejects them.
+            record.update(http_status=result.transport.status_code, raw=result.transport.raw,
+                          elapsed_ms=result.transport.elapsed_ms, actual_model=result.actual_model,
+                          response_id=result.response_id)
+            self.store.put("model_responses", key, record)
+            return result, key
         except Exception as exc:
             if isinstance(exc, ModelCallError) and exc.response is not None:
                 record.update(

@@ -7,7 +7,8 @@ This service never fabricates robot observations or exposes arbitrary commands.
 import json
 import re
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from .contracts import ContractError, require, schema_check
+from .contracts import ContractError, require, schema_check, check_terminal
+from .context_memory import record_hash
 from .runtime import Runtime
 from .skills import Skills
 
@@ -22,15 +23,18 @@ def skill_server(store, host="127.0.0.1", port=0):
 
         def handle_request(self):
             match = re.fullmatch(
-                r"/executions/([A-Za-z0-9_-]{1,128})(/cancel)?", self.path
+                r"/executions/([A-Za-z0-9_-]{1,128})(/cancel|/reconcile)?", self.path
             )
             if match is None:
                 self.reply(404, {"error": "unknown route"})
                 return
             execution_id = match.group(1)
             try:
-                with store.lock:
+                # Keep authority acceptance and synchronous local side effects
+                # serialized across threads and service processes sharing this ledger.
+                with store.lock, store.task_lock('service-execution-authority'):
                     request = store.get("service_requests", execution_id)
+                    new_execution = False
                     if self.command == "PUT" and not match.group(2):
                         size = int(self.headers.get("Content-Length", "0"))
                         require(0 < size <= 1048576, "body must be 1..1048576 bytes")
@@ -58,7 +62,7 @@ def skill_server(store, host="127.0.0.1", port=0):
                             )
                             schema_check(spec["input_schema"], body.get("args"))
                             request = {"body": body, "spec": spec}
-                            store.put("service_requests", execution_id, request)
+                            new_execution = True
                             operation = "start"
                     elif self.command in {"GET", "POST"}:
                         if request is None:
@@ -72,6 +76,55 @@ def skill_server(store, host="127.0.0.1", port=0):
                     else:
                         raise ContractError("unsupported method")
                     body = request["body"]
+                    domain = request['spec'].get('fencing_domain')
+                    current_spec = Runtime(store).catalog().get(body['skill'])
+                    require(current_spec is not None and current_spec.get('fencing_domain') == domain,
+                            'execution fencing configuration changed')
+                    authority = body.get('authority')
+                    if domain:
+                        from .fencing import validate_authority, accept, domain_key
+                        validate_authority(authority, domain)
+                        supplied = json.loads(self.headers.get('X-Execution-Authority', 'null'))
+                        validate_authority(supplied, domain)
+                        if match.group(2) == '/reconcile':
+                            current = store.get('service_authorities', domain_key(body['robot_id'], domain))
+                            require(current is not None and current['token'] == supplied['token']
+                                    and current['token'] > authority['token'],
+                                    'reconciliation requires current newer authority')
+                            saved = store.get('service_reconciliations', execution_id)
+                            if saved is None:
+                                require(request['spec'].get('cancelable', False), 'execution is not cancelable')
+                                # Only a real local cancellation/result may certify stopping.
+                                # No caller-provided terminal result is accepted.
+                                result = Skills(store).call('cancel', body['skill'], request['spec'],
+                                    execution_id, body['args'], body['robot_id'])
+                                check_terminal(result, execution_id)
+                                result = {**result, 'authority': authority,
+                                    'reconciliation': {'controller_execution_id': current['execution_id'],
+                                                       'authority': supplied}}
+                                saved = {'request_hash': record_hash(body), 'result': result}
+                                store.put('service_reconciliations', execution_id, saved)
+                            require(saved['request_hash'] == record_hash(body), 'reconciled execution request changed')
+                            self.reply(200, saved['result'])
+                            return
+                        require(supplied == authority, 'execution authority header mismatch')
+                        # A reconciled historical result is read-only, even for a
+                        # pending old cancel. Never poll Skills here: polling copies bytes.
+                        saved = store.get('service_reconciliations', execution_id)
+                        if saved is not None and self.command in {'GET', 'POST'}:
+                            require(saved['request_hash'] == record_hash(body), 'reconciled execution request changed')
+                            check_terminal(saved['result'], execution_id)
+                            self.reply(200, saved['result'])
+                            return
+                    else:
+                        require(match.group(2) != '/reconcile', 'reconciliation requires a fenced execution')
+                        require(authority is None and self.headers.get('X-Execution-Authority') is None,
+                                'endpoint skill does not support execution authority')
+                    with store.transaction():
+                        if domain:
+                            accept(store, body['robot_id'], execution_id, authority, new_execution=new_execution)
+                        if new_execution:
+                            store.put('service_requests', execution_id, request)
                     result = Skills(store).call(
                         operation,
                         body["skill"],
@@ -80,6 +133,8 @@ def skill_server(store, host="127.0.0.1", port=0):
                         body["args"],
                         body["robot_id"],
                     )
+                    if domain:
+                        result = {**result, 'authority': authority}
                     self.reply(200, result)
             except (ValueError, ContractError) as exc:
                 self.reply(409, {"error": type(exc).__name__, "message": str(exc)})

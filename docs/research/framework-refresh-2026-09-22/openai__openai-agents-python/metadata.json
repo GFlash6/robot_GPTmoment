@@ -1,0 +1,28 @@
+{
+  "repo": "openai/openai-agents-python",
+  "retrieved_at": "2026-09-22T08:42:30.825402+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/openai/openai-agents-python/32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b/README.md",
+      "sha256": "00bf6db68509e0211c6564b43e2daaf0ca48e0163111d70c1f0b48a9952b5b24"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/openai/openai-agents-python/32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b/LICENSE",
+      "sha256": "13df7812ca53ecaae1cb4a868844bb598373047ae1d580e4debfbef1dd5b6915"
+    },
+    {
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/openai/openai-agents-python/32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b/pyproject.toml",
+      "sha256": "86792844efc7968e2601f417bd48381d836083a64d7c58dc15b93fa3d69e7a39"
+    },
+    {
+      "path": "docs/models/index.md",
+      "url": "https://raw.githubusercontent.com/openai/openai-agents-python/32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b/docs/models/index.md",
+      "sha256": "c5cdd8699b5d039da7fd2b74a767595ebde75a36b109af793325a5dff7ff5619"
+    }
+  ],
+  "errors": [],
+  "sha": "32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b"
+}

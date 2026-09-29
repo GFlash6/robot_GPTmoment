@@ -1,0 +1,428 @@
+[
+  {
+    "repo": "pydantic/pydantic-ai",
+    "retrieved_at": "2026-09-22T08:37:41.583099+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/README.md",
+        "sha256": "824afc40e65f540906bcfe8c361b1a5305dcc70bc8c231487912d289566a3a1a",
+        "retrieved_at": "2026-09-22T08:39:25.214056+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/LICENSE",
+        "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+        "retrieved_at": "2026-09-22T08:39:26.300490+00:00"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/pyproject.toml",
+        "sha256": "c7672aba513b7210e2ce4343600e5c039aacd277ecda22c69982aff84bfc8cb1",
+        "retrieved_at": "2026-09-22T08:39:27.054387+00:00"
+      },
+      {
+        "path": "pydantic_ai_slim/pyproject.toml",
+        "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/pydantic_ai_slim/pyproject.toml",
+        "sha256": "d937caa3974b2c51737c51b232019d70fafe8edfedc64334c2391004acfb76cb",
+        "retrieved_at": "2026-09-22T08:39:27.559682+00:00"
+      },
+      {
+        "path": "docs/durable_execution/dbos.md",
+        "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/e8895d2905d78ccf570edc491a27ad505e8d4b5a/docs/durable_execution/dbos.md",
+        "sha256": "413c2ca85e52519d3496b3d74be0cddcc092602ae52191fe7574ad9b8e1ba00e",
+        "retrieved_at": "2026-09-22T08:39:28.169557+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      }
+    ],
+    "sha": "e8895d2905d78ccf570edc491a27ad505e8d4b5a",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "langchain-ai/langgraph",
+    "retrieved_at": "2026-09-22T08:37:41.584098+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/49cce0ca852be4cfb567a1cbe0e511ff325a1682/README.md",
+        "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+        "retrieved_at": "2026-09-22T08:39:23.886234+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/49cce0ca852be4cfb567a1cbe0e511ff325a1682/LICENSE",
+        "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+        "retrieved_at": "2026-09-22T08:39:24.734254+00:00"
+      },
+      {
+        "path": "libs/langgraph/pyproject.toml",
+        "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/49cce0ca852be4cfb567a1cbe0e511ff325a1682/libs/langgraph/pyproject.toml",
+        "sha256": "7224a70df0fae0641afc5b455760333797bf3996dcaee1b05dd66d2397712b1f",
+        "retrieved_at": "2026-09-22T08:39:25.767983+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      },
+      {
+        "resource": "https://raw.githubusercontent.com/langchain-ai/langgraph/49cce0ca852be4cfb567a1cbe0e511ff325a1682/pyproject.toml",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "sha": "49cce0ca852be4cfb567a1cbe0e511ff325a1682",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "RobotecAI/rai",
+    "retrieved_at": "2026-09-22T08:37:41.584277+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/RobotecAI/rai/6802d4073e8caa2ab72c5509fa1eeeb659663f64/README.md",
+        "sha256": "11d112a35a74030658deebbbc9b198f88c8ebacc8119e46892196feb41a4d7f2",
+        "retrieved_at": "2026-09-22T08:39:24.082694+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/RobotecAI/rai/6802d4073e8caa2ab72c5509fa1eeeb659663f64/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "retrieved_at": "2026-09-22T08:39:24.901640+00:00"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/RobotecAI/rai/6802d4073e8caa2ab72c5509fa1eeeb659663f64/pyproject.toml",
+        "sha256": "75d06b23be54413170513f9f67b406a4783ea13fd999725fb40707d443a941a4",
+        "retrieved_at": "2026-09-22T08:39:25.482829+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      }
+    ],
+    "sha": "6802d4073e8caa2ab72c5509fa1eeeb659663f64",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "dimensionalOS/dimos",
+    "retrieved_at": "2026-09-22T08:37:41.584455+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/README.md",
+        "sha256": "aa21ead817a3160648c7efd7f00677d36623139340c0a74d3cf8f4dbe32d3d20",
+        "retrieved_at": "2026-09-22T08:39:24.217432+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/LICENSE",
+        "sha256": "ab463ad5ae0dcd7a4fc55871e64d061d6b40ceffe3faaa2b7037e08b2b28b21f",
+        "retrieved_at": "2026-09-22T08:39:25.054173+00:00"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/pyproject.toml",
+        "sha256": "a39c8aace2704ea1674e14728b0afcaacb6e4d477b110cef2dbfab080cfa35cb",
+        "retrieved_at": "2026-09-22T08:39:25.655427+00:00"
+      },
+      {
+        "path": "docs/requirements.md",
+        "url": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/docs/requirements.md",
+        "sha256": "a7f5936e2d853157171791d3cfa6be6625708e22ca2fa22fcba130bdbdd85ea7",
+        "retrieved_at": "2026-09-22T08:39:26.861499+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      },
+      {
+        "resource": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/dimos/robot/unitree/g1/README.md",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "sha": "a7492431f15d61aa6433d8feb483186f864504bc",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "automatika-robotics/embodied-agents",
+    "retrieved_at": "2026-09-22T08:37:41.584679+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/README.md",
+        "sha256": "606fab4f1da5a72578ac61994760d254a99a16c52694055e64c9512bc56300b7",
+        "retrieved_at": "2026-09-22T08:39:23.876656+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/LICENSE",
+        "sha256": "5e73597f4cf6a051df304ea0c0d0923d2ba7276ee74fc69454904e2273a44a65",
+        "retrieved_at": "2026-09-22T08:39:24.711579+00:00"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/automatika-robotics/embodied-agents/29898459a7fc80ed1a5f6cbbfdc0f9459b68321f/pyproject.toml",
+        "sha256": "ab8c8088586d47307bbfe1e235e16f3c3728b3ecd018a8b46d99c29a4350ad32",
+        "retrieved_at": "2026-09-22T08:39:25.351380+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      }
+    ],
+    "sha": "29898459a7fc80ed1a5f6cbbfdc0f9459b68321f",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "nasa-jpl/rosa",
+    "retrieved_at": "2026-09-22T08:37:41.584834+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/README.md",
+        "sha256": "e8645d3d4c0fe22f9b7335537c02f2bd01b137594b774861f0601b19a84f5f95",
+        "retrieved_at": "2026-09-22T08:39:24.315541+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "retrieved_at": "2026-09-22T08:39:25.227245+00:00"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/pyproject.toml",
+        "sha256": "5f761353c9017772bcd7438e11e2b04168a6bbdf3bffc10a83580701ad4197d5",
+        "retrieved_at": "2026-09-22T08:39:26.210950+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      }
+    ],
+    "sha": "e7e53754bed673e2ce36d1fa311e04e51bfbacad",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "OpenMind/OM1",
+    "retrieved_at": "2026-09-22T08:37:41.903112+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OpenMind/OM1/84e00a1672d17d012c24ae6b300365594265bd37/README.md",
+        "sha256": "45f57c17c1bb770b02c2d7f56ec33b4d98d011f493234bb51168ba9fcccf746b",
+        "retrieved_at": "2026-09-22T08:39:24.620270+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/OpenMind/OM1/84e00a1672d17d012c24ae6b300365594265bd37/LICENSE",
+        "sha256": "346d8a3f9ea734e02cbce9ebcc9969b18f28242badd1078360168a09e0e2f37c",
+        "retrieved_at": "2026-09-22T08:39:25.240242+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      },
+      {
+        "resource": "https://raw.githubusercontent.com/OpenMind/OM1/84e00a1672d17d012c24ae6b300365594265bd37/pyproject.toml",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "sha": "84e00a1672d17d012c24ae6b300365594265bd37",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "microsoft/agent-framework",
+    "retrieved_at": "2026-09-22T08:37:42.228844+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/microsoft/agent-framework/a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91/README.md",
+        "sha256": "4a628aa224c014ff326587cc543a4991e483e11723a226f6fcdb22664224c58a",
+        "retrieved_at": "2026-09-22T08:39:24.790686+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/microsoft/agent-framework/a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91/LICENSE",
+        "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+        "retrieved_at": "2026-09-22T08:39:25.791884+00:00"
+      },
+      {
+        "path": "python/packages/core/pyproject.toml",
+        "url": "https://raw.githubusercontent.com/microsoft/agent-framework/a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91/python/packages/core/pyproject.toml",
+        "sha256": "2af9bf9be2b91f122999e1176e39a2ce91b42c69db36c9941223f9d25c92ddea",
+        "retrieved_at": "2026-09-22T08:39:27.326843+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      },
+      {
+        "resource": "https://raw.githubusercontent.com/microsoft/agent-framework/a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91/pyproject.toml",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "sha": "a8acb4e0e9d7e4712b01b9c888cf943a2dfbee91",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "crewAIInc/crewAI",
+    "retrieved_at": "2026-09-22T08:37:42.229041+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/crewAIInc/crewAI/bdd1bc62007fcee732c912f0daa093e1f760f3fc/README.md",
+        "sha256": "b0f39843f93676b12883d5821a34555e2146e62bd2c42dc12733fc41222de013",
+        "retrieved_at": "2026-09-22T08:39:24.472811+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/crewAIInc/crewAI/bdd1bc62007fcee732c912f0daa093e1f760f3fc/LICENSE",
+        "sha256": "28868731966f4aa37f02879839aabc797137e27ddde4e274ef9cf965f9a71774",
+        "retrieved_at": "2026-09-22T08:39:25.207711+00:00"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/crewAIInc/crewAI/bdd1bc62007fcee732c912f0daa093e1f760f3fc/pyproject.toml",
+        "sha256": "2afd041117adcafef852c77c09941159e56b87a17daed5d98caef0f6ac245d41",
+        "retrieved_at": "2026-09-22T08:39:25.860862+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      }
+    ],
+    "sha": "bdd1bc62007fcee732c912f0daa093e1f760f3fc",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "langchain-ai/deepagents",
+    "retrieved_at": "2026-09-22T08:37:42.229167+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/langchain-ai/deepagents/d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f/README.md",
+        "sha256": "569c79f865abd0d677a71e83ba5c3b971318146a4421e3851a0e25ee2d3b1146",
+        "retrieved_at": "2026-09-22T08:39:25.730812+00:00"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/langchain-ai/deepagents/d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f/LICENSE",
+        "sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478",
+        "retrieved_at": "2026-09-22T08:39:26.533357+00:00"
+      },
+      {
+        "path": "libs/deepagents/pyproject.toml",
+        "url": "https://raw.githubusercontent.com/langchain-ai/deepagents/d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f/libs/deepagents/pyproject.toml",
+        "sha256": "d9855bf92420b7226593185ff7bfc75c86838fe224568e49f45a41580b11e1fa",
+        "retrieved_at": "2026-09-22T08:39:28.062257+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "resource": "metadata",
+        "error": "HTTP Error 403: rate limit exceeded"
+      },
+      {
+        "resource": "https://raw.githubusercontent.com/langchain-ai/deepagents/d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f/pyproject.toml",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "sha": "d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f",
+    "revision_method": "git ls-remote HEAD"
+  },
+  {
+    "repo": "openai/openai-agents-python",
+    "retrieved_at": "2026-09-22T08:42:30.825402+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/openai/openai-agents-python/32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b/README.md",
+        "sha256": "00bf6db68509e0211c6564b43e2daaf0ca48e0163111d70c1f0b48a9952b5b24"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/openai/openai-agents-python/32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b/LICENSE",
+        "sha256": "13df7812ca53ecaae1cb4a868844bb598373047ae1d580e4debfbef1dd5b6915"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/openai/openai-agents-python/32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b/pyproject.toml",
+        "sha256": "86792844efc7968e2601f417bd48381d836083a64d7c58dc15b93fa3d69e7a39"
+      },
+      {
+        "path": "docs/models/index.md",
+        "url": "https://raw.githubusercontent.com/openai/openai-agents-python/32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b/docs/models/index.md",
+        "sha256": "c5cdd8699b5d039da7fd2b74a767595ebde75a36b109af793325a5dff7ff5619"
+      }
+    ],
+    "errors": [],
+    "sha": "32edd3c3ecde37a7fb6bf4b082f35f1d8f7f086b"
+  },
+  {
+    "repo": "agno-agi/agno",
+    "retrieved_at": "2026-09-22T08:42:30.825597+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/agno-agi/agno/54516f4186b495aaf0f84a12a377449e1c50e17b/README.md",
+        "sha256": "ee04510fcc6e82fa87258c3bba766da73bbffd1f8bd8a2320babee8bc291ff30"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/agno-agi/agno/54516f4186b495aaf0f84a12a377449e1c50e17b/LICENSE",
+        "sha256": "7504bf0fe32a486487ec309d5ef30597ca87d2508450be380f6ef4772c3371ca"
+      },
+      {
+        "path": "libs/agno/pyproject.toml",
+        "url": "https://raw.githubusercontent.com/agno-agi/agno/54516f4186b495aaf0f84a12a377449e1c50e17b/libs/agno/pyproject.toml",
+        "sha256": "34dcaa7ae58fe2eb8ffeec862845ef3b07b695a0a9ad9045bfb8319ef35516e4"
+      }
+    ],
+    "errors": [],
+    "sha": "54516f4186b495aaf0f84a12a377449e1c50e17b"
+  },
+  {
+    "repo": "huggingface/smolagents",
+    "retrieved_at": "2026-09-22T08:42:30.825654+00:00",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/huggingface/smolagents/30bb1161095dbae2271e6bc3cc4c219cc3897a57/README.md",
+        "sha256": "131628d2669b4ee983c715002b57ea4b375b62c8502f6354b8d9fdf3fbc39f8d"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/huggingface/smolagents/30bb1161095dbae2271e6bc3cc4c219cc3897a57/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/huggingface/smolagents/30bb1161095dbae2271e6bc3cc4c219cc3897a57/pyproject.toml",
+        "sha256": "7d7baa3f6a50d7c98eee38c41f1444b5c0f4f217e6e9626e1ece01f9b222ebde"
+      }
+    ],
+    "errors": [],
+    "sha": "30bb1161095dbae2271e6bc3cc4c219cc3897a57"
+  }
+]

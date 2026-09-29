@@ -1,8 +1,10 @@
 """Versioned read models over a live SQLite ledger, never a runtime controller."""
 from contextlib import contextmanager
 from datetime import datetime, timezone
+from .context_diff import compare_contexts
 from pathlib import Path
 import json
+import hashlib
 import sqlite3
 
 
@@ -146,6 +148,58 @@ class Ledger:
         return self.response(query)
 
     def model(self,key): return self.response(lambda db:self.get(db,'model_responses',key))
+
+    def model_context(self, key):
+        """Inspect persisted links and hashes, without preparing or invoking a model."""
+        return self.response(lambda db: self._model_context(db, key))
+
+    def _model_context(self, db, key):
+        record = self.get(db, 'model_responses', key)
+        links = {}
+        for label, collection in [('bundle', 'context_bundles'), ('manifest', 'context_manifests')]:
+            identity = record.get('context_' + label + '_id')
+            row = db.execute('SELECT data FROM objects WHERE collection=? AND id=?',
+                             (collection, identity)).fetchone() if isinstance(identity, str) else None
+            links[label] = decode(row) if row else None
+        bundle, manifest = links['bundle'], links['manifest']
+        issues = [] if record.get('id') == key else ['model_identity_mismatch']
+        for label in links:
+            if record.get('context_' + label + '_id') is not None and links[label] is None:
+                issues.append('missing_' + label)
+        actual_hash = None
+        if bundle is not None:
+            # Match the writer's canonical encoding, including default separators.
+            actual_hash = hashlib.sha256(json.dumps(bundle, ensure_ascii=False, sort_keys=True,
+                allow_nan=False).encode()).hexdigest()
+            if record.get('context_bundle_hash') != actual_hash:
+                issues.append('bundle_hash_mismatch')
+            if type(bundle.get('schema_version')) is not int or bundle['schema_version'] != 1:
+                issues.append('unsupported_bundle_version')
+        if manifest is not None and manifest.get('id') != record.get('context_manifest_id'):
+            issues.append('manifest_identity_mismatch')
+        if bundle is not None and manifest is not None:
+            request = bundle.get('request')
+            if not isinstance(request, dict) or any(not isinstance(request.get(k), str) or request[k] != manifest.get(k) for k in ('request_id', 'phase')):
+                issues.append('request_manifest_mismatch')
+        return {'model_record_id': key, 'method': record.get('method'), 'model_status': record.get('status'),
+                'bundle_id': record.get('context_bundle_id'), 'manifest_id': record.get('context_manifest_id'),
+                'bundle': bundle, 'manifest': manifest, 'allocation': record.get('context_allocation'),
+                'preparation': record.get('preparation'),
+                'integrity': {'status': 'inconsistent' if issues else ('matched' if bundle is not None and manifest is not None else 'partial' if bundle is not None or manifest is not None else 'unavailable'),
+                              'issues': issues, 'expected_bundle_hash': record.get('context_bundle_hash'),
+                              'actual_bundle_hash': actual_hash,
+                              'scope': 'persisted_links_and_bundle_hash_only'}}
+
+    def model_context_diff(self, key, params):
+        against = params.get('against')
+        if not isinstance(against, str) or not against.strip():
+            raise ObserverError('INVALID_QUERY', 'against 必须指定基准模型记录 ID')
+        def query(db):
+            # Both records and all links share one SQLite read snapshot.
+            before = self._model_context(db, against)
+            after = self._model_context(db, key)
+            return compare_contexts(clean(before), clean(after))
+        return self.response(query)
 
 
 def integer(params,key,default,low,high):

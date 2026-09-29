@@ -1,0 +1,649 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "reports": [
+    {
+      "source_report": ".runtime/session-summary-validation/d4f1872e-1e55-4b31-afb8-48376b46d1d4/report.json",
+      "source_report_sha256": "1a7d905e2e1452236ac0b654907ca1bcedafe79992ae2b74aa6ac2f8e68979fd",
+      "large_history": true,
+      "automatic": true,
+      "configured_model": "qwen3.7-plus",
+      "mock_used": false,
+      "simulation_used": false,
+      "budget_events": [
+        {
+          "action_call_id": "44b9b7a7-e756-4122-9695-0fd497def28d",
+          "created_at": 1790019261.4517426,
+          "error": "required context exceeds model input budget: session",
+          "fragment_id": "session",
+          "id": "147aa2c3-7967-4a0d-9160-8b79371f8cf3",
+          "method": "goal_analysis",
+          "session_id": "c833a8d9-7317-45ab-83e6-23dc90756a63",
+          "session_revision": 8,
+          "status": "policy_disabled",
+          "trigger": "required context exceeds model input budget: session"
+        },
+        {
+          "action_call_id": "f5462819-6a15-48a4-bf22-cf85c4ff8716",
+          "created_at": 1790019261.4729798,
+          "error": "required context exceeds model input budget: session",
+          "fragment_id": "session",
+          "id": "5a486dbe-06bc-47c0-9d36-2ced4ab05dab",
+          "method": "goal_analysis",
+          "session_id": "c833a8d9-7317-45ab-83e6-23dc90756a63",
+          "session_revision": 9,
+          "status": "rejected",
+          "trigger": "required context exceeds model input budget: session"
+        },
+        {
+          "action_call_id": "0de9d630-f35f-47a0-9d10-cadbb8b2b64e",
+          "allocation": {
+            "drop_details": [],
+            "dropped": [],
+            "estimated_input_tokens": 11197,
+            "estimator": "utf8_bytes_v1",
+            "included": [
+              "goal",
+              "capabilities",
+              "session-summary",
+              "session"
+            ],
+            "input_token_limit": 32768,
+            "reserved_output_tokens": 2048
+          },
+          "created_at": 1790019408.9950595,
+          "id": "71716fd5-91f3-4708-89a7-98185b3974e7",
+          "method": "planning",
+          "session_id": "c833a8d9-7317-45ab-83e6-23dc90756a63",
+          "session_revision": 11,
+          "status": "fits"
+        },
+        {
+          "action_call_id": "b2996526-bb0e-49a2-bdf9-a3b795586ade",
+          "allocation": {
+            "drop_details": [],
+            "dropped": [],
+            "estimated_input_tokens": 7791,
+            "estimator": "utf8_bytes_v1",
+            "included": [
+              "goal",
+              "capabilities",
+              "session-summary",
+              "session"
+            ],
+            "input_token_limit": 32768,
+            "reserved_output_tokens": 2048
+          },
+          "created_at": 1790019261.4940293,
+          "fragment_id": "session",
+          "id": "937c39b4-bd26-427c-a2c8-0673ff0cb98c",
+          "method": "goal_analysis",
+          "session_id": "c833a8d9-7317-45ab-83e6-23dc90756a63",
+          "session_revision": 10,
+          "status": "reduced",
+          "summary_id": "7171783a-7a0e-4c4b-8acf-fc072fac85d6",
+          "summary_run_id": "72140fd5-d379-4493-836b-0fd64dedd972",
+          "trigger": "required context exceeds model input budget: session"
+        }
+      ],
+      "status": "passed",
+      "task_id": "44567326-7b8c-4cdd-ad13-0d54e53ed4fd",
+      "summary": {
+        "chunks": [
+          {
+            "index": 0,
+            "model_response_id": "1bdb6d84-cbff-44da-a22b-7ea6a6ea5743",
+            "source_parts": [
+              {
+                "content_hash": "b8f137e044daf81591d7cc38f5b17933c06e8b36393b130c50e3bc70974ec92a",
+                "end": 85,
+                "start": 0,
+                "turn_id": "ce736141-7f77-46ca-9202-59b939e8c889"
+              },
+              {
+                "content_hash": "1167a4a6ed5b075754888e7aae7f9ece2214be306a542173eb95023848611e7e",
+                "end": 243,
+                "start": 0,
+                "turn_id": "44adcfdb-925d-4b71-9f51-5c7d698566e1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "model_response_id": "1c2f2ebd-3faa-4ba7-ae8b-b426cb134061",
+            "source_parts": [
+              {
+                "content_hash": "36743541694ba2576ab9cde1058e6fc81807026ad6b072eb60cf8930f282d45d",
+                "end": 15354,
+                "start": 0,
+                "turn_id": "96a0cb82-0559-43aa-b131-784d8a83f3e7"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "model_response_id": "2552fcef-e8b8-4c03-aade-48308cce8aaa",
+            "source_parts": [
+              {
+                "content_hash": "130d11866836cd64b046ca1e4cd4f3e125343fc8232678245f851864af06559a",
+                "end": 15722,
+                "start": 15354,
+                "turn_id": "96a0cb82-0559-43aa-b131-784d8a83f3e7"
+              },
+              {
+                "content_hash": "691a824a7b85c91a04004f9dcd6f71f4a71215b0dbb7350c95e22d8acf6dd3b1",
+                "end": 1459,
+                "start": 0,
+                "turn_id": "2d138152-9809-4f5e-8b99-ef387b3b0c91"
+              },
+              {
+                "content_hash": "1a9793f5bef8e346c3b3709467e0043ec6cdf35a84e0960539744e69e7a17566",
+                "end": 15722,
+                "start": 0,
+                "turn_id": "01578cc0-6c47-482e-858f-0df5f9a43930"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "model_response_id": "ec3f3ea4-4f46-4443-a599-83e96b62a683",
+            "source_parts": [
+              {
+                "content_hash": "dd61d59b5f9ea7fbaa7486c9da38f02eb1f1b6c977e1ef64e25a2008e976beda",
+                "end": 5405,
+                "start": 0,
+                "turn_id": "c784fa37-7c2b-4979-86dc-dce2bb891af5"
+              }
+            ]
+          }
+        ],
+        "content_authority": "model_summary_not_execution_evidence",
+        "covered_turns": [
+          {
+            "id": "ce736141-7f77-46ca-9202-59b939e8c889",
+            "record_hash": "4df6eb1dd37a8d0b004351ad9b1ddc8595a4ce06cd5a710fa09714a4d60b1fc8"
+          },
+          {
+            "id": "44adcfdb-925d-4b71-9f51-5c7d698566e1",
+            "record_hash": "46a5832659bf73665299443dea67de387c4ecb9752c756d889f2d457513e5773"
+          },
+          {
+            "id": "96a0cb82-0559-43aa-b131-784d8a83f3e7",
+            "record_hash": "e985a10d13db76bee57b214f86cc8b6090245046a1319c26c7270a7537d08c22"
+          },
+          {
+            "id": "2d138152-9809-4f5e-8b99-ef387b3b0c91",
+            "record_hash": "37ae28f1788d6bcd1b6894e0151185bad2d13f9ed9f88a98430ba19ab850b02e"
+          },
+          {
+            "id": "01578cc0-6c47-482e-858f-0df5f9a43930",
+            "record_hash": "6e7268299e4e7417f0923516cd9a4a13aea2eb4e0e916aef774743cbdca303c4"
+          },
+          {
+            "id": "c784fa37-7c2b-4979-86dc-dce2bb891af5",
+            "record_hash": "b9037e51ba7b807e0de6b8ea054fc68be1e6611a91a530a33c1be236127a36cf"
+          }
+        ],
+        "created_at": 1790019364.035854,
+        "id": "7171783a-7a0e-4c4b-8acf-fc072fac85d6",
+        "keep_recent": 2,
+        "model_response_id": "1bdb6d84-cbff-44da-a22b-7ea6a6ea5743",
+        "model_response_ids": [
+          "1bdb6d84-cbff-44da-a22b-7ea6a6ea5743",
+          "1c2f2ebd-3faa-4ba7-ae8b-b426cb134061",
+          "2552fcef-e8b8-4c03-aade-48308cce8aaa",
+          "ec3f3ea4-4f46-4443-a599-83e96b62a683"
+        ],
+        "pinned_turn_ids": [
+          "ffb9e817-1c58-4151-ae0b-19fd8aef1b94"
+        ],
+        "points": [
+          {
+            "text": "任务要求归档指定的实际协议文档并验证字节。需使用 file.ingest 后接 asset.verify。系统资产库存储位置已配置，无须询问其他目标路径，且不涉及机器人运动。",
+            "turn_ids": [
+              "ce736141-7f77-46ca-9202-59b939e8c889"
+            ]
+          },
+          {
+            "text": "唯一需要归档的实际源文件路径为 /home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/session-summary-validation/d4f1872e-1e55-4b31-afb8-48376b46d1d4/protocol.md，其 SHA256 校验和为 f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5。",
+            "turn_ids": [
+              "44adcfdb-925d-4b71-9f51-5c7d698566e1"
+            ]
+          },
+          {
+            "text": "用户提供的长文档为机器人 Agent 框架工程状态背景，明确声明不作为额外执行任务，仅用于提供项目上下文。",
+            "turn_ids": [
+              "96a0cb82-0559-43aa-b131-784d8a83f3e7"
+            ]
+          },
+          {
+            "text": "背景文档确认 `file.ingest` 和 `asset.verify` 作为本地文件技能已实现（状态：已完成），支持实际文件摄取、字节哈希校验及完整性验证。",
+            "turn_ids": [
+              "96a0cb82-0559-43aa-b131-784d8a83f3e7"
+            ]
+          },
+          {
+            "text": "原始目标要求使用 `file.ingest` 和 `asset.verify` 归档协议文档并验证字节，无需询问目标路径且不涉及机器人运动，该目标与文档中已实现的本地文件技能能力完全匹配。",
+            "turn_ids": [
+              "96a0cb82-0559-43aa-b131-784d8a83f3e7"
+            ]
+          },
+          {
+            "text": "Turn 1和2提供项目状态与维护规则背景，明确声明为实际项目文档背景而非额外执行任务。其中记录了实际文件与HTTP验证已完成，包含文件摄取、哈希及真实部分文件记录，并指出“worker 最终哈希验证通过”。",
+            "turn_ids": [
+              "96a0cb82-0559-43aa-b131-784d8a83f3e7",
+              "2d138152-9809-4f5e-8b99-ef387b3b0c91"
+            ]
+          },
+          {
+            "text": "Turn 1和2提及具体验证证据路径：`validation/model-planning-qwen3.8-max.json`、`validation/memory-browser-live.json` 和 `validation/chunked-session-summary-live.json`，记录了模型计划、记忆选择等实际文件执行与哈希验证状态。",
+            "turn_ids": [
+              "96a0cb82-0559-43aa-b131-784d8a83f3e7",
+              "2d138152-9809-4f5e-8b99-ef387b3b0c91"
+            ]
+          },
+          {
+            "text": "Turn 3提供框架架构文档背景，定义证据数据平面与资产目录（Asset Catalog）。明确资产需内容寻址且不可变，包含哈希、格式等元数据，强调大文件不进入任务JSON，事实必须可追溯，为资产验证提供架构约束参考。",
+            "turn_ids": [
+              "01578cc0-6c47-482e-858f-0df5f9a43930"
+            ]
+          },
+          {
+            "text": "用户提供的长文本为实际项目文档背景（涵盖第9至17节，涉及数据库、部署、安全、测试、代码演进及架构路线图等），并明确声明该内容“不是额外执行任务”。",
+            "turn_ids": [
+              "c784fa37-7c2b-4979-86dc-dce2bb891af5"
+            ]
+          },
+          {
+            "text": "原始目标约束：需归档指定的实际协议文档并验证字节，必须使用 `file.ingest` 后接 `asset.verify`。系统资产库存储位置已配置，无须询问其他目标路径，且不涉及机器人运动。",
+            "turn_ids": [
+              "c784fa37-7c2b-4979-86dc-dce2bb891af5"
+            ]
+          },
+          {
+            "text": "文档定义了系统状态所有权（每类状态单写权威、Outbox模式）、部署拓扑（Operator Host/Robot Compute/Storage）、安全权限（禁止LLM直接控制硬件）及测试验收分层（单元至真机纵向切片）。",
+            "turn_ids": [
+              "c784fa37-7c2b-4979-86dc-dce2bb891af5"
+            ]
+          },
+          {
+            "text": "文档明确了8步架构演进路线（当前下一步为Execution Authority/fencing），并设定了10项架构完成判据，要求系统能追溯计划、权限、执行、恢复和验证的实际证据，而非仅依赖模型自述。",
+            "turn_ids": [
+              "c784fa37-7c2b-4979-86dc-dce2bb891af5"
+            ]
+          }
+        ],
+        "session_id": "c833a8d9-7317-45ab-83e6-23dc90756a63",
+        "source_revision": 10,
+        "summary_run_id": "72140fd5-d379-4493-836b-0fd64dedd972",
+        "version": 2
+      },
+      "actual_result": {
+        "evidence": [
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "asset:74166898-5b94-4ecd-8c3b-9d65a98f8879"
+          }
+        ],
+        "execution_id": "1a05f18f-a0b4-4b7b-8663-b6b872e83aca",
+        "output": {
+          "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+          "size": 2669,
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "source_bytes": 113696,
+      "summary_bytes": 5864,
+      "summary_response_id": "chatcmpl-eabd6360-82bd-92ba-b4b4-82bcd405078c",
+      "planning_response_id": "chatcmpl-8eed428f-5c65-9e01-9865-c694e232b6d3",
+      "context_manifest": {
+        "dropped": [],
+        "estimated_input_tokens": 11197,
+        "estimator": "utf8_bytes_v1",
+        "id": "20615a5c-4865-402e-b433-9cdbb5ba4e68",
+        "included": [
+          "goal",
+          "capabilities",
+          "session-summary",
+          "session"
+        ],
+        "input_token_limit": 32768,
+        "phase": "planning",
+        "renderer_version": "role-aware-v1",
+        "request_id": "0de9d630-f35f-47a0-9d10-cadbb8b2b64e",
+        "reserved_output_tokens": 2048,
+        "sources": [
+          {
+            "authority": "operator",
+            "evidence_ids": [],
+            "id": "goal",
+            "metadata": {},
+            "source": "goal_context"
+          },
+          {
+            "authority": "framework",
+            "evidence_ids": [],
+            "id": "capabilities",
+            "metadata": {},
+            "source": "skill_registry"
+          },
+          {
+            "authority": "data",
+            "evidence_ids": [],
+            "id": "session-summary",
+            "metadata": {
+              "covered_turns": [
+                {
+                  "id": "ce736141-7f77-46ca-9202-59b939e8c889",
+                  "record_hash": "4df6eb1dd37a8d0b004351ad9b1ddc8595a4ce06cd5a710fa09714a4d60b1fc8"
+                },
+                {
+                  "id": "44adcfdb-925d-4b71-9f51-5c7d698566e1",
+                  "record_hash": "46a5832659bf73665299443dea67de387c4ecb9752c756d889f2d457513e5773"
+                },
+                {
+                  "id": "96a0cb82-0559-43aa-b131-784d8a83f3e7",
+                  "record_hash": "e985a10d13db76bee57b214f86cc8b6090245046a1319c26c7270a7537d08c22"
+                },
+                {
+                  "id": "2d138152-9809-4f5e-8b99-ef387b3b0c91",
+                  "record_hash": "37ae28f1788d6bcd1b6894e0151185bad2d13f9ed9f88a98430ba19ab850b02e"
+                },
+                {
+                  "id": "01578cc0-6c47-482e-858f-0df5f9a43930",
+                  "record_hash": "6e7268299e4e7417f0923516cd9a4a13aea2eb4e0e916aef774743cbdca303c4"
+                },
+                {
+                  "id": "c784fa37-7c2b-4979-86dc-dce2bb891af5",
+                  "record_hash": "b9037e51ba7b807e0de6b8ea054fc68be1e6611a91a530a33c1be236127a36cf"
+                }
+              ],
+              "model_response_id": "1bdb6d84-cbff-44da-a22b-7ea6a6ea5743",
+              "model_response_ids": [
+                "1bdb6d84-cbff-44da-a22b-7ea6a6ea5743",
+                "1c2f2ebd-3faa-4ba7-ae8b-b426cb134061",
+                "2552fcef-e8b8-4c03-aade-48308cce8aaa",
+                "ec3f3ea4-4f46-4443-a599-83e96b62a683"
+              ],
+              "pinned_turn_ids": [
+                "ffb9e817-1c58-4151-ae0b-19fd8aef1b94"
+              ],
+              "record_hash": "a77211bfb33985c7b02c3fd281427cef8000752e5e4211701d2944c3ec13e0b3",
+              "summary_id": "7171783a-7a0e-4c4b-8acf-fc072fac85d6"
+            },
+            "source": "session_summary"
+          },
+          {
+            "authority": "data",
+            "evidence_ids": [],
+            "id": "session",
+            "metadata": {
+              "revision": 11,
+              "session_id": "c833a8d9-7317-45ab-83e6-23dc90756a63",
+              "snapshot_id": null
+            },
+            "source": "session_ledger"
+          }
+        ]
+      },
+      "model_records": [
+        {
+          "id": "1bdb6d84-cbff-44da-a22b-7ea6a6ea5743",
+          "method": "session_summary",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-eabd6360-82bd-92ba-b4b4-82bcd405078c",
+          "status": "validated"
+        },
+        {
+          "id": "1c2f2ebd-3faa-4ba7-ae8b-b426cb134061",
+          "method": "session_summary",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-44e124da-254e-9857-93c1-95ab94a77bf6",
+          "status": "validated"
+        },
+        {
+          "id": "2552fcef-e8b8-4c03-aade-48308cce8aaa",
+          "method": "session_summary",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-b59d6890-ec11-963a-92f2-a783df1635de",
+          "status": "validated"
+        },
+        {
+          "id": "2ad3ce43-1bda-4e2b-9486-1f3ba245bdbc",
+          "method": "planning",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-8eed428f-5c65-9e01-9865-c694e232b6d3",
+          "status": "validated"
+        },
+        {
+          "id": "d9e07153-f970-4e5f-b119-41fc6ea83dc1",
+          "method": "goal_analysis",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-540735b9-d476-99ff-ab08-32f11d504c84",
+          "status": "validated"
+        },
+        {
+          "id": "ec3f3ea4-4f46-4443-a599-83e96b62a683",
+          "method": "session_summary",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-c82ce826-f05c-9035-8aeb-8df7324d8012",
+          "status": "validated"
+        }
+      ]
+    },
+    {
+      "source_report": ".runtime/plan-budget-validation/75f647c2-79ed-4b28-ab3c-5aefef8be7af/report.json",
+      "source_report_sha256": "52bf042d6e1f01052feb5b6ef58efa0489d8463141464088af08ea15e9f4be4b",
+      "configured_model": "qwen3.7-plus",
+      "mock_used": false,
+      "simulation_used": false,
+      "status": "passed",
+      "before_revision": 7,
+      "after_revision": 8,
+      "task_id": "c79f85e1-547c-4dfd-8b55-4e8c1691c1d8",
+      "actual_result": {
+        "evidence": [
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "asset:f56dd2df-0c04-4aaf-abd6-c3218949d907"
+          }
+        ],
+        "execution_id": "f0b4ed84-587c-4e7a-9d24-5e1ffa2a64fe",
+        "output": {
+          "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+          "size": 2669,
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "budget_events": [
+        {
+          "action_call_id": "203ae10f-826f-427d-9120-bced0be9130a",
+          "allocation": {
+            "drop_details": [],
+            "dropped": [],
+            "estimated_input_tokens": 29968,
+            "estimator": "utf8_bytes_v1",
+            "included": [
+              "goal",
+              "capabilities",
+              "session"
+            ],
+            "input_token_limit": 32768,
+            "reserved_output_tokens": 2048
+          },
+          "created_at": 1790019386.5025597,
+          "id": "3dee27d9-7988-4dc5-a637-4542f179afc3",
+          "method": "goal_analysis",
+          "session_id": "679bf3a3-a526-4f06-99db-1c6c73fd7786",
+          "session_revision": 6,
+          "status": "fits"
+        },
+        {
+          "action_call_id": "4e6b0917-05a4-40ea-9297-d704f3bd01cd",
+          "allocation": {
+            "drop_details": [],
+            "dropped": [],
+            "estimated_input_tokens": 8116,
+            "estimator": "utf8_bytes_v1",
+            "included": [
+              "goal",
+              "capabilities",
+              "session-summary",
+              "session"
+            ],
+            "input_token_limit": 32768,
+            "reserved_output_tokens": 2048
+          },
+          "created_at": 1790019422.9744499,
+          "fragment_id": "session",
+          "id": "52a71ef2-c799-47b5-b52a-894446fa0906",
+          "method": "planning",
+          "session_id": "679bf3a3-a526-4f06-99db-1c6c73fd7786",
+          "session_revision": 7,
+          "status": "reduced",
+          "summary_id": "23629d9c-521b-4def-aef8-d29b6b7671be",
+          "summary_run_id": "c6bb3c86-85c8-488c-9833-950b5dac63bf",
+          "trigger": "required context exceeds model input budget: session"
+        }
+      ],
+      "model_response_id": "2a10c44b-55fd-4361-a0ea-c8b9f378deb3",
+      "provider_response_id": "chatcmpl-c1718f48-ceed-95ab-a010-3f469fdab15e",
+      "summary_runs": [
+        {
+          "action_call_id": "4e6b0917-05a4-40ea-9297-d704f3bd01cd",
+          "chunk_count": 1,
+          "created_at": 1790019422.9747062,
+          "id": "c6bb3c86-85c8-488c-9833-950b5dac63bf",
+          "model_response_ids": [
+            "d5f5a52f-1899-4858-9838-f2cf585e8fc3"
+          ],
+          "session_id": "679bf3a3-a526-4f06-99db-1c6c73fd7786",
+          "session_revision": 7,
+          "status": "completed",
+          "summary_id": "23629d9c-521b-4def-aef8-d29b6b7671be"
+        }
+      ],
+      "manifest": {
+        "dropped": [],
+        "estimated_input_tokens": 8116,
+        "estimator": "utf8_bytes_v1",
+        "id": "53d25cd5-88e8-467b-8c96-40ed52392dce",
+        "included": [
+          "goal",
+          "capabilities",
+          "session-summary",
+          "session"
+        ],
+        "input_token_limit": 32768,
+        "phase": "planning",
+        "renderer_version": "role-aware-v1",
+        "request_id": "4e6b0917-05a4-40ea-9297-d704f3bd01cd",
+        "reserved_output_tokens": 2048,
+        "sources": [
+          {
+            "authority": "operator",
+            "evidence_ids": [],
+            "id": "goal",
+            "metadata": {},
+            "source": "goal_context"
+          },
+          {
+            "authority": "framework",
+            "evidence_ids": [],
+            "id": "capabilities",
+            "metadata": {},
+            "source": "skill_registry"
+          },
+          {
+            "authority": "data",
+            "evidence_ids": [],
+            "id": "session-summary",
+            "metadata": {
+              "covered_turns": [
+                {
+                  "id": "a65d4ca2-e045-4f12-9bb8-bde1c65b29fd",
+                  "record_hash": "8206aba248f98d6bcc6f00fde60e8aac845722a9d4e927eea92ce24163960e9c"
+                },
+                {
+                  "id": "8996086d-29c1-4c52-b3b4-f6b0bdc3d617",
+                  "record_hash": "cb32a209ae61f961fe4308dde0fedb179ce2e3ffb79cf552e8f38df30a82fc1c"
+                },
+                {
+                  "id": "2a70eaea-348c-434b-832f-ee11f588de89",
+                  "record_hash": "b7202c1fede129f6597938d29b9695884bca6cbd6fd6970ffcaab5b6eca75a03"
+                },
+                {
+                  "id": "c35c9d5d-6ef2-4021-8b60-c1d69b7b8edb",
+                  "record_hash": "4bcd69a3d98ecbf2ac6fc0645d559f7e1a87f9275a4084f309d4d33503f38e4c"
+                }
+              ],
+              "model_response_id": "d5f5a52f-1899-4858-9838-f2cf585e8fc3",
+              "model_response_ids": [
+                "d5f5a52f-1899-4858-9838-f2cf585e8fc3"
+              ],
+              "pinned_turn_ids": [
+                "44e21322-4738-4f44-889d-ad9519ea8d7f"
+              ],
+              "record_hash": "a016409556b668067f6e857d0f56cf54236d7a1e0008b16e3dc9f7a99c59652e",
+              "summary_id": "23629d9c-521b-4def-aef8-d29b6b7671be"
+            },
+            "source": "session_summary"
+          },
+          {
+            "authority": "data",
+            "evidence_ids": [],
+            "id": "session",
+            "metadata": {
+              "revision": 7,
+              "session_id": "679bf3a3-a526-4f06-99db-1c6c73fd7786",
+              "snapshot_id": null
+            },
+            "source": "session_ledger"
+          }
+        ]
+      },
+      "model_records": [
+        {
+          "id": "26dd7256-db2b-497f-8f63-c22579098723",
+          "method": "goal_analysis",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-ee291313-f19b-90a3-9856-3b837114d23d",
+          "status": "validated"
+        },
+        {
+          "id": "2a10c44b-55fd-4361-a0ea-c8b9f378deb3",
+          "method": "planning",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-c1718f48-ceed-95ab-a010-3f469fdab15e",
+          "status": "validated"
+        },
+        {
+          "id": "d5f5a52f-1899-4858-9838-f2cf585e8fc3",
+          "method": "session_summary",
+          "model": "qwen3.7-plus",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-c9a09f12-2dbf-9f50-9aa5-75859e53ba87",
+          "status": "validated"
+        }
+      ]
+    }
+  ],
+  "regression": {
+    "passed": 29,
+    "subtests_passed": 9
+  },
+  "ui_build": "TypeScript and Vite passed; no new browser acceptance claimed"
+}

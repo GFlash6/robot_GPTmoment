@@ -31,7 +31,7 @@ class Runtime:
                 cancelable=True,
                 replay_safe=name != "file.copy",
                 allowed_roots=allowed_roots,
-                verifier=name in {"asset.verify", "file.copy"},
+                verifier=name in {"asset.verify", "asset.verify-set", "file.copy"},
             )
             self.register(name, spec)
 
@@ -47,16 +47,16 @@ class Runtime:
 
         return GoalAnalyzer(self.store, model_config).analyze(goal, conversation)
 
-    def submit(self, plan, robot_id, priority=0, goal=None, *, agent_context=None):
+    def submit(self, plan, robot_id, priority=0, goal=None, *, agent_context=None, task_id=None, completion_contract=None):
         require(
             isinstance(robot_id, str) and robot_id and "/" not in robot_id,
             "robot_id must be one namespace segment",
         )
         require(type(priority) is int, "priority must be integer")
         catalog = self.catalog()
-        self._check_plan(plan, catalog, robot_id)
+        self._check_plan(plan, catalog, robot_id, completion_contract)
         task = {
-            "id": str(uuid.uuid4()),
+            "id": task_id or str(uuid.uuid4()),
             "robot_id": robot_id,
             "goal": goal,
             "priority": priority,
@@ -71,6 +71,11 @@ class Runtime:
                 for s in plan["steps"]
             },
         }
+        if completion_contract is not None:
+            from .completion import validate_contract
+            from .context_memory import record_hash
+            task["completion_contract"] = validate_contract(completion_contract, catalog)
+            task["completion_contract_hash"] = record_hash(task["completion_contract"])
         if agent_context is not None:
             require(
                 set(agent_context)
@@ -79,6 +84,7 @@ class Runtime:
             )
             task.update(copy.deepcopy(agent_context))
         with self.store.transaction():
+            require(self.store.get("tasks", task["id"]) is None, "task already exists")
             self.store.put("tasks", task["id"], task)
             self.store.event(
                 task["id"],
@@ -87,11 +93,20 @@ class Runtime:
             )
         return task
 
-    def _check_plan(self, plan, catalog, robot_id):
+    def _check_plan(self, plan, catalog, robot_id, completion_contract=None):
         validate_plan(plan, catalog)
+        from .completion import check_plan_contract
+        check_plan_contract(plan, catalog, completion_contract)
         for step in plan["steps"]:
             for item in [step, *step.get("fallback", [])]:
                 spec = catalog[item["skill"]]
+                if spec.get('fencing_domain'):
+                    domain = spec['fencing_domain']
+                    require(spec['adapter'] == 'http', 'fenced runtime skills require enforcing HTTP endpoint')
+                    require(spec.get('resources', {}).get(domain) == 1, 'fencing domain requires exclusive resource')
+                    capacity = self.store.db.execute('SELECT capacity FROM resources WHERE name=?',
+                        (self.resource_name(robot_id, domain),)).fetchone()
+                    require(capacity is not None and capacity[0] == 1, 'fencing resource capacity must be one')
                 if step.get("retries", 0):
                     require(
                         spec.get("replay_safe", False),
@@ -168,19 +183,39 @@ class Runtime:
             self._save(task)
         generation = task["generation"]
         try:
+            snapshot_id = task.get("context_snapshot_id")
+            from .context_snapshot import read_snapshot, snapshot_goal
+            snapshot = read_snapshot(self.store, snapshot_id, robot_id=task["robot_id"],
+                                     expected_hash=task.get("context_snapshot_hash")) if snapshot_id else None
+            goal = GoalContext.from_input(task["goal"])
+            if snapshot:
+                goal = snapshot_goal(snapshot)
             planner = Planner(self.store, task["model_config"])
             request = ContextRequest(
                 request_id=str(uuid.uuid4()),
                 phase="replanning",
-                goal=GoalContext.from_input(task["goal"]),
+                goal=goal,
                 robot_id=task["robot_id"],
+                session_id=snapshot["session"]["id"] if snapshot else None,
+                context_snapshot_id=snapshot_id,
                 task_id=task_id,
                 revision=task["revision"],
                 generation=task["generation"],
             )
+            recovery_guard = None
+            if snapshot:
+                from .recovery_budget import fit_recovery
+                request, recovery_guard = fit_recovery(self.store, task, request)
             plan = planner.plan(
-                task["goal"], task["catalog"], context_request=request
+                goal.interpreted_intent, task["catalog"], context_request=request
             )
+            if recovery_guard:
+                recovery_guard()
+            if snapshot:
+                from .context_memory import verify_bindings
+                verify_bindings(self.store, snapshot["session"].get("memory_bindings", []), task["robot_id"])
+                from .context_assets import verify_session_assets
+                verify_session_assets(self.store, snapshot["session"])
             return self.revise(
                 task_id,
                 plan,
@@ -202,6 +237,12 @@ class Runtime:
                 if rejected["generation"] != generation:
                     return rejected
                 control = self.store.get("controls", task_id)
+                # An accepted stop request still needs the worker to apply it.
+                # Do not turn its target terminal while rejecting a late model result.
+                if not control and any(c["task_id"] == task_id and c["status"] == "accepted"
+                                       and c["action"] in {"task.cancel", "task.pause"}
+                                       for c in self.store.list("commands")):
+                    return rejected
                 rejected["status"] = (
                     ("canceled" if control["mode"] == "cancel" else "paused")
                     if control and not control.get("failure")
@@ -306,6 +347,10 @@ class Runtime:
                 "replan has unresolved execution",
             )
             control = self.store.get("controls", task_id)
+            if automatic and any(c["task_id"] == task_id and c["action"] == "task.cancel" and c["status"] == "accepted"
+                                 for c in self.store.list("commands")):
+                self.store.event(task_id, "late_plan_discarded", {"reason": "accepted cancellation command", "model_response_id": model_response_id})
+                return task
             if automatic and control and not control.get("failure"):
                 task["status"] = "canceled" if control["mode"] == "cancel" else "paused"
                 self.store.put("tasks", task_id, task)
@@ -319,7 +364,8 @@ class Runtime:
                 )
                 return task
             require(task["revision"] < 10, "plan revision budget exhausted")
-            self._check_plan(plan, self.catalog(), task["robot_id"])
+            from .completion import task_contract
+            self._check_plan(plan, self.catalog(), task["robot_id"], task_contract(task))
             # A revision is a new plan, never an implicit replay of completed side effects.
             for step in plan["steps"]:
                 for item in [step, *step.get("fallback", [])]:
@@ -466,6 +512,23 @@ class Runtime:
                         continue
                     execution_id = str(uuid.uuid4())
                     with self.store.transaction():
+                        try:
+                            from .completion import task_contract, same_contract
+                            completion = task_contract(task)
+                            if task.get("context_snapshot_id"):
+                                from .context_snapshot import read_snapshot
+                                from .context_assets import verify_session_assets
+                                snapshot = read_snapshot(self.store, task["context_snapshot_id"],
+                                    robot_id=task["robot_id"], session_id=task.get("session_id"),
+                                    expected_hash=task.get("context_snapshot_hash"))
+                                verify_session_assets(self.store, snapshot["session"])
+                                require(same_contract(snapshot["session"].get("completion_contract"), completion),
+                                        "snapshot completion contract differs from task")
+                        except ContractError as exc:
+                            state.update(status="failed", error=str(exc))
+                            self._save(task)
+                            self.store.event(task_id, "context_rejected", {"step": step["id"], "error": str(exc)})
+                            continue
                         if not self.store._acquire(execution_id, needs):
                             continue
                         state.update(
@@ -482,6 +545,9 @@ class Runtime:
                             "created_at": time.time(),
                             "status": "dispatched",
                         }
+                        if spec.get('fencing_domain'):
+                            from .fencing import issue
+                            execution['authority'] = issue(self.store, task['robot_id'], spec['fencing_domain'])
                         self.store.put("executions", execution_id, execution)
                         self._save(task)
                         self.store.event(task_id, "dispatch_intent", execution)
@@ -503,6 +569,7 @@ class Runtime:
                         execution_id,
                         execution["args"],
                         task["robot_id"],
+                        **({'authority': execution.get('authority')} if spec.get('fencing_domain') else {}),
                     )
                     require(
                         isinstance(result, dict)
@@ -527,6 +594,13 @@ class Runtime:
                                 check_result(
                                     task["catalog"][step["skill"]], result, execution_id
                                 )
+                                if step["id"] == task["plan"]["verification"]:
+                                    from .completion import task_contract, evaluate
+                                    completion = task_contract(task)
+                                    if completion is not None:
+                                        evaluation = evaluate(completion, result["output"], execution_id)
+                                        result = {**result, "reported_status": result["status"], "completion_evaluation": evaluation}
+                                        require(evaluation["status"] == "passed", "task completion criteria failed")
                             except ContractError as exc:
                                 result = {
                                     **result,

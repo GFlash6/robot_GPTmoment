@@ -4,10 +4,10 @@
   "workspace": {
     "key": "workspace-robot-agent-framework",
     "title": "机器人 Agent 框架",
-    "revision": 151,
-    "updatedAt": "2026-09-11T17:02:26.946Z",
+    "revision": 156,
+    "updatedAt": "2026-09-22T02:40:09.810Z",
     "confirmedBy": "momo-skill",
-    "confirmedAt": "2026-09-11T17:02:26.946Z"
+    "confirmedAt": "2026-09-21T18:24:21.448Z"
   },
   "snapshot": {
     "schemaVersion": 4,
@@ -19,7 +19,7 @@
         "schemaVersion": 1,
         "title": "机器人 Agent 框架",
         "lifecycle": "in_progress",
-        "summary": "机器人 Agent 框架基础闭环与只读 UI 可运行；上下文第一轮基础框架已实现，包含语义目标初析/问讯、统一构造、权限渲染、预算分配、任务图状态和构造清单，连续会话记忆与真实模型/机器人验收仍待完成。",
+        "summary": "应用协作、持久执行、上下文追溯与文件任务恢复已验证；真实世界状态、物理实体和真机闭环仍待接入。",
         "properties": {
           "workspaceKey": "workspace-robot-agent-framework",
           "ownership": "owned",
@@ -33,10 +33,31 @@
           "openQuestionsStatusSource": ".momo/intake/open-questions-status.json",
           "roadmapSource": "docs/BUILD_ROADMAP.md",
           "roadmapSourceFingerprint": "7785a9ed06b3e5be6209c5c42d7828c67d4b47110db3f1d1cb00febade261c25",
-          "currentBuildPhase": "phase-1-context-foundation-and-execution-authority"
+          "currentBuildPhase": "phase-1-context-foundation-and-execution-authority",
+          "source": "docs/PROJECT_STATUS.md",
+          "sourceFingerprint": "5c7f3359480c5619f1ddebca240160710bb9093dc1fa4a1ef72df0d83769ab1a",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/completion-recovery-live.json",
+              "sha256": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/action-idempotency-live.json",
+              "sha256": "250c68ea1e097d3faf9a917e5ac05cf357b1076ad6d67fc97979af47e4e931df",
+              "status": "passed_after_reproduced_cross_action_collision_fix"
+            },
+            {
+              "path": "docs/validation/world-source-discovery.json",
+              "sha256": "9ddfe86cd4a66e20d09f773c9ceb51f8cc9c7ebc43ca693262d9d838964306dd",
+              "status": "discovery_completed_device_unavailable_in_observed_graph"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T06:08:28.603463+00:00",
-        "updatedAt": "2026-09-12T08:00:00.000Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "goal",
@@ -100,10 +121,10 @@
         "schemaVersion": 1,
         "title": "多模态数据与地图记忆",
         "lifecycle": "in_progress",
-        "summary": "多模态资产目录与记录管道已实现；实际输入、地图对齐/失效、分类/合并/遗忘、容量与检索分层仍待完善。",
+        "summary": "归档资产、记忆检索、来源版本绑定和摘要已具备；实时物体定位、空间融合、地图失效与容量策略仍待完善。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "docs/USER_REQUIREMENTS.md",
+          "source": "robot_agent/context_assets.py",
           "openQuestionIds": [
             "Q09",
             "Q10",
@@ -113,10 +134,25 @@
             "R09",
             "U03"
           ],
-          "openQuestionsSource": "docs/OPEN_QUESTIONS.md"
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
+          "sourceFingerprint": "ec9d76587d94faa255c111284373c9159bb604030027d21a8c382bdbe7e057c2",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/asset-binding-live.json",
+              "sha256": "b3478391cd29ee78ec4cab4811c6882c17219ffcdcbd7ae8d40dd42371df8049",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/summary-context-live.json",
+              "sha256": "dff3d5cc38cafc498c36ce280a9c6db43099115b19f26954c8ea72f2b0028922",
+              "status": "passed_after_test_input_corrections"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T06:08:28.603463+00:00",
-        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "truth",
@@ -125,17 +161,32 @@
         "schemaVersion": 1,
         "title": "实际返回与证据判定",
         "lifecycle": "in_progress",
-        "summary": "真实返回、schema 和来源证据检查已有软件验证；机器人后置条件与独立目标验证仍缺真实验收。",
+        "summary": "Runtime 独立执行冻结的操作者完成条件；技能成功但任务字节不匹配会失败，实际模型恢复仍保留原要求。物理验证指标待设备观测。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "docs/USER_REQUIREMENTS.md",
+          "source": "robot_agent/completion.py",
           "openQuestionIds": [
             "Q03"
           ],
-          "openQuestionsSource": "docs/OPEN_QUESTIONS.md"
+          "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
+          "sourceFingerprint": "c0eac00d96fd1f806c0926da188df8a7b0be58cf3181806814cdb64b641fe972",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/completion-contract-live.json",
+              "sha256": "c90d59550790d2d75243d6aae807c968108aa47a9fb5932982553290524a998f",
+              "status": "passed_after_test_exit_code_correction"
+            },
+            {
+              "path": "docs/validation/completion-recovery-live.json",
+              "sha256": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T06:08:28.603463+00:00",
-        "updatedAt": "2026-09-06T15:16:12.198429+00:00"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "research",
@@ -187,10 +238,10 @@
         "schemaVersion": 1,
         "title": "框架实现",
         "lifecycle": "in_progress",
-        "summary": "第一版内核可运行；当前按路线图阶段 1 推进，历史版本契约已完成，下一项为控制权 fencing，之后是补偿和统一重试责任。",
+        "summary": "已有共享动作、控制命令、HTTP fencing 与显式停止协调的实际文件服务验证；物理设备隔离、停止与补偿仍待验收。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "docs/VALIDATION.md",
+          "source": "robot_agent/runtime.py",
           "openQuestionIds": [
             "Q13",
             "R01",
@@ -199,10 +250,25 @@
           ],
           "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
           "roadmapSource": "docs/BUILD_ROADMAP.md",
-          "currentBuildPhase": "phase-1-execution-authority-and-recovery"
+          "currentBuildPhase": "phase-1-execution-authority-and-recovery",
+          "sourceFingerprint": "85e43b683005b13f577994287eac77fff02c54b6aff8a601fc3d0202d905cc65",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/fencing-live.json",
+              "sha256": "9a0b5a1fd3e6d73ac13f33b16094486bc1bb129eb229254d23fa3efbe7aaa600",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/fencing-reconciliation-live.json",
+              "sha256": "75c47606f429d8a2796c61c97f4295e5ded84ad4ca65572c17c48b914ecc2c7c",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T06:08:28.603463+00:00",
-        "updatedAt": "2026-09-06T16:19:06.511Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "questions",
@@ -211,7 +277,7 @@
         "schemaVersion": 1,
         "title": "模块待决问题台账",
         "lifecycle": "in_progress",
-        "summary": "OPEN_QUESTIONS 保存 30 条问题原文；Q01 已取得真实问答和合法短计划证据，仍开放长程执行与自动重规划；U05 已关闭。",
+        "summary": "问题台账已修正文件闭环、恢复与UI控制过时描述；设备连接、时间/坐标语义、物理停止和通用任务质量仍开放。",
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "docs/OPEN_QUESTIONS.md",
@@ -695,10 +761,20 @@
             "open": 28,
             "continuous": 1,
             "newlyClosed": 1
-          }
+          },
+          "sourceFingerprint": "45020e471d803da72cd64e14596e58c43b0ebb25b298a65b5e9f9fae9a8aed49",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/world-source-discovery.json",
+              "sha256": "9ddfe86cd4a66e20d09f773c9ceb51f8cc9c7ebc43ca693262d9d838964306dd",
+              "status": "discovery_completed_device_unavailable_in_observed_graph"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T06:08:28.603463+00:00",
-        "updatedAt": "2026-09-07T03:29:58.160Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "verification",
@@ -707,7 +783,7 @@
         "schemaVersion": 1,
         "title": "实际 AI 与机器人技能联调",
         "lifecycle": "in_progress",
-        "summary": "qwen3.8-max 真实问答与两步计划校验已通过；计划执行、自动重规划和机器人技能/停止回执仍未验收。",
+        "summary": "真实模型文件、多文件、摘要、失败诊断与完成契约恢复已有实际执行证据；当前 ROS 图仅检查节点诊断发布者，无设备闭环。",
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "docs/VALIDATION.md",
@@ -721,10 +797,33 @@
             "Q07"
           ],
           "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
-          "latestModelValidation": "docs/validation/model-planning-qwen3.8-max.json"
+          "latestModelValidation": "docs/validation/application-layer-2026-09-22.json",
+          "implementationStatus": "partial",
+          "validationSource": "docs/validation/application-layer-2026-09-22.json",
+          "sourceFingerprint": "6f64696770e250c31c2074dd025e3c0ef266e8565bfedbc09a4fbc009fd4888d",
+          "validationSourceFingerprint": "068fab21deaf2ed8ab100df5be790f98c157dd6e0557ebaa5ff5fb8a01fe7b39",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/multifile-live.json",
+              "sha256": "8c02f835b925144d7c4e6ae2a1f96bd1cc3196f3b5d12644500dacb2447489a6",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/completion-recovery-live.json",
+              "sha256": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/world-source-discovery.json",
+              "sha256": "9ddfe86cd4a66e20d09f773c9ceb51f8cc9c7ebc43ca693262d9d838964306dd",
+              "status": "discovery_completed_device_unavailable_in_observed_graph"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T06:08:28.603463+00:00",
-        "updatedAt": "2026-09-07T03:24:29.379Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "momo",
@@ -767,10 +866,10 @@
         "schemaVersion": 1,
         "title": "任务执行与控制权",
         "lifecycle": "in_progress",
-        "summary": "第一版执行与资源机制及历史版本契约已有验证；广义模块仍需控制端旧执行者隔离、补偿与恢复契约及跨层重试归属。",
+        "summary": "共享动作发现契约、任务/会话/自动化跨动作幂等已实现；实际 HTTP 并发、文件执行和旧账本回执兼容通过。设备端控制与物理停止未验收。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "robot_agent/runtime.py",
+          "source": "robot_agent/actions.py",
           "openQuestionIds": [
             "Q02",
             "Q05",
@@ -780,10 +879,28 @@
             "R06"
           ],
           "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
-          "firstVersionSoftwareValidation": "done"
+          "firstVersionSoftwareValidation": "done",
+          "implementationStatus": "partial",
+          "validationSource": "docs/validation/application-layer-2026-09-22.json",
+          "sourceFingerprint": "316a70ca02d6014b2119321cd35f2630c97a8ed8ee52cbd520931274c1ddd2c3",
+          "validationSourceFingerprint": "068fab21deaf2ed8ab100df5be790f98c157dd6e0557ebaa5ff5fb8a01fe7b39",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/action-idempotency-live.json",
+              "sha256": "250c68ea1e097d3faf9a917e5ac05cf357b1076ad6d67fc97979af47e4e931df",
+              "status": "passed_after_reproduced_cross_action_collision_fix"
+            },
+            {
+              "path": "docs/validation/fencing-reconciliation-live.json",
+              "sha256": "75c47606f429d8a2796c61c97f4295e5ded84ad4ca65572c17c48b914ecc2c7c",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T08:00:31.921946+00:00",
-        "updatedAt": "2026-09-06T16:19:06.511Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "multimodal-storage",
@@ -816,22 +933,39 @@
         "schemaVersion": 1,
         "title": "模型调用与上下文流转",
         "lifecycle": "in_progress",
-        "summary": "模型调用链已扩展为目标语义初析/澄清、ContextBuilder、预算分配、角色权限渲染、发送与 ContextManifest 留痕；初始规划和重规划共用构造入口，连续 Session、摘要检索和世界状态接入仍待实现。",
+        "summary": "持久会话、记忆检索、分块摘要、恢复预算和完整上下文追溯已接通并有真实模型证据；实时世界状态未接入。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "robot_agent/context_builder.py",
+          "source": "robot_agent/sessions.py",
           "openQuestionIds": [
             "Q01",
             "R06"
           ],
           "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
-          "latestModelValidation": "docs/validation/model-planning-qwen3.8-max.json",
-          "configuredModel": "qwen3.8-max",
+          "latestModelValidation": "docs/validation/application-layer-2026-09-22.json",
+          "configuredModel": "qwen3.7-plus (environment, 2026-09-22)",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
-          "sourceFingerprint": "45cd9e3b4b1800a3a4a300a6a50a9b8f64c7b962f8564a2a7c1c3127322e6148"
+          "sourceFingerprint": "44c77200fdd23167c80b0bd5420cb44a36ee1ca00850a38f388b0c7b2fb4947b",
+          "implementationStatus": "partial",
+          "validationSource": "docs/validation/application-layer-2026-09-22.json",
+          "validationSourceFingerprint": "068fab21deaf2ed8ab100df5be790f98c157dd6e0557ebaa5ff5fb8a01fe7b39",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/summary-context-live.json",
+              "sha256": "dff3d5cc38cafc498c36ce280a9c6db43099115b19f26954c8ea72f2b0028922",
+              "status": "passed_after_test_input_corrections"
+            },
+            {
+              "path": "docs/validation/completion-recovery-live.json",
+              "sha256": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T08:00:31.921946+00:00",
-        "updatedAt": "2026-09-12T08:00:00.000Z",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00",
         "contentRef": {
           "contentId": "model-flow-overview-content",
           "format": "text/plain",
@@ -845,29 +979,39 @@
         "schemaVersion": 1,
         "title": "软件实际验证记录",
         "lifecycle": "done",
-        "summary": "最新本地回归为 32 tests 与 9 subtests 通过；另有 qwen3.8-max 真实问答 1 项通过。软件与模型短计划证据仍不代表机器人或长程执行验收。",
+        "summary": "按改动运行真实文件/HTTP/SQLite/进程回归；最新跨动作幂等回归25项、真实自动诊断1项通过。不是整个测试集或物理系统验收。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "docs/VALIDATION.md",
+          "source": "tests/test_action_idempotency.py",
           "latestIncrementalReport": "docs/validation/pytest-roadmap.xml",
-          "latestModelValidation": "docs/validation/model-planning-qwen3.8-max.json"
+          "latestModelValidation": "docs/validation/model-planning-qwen3.8-max.json",
+          "sourceFingerprint": "8ff908f261f1f92bc712ab2f8271cd872b03b7fdebc95bdf41e142c544d5dd91",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/action-idempotency-live.json",
+              "sha256": "250c68ea1e097d3faf9a917e5ac05cf357b1076ad6d67fc97979af47e4e931df",
+              "status": "passed_after_reproduced_cross_action_collision_fix"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T08:00:31.921946+00:00",
-        "updatedAt": "2026-09-07T03:24:29.379Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "workflow-ui",
         "projectId": "project-robot-agent-framework",
         "type": "work_item",
         "schemaVersion": 1,
-        "title": "解耦流程可视化 UI",
-        "lifecycle": "done",
-        "summary": "独立 React/TypeScript 只读流程 UI 与观察 API 已实现；任务 DAG、结果、fallback、停止证据、资源、记忆和模型记录均读取真实账本。",
+        "title": "解耦流程观察与任务协作 UI",
+        "lifecycle": "in_progress",
+        "summary": "工作台控制、记忆/摘要、自动诊断、事件分页及上下文单记录/差异视图已有真实浏览器验证；远程认证与设备实时状态待完成。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "docs/UI_DESIGN.md",
+          "source": "ui/src/App.tsx",
           "designStatus": "implemented",
-          "validationSource": "docs/UI_VALIDATION.md",
+          "validationSource": "docs/validation/application-layer-2026-09-22.json",
           "apiSource": "docs/UI_API.md",
           "openQuestionIds": [
             "U01",
@@ -878,10 +1022,27 @@
           ],
           "openQuestionsSource": "docs/OPEN_QUESTIONS.md",
           "completedScope": "第一版独立只读观察界面",
-          "followupStatus": "open"
+          "followupStatus": "open",
+          "implementationStatus": "partial",
+          "sourceFingerprint": "4cfbdeb4f39e373d28490d849c8dad6ab17b19746a660f47b83fde685e60f7f5",
+          "validationSourceFingerprint": "068fab21deaf2ed8ab100df5be790f98c157dd6e0557ebaa5ff5fb8a01fe7b39",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/context-diff-browser-live.json",
+              "sha256": "474b58bc7154f0ce38aca5a7fd6b82025e039462c2aec8dfd9dc65c15af0506f",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/automation-browser-live.json",
+              "sha256": "3450949371fb59a42753982e23c29b563b18b5c36eb73ab1be48c3a6757951d3",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-05T16:03:17.080903+00:00",
-        "updatedAt": "2026-09-06T16:19:06.511Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "ui-validation",
@@ -890,13 +1051,28 @@
         "schemaVersion": 1,
         "title": "解耦 UI 实际账本与浏览器验证",
         "lifecycle": "done",
-        "summary": "30 tests、9 subtests 和 4 项 Chromium 检查通过；构建通过。使用真实文件操作账本，无机器人或模型成功声明。",
+        "summary": "实际账本浏览器验证覆盖上下文比较、来源、断连恢复与损坏证据；不同增量结果分别保留，UI 验证不证明真机完成。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "docs/UI_VALIDATION.md"
+          "source": "docs/UI_VALIDATION.md",
+          "sourceFingerprint": "9f95de00cef277740d9853e4e2303c9c3d3260d59c52b18338900b3f35961708",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/context-diff-browser-live.json",
+              "sha256": "474b58bc7154f0ce38aca5a7fd6b82025e039462c2aec8dfd9dc65c15af0506f",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/summary-browser-live.json",
+              "sha256": "25d10624cd2a6cd22eb8204d88d53ee3c10c9da603c22e0de8969af28c1464ce",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "createdAt": "2026-09-06T06:24:43.478330+00:00",
-        "updatedAt": "2026-09-06T06:24:43.478330+00:00"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-qa",
@@ -909,7 +1085,7 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent_observer/model_test.py",
-          "sourceFingerprint": "3120548a1fef2a319fb4ffc11917dd7a0d2a8dbc9606eac9c5d6cb5f16f9799e",
+          "sourceFingerprint": "ca53e6871cb2c7fa1547e669a5fbc8f2e41c90c29cf47108c759ff3ea17332d1",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented"
         },
@@ -932,11 +1108,11 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/planner.py",
-          "sourceFingerprint": "f0a5bd666ffa333e8dc2b85c10743a2d3eb4787a246a586cc55469e525d2b4ab",
+          "sourceFingerprint": "189ceac2cd16c6cf2d1f603da56e986f5a47668f5d5470d6159926f8eb04523a",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9"
         },
         "contentRef": {
           "contentId": "model-flow-planner-content",
@@ -953,13 +1129,22 @@
         "schemaVersion": 1,
         "title": "模型配置 · ModelConfig",
         "lifecycle": "done",
-        "summary": "qwen3.8-max；显式 URL；凭证按环境变量名读取。",
+        "summary": "运行时使用环境中的实际模型和鉴权配置；近期证据为 qwen3.7-plus，qwen3.8-max 属历史记录，不将任一模型名当固定默认。",
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/model_transport.py",
-          "sourceFingerprint": "f6595fae5be94ae07dd05c6344483bec82f8f16c7f5acc67e60c877938735ccf",
+          "sourceFingerprint": "3b174c3fabdc6ca0f5c5014961ae526df264eb744e511d99027716023fcfb539",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
-          "implementationStatus": "implemented"
+          "implementationStatus": "implemented",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/completion-recovery-live.json",
+              "sha256": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "contentRef": {
           "contentId": "model-flow-config-content",
@@ -967,7 +1152,7 @@
           "schemaVersion": 1
         },
         "createdAt": "2026-09-07T09:07:08.644Z",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-caller",
@@ -984,7 +1169,7 @@
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9"
         },
         "contentRef": {
           "contentId": "model-flow-caller-content",
@@ -1005,11 +1190,11 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/model_methods.py",
-          "sourceFingerprint": "cb640ba6076a14dbe69c8b8f25f057dd0c121f1f9dd1e81932d50e429a9c05fd",
+          "sourceFingerprint": "1c66a2e2f968c31c5a85910c7802a7afe3df20619eda3b1b95545fde1af69589",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9"
         },
         "contentRef": {
           "contentId": "model-flow-methods-content",
@@ -1026,15 +1211,29 @@
         "schemaVersion": 1,
         "title": "统一上下文模型 · Goal / Task / Fragment / Bundle",
         "lifecycle": "done",
-        "summary": "保留原始输入并补充解释语义、实体关系、约束、完成标准、歧义与缺失信息；任务状态以节点和类型化边表达，片段携带 kind、authority、phase、优先级和必需性。",
+        "summary": "Goal/Task/Fragment/Bundle 保留来源与权限；AssetBinding 固定归档字节和记录版本；独立操作者完成契约不可被模型计划改写。物理实体尚无绑定。",
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/context_models.py",
-          "sourceFingerprint": "e395cf335e0f061f680477b2cfa9ef389446b5e6c9b76e7c80181f303359e811",
+          "sourceFingerprint": "0ddb925f071b5c7577a308adcb34412c36d9216c3369f54a59b7f66d95bab882",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/asset-binding-live.json",
+              "sha256": "b3478391cd29ee78ec4cab4811c6882c17219ffcdcbd7ae8d40dd42371df8049",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/completion-contract-live.json",
+              "sha256": "c90d59550790d2d75243d6aae807c968108aa47a9fb5932982553290524a998f",
+              "status": "passed_after_test_exit_code_correction"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "contentRef": {
           "contentId": "model-flow-fragments-content",
@@ -1042,7 +1241,7 @@
           "schemaVersion": 1
         },
         "createdAt": "2026-09-07T09:07:08.644Z",
-        "updatedAt": "2026-09-12T08:00:00.000Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-allocator",
@@ -1059,7 +1258,7 @@
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9"
         },
         "contentRef": {
           "contentId": "model-flow-allocator-content",
@@ -1084,7 +1283,7 @@
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9"
         },
         "contentRef": {
           "contentId": "model-flow-request-content",
@@ -1105,7 +1304,7 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/model_transport.py",
-          "sourceFingerprint": "f6595fae5be94ae07dd05c6344483bec82f8f16c7f5acc67e60c877938735ccf",
+          "sourceFingerprint": "3b174c3fabdc6ca0f5c5014961ae526df264eb744e511d99027716023fcfb539",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented"
         },
@@ -1128,7 +1327,7 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/model_call.py",
-          "sourceFingerprint": "8c48a698d8179aacb6fd957d4b28159038d9bf199f5da89a496206c8d2187916",
+          "sourceFingerprint": "c897222ae02d15dce39460b61a724ac5247cdad5569c7f2fa81ef94e260c01c7",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented"
         },
@@ -1151,7 +1350,7 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/planner.py",
-          "sourceFingerprint": "9a0ee9b2c97704f1e619a4f8d8a97f5e727aa2c50c67bd1b1a6fb599013b2c76",
+          "sourceFingerprint": "189ceac2cd16c6cf2d1f603da56e986f5a47668f5d5470d6159926f8eb04523a",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented"
         },
@@ -1174,7 +1373,7 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent_observer/model_test.py",
-          "sourceFingerprint": "3120548a1fef2a319fb4ffc11917dd7a0d2a8dbc9606eac9c5d6cb5f16f9799e",
+          "sourceFingerprint": "ca53e6871cb2c7fa1547e669a5fbc8f2e41c90c29cf47108c759ff3ea17332d1",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented"
         },
@@ -1193,15 +1392,34 @@
         "schemaVersion": 1,
         "title": "规划证据 · model_responses / ContextManifest",
         "lifecycle": "done",
-        "summary": "在传输前持久化每次上下文构造清单，包括使用/丢弃片段、原因、预算和成本估算；随后关联模型响应与合法计划。",
+        "summary": "模型调用保存实际请求、原始响应、Bundle/Manifest 与哈希；目标、规划、解释、摘要、自动诊断已有输入重建证据。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "robot_agent/planner.py",
-          "sourceFingerprint": "f0a5bd666ffa333e8dc2b85c10743a2d3eb4787a246a586cc55469e525d2b4ab",
+          "source": "robot_agent/context_codec.py",
+          "sourceFingerprint": "5fce02c0b10b3be1fd424562b33424216556b8843f7932d9789c2b6bd63e5730",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/context-codec-live.json",
+              "sha256": "c6f5c8acc47609eccd6bbc71ddb86910556694d30c79ab431c4bc4d54ac4b0d7",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/summary-context-live.json",
+              "sha256": "dff3d5cc38cafc498c36ce280a9c6db43099115b19f26954c8ea72f2b0028922",
+              "status": "passed_after_test_input_corrections"
+            },
+            {
+              "path": "docs/validation/action-idempotency-live.json",
+              "sha256": "250c68ea1e097d3faf9a917e5ac05cf357b1076ad6d67fc97979af47e4e931df",
+              "status": "passed_after_reproduced_cross_action_collision_fix"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "contentRef": {
           "contentId": "model-flow-plan-history-content",
@@ -1209,7 +1427,7 @@
           "schemaVersion": 1
         },
         "createdAt": "2026-09-07T09:07:08.644Z",
-        "updatedAt": "2026-09-12T08:00:00.000Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-task-state",
@@ -1218,15 +1436,24 @@
         "schemaVersion": 1,
         "title": "任务状态上下文 · TaskStateContext",
         "lifecycle": "done",
-        "summary": "从权威 tasks 账本构造当前修订与代际的任务图，表达分解、依赖、产出/消费、验证、回退和阻塞关系；仅成功步骤的真实输出和证据进入上下文。",
+        "summary": "权威任务版本、任务图与结果进入上下文；完成契约检查失败时单独以 data 片段保留实际逐项差异，供恢复使用。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "robot_agent/context_builder.py",
-          "sourceFingerprint": "45cd9e3b4b1800a3a4a300a6a50a9b8f64c7b962f8564a2a7c1c3127322e6148",
+          "source": "robot_agent/context_providers.py",
+          "sourceFingerprint": "48bc0252e40b4809c7c12b3566808084136936bf47b1388128216f792f06ed47",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/completion-recovery-live.json",
+              "sha256": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "contentRef": {
           "contentId": "model-flow-task-state-content",
@@ -1234,7 +1461,7 @@
           "schemaVersion": 1
         },
         "createdAt": "2026-09-07T09:07:08.644Z",
-        "updatedAt": "2026-09-12T08:00:00.000Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-replan",
@@ -1243,15 +1470,24 @@
         "schemaVersion": 1,
         "title": "历史回流 · recover_plan",
         "lifecycle": "in_progress",
-        "summary": "读取权威失败状态并通过同一 ContextBuilder 生成与当前 revision/generation 匹配的重规划上下文；真实执行闭环仍待验收。",
+        "summary": "真实失败后的恢复继承冻结快照、契约与实际验收差异；模型改用授权备用文件并由独立 worker 核验原字节通过。通用和物理恢复仍未证明。",
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/runtime.py",
-          "sourceFingerprint": "b890dcad484202e8b0d22c18438e2078ca242a0f93d40a482e16ac602d0ffd0a",
+          "sourceFingerprint": "85e43b683005b13f577994287eac77fff02c54b6aff8a601fc3d0202d905cc65",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented_pending_live_validation",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/completion-recovery-live.json",
+              "sha256": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "contentRef": {
           "contentId": "model-flow-replan-content",
@@ -1259,24 +1495,39 @@
           "schemaVersion": 1
         },
         "createdAt": "2026-09-07T09:07:08.644Z",
-        "updatedAt": "2026-09-12T08:00:00.000Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-gap-session",
         "projectId": "project-robot-agent-framework",
         "type": "work_item",
         "schemaVersion": 1,
-        "title": "未完成 · 连续会话历史",
-        "lifecycle": "open",
-        "summary": "已定义 Session 上下文角色边界，但尚无 session_id、多轮窗口、会话隔离与持久化恢复。",
+        "title": "持久会话与多轮目标完善",
+        "lifecycle": "in_progress",
+        "summary": "多轮会话、固定原文、分块摘要、自动预算、绑定资产/记忆和冻结提交快照已有真实验证；生产留存策略仍待完善。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "robot_agent/context_models.py",
-          "sourceFingerprint": "e395cf335e0f061f680477b2cfa9ef389446b5e6c9b76e7c80181f303359e811",
+          "source": "robot_agent/sessions.py",
+          "sourceFingerprint": "44c77200fdd23167c80b0bd5420cb44a36ee1ca00850a38f388b0c7b2fb4947b",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
-          "implementationStatus": "not_implemented",
-          "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "implementationStatus": "partial",
+          "validationSource": "docs/validation/application-layer-2026-09-22.json",
+          "validationSourceFingerprint": "068fab21deaf2ed8ab100df5be790f98c157dd6e0557ebaa5ff5fb8a01fe7b39",
+          "memoryValidationSource": "docs/validation/memory-context-live.json",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/summary-context-live.json",
+              "sha256": "dff3d5cc38cafc498c36ce280a9c6db43099115b19f26954c8ea72f2b0028922",
+              "status": "passed_after_test_input_corrections"
+            },
+            {
+              "path": "docs/validation/asset-binding-live.json",
+              "sha256": "b3478391cd29ee78ec4cab4811c6882c17219ffcdcbd7ae8d40dd42371df8049",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "contentRef": {
           "contentId": "model-flow-gap-session-content",
@@ -1284,24 +1535,38 @@
           "schemaVersion": 1
         },
         "createdAt": "2026-09-07T09:07:08.644Z",
-        "updatedAt": "2026-09-12T08:00:00.000Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-gap-summary",
         "projectId": "project-robot-agent-framework",
         "type": "work_item",
         "schemaVersion": 1,
-        "title": "未完成 · 摘要与检索注入",
-        "lifecycle": "open",
-        "summary": "尚无对话摘要、长期记忆检索、世界状态/资产自动召回与新鲜度策略；当前仅具备可扩展的片段和预算接口。",
+        "title": "记忆检索、历史摘要与恢复预算",
+        "lifecycle": "in_progress",
+        "summary": "有来源的记忆检索、版本绑定、工作台选择、长历史分块摘要和恢复预算已完成限定场景验证；空间检索与实体合并仍待完成。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "robot_agent/context_builder.py",
-          "sourceFingerprint": "45cd9e3b4b1800a3a4a300a6a50a9b8f64c7b962f8564a2a7c1c3127322e6148",
+          "source": "robot_agent/session_history.py",
+          "sourceFingerprint": "6652650bf6799efa51040b90f24738583d47e35fc9a3272225eb3767a8cbd07c",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
-          "implementationStatus": "not_implemented",
-          "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "implementationStatus": "partial",
+          "validationSource": "docs/validation/memory-context-live.json",
+          "validationSourceFingerprint": "7e1b82e2392f5632c63f17c7e201c31b5270b3d52e2be7127f8c7a216a608419",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/summary-context-live.json",
+              "sha256": "dff3d5cc38cafc498c36ce280a9c6db43099115b19f26954c8ea72f2b0028922",
+              "status": "passed_after_test_input_corrections"
+            },
+            {
+              "path": "docs/validation/memory-browser-live.json",
+              "sha256": "44c2826af4238090cf2d1db4836624a52063b0998064af4fb01b864be7127be5",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "contentRef": {
           "contentId": "model-flow-gap-summary-content",
@@ -1309,7 +1574,7 @@
           "schemaVersion": 1
         },
         "createdAt": "2026-09-07T09:07:08.644Z",
-        "updatedAt": "2026-09-12T08:00:00.000Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-gap-budget",
@@ -1322,11 +1587,11 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/runtime.py",
-          "sourceFingerprint": "b890dcad484202e8b0d22c18438e2078ca242a0f93d40a482e16ac602d0ffd0a",
+          "sourceFingerprint": "d521b9510cab61b33680bdc0cfd4178091b355b0ca84364847160db7434360e9",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9"
         },
         "contentRef": {
           "contentId": "model-flow-gap-budget-content",
@@ -1345,11 +1610,11 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/goal_analysis.py",
-          "sourceFingerprint": "93330f12381fc1f2df8d77df62e8e17b73e41ecb9a69cc00d0023b7c9e201305",
+          "sourceFingerprint": "5739df61dbee48c7aabc8709f7e0a5f054cae28c3e6eb12e171b19531b1d8d0a",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9"
         },
         "projectId": "project-robot-agent-framework",
         "schemaVersion": 1,
@@ -1365,11 +1630,11 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/goal_analysis.py",
-          "sourceFingerprint": "93330f12381fc1f2df8d77df62e8e17b73e41ecb9a69cc00d0023b7c9e201305",
+          "sourceFingerprint": "5739df61dbee48c7aabc8709f7e0a5f054cae28c3e6eb12e171b19531b1d8d0a",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9"
         },
         "projectId": "project-robot-agent-framework",
         "schemaVersion": 1,
@@ -1385,11 +1650,12 @@
         "properties": {
           "evidenceStatus": "Confirmed",
           "source": "robot_agent/context_builder.py",
-          "sourceFingerprint": "45cd9e3b4b1800a3a4a300a6a50a9b8f64c7b962f8564a2a7c1c3127322e6148",
+          "sourceFingerprint": "a45a1bbd157f9616752212079b4edefc2aa7b892ea733d3da8d77ed5d1931b96",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9",
+          "memoryValidationSource": "docs/validation/memory-context-live.json"
         },
         "projectId": "project-robot-agent-framework",
         "schemaVersion": 1,
@@ -1401,20 +1667,34 @@
         "type": "artifact",
         "title": "上下文构造记录 · ContextManifest",
         "lifecycle": "done",
-        "summary": "在模型传输前保存使用/丢弃的上下文片段、丢弃原因、输入输出预算和估算成本；即使传输失败也保留诊断证据。",
+        "summary": "Manifest 保存纳入/丢弃来源、预算与诊断；完整上下文包和只读单记录/双记录视图已接通，哈希一致不等于模型正确。",
         "properties": {
           "evidenceStatus": "Confirmed",
-          "source": "robot_agent/context_models.py",
-          "sourceFingerprint": "e395cf335e0f061f680477b2cfa9ef389446b5e6c9b76e7c80181f303359e811",
+          "source": "robot_agent/context_evidence.py",
+          "sourceFingerprint": "d592fc79f757969784465bdede75e1b2b44aa2b586eb51715d11b30f6b017026",
           "flowGuide": "docs/MODEL_CONTEXT_FLOW.md",
           "implementationStatus": "implemented",
           "validationSource": "docs/VALIDATION.md",
-          "validationSourceFingerprint": "ce35d27b1504c3e6bf8a3e85f4527da2f05fd346ff4f0e992067459844b3b5a9"
+          "validationSourceFingerprint": "f7aeeb19feac1af1657fb7f5d6695fdf66715c0285e59edc6abab9a0b18c60c9",
+          "verifiedIncrementEvidence": [
+            {
+              "path": "docs/validation/context-diff-browser-live.json",
+              "sha256": "474b58bc7154f0ce38aca5a7fd6b82025e039462c2aec8dfd9dc65c15af0506f",
+              "status": "passed"
+            },
+            {
+              "path": "docs/validation/context-codec-live.json",
+              "sha256": "c6f5c8acc47609eccd6bbc71ddb86910556694d30c79ab431c4bc4d54ac4b0d7",
+              "status": "passed"
+            }
+          ],
+          "verificationScope": "限定软件场景与已有实际证据；不代表整体或真机完成",
+          "lastEvidenceReview": "2026-09-22T02:39:24.239675+00:00"
         },
         "projectId": "project-robot-agent-framework",
         "schemaVersion": 1,
         "createdAt": "2026-09-12T08:00:00.000Z",
-        "updatedAt": "2026-09-12T08:00:00.000Z"
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       }
     ],
     "relations": [
@@ -2004,6 +2284,27 @@
         "targetObjectId": "model-flow-plan-history",
         "type": "supports",
         "createdAt": "2026-09-11T17:02:26.946Z"
+      },
+      {
+        "id": "relation-dece8cffef80fdbc",
+        "sourceObjectId": "model-flow-gap-session",
+        "targetObjectId": "model-flow-context-builder",
+        "type": "supports",
+        "createdAt": "2026-09-21T18:02:06.342Z"
+      },
+      {
+        "id": "relation-4050ff888f740338",
+        "sourceObjectId": "model-flow-gap-session",
+        "targetObjectId": "model-flow-goal-analysis",
+        "type": "supports",
+        "createdAt": "2026-09-21T18:02:06.342Z"
+      },
+      {
+        "id": "relation-0d73e0c279ff17aa",
+        "sourceObjectId": "model-flow-gap-summary",
+        "targetObjectId": "model-flow-context-builder",
+        "type": "supports",
+        "createdAt": "2026-09-21T18:24:21.448Z"
       }
     ],
     "proposals": [],
@@ -2307,8 +2608,8 @@
         "objectId": "model-flow-config",
         "format": "text/plain",
         "schemaVersion": 1,
-        "value": "模型配置 · ModelConfig\n\nqwen3.8-max；显式 URL；凭证按环境变量名读取。\n\nendpoint/model/token_env/timeout/max_input_tokens/max_output_tokens。当前超时60秒；默认预算32768，输出2048。密钥不进入图或提示词。\n\n代码证据：robot_agent/model_transport.py\n关系说明：docs/MODEL_CONTEXT_FLOW.md",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "value": "运行时使用环境中的实际模型和鉴权配置；近期证据为 qwen3.7-plus，qwen3.8-max 属历史记录，不将任一模型名当固定默认。\n\n实际证据：\ndocs/validation/completion-recovery-live.json",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-caller-content",
@@ -2331,8 +2632,8 @@
         "objectId": "model-flow-fragments",
         "format": "text/plain",
         "schemaVersion": 1,
-        "value": "上下文片段 · ContextFragment\n\nid、content、priority、required；重规划封装为必需片段。\n\nPlanner 将外部 JSON 序列化为 planner_runtime_context，priority=100，required=True；没有跨轮消息缓存。\n\n代码证据：robot_agent/model_context.py\n关系说明：docs/MODEL_CONTEXT_FLOW.md",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "value": "Goal/Task/Fragment/Bundle 保留来源与权限；AssetBinding 固定归档字节和记录版本；独立操作者完成契约不可被模型计划改写。物理实体尚无绑定。\n\n实际证据：\ndocs/validation/asset-binding-live.json\ndocs/validation/completion-contract-live.json",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-allocator-content",
@@ -2387,40 +2688,40 @@
         "objectId": "model-flow-plan-history",
         "format": "text/plain",
         "schemaVersion": 1,
-        "value": "规划证据 · model_responses\n\n保留请求状态、原始响应、合法计划和上下文分配信息。\n\nledger.sqlite 中 model_responses 集合；requesting→validated/rejected。不会自动回放到下一次模型请求。\n\n代码证据：robot_agent/planner.py\n关系说明：docs/MODEL_CONTEXT_FLOW.md",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "value": "模型调用保存实际请求、原始响应、Bundle/Manifest 与哈希；目标、规划、解释、摘要、自动诊断已有输入重建证据。\n\n实际证据：\ndocs/validation/context-codec-live.json\ndocs/validation/summary-context-live.json\ndocs/validation/action-idempotency-live.json",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-task-state-content",
         "objectId": "model-flow-task-state",
         "format": "text/plain",
         "schemaVersion": 1,
-        "value": "任务状态 · tasks 账本\n\n计划、步骤结果和修订号是自动重规划的历史来源。\n\n保存任务 goal/plan/steps/catalog/revision 等。模型配置仅保留 endpoint/model/token_env/timeout。不是完整聊天历史。\n\n代码证据：robot_agent/runtime.py\n关系说明：docs/MODEL_CONTEXT_FLOW.md",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "value": "权威任务版本、任务图与结果进入上下文；完成契约检查失败时单独以 data 片段保留实际逐项差异，供恢复使用。\n\n实际证据：\ndocs/validation/completion-recovery-live.json",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-replan-content",
         "objectId": "model-flow-replan",
         "format": "text/plain",
         "schemaVersion": 1,
-        "value": "历史回流 · recover_plan\n\n读取任务失败状态，有界重规划；真实执行闭环仍待验收。\n\nprevious_plan=task.plan；step_results=task.steps；revision=task.revision。传入 Planner 必需片段；不自动重放全部历次规划。\n\n代码证据：robot_agent/runtime.py\n关系说明：docs/MODEL_CONTEXT_FLOW.md",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "value": "真实失败后的恢复继承冻结快照、契约与实际验收差异；模型改用授权备用文件并由独立 worker 核验原字节通过。通用和物理恢复仍未证明。\n\n实际证据：\ndocs/validation/completion-recovery-live.json",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-gap-session-content",
         "objectId": "model-flow-gap-session",
         "format": "text/plain",
         "schemaVersion": 1,
-        "value": "未完成 · 连续会话历史\n\n尚无 session_id、多轮 user/assistant 组装和会话隔离。\n\n已有问答持久化，但每次 UI 发送只有当前问题；后续实现需要明确会话标识、保留策略与调用入口。\n\n代码证据：ui/src/ModelTest.tsx\n关系说明：docs/MODEL_CONTEXT_FLOW.md",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "value": "多轮会话、固定原文、分块摘要、自动预算、绑定资产/记忆和冻结提交快照已有真实验证；生产留存策略仍待完善。\n\n实际证据：\ndocs/validation/summary-context-live.json\ndocs/validation/asset-binding-live.json",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-gap-summary-content",
         "objectId": "model-flow-gap-summary",
         "format": "text/plain",
         "schemaVersion": 1,
-        "value": "未完成 · 摘要与检索注入\n\n尚无滑动窗口、摘要和资产/记忆自动检索；必需片段超限报错。\n\nContextAllocator 仅选择片段，不执行摘要或检索；重规划整体必需上下文可能超限。当前不存在自动 memory→prompt 通路。\n\n代码证据：robot_agent/model_context.py\n关系说明：docs/MODEL_CONTEXT_FLOW.md",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "value": "有来源的记忆检索、版本绑定、工作台选择、长历史分块摘要和恢复预算已完成限定场景验证；空间检索与实体合并仍待完成。\n\n实际证据：\ndocs/validation/summary-context-live.json\ndocs/validation/memory-browser-live.json",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       },
       {
         "id": "model-flow-gap-budget-content",
@@ -2435,8 +2736,8 @@
         "objectId": "model-adapter",
         "format": "text/plain",
         "schemaVersion": 1,
-        "value": "# 模型调用与上下文流转\n\n2026-09-07：用户要求在 Momo 图中单独细化此模块。此图描述当前实现，不新增运行能力。沿用 `model-adapter` 对象作为容器，保留它与项目主图的语义关系。\n\n## 调用主链\n\nUI 测试网关或 Planner 调用 ModelCaller；ModelCaller 选择 qa/planning 方法，获取基础消息，把外部 ContextFragment 交给 ContextAllocator，再组装 ModelRequest，经 HTTP Transport 调用显式配置的模型，返回 ModelCallResult。调用器不持有会话历史。\n\nModelConfig 保存 endpoint、model、token_env、timeout、max_input_tokens、max_output_tokens。当前模型为 qwen3.8-max，凭证在请求发送时从环境读取；图中不保存密钥、实际请求正文或本地绝对路径。默认超时 60 秒，本地预算 32768，输出预留 2048；当前分配器实际使用 30720 的估算输入预算，估算采用 UTF-8 字节而非模型 tokenizer。temperature 和 response_format 属于方法输出的请求参数：规划要求 JSON，UI qa 默认普通文本且不显式设置 temperature。\n\n消息顺序：方法 system → 可选上下文 system → 当前 user。上下文提示标记内容为数据，但目前仍使用 system role；这不是隔离任意输入指令的安全保证。\n\n## 历史的三条路径\n\n1. UI：问题 → qa → 实际回答 → model-tests.sqlite。历史仅供查看和重新选择；预期答案不发送，历史不自动进入下一轮问答。\n2. 规划：目标＋技能目录 → planning → 实际响应 → JSON/DAG/最终 verifier 校验 → model_responses 证据记录。规划记录不是自动加载的对话历史。\n3. 重规划：任务账本中的 previous_plan、step_results、revision → Runtime.recover_plan → 一个必需的 planner_runtime_context 片段 → 规划请求。默认初次 submit_goal 不传额外上下文；CLI plan --context 可显式传入 JSON。\n\n## 图的读法\n\n进入 Momo「模型调用与上下文流转」容器，在专用画布查看：上部为入口和调用装配，中部为预算与 HTTP/返回，下部为历史与重规划，最下方为未完成项。节点详情保留实际数据结构、来源文件和边界。\n\n实线 `supports` 表示上游模块/数据支持下游模块，具体传递字段见节点详情；它不是运行事件顺序。`depends_on` 表示待完成工作依赖已有部件，不表示该能力已接通。包含关系用于分组，不绘制为数据流。\n\n## 当前未完成项\n\n- 会话历史管理：没有 session_id 与跨轮 user/assistant 消息组装；UI 历史持久化不等于连续对话。\n- 历史摘要与记忆检索注入：没有自动摘要、滑动窗口或资产/记忆检索接入。可选片段超预算会丢弃；当前重规划使用单个必需片段，超预算报错。\n- 重规划参数继承：Runtime 保存 model_config 时只保留 endpoint/model/token_env/timeout，自定义输入输出预算不会随任务保存，自动重规划回到默认预算。\n\n这些是当前缺口的记录，不代表本次已授权实现或已完成修复。\n\n## 代码证据\n\n- `robot_agent/model_call.py`：组合调用方法、上下文分配和传输，返回 ModelCallResult。\n- `robot_agent/model_methods.py`：qa/planning 的提示词和请求参数。\n- `robot_agent/model_context.py`：ContextFragment、分配规则和消息渲染。\n- `robot_agent/model_transport.py`：ModelConfig、ModelRequest、HTTP 请求和环境凭证读取。\n- `robot_agent/planner.py`：规划输入、运行上下文封装、计划校验和证据保存。\n- `robot_agent/runtime.py`：初次提交、任务配置保存和失败重规划。\n- `robot_agent_observer/model_test.py`：真实 QA、预期答案比较及独立历史。\n- `ui/src/ModelTest.tsx`：界面发送本次问题与预期答案，不携带历史消息。\n",
-        "updatedAt": "2026-09-07T09:07:08.644Z"
+        "value": "持久会话、记忆检索、分块摘要、恢复预算和完整上下文追溯已接通并有真实模型证据；实时世界状态未接入。\n\n实际证据：\ndocs/validation/summary-context-live.json\ndocs/validation/completion-recovery-live.json",
+        "updatedAt": "2026-09-22T02:39:24.239675+00:00"
       }
     ],
     "activity": [],

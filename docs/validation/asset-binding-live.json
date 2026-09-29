@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "new_validated_model_responses": 4,
+  "source_report": ".runtime/asset-binding-validation/ca45d8b6-6e71-453b-bdc7-218043a0fb3c/report.json",
+  "source_report_sha256": "1ca6e63e548b0f40e2b53dcf0a0985333bc5cb0b7d4dbec6bd78f03900e016ad",
+  "tests": {
+    "live": "1 passed in 60.27s",
+    "regression": "37 passed in 7.56s",
+    "live_command": "RUN_LIVE_MODEL_TESTS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q -s tests/test_asset_bindings_live.py",
+    "regression_command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q tests/test_context_assets.py tests/test_context_providers.py tests/test_context_codec.py tests/test_context_snapshot.py tests/test_application_actions.py"
+  },
+  "report": {
+    "root": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/asset-binding-validation/ca45d8b6-6e71-453b-bdc7-218043a0fb3c",
+    "mock_used": false,
+    "simulation_used": false,
+    "configured_model": "qwen3.7-plus",
+    "asset_id": "2092c4dc-a696-4c0f-9677-81c55b1cef2d",
+    "expected_sha256": "f769063fcd18a75335940d4ebb23086868a5809f65d283b552ab6742e5c17b46",
+    "boundaries": [
+      "metadata change after actual planning blocks submit without a new model call",
+      "independent process rejects changed asset before creating task",
+      "actual blob corruption after acceptance blocks dispatch and recovery without any external skill call",
+      "fresh actual model plan completes in independent worker with exact bound bytes and expected hash"
+    ],
+    "model_records": [
+      {
+        "id": "02243c45-7925-46b5-aa37-a5076170bb1b",
+        "method": "planning",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-edff5822-911f-9678-a528-e0bddbbc0b2e",
+        "context_bundle_hash": "d154f6e9dc8c3dd93ed1a5335da9738dc4889d6e456cfff22b9de99c993bcf0d",
+        "request_sha256": "94171750d17ebd0133b01423ad399345a2d2f332e888dd01267a5427ffd879d8",
+        "raw_sha256": "94193706147a70e34d31c8ebcf4e30408bcdda0466130e8dce3a05d2f41d5a92",
+        "exact_input_reconstruction": true
+      },
+      {
+        "id": "3334c51a-0446-47a7-9cab-bcab914a9159",
+        "method": "goal_analysis",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-d04640bf-1e05-99c2-9216-f5fe3d91ce93",
+        "context_bundle_hash": "c0626ee8bff85fb96d3597dae845fc7040a242bf26a565ceb71e0ffcd0fd184e",
+        "request_sha256": "01a2b67dc2da05dc535327081dbdfec0d75c20f5880be02c704dd1ab4be188ae",
+        "raw_sha256": "3a6f8ed2902a4ab9084a897e3fff76a96704ebbff78c4c5ed84701a490a4415d",
+        "exact_input_reconstruction": true
+      },
+      {
+        "id": "7aeffab0-e454-4cb2-a4e9-61d4188b786a",
+        "method": "planning",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-14d36b5f-67b4-9f99-8ae9-6b1e20ccdd3e",
+        "context_bundle_hash": "678f0caedaecd57622e112267a9485cbeb8b677d2d105da60a86bb369c927a6e",
+        "request_sha256": "94171750d17ebd0133b01423ad399345a2d2f332e888dd01267a5427ffd879d8",
+        "raw_sha256": "01241d5d3f629a2ce1645da134e390cf03ce393d33ed3a7e5368dda47cdb63af",
+        "exact_input_reconstruction": true
+      },
+      {
+        "id": "e622abd4-8ddb-4e06-8816-8b4090fef78d",
+        "method": "planning",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-c08b67bd-c881-9874-9c79-1939ca19dd31",
+        "context_bundle_hash": "7a60d2c487a3bc343b6e2805cd8ce56d5dc3cfe5ac75a6a83d6b4500086b1159",
+        "request_sha256": "94171750d17ebd0133b01423ad399345a2d2f332e888dd01267a5427ffd879d8",
+        "raw_sha256": "6ebcb47d4952db10c78fb0a5411d90e5885e2590937ee9d268715a96526d1888",
+        "exact_input_reconstruction": true
+      }
+    ],
+    "binding": {
+      "schema_version": 1,
+      "asset_id": "2092c4dc-a696-4c0f-9677-81c55b1cef2d",
+      "robot_id": "r1",
+      "record_hash": "4086854a62efe45668d1f246c1048077f0d67b1cf6077aaea0e2c45188f48af1",
+      "sha256": "f769063fcd18a75335940d4ebb23086868a5809f65d283b552ab6742e5c17b46",
+      "size": 6296
+    },
+    "rejected_command": {
+      "id": "bc958b28a8216b113c8b55626e738ba82eafd9a5f4a3830a6b496260525e719b",
+      "status": "rejected",
+      "error": {
+        "code": "INVALID_STATE",
+        "message": "bound asset record changed; reattach assets"
+      }
+    },
+    "rejected_task": {
+      "id": "d4d15af7-35fe-46b9-90f3-a705bf70b88e",
+      "status": "failed",
+      "steps": {
+        "verify_asset": {
+          "alternative": 0,
+          "attempts": 0,
+          "error": "asset integrity failed: 2092c4dc-a696-4c0f-9677-81c55b1cef2d",
+          "status": "failed"
+        }
+      }
+    },
+    "task_id": "2a17d28e-b578-46e6-a55f-ee242f306149",
+    "actual_result": {
+      "evidence": [
+        {
+          "sha256": "f769063fcd18a75335940d4ebb23086868a5809f65d283b552ab6742e5c17b46",
+          "source": "asset:2092c4dc-a696-4c0f-9677-81c55b1cef2d"
+        }
+      ],
+      "execution_id": "aa4a1803-3a53-4167-a66e-40bd29540b80",
+      "output": {
+        "count": 1,
+        "items": [
+          {
+            "asset_id": "2092c4dc-a696-4c0f-9677-81c55b1cef2d",
+            "sha256": "f769063fcd18a75335940d4ebb23086868a5809f65d283b552ab6742e5c17b46",
+            "size": 6296
+          }
+        ],
+        "verified": true
+      },
+      "quiescent": true,
+      "status": "succeeded"
+    },
+    "status": "passed",
+    "elapsed_seconds": 60.13551729894243
+  },
+  "rejection_events": [
+    {
+      "seq": 2,
+      "task_id": "b6fdb4ec-0074-4367-a739-4b903c964d25",
+      "type": "command_rejected",
+      "data": {
+        "action": "task.submit",
+        "action_call_id": "b1fb4c4f-08a5-446c-acc3-13e484df87a1",
+        "applied_at": null,
+        "command_id": "bc958b28a8216b113c8b55626e738ba82eafd9a5f4a3830a6b496260525e719b",
+        "confirmed_stopped": false,
+        "created_at": 1790040602.4446871,
+        "error": {
+          "code": "INVALID_STATE",
+          "message": "bound asset record changed; reattach assets"
+        },
+        "status": "rejected",
+        "task_id": "b6fdb4ec-0074-4367-a739-4b903c964d25"
+      }
+    },
+    {
+      "seq": 6,
+      "task_id": "d4d15af7-35fe-46b9-90f3-a705bf70b88e",
+      "type": "context_rejected",
+      "data": {
+        "error": "asset integrity failed: 2092c4dc-a696-4c0f-9677-81c55b1cef2d",
+        "step": "verify_asset"
+      }
+    },
+    {
+      "seq": 7,
+      "task_id": "d4d15af7-35fe-46b9-90f3-a705bf70b88e",
+      "type": "replan_rejected",
+      "data": {
+        "attempt": 1,
+        "error": "ContractError: asset integrity failed: 2092c4dc-a696-4c0f-9677-81c55b1cef2d"
+      }
+    }
+  ],
+  "limits": [
+    "Binding identifies stored asset bytes and exact catalog metadata, not a physical object, current pose or semantic truth.",
+    "No rewrite of historical sessions, bundles or snapshots; ID-only legacy attachments require explicit reattachment and a fresh plan before new execution.",
+    "Asset bytes are re-read at use boundaries; a database transaction does not lock filesystem bytes against later external writes.",
+    "An executing skill must enforce its own input/output and completion conditions; asset binding does not bind arbitrary original filesystem paths.",
+    "Successful actual execution is one stored-asset verification task; robot/WorldState/TF and generic completion contracts remain unimplemented.",
+    "No Momo synchronization in this increment."
+  ]
+}

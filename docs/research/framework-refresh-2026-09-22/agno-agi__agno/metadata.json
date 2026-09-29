@@ -1,0 +1,23 @@
+{
+  "repo": "agno-agi/agno",
+  "retrieved_at": "2026-09-22T08:42:30.825597+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/agno-agi/agno/54516f4186b495aaf0f84a12a377449e1c50e17b/README.md",
+      "sha256": "ee04510fcc6e82fa87258c3bba766da73bbffd1f8bd8a2320babee8bc291ff30"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/agno-agi/agno/54516f4186b495aaf0f84a12a377449e1c50e17b/LICENSE",
+      "sha256": "7504bf0fe32a486487ec309d5ef30597ca87d2508450be380f6ef4772c3371ca"
+    },
+    {
+      "path": "libs/agno/pyproject.toml",
+      "url": "https://raw.githubusercontent.com/agno-agi/agno/54516f4186b495aaf0f84a12a377449e1c50e17b/libs/agno/pyproject.toml",
+      "sha256": "34dcaa7ae58fe2eb8ffeec862845ef3b07b695a0a9ad9045bfb8319ef35516e4"
+    }
+  ],
+  "errors": [],
+  "sha": "54516f4186b495aaf0f84a12a377449e1c50e17b"
+}

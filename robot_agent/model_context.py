@@ -6,6 +6,13 @@ from .contracts import ContractError, require
 from .context_models import ContextFragment
 
 
+class ContextBudgetError(ContractError):
+    """A budget failure, distinct from invalid context or model transport errors."""
+    def __init__(self, message, fragment_id=None):
+        super().__init__(message)
+        self.fragment_id = fragment_id
+
+
 @dataclass(frozen=True)
 class ContextAllocation:
     included: tuple[ContextFragment, ...]
@@ -62,7 +69,7 @@ class ContextAllocator:
         usable = max_input_tokens - reserve_output_tokens
         used = estimate_messages(base_messages)
         if used > usable:
-            raise ContractError("method prompt exceeds model input budget")
+            raise ContextBudgetError("method prompt exceeds model input budget")
 
         indexed = list(enumerate(fragments))
         required = sorted(
@@ -85,7 +92,7 @@ class ContextAllocator:
                 selected.append(item)
                 used += cost
             elif item.required:
-                raise ContractError(f"required context exceeds model input budget: {item.id}")
+                raise ContextBudgetError(f"required context exceeds model input budget: {item.id}", item.id)
             else:
                 dropped.append(item.id)
         return ContextAllocation(

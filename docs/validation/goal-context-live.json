@@ -1,0 +1,199 @@
+{
+  "status": "passed_after_fix",
+  "mock_used": false,
+  "simulation_used": false,
+  "successful_paths": [
+    {
+      "source_report": ".runtime/application-validation/fe74b61e-1e9f-4d7e-9b8f-acbf18e9a40f/report.json",
+      "source_report_sha256": "38fc7282100e85015f23e8e769a26898504adf4ebd47b8a51ca09d82782986f1",
+      "models": [
+        {
+          "id": "48bddf8f-6e8e-4e7f-8d59-f0aa4fbb014e",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-0fefb418-a5ab-9756-96ab-17bc4bd07d28",
+          "raw_sha256": "63ac292ad681f356c18188f4641ff6b48ab85558678eadc274cb1774caa5f97f"
+        },
+        {
+          "id": "595e1ea7-b80b-4e14-850b-24b4062e6c0e",
+          "method": "planning",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-30b31c57-bf9c-9381-966f-54c5c6cb1370",
+          "raw_sha256": "c333bcaea9cf93c46d2db5b9a34a1b12436a3ef30d70c5ea680f3fa2a38c8508"
+        }
+      ],
+      "context_evidence": [
+        {
+          "record_id": "48bddf8f-6e8e-4e7f-8d59-f0aa4fbb014e",
+          "method": "goal_analysis",
+          "bundle_hash": "5cf77c00aa65a12b19ac878cf08466cc30217b1d847d35f9a306ef157c385664",
+          "manifest_id": "48bddf8f-6e8e-4e7f-8d59-f0aa4fbb014e",
+          "canonical_request_reconstruction": "passed"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "e4b38130-1934-4675-96d6-97b78ea2972c",
+          "status": "succeeded"
+        }
+      ]
+    },
+    {
+      "source_report": ".runtime/application-validation/6be3698d-1166-4a50-a847-dbcc1e63a429/report.json",
+      "source_report_sha256": "13f17c263823b8b5abb9130291c9d9322cf9752308dc7f58dbbc3a1e533f3ff2",
+      "models": [
+        {
+          "id": "0ae6ea62-e468-4d97-98ed-0a3b542ac01f",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-251fb726-d1eb-930c-9963-295170bae6ac",
+          "raw_sha256": "dfe1c66c7cec28a6fd35eb19fe79585d0a6c01bbb2b63d0d2977d96418b56388"
+        },
+        {
+          "id": "0dbae479-537a-4eff-bb80-acefe2c339ef",
+          "method": "task_explanation",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-0a920026-edc5-9f68-9ba2-ff2807e75db8",
+          "raw_sha256": "0da16f91b9106994c4f71525c70fa49bd0451a1991510346df9a72fbb75ac95d"
+        },
+        {
+          "id": "26c10bc7-8875-42a1-b030-a8c7d36f6289",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-372dbfb3-3078-904a-ac82-05c7796a3658",
+          "raw_sha256": "0bca17d3dde8f39b3de214a1c01652ca206401423ab65bfcfbd72ed261b1a497"
+        },
+        {
+          "id": "ae3db87d-f9e4-4de7-b3af-5bd3ec4ea2aa",
+          "method": "goal_clarification",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-5340e11d-9644-9eff-b6d7-b974e52ebf78",
+          "raw_sha256": "4fd3d738f6a42862576fc40189ebe8b151d28a8b24636fe631c56c5dea9f11ec"
+        }
+      ],
+      "context_evidence": [
+        {
+          "record_id": "0ae6ea62-e468-4d97-98ed-0a3b542ac01f",
+          "method": "goal_analysis",
+          "bundle_hash": "dd51b55c68c8c742a3bd52c3bfc4646767b914362604c29412f34d78a3d58b52",
+          "manifest_id": "0ae6ea62-e468-4d97-98ed-0a3b542ac01f",
+          "canonical_request_reconstruction": "passed"
+        },
+        {
+          "record_id": "0dbae479-537a-4eff-bb80-acefe2c339ef",
+          "method": "task_explanation",
+          "bundle_hash": "115074e96c84ac4d210882888b85dd8929321eeca79289b50e25b0559ebb747d",
+          "manifest_id": "0dbae479-537a-4eff-bb80-acefe2c339ef",
+          "canonical_request_reconstruction": "passed"
+        },
+        {
+          "record_id": "26c10bc7-8875-42a1-b030-a8c7d36f6289",
+          "method": "goal_analysis",
+          "bundle_hash": "84c2d2b962230f241b4745dbb79e82a7f8484038405e80a6a75ba8dcf774b446",
+          "manifest_id": "26c10bc7-8875-42a1-b030-a8c7d36f6289",
+          "canonical_request_reconstruction": "passed"
+        },
+        {
+          "record_id": "ae3db87d-f9e4-4de7-b3af-5bd3ec4ea2aa",
+          "method": "goal_clarification",
+          "bundle_hash": "84c2d2b962230f241b4745dbb79e82a7f8484038405e80a6a75ba8dcf774b446",
+          "manifest_id": "ae3db87d-f9e4-4de7-b3af-5bd3ec4ea2aa",
+          "canonical_request_reconstruction": "passed"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "00d64867-f566-482e-ae67-465a4f4cb4da",
+          "status": "failed"
+        }
+      ]
+    },
+    {
+      "source_report": ".runtime/session-summary-validation/5ce58d74-e49f-49bd-bbe5-76165534d7c2/report.json",
+      "source_report_sha256": "b419e804bb211710dfbbfedbe6c47ffb9bca896b6faf152e1ab4d71040ac79fb",
+      "models": [
+        {
+          "id": "301e2758-4770-46a5-94f9-734023bf8859",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-7d9e548b-fd58-9ec5-ab47-c07ba98652e0",
+          "raw_sha256": "d0d9e0e383ad37ac985f6a568860caaf88acf59aa79ce3de9186217ea177f88e"
+        },
+        {
+          "id": "3c639900-3d2d-4a06-ad5a-9d0a6f9a79f1",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-b5622a60-bdc3-9bd5-8c6e-e6efc3aee66b",
+          "raw_sha256": "c4b4615bb2cb53ef40a61d44bd62d38fd55454c9084a48a7f31e0f7292ba18aa"
+        },
+        {
+          "id": "4bcbffea-da1f-4745-a0e9-6e518f7417f0",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-449c99db-1736-961e-b756-5aaa62190380",
+          "raw_sha256": "e94fa1724319df70edbc2b56fc8430cd34d3ca9f7f43866ab0b0e37d6fad78d5"
+        },
+        {
+          "id": "5b1d7e4f-6315-4173-974d-320b21b4d7ee",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-bf95b749-a97b-9946-8521-c84e8e1d067e",
+          "raw_sha256": "b555c3bd37f038622bc3e864a58023d7daaf2d2dfa73535ed5aac54b7b454451"
+        },
+        {
+          "id": "968b7bad-fe11-48a9-b7ad-5aee9db20be8",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-49f8bfdb-f6eb-920e-9a2b-8244b6598210",
+          "raw_sha256": "675a31deb32073ddd48cf0c7055b8c61f8580e4aa0169e925372869f2b761d93"
+        },
+        {
+          "id": "ac98150f-17bc-4d7d-b967-7aceef5ac0ea",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-280c7a5c-6734-9945-b8c2-47c48dc07367",
+          "raw_sha256": "edacff52768cccb79c75c9bcb26ec1dd3bbac572a8ad2d3cb4986f2a50ed5ff1"
+        },
+        {
+          "id": "b3b1ce4d-f2ed-4f00-938d-7fecacef9c3e",
+          "method": "planning",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-46851b4f-9f0a-94e9-a68e-4270ababcfe7",
+          "raw_sha256": "848ce625c188daa2118e27890f9c9f9eb6335631c1b49761c8ec1383b632a202"
+        }
+      ],
+      "context_evidence": [
+        {
+          "record_id": "4bcbffea-da1f-4745-a0e9-6e518f7417f0",
+          "method": "goal_analysis",
+          "bundle_hash": "dad117536d2e8f328471ba048896e31af19aebe57fdc91843ce1f4b58e77b8c6",
+          "manifest_id": "4bcbffea-da1f-4745-a0e9-6e518f7417f0",
+          "canonical_request_reconstruction": "passed"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "00557215-65b8-40a9-a1c0-379335b9d711",
+          "status": "succeeded"
+        }
+      ]
+    }
+  ],
+  "validated_actual_model_responses": 13,
+  "initial_live_run": "1 failed, 2 passed in 336.05s",
+  "affected_path_rerun": "1 passed, 1 deselected in 89.33s",
+  "regression": "23 passed in 7.69s",
+  "resolved_failure": {
+    "source_report": ".runtime/application-validation/cdc10965-4a1b-4834-94f2-fad129b57eb4/report.json",
+    "source_report_sha256": "bb94da712aa748184ab101f637da03441ec78e1f0145267c1c12837947bf792d",
+    "cause": "Persisted JSON key order changed nested clarification arguments; decoded JSON matched but exact input text did not.",
+    "fix": "Canonicalize preparation arguments with ledger JSON ordering before the first request."
+  },
+  "read_only_final_audit": "All successful goal/explanation records reconstruct exact messages, response_format and allocation using canonical arguments; actual successful task source bytes match verifier hashes.",
+  "limits": [
+    "Successful ordinary and automatic-summary paths ran in the initial process; the changed clarification path was rerun after correction. Final canonical argument reconstruction was audited on all successful records without additional model calls.",
+    "Current prompt/config reconstruction only; not cross-version replay compatibility.",
+    "Summary and automation model calls are not fully migrated to ContextBundle.",
+    "No robot, live WorldState, distributed authority or Momo synchronization claimed."
+  ]
+}

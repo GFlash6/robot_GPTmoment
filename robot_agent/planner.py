@@ -6,6 +6,8 @@ import uuid
 
 from .contracts import require, validate_plan, ContractError
 from .context_builder import ContextBuilder
+from .context_codec import encode_bundle, decode_bundle
+from .context_memory import record_hash
 from .context_models import ContextFragment, ContextManifest
 from .model_call import ModelCaller
 from .model_transport import ModelCallError
@@ -17,7 +19,7 @@ class Planner:
         self.config = config
         self.context_builder = context_builder or ContextBuilder(store)
 
-    def plan(self, goal, catalog, context=None, *, context_request=None):
+    def plan(self, goal, catalog, context=None, *, context_request=None, context_session=None):
         require(isinstance(goal, str) and bool(goal.strip()), "goal required")
         # Validate configuration before creating an evidence record, preserving the
         # distinction between a missing configuration and a rejected actual call.
@@ -39,8 +41,14 @@ class Planner:
             }
             for k, spec in catalog.items()
         }
+        diagnostics = ()
+        encoded_bundle = None
         if context_request is not None:
-            fragments = self.context_builder.build(context_request, catalog).fragments
+            bundle = self.context_builder.build(context_request, catalog, **({"session_override": context_session} if context_session is not None else {}))
+            encoded_bundle = encode_bundle(bundle)
+            bundle = decode_bundle(encoded_bundle)
+            fragments = bundle.fragments
+            diagnostics = bundle.diagnostics
         elif context is not None:
             fragments = (
                 ContextFragment(
@@ -66,6 +74,9 @@ class Planner:
         }
         self.store.put("model_responses", key, record)
         try:
+            if encoded_bundle is not None:
+                self.store.put("context_bundles", key, encoded_bundle)
+                record.update(context_bundle_id=key, context_bundle_hash=record_hash(encoded_bundle))
             prepared = caller.prepare(
                 "planning",
                 {"goal": goal, "skills": capabilities},
@@ -84,6 +95,13 @@ class Planner:
                 reserved_output_tokens=prepared.allocation.reserved_output_tokens,
                 estimator=prepared.allocation.estimator,
                 renderer_version=caller._renderer.version,
+                provider_diagnostics=tuple({**d,
+                    "included": [fid for fid in d["fragment_ids"] if fid in {f.id for f in prepared.allocation.included}],
+                    "dropped": [item for item in prepared.allocation.dropped if item["id"] in d["fragment_ids"]],
+                } for d in diagnostics),
+                sources=tuple({"id": f.id, "source": f.source, "authority": f.authority,
+                               "evidence_ids": list(f.evidence_ids), "metadata": f.metadata}
+                              for f in prepared.allocation.included),
             )
             self.store.put(
                 "context_manifests",
@@ -93,6 +111,9 @@ class Planner:
             record.update(
                 context_manifest_id=manifest_id,
                 context_allocation=prepared.allocation.as_dict(),
+                request={"messages": list(prepared.request.messages),
+                         "response_format": prepared.request.response_format,
+                         "model": caller.config.model},
             )
             self.store.put("model_responses", key, record)
             result = caller.send_prepared(prepared)

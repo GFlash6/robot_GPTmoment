@@ -1,0 +1,10 @@
+{
+  "command": "source /opt/ros/humble/setup.bash && timeout 12 ros2 topic list --no-daemon",
+  "started_at": 1790022832.5919197,
+  "finished_at": 1790022833.5253236,
+  "exit_code": 0,
+  "stdout": "/parameter_events\n/rosout\n",
+  "stderr": "",
+  "simulation_started": false,
+  "robot_observation_validated": false
+}

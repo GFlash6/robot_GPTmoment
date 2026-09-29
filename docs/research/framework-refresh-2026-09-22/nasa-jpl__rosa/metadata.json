@@ -1,0 +1,32 @@
+{
+  "repo": "nasa-jpl/rosa",
+  "retrieved_at": "2026-09-22T08:37:41.584834+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/README.md",
+      "sha256": "e8645d3d4c0fe22f9b7335537c02f2bd01b137594b774861f0601b19a84f5f95",
+      "retrieved_at": "2026-09-22T08:39:24.315541+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "retrieved_at": "2026-09-22T08:39:25.227245+00:00"
+    },
+    {
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/nasa-jpl/rosa/e7e53754bed673e2ce36d1fa311e04e51bfbacad/pyproject.toml",
+      "sha256": "5f761353c9017772bcd7438e11e2b04168a6bbdf3bffc10a83580701ad4197d5",
+      "retrieved_at": "2026-09-22T08:39:26.210950+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    }
+  ],
+  "sha": "e7e53754bed673e2ce36d1fa311e04e51bfbacad",
+  "revision_method": "git ls-remote HEAD"
+}

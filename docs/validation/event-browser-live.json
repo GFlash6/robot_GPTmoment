@@ -1,0 +1,175 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/event-browser-validation/f773965b-68fc-468b-9401-a20e5c8b2aad/report.json",
+  "source_report_sha256": "fa77c48e36d7a234fb63fc96ed7525940098fcd209ab1bcca0b4388ee7bd6161",
+  "original_model_report": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/226fe510-73f6-4516-af2e-ba3354c74443/report.json",
+  "original_model_report_sha256": "4ae76f91dc07c4796d4d774b57e03169d37041af3d08659912e7a71653f470ca",
+  "report": {
+    "status": "passed",
+    "root": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/event-browser-validation/f773965b-68fc-468b-9401-a20e5c8b2aad",
+    "sourceRoot": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/226fe510-73f6-4516-af2e-ba3354c74443",
+    "seed": {
+      "model_task": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+      "model_events": 17,
+      "long_task": "cbb34f42-2fcf-4765-ac8e-fd0c3be79391",
+      "long_events": 69,
+      "models": 2,
+      "executions": 9
+    },
+    "mock_used": false,
+    "simulation_used": false,
+    "new_model_calls": 0,
+    "console_errors": [],
+    "page_requests": [
+      {
+        "task_id": "cbb34f42-2fcf-4765-ac8e-fd0c3be79391",
+        "after_seq": 0,
+        "limit": 50
+      },
+      {
+        "task_id": "cbb34f42-2fcf-4765-ac8e-fd0c3be79391",
+        "after_seq": 67,
+        "limit": 50,
+        "through_seq": 86
+      },
+      {
+        "task_id": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+        "after_seq": 0,
+        "limit": 50
+      },
+      {
+        "task_id": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+        "after_seq": 17,
+        "limit": 50
+      },
+      {
+        "task_id": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+        "after_seq": 17,
+        "limit": 50
+      },
+      {
+        "task_id": "cbb34f42-2fcf-4765-ac8e-fd0c3be79391",
+        "after_seq": 0,
+        "limit": 50
+      },
+      {
+        "task_id": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+        "after_seq": 0,
+        "limit": 50
+      }
+    ],
+    "checks": [
+      "actual control history pagination",
+      "task switch isolation",
+      "real server disconnect retains records",
+      "server restart resumes without duplicates",
+      "credential change clears events",
+      "actual model task evidence disclosure",
+      "desktop/mobile captures",
+      "no new model calls or executions"
+    ]
+  },
+  "screenshots": [
+    {
+      "path": ".runtime/event-browser-validation/f773965b-68fc-468b-9401-a20e5c8b2aad/desktop.png",
+      "sha256": "bee6b645c61a5c8fb9467aabdaf393ae95cd5505764cd5fbdda7fb117585d637"
+    },
+    {
+      "path": ".runtime/event-browser-validation/f773965b-68fc-468b-9401-a20e5c8b2aad/mobile.png",
+      "sha256": "70eb8dce9efaea18c21a38d8723c7da625ca84d6875a4fe4080594d644ead28a"
+    }
+  ],
+  "build": "TypeScript and Vite passed; existing bundle-size advisory remains",
+  "design_review": {
+    "disposition": "ship",
+    "scope": "Scored readability fixes only; selector 14px, disclosure and JSON 13px with dark foreground; final computed styles verified",
+    "rounds": 2
+  },
+  "limits": [
+    "Read-only browser validation over a copied genuine model ledger; zero new model requests",
+    "Additional pagination events produced by real pause/resume and file execution",
+    "No robot validation; no streaming transport"
+  ],
+  "final_recapture": {
+    "path": ".runtime/event-browser-validation/f773965b-68fc-468b-9401-a20e5c8b2aad/recapture.json",
+    "sha256": "5a75d60382d5dcee7fd5daa141737f469fef690f4f4d22e6307f1d3574d4aaa8",
+    "report": {
+      "status": "passed",
+      "root": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/event-browser-validation/f773965b-68fc-468b-9401-a20e5c8b2aad",
+      "sourceRoot": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/multifile-validation/226fe510-73f6-4516-af2e-ba3354c74443",
+      "seed": {
+        "model_task": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+        "model_events": 17,
+        "long_task": "cbb34f42-2fcf-4765-ac8e-fd0c3be79391",
+        "long_events": 69,
+        "models": 2,
+        "executions": 9
+      },
+      "mock_used": false,
+      "simulation_used": false,
+      "new_model_calls": 0,
+      "console_errors": [],
+      "page_requests": [
+        {
+          "task_id": "cbb34f42-2fcf-4765-ac8e-fd0c3be79391",
+          "after_seq": 0,
+          "limit": 50
+        },
+        {
+          "task_id": "cbb34f42-2fcf-4765-ac8e-fd0c3be79391",
+          "after_seq": 67,
+          "limit": 50,
+          "through_seq": 86
+        },
+        {
+          "task_id": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+          "after_seq": 0,
+          "limit": 50
+        },
+        {
+          "task_id": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+          "after_seq": 17,
+          "limit": 50
+        },
+        {
+          "task_id": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+          "after_seq": 17,
+          "limit": 50
+        },
+        {
+          "task_id": "cbb34f42-2fcf-4765-ac8e-fd0c3be79391",
+          "after_seq": 0,
+          "limit": 50
+        },
+        {
+          "task_id": "e219f59f-f75d-4071-bc0f-d6ceb9979e7b",
+          "after_seq": 0,
+          "limit": 50
+        }
+      ],
+      "computed_styles": {
+        "summary": {
+          "fontSize": "13px",
+          "color": "rgb(38, 60, 50)"
+        },
+        "pre": {
+          "fontSize": "13px",
+          "color": "rgb(38, 60, 50)"
+        }
+      },
+      "checks": [
+        "actual control history pagination",
+        "task switch isolation",
+        "real server disconnect retains records",
+        "server restart resumes without duplicates",
+        "credential change clears events",
+        "actual model task evidence disclosure",
+        "desktop/mobile captures",
+        "no new model calls or executions"
+      ]
+    }
+  },
+  "functional_fix": "Explicit label/htmlFor association gives task selector a stable accessible name"
+}

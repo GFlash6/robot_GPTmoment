@@ -1,131 +1,50 @@
-"""Build goal, capability, and graph-shaped task context from authoritative state."""
-
-from .context_models import (
-    ContextBundle,
-    ContextFragment,
-    ContextRequest,
-    TaskEdge,
-    TaskNode,
-    TaskStateContext,
-)
+"""Assemble trusted providers; budget and role rendering remain separate stages."""
+from dataclasses import replace
+from copy import deepcopy
+from .context_models import ContextBundle, ContextRequest, ContextFragment
+from .context_providers import DEFAULT_PROVIDERS, ProviderInput, capabilities, task_state
 from .contracts import require
 
 
-CAPABILITY_FIELDS = {
-    "input_schema",
-    "output_schema",
-    "checks",
-    "resources",
-    "cancelable",
-    "replay_safe",
-    "verifier",
-}
-
-
 class ContextBuilder:
-    def __init__(self, store):
+    def __init__(self, store, *, providers=None):
         self.store = store
+        self.providers = tuple(DEFAULT_PROVIDERS if providers is None else providers)
+        names = [provider.name for provider in self.providers]
+        require(all(isinstance(name, str) and name for name in names), "context provider name required")
+        require(len(set(names)) == len(names), "duplicate context provider name")
 
-    def build(self, request: ContextRequest, catalog):
+    # Kept for callers preparing the same capability and task views for budgeting.
+    capabilities = staticmethod(capabilities)
+    task_state = staticmethod(task_state)
+
+    def build(self, request: ContextRequest, catalog, *, session_override=None):
         require(isinstance(catalog, dict), "skill catalog required")
-        fragments = [
-            ContextFragment(
-                id="goal",
-                kind="goal",
-                content=request.goal.as_dict(),
-                source="goal_context",
-                authority="operator",
-                priority=100,
-                required=True,
-            ),
-            ContextFragment(
-                id="capabilities",
-                kind="capability",
-                content=self.capabilities(catalog),
-                source="frozen_skill_catalog" if request.task_id else "skill_registry",
-                authority="framework",
-                priority=90,
-                required=True,
-            ),
-        ]
-        if request.task_id:
-            task = self.store.get("tasks", request.task_id)
-            require(task is not None, "unknown context task")
-            require(
-                task["revision"] == request.revision
-                and task["generation"] == request.generation,
-                "stale task context request",
-            )
-            fragments.append(
-                ContextFragment(
-                    id="task-state",
-                    kind="task_state",
-                    content=self.task_state(task).as_dict(),
-                    source="runtime_ledger",
-                    authority="data",
-                    priority=95,
-                    required=request.phase in {"replanning", "subplanning"},
-                )
-            )
-        return ContextBundle(request=request, fragments=tuple(fragments))
-
-    @staticmethod
-    def capabilities(catalog):
-        return {
-            name: {key: value for key, value in spec.items() if key in CAPABILITY_FIELDS}
-            for name, spec in sorted(catalog.items())
-        }
-
-    @staticmethod
-    def task_state(task):
-        root_id = "task:" + task["id"]
-        nodes = [
-            TaskNode(
-                id=root_id,
-                title=task.get("goal") or "operator supplied plan",
-                node_type="task",
-                status=task["status"],
-                priority=task.get("priority", 0),
-            )
-        ]
-        edges = []
-        verification = task["plan"]["verification"]
-        require(
-            root_id not in {step["id"] for step in task["plan"]["steps"]},
-            "task root id collides with step id",
-        )
-        for step in task["plan"]["steps"]:
-            state = task["steps"][step["id"]]
-            result = state.get("result") or {}
-            evidence = tuple(
-                item.get("source")
-                for item in result.get("evidence", [])
-                if isinstance(item, dict) and item.get("source")
-            )
-            nodes.append(
-                TaskNode(
-                    id=step["id"],
-                    title=step["skill"],
-                    node_type="verification" if step["id"] == verification else "step",
-                    status=state["status"],
-                    parent_id=root_id,
-                    output=result.get("output") if state["status"] == "succeeded" else None,
-                    failure=result.get("error") or state.get("error"),
-                    evidence_ids=evidence,
-                )
-            )
-            edges.append(TaskEdge(root_id, step["id"], "decomposes_to"))
-            edges.extend(
-                TaskEdge(dep, step["id"], "depends_on")
-                for dep in step.get("deps", [])
-            )
-            if step["id"] == verification:
-                edges.append(TaskEdge(step["id"], root_id, "verifies"))
-        return TaskStateContext(
-            task_id=task["id"],
-            status=task["status"],
-            revision=task["revision"],
-            generation=task["generation"],
-            nodes=tuple(nodes),
-            edges=tuple(edges),
-        )
+        require(not request.context_snapshot_id or request.session_id, "snapshot requires a session")
+        require(session_override is None or request.session_id, "session override requires a session")
+        session = None
+        if request.session_id:
+            snapshot = None
+            if request.context_snapshot_id:
+                from .context_snapshot import read_snapshot
+                snapshot = read_snapshot(self.store, request.context_snapshot_id,
+                                         robot_id=request.robot_id, session_id=request.session_id)
+                require(snapshot["goal"] == request.goal.as_dict(), "planning snapshot request goal mismatch")
+            require(not (snapshot and session_override is not None), "cannot override an immutable context snapshot")
+            session = snapshot["session"] if snapshot else (session_override if session_override is not None else self.store.get("sessions", request.session_id))
+            require(session is not None and session["robot_id"] == request.robot_id, "invalid context session")
+            require(session["id"] == request.session_id, "context session mismatch")
+        inputs = deepcopy(ProviderInput(request=request, catalog=catalog, session=session))
+        fragments, diagnostics = [], []
+        for provider in self.providers:
+            isolated = deepcopy(inputs)
+            result = provider.collect(self.store, isolated)
+            require(isolated == inputs, f"context provider modified its input: {provider.name}")
+            require(isinstance(result, tuple) and all(isinstance(f, ContextFragment) for f in result),
+                    "invalid context provider result")
+            result = deepcopy(result)
+            fragments.extend(replace(f, metadata={**f.metadata, "provider": provider.name,
+                                                 "provider_contract_version": 1}) for f in result)
+            diagnostics.append({"provider": provider.name, "status": "collected" if result else "empty",
+                                "fragment_ids": [f.id for f in result]})
+        return ContextBundle(request=deepcopy(inputs.request), fragments=tuple(fragments), diagnostics=tuple(diagnostics))

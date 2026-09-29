@@ -1,0 +1,36 @@
+{
+  "repo": "langchain-ai/langgraph",
+  "retrieved_at": "2026-09-22T08:37:41.584098+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/49cce0ca852be4cfb567a1cbe0e511ff325a1682/README.md",
+      "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+      "retrieved_at": "2026-09-22T08:39:23.886234+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/49cce0ca852be4cfb567a1cbe0e511ff325a1682/LICENSE",
+      "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+      "retrieved_at": "2026-09-22T08:39:24.734254+00:00"
+    },
+    {
+      "path": "libs/langgraph/pyproject.toml",
+      "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/49cce0ca852be4cfb567a1cbe0e511ff325a1682/libs/langgraph/pyproject.toml",
+      "sha256": "7224a70df0fae0641afc5b455760333797bf3996dcaee1b05dd66d2397712b1f",
+      "retrieved_at": "2026-09-22T08:39:25.767983+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "resource": "https://raw.githubusercontent.com/langchain-ai/langgraph/49cce0ca852be4cfb567a1cbe0e511ff325a1682/pyproject.toml",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "sha": "49cce0ca852be4cfb567a1cbe0e511ff325a1682",
+  "revision_method": "git ls-remote HEAD"
+}

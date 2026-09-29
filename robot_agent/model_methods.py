@@ -48,7 +48,10 @@ class PlanningMethod:
         'Return only a JSON object shaped as {"steps":[...],"verification":"step_id"}. Each step has a unique id, skill from the supplied catalog, args, deps, optional retries (0..10) and fallback [{skill,args}]. '
         "verification must be a JSON string containing the id of a final independent goal-checking step that transitively depends on every other step; never return an object in verification. "
         'Use {"$ref":"dependency_id.output_field"} to reference actual direct dependency output fields. '
+        'For example, file.ingest step "save" exposes asset_id directly: use {"$ref":"save.asset_id"}, never "save.output.asset_id". '
         "Never invent sensor observations, successful skill results, skill names or paths. Split long goals into an executable dependency DAG. "
+        "Unresolved grounding requests are work to perform with registered skills, not known facts. "
+        "Include supported observation and verification steps to resolve them; if the available skills cannot do so, return an error. "
         'If the catalog cannot express or verify the goal, return {"error":"reason"}; do not claim success.'
     )
 

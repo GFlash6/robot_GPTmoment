@@ -12,6 +12,7 @@ dependencies = ["dbos==2.31.0", "py-trees==2.5.0", "mcap==1.4.0", "jsonschema==4
 [project.scripts]
 robot-agent = "robot_agent.cli:main"
 robot-agent-observer = "robot_agent_observer.server:main"
+robot-agent-application = "robot_agent.application:main"
 
 [tool.setuptools.packages.find]
 include = ["robot_agent*"]

@@ -106,7 +106,8 @@ def test_http_same_execution_id_rejects_changed_request(tmp_path):
         s.close()
 
 
-def test_worker_kill_recovers_same_remote_execution_without_redispatch(tmp_path):
+@pytest.mark.parametrize('fenced', [False, True])
+def test_worker_kill_recovers_same_remote_execution_without_redispatch(tmp_path, fenced):
     import subprocess
     import sys
     import time
@@ -119,6 +120,8 @@ def test_worker_kill_recovers_same_remote_execution_without_redispatch(tmp_path)
     service_store = Store(tmp_path / "service")
     service_rt = Runtime(service_store)
     service_rt.install_local_skills([str(tmp_path)])
+    if fenced:
+        service_rt.register('file.copy', {**service_rt.catalog()['file.copy'], 'fencing_domain': 'disk'})
     server = skill_server(service_store, "127.0.0.1", 0)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -179,6 +182,21 @@ def test_worker_kill_recovers_same_remote_execution_without_redispatch(tmp_path)
         assert s.get("tasks", task)["status"] == "succeeded"
         assert len(s.list("executions")) == 1
         assert len(service_store.list("service_requests")) == 1
+        if fenced:
+            execution = s.list('executions')[0]
+            request = service_store.list('service_requests')[0]
+            assert execution['authority'] == request['body']['authority'] == {'domain': 'disk', 'token': 1}
+            assert execution['result']['authority'] == execution['authority']
+            second_plan = s.get('tasks', task)['plan']
+            second_plan['steps'][0]['args']['target'] = str(tmp_path / 'next-copy')
+            next_task = rt.submit(second_plan, 'r1')['id']
+            next_worker = subprocess.run(command[:-1] + [next_task], capture_output=True, text=True, timeout=40)
+            assert next_worker.returncode == 0, next_worker.stderr
+            next_state = s.get('tasks', next_task)
+            assert next_state['status'] == 'succeeded'
+            next_execution = s.get('executions', next_state['steps']['copy']['execution_id'])
+            assert next_execution['authority'] == {'domain': 'disk', 'token': 2}
+            assert (tmp_path / 'next-copy').read_bytes() == source.read_bytes()
         assert not s.leases()
     finally:
         if first.poll() is None:

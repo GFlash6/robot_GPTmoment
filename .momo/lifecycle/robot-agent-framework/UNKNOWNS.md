@@ -49,3 +49,20 @@ Unknown：连续 Session、资产或语义记忆自动检索、在线 DAG 修补
 ## 2026-09-12 上下文第一段实现后的缺口
 
 Confirmed：自定义 `max_input_tokens/max_output_tokens` 已随任务保存，初始规划和自动重规划已使用统一 ContextBuilder；此前预算继承缺口已修复。Confirmed：已实现独立 System Prompt 的初步模型 Goal Analyzer 和澄清问讯，并区分 `needs_grounding` 与 `needs_clarification`，但不自动提交 Task。Unknown：分析模型选型、用户回答回填、grounding 调度以及多轮状态机仍待 Session 基础完成后完善。Unknown：Session 保留窗口、摘要策略和子规划 ContextProfile 尚未实现。Memory 与 World State 仍未接入模型上下文。
+
+## 2026-09-22 未完成范围
+
+- 真机服务地址、ROS2 Action 类型和允许动作范围缺失。实际 topic 发现仅 /parameter_events、/rosout，已异步询问用户。不启动仿真。
+- 实时世界状态、通用记忆检索/摘要、长程任务族、fencing、硬件停止和跨主机调度尚未完成或验收。
+- 应用模型调用进程故障保留 unresolved，尚无生产级人工恢复操作界面。
+- Momo 旧 session→QA history 依赖与当前独立会话账本不符，移除仅列提案，未自动删除。
+- 既有 ScriptedCaller/固定模型响应测试未运行，本轮的26项真实文件/HTTP/进程回归不代表整个历史测试目录全部通过。
+
+## 记忆增量验收
+
+已完成范围：按机器人作用域的词组记忆检索和持久版本绑定。未完成：工作台记忆选择、长程摘要、通用语义相似度检索、实时世界状态和真机验收。历史无机器人作用域的记忆不自动迁移。
+
+
+## 2026-09-22 近期增量同步
+
+当前开放：实际设备ID/连接网卡/ROS域、采样与接收时间语义、TF/地图/速度坐标、独立停止观测及物理完成阈值。另有历史session→QA history依赖待明确删除；此提案阻止宣称图全部清理完成，但不阻止独立软件工作。软件文件/摘要/恢复验证已完成的限定范围见HANDOFF最新入口。

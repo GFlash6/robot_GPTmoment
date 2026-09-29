@@ -1,0 +1,595 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "reports": [
+    {
+      "source_report": ".runtime/session-summary-validation/e9412793-1abd-4adb-98fa-e1fcdfd4b8f6/report.json",
+      "source_report_sha256": "15f12620ffc974d590aaadcdf17e0e436fd8b5be1f6d883eac856fcf3f678763",
+      "large_history": false,
+      "configured_model": "qwen3.7-plus",
+      "mock_used": false,
+      "simulation_used": false,
+      "status": "passed",
+      "task_id": "6e3491ad-5cbf-4a24-b111-83436d34902c",
+      "summary": {
+        "id": "d5d7854a-5b94-4149-99e5-d932605ae851",
+        "session_id": "047c95f4-4709-455a-864f-5b55f72afc96",
+        "source_revision": 5,
+        "covered_turns": [
+          {
+            "id": "4a61457e-ee3a-49bd-b9be-ae03625edcce",
+            "record_hash": "6347f218737ae0c00585a21394e8e620490bc1798035d0d7f8f5e233265a7b10"
+          },
+          {
+            "id": "790b1e1a-1cc4-41b5-8697-7e16e748e710",
+            "record_hash": "6b2c2ec4399dc735057eac2a94c352728c6d13dcd2291237aae9c5d8ed37d8e3"
+          },
+          {
+            "id": "55631cca-497f-4ca0-b659-9dd8981ff2cb",
+            "record_hash": "d62bb26e42967ae4fb45dcf4c95d420fc84c79c311f7932d118ad046d19e592c"
+          }
+        ],
+        "pinned_turn_ids": [
+          "97d48936-2465-46fa-995c-0f1353b70965"
+        ],
+        "keep_recent": 2,
+        "points": [
+          {
+            "text": "任务要求归档指定协议文档并验证字节，需依次使用 file.ingest 和 asset.verify。系统资产库存储位置已配置，无须询问其他目标路径，且不涉及机器人运动。",
+            "turn_ids": [
+              "4a61457e-ee3a-49bd-b9be-ae03625edcce"
+            ]
+          },
+          {
+            "text": "唯一需要归档的实际源文件路径为 /home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/session-summary-validation/e9412793-1abd-4adb-98fa-e1fcdfd4b8f6/protocol.md，指定的 SHA256 校验和为 f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5。",
+            "turn_ids": [
+              "790b1e1a-1cc4-41b5-8697-7e16e748e710"
+            ]
+          },
+          {
+            "text": "提供的“技能接入协议”原文（含注册契约、请求响应、恢复控制等规范）仅作为项目背景信息，明确声明不是额外执行任务。",
+            "turn_ids": [
+              "55631cca-497f-4ca0-b659-9dd8981ff2cb"
+            ]
+          }
+        ],
+        "chunks": [
+          {
+            "index": 0,
+            "model_response_id": "e35d1bd7-3a98-4866-9c6e-e2ba9a4c7612",
+            "source_parts": [
+              {
+                "turn_id": "4a61457e-ee3a-49bd-b9be-ae03625edcce",
+                "start": 0,
+                "end": 85,
+                "content_hash": "b8f137e044daf81591d7cc38f5b17933c06e8b36393b130c50e3bc70974ec92a"
+              },
+              {
+                "turn_id": "790b1e1a-1cc4-41b5-8697-7e16e748e710",
+                "start": 0,
+                "end": 243,
+                "content_hash": "27ebb662dd596d0a3f7e7aee95adb42fd7f1c3c3cba19e48dd29d3ae26f75d1f"
+              },
+              {
+                "turn_id": "55631cca-497f-4ca0-b659-9dd8981ff2cb",
+                "start": 0,
+                "end": 1305,
+                "content_hash": "d1c4ce709d6511c6a996b6b7dcc5b8e0b014185fd78a32853c28a9d060f32078"
+              }
+            ]
+          }
+        ],
+        "model_response_id": "e35d1bd7-3a98-4866-9c6e-e2ba9a4c7612",
+        "model_response_ids": [
+          "e35d1bd7-3a98-4866-9c6e-e2ba9a4c7612"
+        ],
+        "summary_run_id": "1d3ca2d6-b7a6-443a-9e4f-4fda7b61a575",
+        "created_at": 1790018505.4191859,
+        "version": 2,
+        "content_authority": "model_summary_not_execution_evidence"
+      },
+      "actual_result": {
+        "evidence": [
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "asset:319a5193-534f-4edd-885d-8d9ba106603b"
+          }
+        ],
+        "execution_id": "48f44e9c-3627-47da-a181-680c38b4f66a",
+        "output": {
+          "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+          "size": 2669,
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "source_bytes": 7063,
+      "summary_bytes": 1285,
+      "summary_response_id": "chatcmpl-8e7d450a-4fcb-9495-98cb-8d7bd87c50c4",
+      "planning_response_id": "chatcmpl-3d8d19f0-eaa1-9170-a0c5-f42793ef9864",
+      "context_manifest": {
+        "dropped": [],
+        "estimated_input_tokens": 8236,
+        "estimator": "utf8_bytes_v1",
+        "id": "2c4d40c1-bfe2-4f0b-9afd-946fb73a3928",
+        "included": [
+          "goal",
+          "capabilities",
+          "session",
+          "session-summary"
+        ],
+        "input_token_limit": 32768,
+        "phase": "planning",
+        "renderer_version": "role-aware-v1",
+        "request_id": "b3556551-2161-4300-abe1-75c7922a1b7c",
+        "reserved_output_tokens": 2048,
+        "sources": [
+          {
+            "authority": "operator",
+            "evidence_ids": [],
+            "id": "goal",
+            "metadata": {},
+            "source": "goal_context"
+          },
+          {
+            "authority": "framework",
+            "evidence_ids": [],
+            "id": "capabilities",
+            "metadata": {},
+            "source": "skill_registry"
+          },
+          {
+            "authority": "data",
+            "evidence_ids": [],
+            "id": "session",
+            "metadata": {
+              "revision": 7,
+              "session_id": "047c95f4-4709-455a-864f-5b55f72afc96",
+              "snapshot_id": null
+            },
+            "source": "session_ledger"
+          },
+          {
+            "authority": "data",
+            "evidence_ids": [],
+            "id": "session-summary",
+            "metadata": {
+              "covered_turns": [
+                {
+                  "id": "4a61457e-ee3a-49bd-b9be-ae03625edcce",
+                  "record_hash": "6347f218737ae0c00585a21394e8e620490bc1798035d0d7f8f5e233265a7b10"
+                },
+                {
+                  "id": "790b1e1a-1cc4-41b5-8697-7e16e748e710",
+                  "record_hash": "6b2c2ec4399dc735057eac2a94c352728c6d13dcd2291237aae9c5d8ed37d8e3"
+                },
+                {
+                  "id": "55631cca-497f-4ca0-b659-9dd8981ff2cb",
+                  "record_hash": "d62bb26e42967ae4fb45dcf4c95d420fc84c79c311f7932d118ad046d19e592c"
+                }
+              ],
+              "model_response_id": "e35d1bd7-3a98-4866-9c6e-e2ba9a4c7612",
+              "model_response_ids": [
+                "e35d1bd7-3a98-4866-9c6e-e2ba9a4c7612"
+              ],
+              "pinned_turn_ids": [
+                "97d48936-2465-46fa-995c-0f1353b70965"
+              ],
+              "record_hash": "70951b3aa7fa2923a77939dce77094e1be0644d63dfc6d470d005cf3330f72ab",
+              "summary_id": "d5d7854a-5b94-4149-99e5-d932605ae851"
+            },
+            "source": "session_summary"
+          }
+        ]
+      }
+    },
+    {
+      "source_report": ".runtime/session-summary-validation/f9140475-d527-4dac-addd-7c6e85afe2f1/report.json",
+      "source_report_sha256": "879882621b51591d0cd31b07c6e60c6bc50e27d1a4e4242b8081114707c3c270",
+      "large_history": true,
+      "configured_model": "qwen3.7-plus",
+      "mock_used": false,
+      "simulation_used": false,
+      "status": "passed",
+      "task_id": "7dc3655f-0a25-4bbc-97a2-4ce1f89023ec",
+      "summary": {
+        "id": "c223b890-e1e9-4b0e-82d9-68d54eeb46e4",
+        "session_id": "d377af9b-bbfd-47a6-b9d5-a5c6cc3202b5",
+        "source_revision": 8,
+        "covered_turns": [
+          {
+            "id": "6b99a5f7-2bb0-47a4-849a-7acc86550af7",
+            "record_hash": "4d96be8253afbeceec9604f97bb13fd12a559f455b42d3d783225e2fa8ad154c"
+          },
+          {
+            "id": "8138b984-503d-4b3d-8c9b-85e5bf8d9812",
+            "record_hash": "dc461dec9a9cead5fc1e4b6d40efafb4a08874a86155c4e4a5e2c6192d392f98"
+          },
+          {
+            "id": "1639f401-75d3-4c72-83e1-7246ab4b5894",
+            "record_hash": "d07f300006bbbc15a1dab39edac098c93fe1d7657f39cbca595f864b8c3b6bf5"
+          },
+          {
+            "id": "186be95d-bd4b-46f8-b50f-ac1c66651441",
+            "record_hash": "81ebeb96509293235cd07d0b67defd2e163431bb69bf32464c5562006f0e0602"
+          },
+          {
+            "id": "4736f124-e73d-49a8-a845-c51b53577daf",
+            "record_hash": "91964606185dab7944eca9470eb34f582d7d0d6fe699d75323e20a5c95e629d9"
+          },
+          {
+            "id": "68e19f7d-e2a6-4763-a58f-704081f32cf2",
+            "record_hash": "305b71467856f7de5735a5b8b9174abaa164004f75f8e7269e825966cb5ade55"
+          }
+        ],
+        "pinned_turn_ids": [
+          "8df6b5bf-e2b9-4830-86b0-478a73754cc6"
+        ],
+        "keep_recent": 2,
+        "points": [
+          {
+            "text": "任务目标是归档指定的实际协议文档并验证字节。需使用 file.ingest 后接 asset.verify。系统资产库存储位置已配置，无须询问其他目标路径，且不涉及机器人运动。",
+            "turn_ids": [
+              "6b99a5f7-2bb0-47a4-849a-7acc86550af7"
+            ]
+          },
+          {
+            "text": "唯一需要归档的实际源文件路径为 /home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/session-summary-validation/f9140475-d527-4dac-addd-7c6e85afe2f1/protocol.md，其 SHA256 校验和为 f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5。",
+            "turn_ids": [
+              "8138b984-503d-4b3d-8c9b-85e5bf8d9812"
+            ]
+          },
+          {
+            "text": "背景作用：提供机器人Agent框架的工程状态、模块完成度及验证边界，作为任务规划的上下文背景，明确当前处于 implementation 阶段，版本 0.1.0。",
+            "turn_ids": [
+              "1639f401-75d3-4c72-83e1-7246ab4b5894"
+            ]
+          },
+          {
+            "text": "技能状态：本地文件技能已实现并标记为已完成，包含 file.ingest 和 asset.verify，能操作实际文件并返回实际结果，相关代码位于 robot_agent/file_copy.py。",
+            "turn_ids": [
+              "1639f401-75d3-4c72-83e1-7246ab4b5894"
+            ]
+          },
+          {
+            "text": "资产摄取约束：实际文件摄取与完整性功能已完成，系统会读取实际字节，保存哈希、大小、格式和来源，并在读取时复核哈希，相关证据见资产完整性测试。",
+            "turn_ids": [
+              "1639f401-75d3-4c72-83e1-7246ab4b5894"
+            ]
+          },
+          {
+            "text": "历史归档记录：背景文档提及此前 qwen3.7-plus 的实际计划已由 worker 完成文件归档与哈希校验，且多轮澄清和失败节点解释已通过验证。",
+            "turn_ids": [
+              "1639f401-75d3-4c72-83e1-7246ab4b5894"
+            ]
+          },
+          {
+            "text": "验证边界约束：明确HTTP请求成功、模型自述成功、软件测试通过和机器人真实完成是不同层级的证据，不会用前一种证据替代后一种，且状态不使用估算百分比。",
+            "turn_ids": [
+              "1639f401-75d3-4c72-83e1-7246ab4b5894"
+            ]
+          },
+          {
+            "text": "任务基准约束。原始目标要求归档实际协议文档并验证字节，需依次使用 `file.ingest` 和 `asset.verify`。系统资产库路径已配置，无须询问其他目标路径，且明确不涉及机器人运动。提供的 excerpts 均声明为项目文档背景，非额外执行任务。",
+            "turn_ids": [
+              "1639f401-75d3-4c72-83e1-7246ab4b5894",
+              "186be95d-bd4b-46f8-b50f-ac1c66651441",
+              "4736f124-e73d-49a8-a845-c51b53577daf"
+            ]
+          },
+          {
+            "text": "项目状态与维护规则。项目包含0-7共8个构建阶段，当前重点为执行权威与恢复闭环。维护规则要求状态更新必须提供代码或实际验证证据，历史测试报告不可改写。提及 `validation/memory-browser-live.json` 中 worker 最终哈希验证通过。",
+            "turn_ids": [
+              "1639f401-75d3-4c72-83e1-7246ab4b5894",
+              "186be95d-bd4b-46f8-b50f-ac1c66651441"
+            ]
+          },
+          {
+            "text": "架构文档背景。Turn 3 提供《机器人 Agent 框架详细架构》全文，涵盖四大平面（控制、适配、证据、安全）、核心领域模型及运行流程。此文档描述目标架构，不代表所有模块已交付，实际完成情况以 `PROJECT_STATUS.md` 为准。",
+            "turn_ids": [
+              "4736f124-e73d-49a8-a845-c51b53577daf"
+            ]
+          },
+          {
+            "text": "涉及的文件路径与标识符。背景中提及的文档及记录路径包括：`UI_VALIDATION.md`、`VALIDATION.md`、`validation/model-planning-qwen3.8-max.json`、`BUILD_ROADMAP.md`、`OPEN_QUESTIONS.md`、`WORKLOG.md`、`UNKNOWNS.md`、`HANDOFF.md`、`validation/memory-browser-live.json`、`PROJECT_STATUS.md` 和 `ARCHITECTURE.md`。",
+            "turn_ids": [
+              "1639f401-75d3-4c72-83e1-7246ab4b5894",
+              "186be95d-bd4b-46f8-b50f-ac1c66651441",
+              "4736f124-e73d-49a8-a845-c51b53577daf"
+            ]
+          },
+          {
+            "text": "证据与资产验证要求。架构设计强调证据数据平面需管理不可变资产（Asset Catalog），大文件不进入任务 JSON，事实必须可追溯。空间事实需携带 `robot_id`、`frame_id`、`timestamp_ns` 等元数据，且模型与传感器结果必须来自实际调用，不得以模拟结果冒充。",
+            "turn_ids": [
+              "4736f124-e73d-49a8-a845-c51b53577daf"
+            ]
+          },
+          {
+            "text": "用户提供了项目架构与设计背景文档（涵盖数据库、部署、安全、测试等），明确声明此内容仅为背景，不是额外执行任务。",
+            "turn_ids": [
+              "68e19f7d-e2a6-4763-a58f-704081f32cf2"
+            ]
+          },
+          {
+            "text": "核心任务为归档会话中指定的实际协议文档，并验证其字节。",
+            "turn_ids": [
+              "68e19f7d-e2a6-4763-a58f-704081f32cf2"
+            ]
+          },
+          {
+            "text": "执行方式约束：必须使用 file.ingest 后接 asset.verify。",
+            "turn_ids": [
+              "68e19f7d-e2a6-4763-a58f-704081f32cf2"
+            ]
+          },
+          {
+            "text": "范围约束：系统资产库存储位置已配置，无须询问其他目标路径；不涉及机器人运动。",
+            "turn_ids": [
+              "68e19f7d-e2a6-4763-a58f-704081f32cf2"
+            ]
+          }
+        ],
+        "chunks": [
+          {
+            "index": 0,
+            "model_response_id": "d0fa0648-989a-453a-9dc8-2c3dfecaf059",
+            "source_parts": [
+              {
+                "turn_id": "6b99a5f7-2bb0-47a4-849a-7acc86550af7",
+                "start": 0,
+                "end": 85,
+                "content_hash": "b8f137e044daf81591d7cc38f5b17933c06e8b36393b130c50e3bc70974ec92a"
+              },
+              {
+                "turn_id": "8138b984-503d-4b3d-8c9b-85e5bf8d9812",
+                "start": 0,
+                "end": 243,
+                "content_hash": "34e3c6063804bddadb5c76378161a01ef5744c87d3e5b7e9934c20b3bcdb1450"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "model_response_id": "9f0266af-21db-4bc9-b3c7-a3ea011f6f52",
+            "source_parts": [
+              {
+                "turn_id": "1639f401-75d3-4c72-83e1-7246ab4b5894",
+                "start": 0,
+                "end": 15384,
+                "content_hash": "615649c104bcaaba16b9f5196574b054d72ba3dcf63c8cab893edabe32ca451f"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "model_response_id": "8b9d6154-93f0-4eab-87cb-983017017554",
+            "source_parts": [
+              {
+                "turn_id": "1639f401-75d3-4c72-83e1-7246ab4b5894",
+                "start": 15384,
+                "end": 15722,
+                "content_hash": "c6bdb30546d8db7e65137a66d41b096dce2fa40822c33b70f396c22a7528d42f"
+              },
+              {
+                "turn_id": "186be95d-bd4b-46f8-b50f-ac1c66651441",
+                "start": 0,
+                "end": 1283,
+                "content_hash": "15a598773c0e511e952d7bf2d6dcf692ac9dd96e2a178839b9e8046f6decd3a8"
+              },
+              {
+                "turn_id": "4736f124-e73d-49a8-a845-c51b53577daf",
+                "start": 0,
+                "end": 15722,
+                "content_hash": "1a9793f5bef8e346c3b3709467e0043ec6cdf35a84e0960539744e69e7a17566"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "model_response_id": "546096b5-b0ca-4251-b800-0c474499426c",
+            "source_parts": [
+              {
+                "turn_id": "68e19f7d-e2a6-4763-a58f-704081f32cf2",
+                "start": 0,
+                "end": 5405,
+                "content_hash": "dd61d59b5f9ea7fbaa7486c9da38f02eb1f1b6c977e1ef64e25a2008e976beda"
+              }
+            ]
+          }
+        ],
+        "model_response_id": "d0fa0648-989a-453a-9dc8-2c3dfecaf059",
+        "model_response_ids": [
+          "d0fa0648-989a-453a-9dc8-2c3dfecaf059",
+          "9f0266af-21db-4bc9-b3c7-a3ea011f6f52",
+          "8b9d6154-93f0-4eab-87cb-983017017554",
+          "546096b5-b0ca-4251-b800-0c474499426c"
+        ],
+        "summary_run_id": "a073d0c1-78d9-4c53-87fd-fc2335a3055a",
+        "created_at": 1790018693.6559901,
+        "version": 2,
+        "content_authority": "model_summary_not_execution_evidence"
+      },
+      "actual_result": {
+        "evidence": [
+          {
+            "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+            "source": "asset:bd342bd7-e4c6-44ce-83d1-e69b466d29d4"
+          }
+        ],
+        "execution_id": "cedfbe85-7c2a-4925-89b5-7e19f972a1f5",
+        "output": {
+          "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+          "size": 2669,
+          "verified": true
+        },
+        "quiescent": true,
+        "status": "succeeded"
+      },
+      "source_bytes": 113064,
+      "summary_bytes": 7483,
+      "summary_response_id": "chatcmpl-bee75e03-f22f-98d8-be1a-298ca93fcb0c",
+      "planning_response_id": "chatcmpl-96dcf90c-4e24-94df-aa06-4805f1f4d676",
+      "context_manifest": {
+        "dropped": [],
+        "estimated_input_tokens": 11944,
+        "estimator": "utf8_bytes_v1",
+        "id": "e1e5ee24-8e0e-45a2-bb6f-b0774d6efd92",
+        "included": [
+          "goal",
+          "capabilities",
+          "session",
+          "session-summary"
+        ],
+        "input_token_limit": 32768,
+        "phase": "planning",
+        "renderer_version": "role-aware-v1",
+        "request_id": "6472d327-ff2c-40cb-bbb8-ff2f742368e7",
+        "reserved_output_tokens": 2048,
+        "sources": [
+          {
+            "authority": "operator",
+            "evidence_ids": [],
+            "id": "goal",
+            "metadata": {},
+            "source": "goal_context"
+          },
+          {
+            "authority": "framework",
+            "evidence_ids": [],
+            "id": "capabilities",
+            "metadata": {},
+            "source": "skill_registry"
+          },
+          {
+            "authority": "data",
+            "evidence_ids": [],
+            "id": "session",
+            "metadata": {
+              "revision": 10,
+              "session_id": "d377af9b-bbfd-47a6-b9d5-a5c6cc3202b5",
+              "snapshot_id": null
+            },
+            "source": "session_ledger"
+          },
+          {
+            "authority": "data",
+            "evidence_ids": [],
+            "id": "session-summary",
+            "metadata": {
+              "covered_turns": [
+                {
+                  "id": "6b99a5f7-2bb0-47a4-849a-7acc86550af7",
+                  "record_hash": "4d96be8253afbeceec9604f97bb13fd12a559f455b42d3d783225e2fa8ad154c"
+                },
+                {
+                  "id": "8138b984-503d-4b3d-8c9b-85e5bf8d9812",
+                  "record_hash": "dc461dec9a9cead5fc1e4b6d40efafb4a08874a86155c4e4a5e2c6192d392f98"
+                },
+                {
+                  "id": "1639f401-75d3-4c72-83e1-7246ab4b5894",
+                  "record_hash": "d07f300006bbbc15a1dab39edac098c93fe1d7657f39cbca595f864b8c3b6bf5"
+                },
+                {
+                  "id": "186be95d-bd4b-46f8-b50f-ac1c66651441",
+                  "record_hash": "81ebeb96509293235cd07d0b67defd2e163431bb69bf32464c5562006f0e0602"
+                },
+                {
+                  "id": "4736f124-e73d-49a8-a845-c51b53577daf",
+                  "record_hash": "91964606185dab7944eca9470eb34f582d7d0d6fe699d75323e20a5c95e629d9"
+                },
+                {
+                  "id": "68e19f7d-e2a6-4763-a58f-704081f32cf2",
+                  "record_hash": "305b71467856f7de5735a5b8b9174abaa164004f75f8e7269e825966cb5ade55"
+                }
+              ],
+              "model_response_id": "d0fa0648-989a-453a-9dc8-2c3dfecaf059",
+              "model_response_ids": [
+                "d0fa0648-989a-453a-9dc8-2c3dfecaf059",
+                "9f0266af-21db-4bc9-b3c7-a3ea011f6f52",
+                "8b9d6154-93f0-4eab-87cb-983017017554",
+                "546096b5-b0ca-4251-b800-0c474499426c"
+              ],
+              "pinned_turn_ids": [
+                "8df6b5bf-e2b9-4830-86b0-478a73754cc6"
+              ],
+              "record_hash": "75e938952e7f45b18b44fac0cbde5ada8db0ce86ac7024053860dcb04f3c182e",
+              "summary_id": "c223b890-e1e9-4b0e-82d9-68d54eeb46e4"
+            },
+            "source": "session_summary"
+          }
+        ]
+      }
+    },
+    {
+      "source_report": ".runtime/summary-concurrency-validation/21eb41a8-aa98-4103-84e9-854a43fc9a96/report.json",
+      "source_report_sha256": "804a8f52c162c1da1d396c375a07e435273a9d9054a840481de72e497895891f",
+      "configured_model": "qwen3.7-plus",
+      "mock_used": false,
+      "simulation_used": false,
+      "status": "passed",
+      "session_id": "88fad86b-c42b-4b71-81a5-7ef782241890",
+      "actual_revision": 7,
+      "summary_run": {
+        "action_call_id": "e8f2bf26-c744-4a25-9762-bf508f24d738",
+        "chunk_count": 3,
+        "created_at": 1790018693.0662262,
+        "error": "session changed during summary",
+        "id": "ccfdaf50-8966-43d4-832e-97c764a0a625",
+        "model_response_ids": [
+          "7d90879c-73cd-4019-a952-6b3463c11249"
+        ],
+        "session_id": "88fad86b-c42b-4b71-81a5-7ef782241890",
+        "session_revision": 6,
+        "status": "rejected"
+      },
+      "model_response_id": "7d90879c-73cd-4019-a952-6b3463c11249",
+      "actual_response_id": "chatcmpl-ae2fca4c-25de-9e95-97f5-dfdf91932763",
+      "partial_points": [
+        {
+          "text": "项目为“机器人 Agent 框架”（版本0.1.0，阶段implementation，范围robot_agent_framework/）。状态口径严格区分证据层级：HTTP成功、模型自述、软件测试与机器人真实完成互不替代，不使用估算百分比。",
+          "turn_ids": [
+            "9541060b-b79c-4664-8722-7045ab998ce8"
+          ]
+        },
+        {
+          "text": "基础软件链路已完成：项目边界与调研、任务契约与DAG检查、依赖调度、技能注册与HTTP执行协议、本地文件技能、有界重试与fallback、暂停/取消/恢复、多任务账本、SQLite持久化与DBOS工作流、模型配置与响应校验、资产分类与MCAP/rosbag2录制、独立只读观察API等。",
+          "turn_ids": [
+            "9541060b-b79c-4664-8722-7045ab998ce8"
+          ]
+        },
+        {
+          "text": "关键未完成与进行中事项：多机器人协调、硬件急停、控制端隔离旧执行者、Postgres生产部署、高可用、长程规划质量评估、真实传感器/地图流、向量检索、3D/视频预览及worker/机器人健康心跳等真机验收与高级特性均标记为未完成或进行中。",
+          "turn_ids": [
+            "9541060b-b79c-4664-8722-7045ab998ce8"
+          ]
+        },
+        {
+          "text": "上下文构造层(ContextBuilder)架构：旨在不替换现有Runtime/Planner边界下增加独立层。含CTX-0至CTX-7工作包。预算降级顺序：安全策略/Goal > Plan/Step > 人工覆盖/近期Session > WorldState > Memory > 旧Session > 调试材料。",
+          "turn_ids": [
+            "9541060b-b79c-4664-8722-7045ab998ce8"
+          ]
+        },
+        {
+          "text": "上下文构造验收与代码边界：分5阶段验收(类型权限->Session/TaskState闭环->Memory->WorldState->统一入口与评测)。代码边界建议位于robot_agent/context/，含models, builder, allocator, renderer, manifest及providers/reducers/validators子目录。",
+          "turn_ids": [
+            "9541060b-b79c-4664-8722-7045ab998ce8"
+          ]
+        },
+        {
+          "text": "背景说明：用户提供的长文本为项目工程状态文档原文，旨在为后续框架开发提供历史背景参考，明确本次交互不执行任何设备动作。",
+          "turn_ids": [
+            "19e91d0d-d3eb-4d01-842c-3cc03216a4d6",
+            "9541060b-b79c-4664-8722-7045ab998ce8"
+          ]
+        }
+      ]
+    }
+  ],
+  "regression": {
+    "passed": 29,
+    "subtests_passed": 9
+  },
+  "scope": "Actual single/chunked model summaries, original Unicode range verification, actual plan and file worker hash, concurrent operator edit rejects partial binding"
+}

@@ -1,0 +1,156 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/application-validation/1bebbee2-7c38-4b38-8d66-ffd8b4ac0350/report.json",
+  "source_report_sha256": "f9a7897456b5a3f6fe011dd6ed01006ed6f0dae7f2765dfa4d7ddd56127aad2b",
+  "live_test": "1 passed, 1 deselected in 85.51s",
+  "regression": "23 passed in 7.37s",
+  "live_command": "RUN_LIVE_MODEL_TESTS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest tests/test_application_live.py -k multiturn -q -s",
+  "regression_command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest tests/test_context_codec.py tests/test_context_providers.py tests/test_application_actions.py -q",
+  "context_evidence": {
+    "bundle_id": "3ee0929c-985e-48b6-a944-83840720572e",
+    "bundle_hash": "a1205b89930c6d77fa40a5f34d3affa2f3f65d3d0a30ee00a1da58360efb2896",
+    "manifest_id": "3ee0929c-985e-48b6-a944-83840720572e",
+    "providers": [
+      {
+        "dropped": [],
+        "fragment_ids": [
+          "goal",
+          "capabilities"
+        ],
+        "included": [
+          "goal",
+          "capabilities"
+        ],
+        "provider": "goal-capabilities",
+        "status": "collected"
+      },
+      {
+        "dropped": [],
+        "fragment_ids": [
+          "task-state"
+        ],
+        "included": [
+          "task-state"
+        ],
+        "provider": "task-state",
+        "status": "collected"
+      },
+      {
+        "dropped": [],
+        "fragment_ids": [
+          "session"
+        ],
+        "included": [
+          "session"
+        ],
+        "provider": "session",
+        "status": "collected"
+      },
+      {
+        "dropped": [],
+        "fragment_ids": [],
+        "included": [],
+        "provider": "memory",
+        "status": "empty"
+      },
+      {
+        "dropped": [],
+        "fragment_ids": [
+          "asset-evidence"
+        ],
+        "included": [
+          "asset-evidence"
+        ],
+        "provider": "assets",
+        "status": "collected"
+      },
+      {
+        "dropped": [],
+        "fragment_ids": [
+          "ui-selection"
+        ],
+        "included": [
+          "ui-selection"
+        ],
+        "provider": "selection",
+        "status": "collected"
+      }
+    ],
+    "actual_request_reconstruction": "exact_messages_and_response_format",
+    "request_hash": "dff0f3dda4be8e802703c531f01158b5865c488ead708e93b9272678c5829945",
+    "raw_response_sha256": "799e0788e310e3145bf84e4a4c1f1f9e87a08fd7bf2600a4ffc2886f43198eca"
+  },
+  "actual_model_records": [
+    {
+      "id": "3ee0929c-985e-48b6-a944-83840720572e",
+      "method": "task_explanation",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-b4ea2af5-6e3d-9aae-82fe-c2dfc699bf35"
+    },
+    {
+      "id": "a753e7cc-f4a7-4692-9811-dc77157e37a2",
+      "method": "goal_clarification",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-b2b67cb2-80c8-9369-8a03-eeb34c7cecce"
+    },
+    {
+      "id": "ca9d0047-260c-4b72-8285-2125bdc42a46",
+      "method": "goal_analysis",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-5d0ce9e3-e1ff-9a34-9699-729ec7f51cfd"
+    },
+    {
+      "id": "e7892644-e370-4429-8c09-a2f6ba844ee7",
+      "method": "goal_analysis",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-195c2a0a-6bda-9d1f-9d64-22d54deb8eb0"
+    }
+  ],
+  "task_id": "36addf1e-b3b9-4e43-89f8-03ef285190eb",
+  "task_final_status": "failed",
+  "actual_explanation": {
+    "explanation": {
+      "summary": "根据账本记录，节点 `read` (file.ingest) 失败的原因是系统尝试读取路径为 `/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/application-validation/1bebbee2-7c38-4b38-8d66-ffd8b4ac0350/does-not-exist.txt` 的文件，但该文件不存在。已记录的错误为 `FileNotFoundError: [Errno 2] No such file or directory`。",
+      "record_refs": [
+        "36addf1e-b3b9-4e43-89f8-03ef285190eb:read"
+      ],
+      "unknowns": []
+    },
+    "model_response_id": "3ee0929c-985e-48b6-a944-83840720572e",
+    "task_id": "36addf1e-b3b9-4e43-89f8-03ef285190eb",
+    "task_revision": 0,
+    "task_generation": 0,
+    "selected_records": {
+      "read": {
+        "alternative": 0,
+        "attempts": 1,
+        "execution_id": "130b98aa-4c8f-442b-9bd9-13fe47260c48",
+        "result": {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/application-validation/1bebbee2-7c38-4b38-8d66-ffd8b4ac0350/does-not-exist.txt'",
+          "evidence": [
+            {
+              "error_type": "FileNotFoundError",
+              "source": "local:file.ingest"
+            }
+          ],
+          "execution_id": "130b98aa-4c8f-442b-9bd9-13fe47260c48",
+          "output": {},
+          "quiescent": true,
+          "status": "failed"
+        },
+        "status": "failed"
+      }
+    },
+    "is_execution_evidence": false
+  },
+  "limits": [
+    "Actual missing-file failure, not a robot task or successful file task.",
+    "Four actual environment model responses; content and exact messages/response_format reconstruction checked.",
+    "New bundle and manifest persistence covers task.explain only; other model methods remain separately scoped.",
+    "Reconstruction validated with current environment configuration and current prompt implementation.",
+    "Legacy explanation records are not retroactively populated.",
+    "No WorldState or physical stop validation; Momo graph not synchronized."
+  ]
+}

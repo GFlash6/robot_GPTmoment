@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "new_model_calls": 0,
+  "source_report": ".runtime/context-diff-browser-validation/10cfe2f5-9084-4b6c-9fc2-94c26a6d9b17/report.json",
+  "source_report_sha256": "475f7cc68f77a5761ab9c5bb1ebac950571f7a493158856345c28621af8a6e08",
+  "report": {
+    "status": "passed",
+    "root": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/context-diff-browser-validation/10cfe2f5-9084-4b6c-9fc2-94c26a6d9b17",
+    "seed": {
+      "first": "b3ce8055-b676-4ec7-8fdc-510a0edb969c",
+      "recovery": "6bc4d096-8863-446d-9d1b-c1d79c3d2ee5",
+      "legacy": "2c0070a0-8449-45cc-88fe-22b929cb390b",
+      "bundle_id": "6bc4d096-8863-446d-9d1b-c1d79c3d2ee5",
+      "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/replanning-context-validation/93593234-4e6a-44a8-8bf0-e4ba3ae8ade9/ledger/ledger.sqlite",
+      "legacy_source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/memory-validation/83872251-288f-402a-b821-592ce3297033/ledger/ledger.sqlite",
+      "models": 5,
+      "actual_response_ids": [
+        "chatcmpl-428435c6-8cb2-9dbc-b8ac-73544d8c008a",
+        "chatcmpl-13abdd8a-ed08-9995-a2ca-0fdcb9627167",
+        "chatcmpl-e16ae3c9-ba8c-9dda-b547-c151ff352643",
+        "chatcmpl-15db15db-24f7-93e2-a8a1-5616dbd1d701",
+        "chatcmpl-4e2ffa7f-2262-9114-8e12-4d01a742b02e"
+      ],
+      "ledger_hash": "d9d221790c4a46fcedfd9b5d211be38fea57844f21706e7ef10c1285244a75b3"
+    },
+    "mock_used": false,
+    "simulation_used": false,
+    "new_model_calls": 0,
+    "page_errors": [],
+    "mutations": [],
+    "final_ledger_hash": "d9d221790c4a46fcedfd9b5d211be38fea57844f21706e7ef10c1285244a75b3",
+    "checks": [
+      "actual baseline pin and source disclosure by keyboard",
+      "self comparison",
+      "real planning to recovery sources and budget",
+      "draft baseline does not change active pair",
+      "reverse comparison",
+      "missing record error",
+      "actual legacy evidence unavailable",
+      "real server disconnect retention",
+      "baseline and current switch during disconnect clear stale pair",
+      "real server restart recovery",
+      "actual copied-ledger hash corruption blocks comparison",
+      "clear and reapply baseline",
+      "desktop and mobile no overflow",
+      "single context panel remains functional",
+      "no new model calls or browser ledger writes"
+    ]
+  },
+  "original_real_model_report": ".runtime/replanning-context-validation/93593234-4e6a-44a8-8bf0-e4ba3ae8ade9/report.json",
+  "original_real_model_report_sha256": "adb0bf8a458e1b31d852bfe83b29436497f6f1a976068e2be98633057ddf433d",
+  "screenshots": [
+    {
+      "path": ".runtime/context-diff-browser-validation/10cfe2f5-9084-4b6c-9fc2-94c26a6d9b17/desktop.png",
+      "review_path": ".impeccable/review/context-diff/desktop.png",
+      "sha256": "b0abf8d28400c9545260e2fb0c6161d9aee95cccb1fe3a9f5f37537f40462d9d"
+    },
+    {
+      "path": ".runtime/context-diff-browser-validation/10cfe2f5-9084-4b6c-9fc2-94c26a6d9b17/mobile.png",
+      "review_path": ".impeccable/review/context-diff/mobile.png",
+      "sha256": "513a04bf65a3ebb5c4e103b2c2466f501fde6629554968fe97ed33224f34e228"
+    },
+    {
+      "path": ".runtime/context-diff-browser-validation/10cfe2f5-9084-4b6c-9fc2-94c26a6d9b17/desktop-diff.png",
+      "review_path": ".impeccable/review/context-diff/desktop-diff.png",
+      "sha256": "a2614d977d9895b2d05aec89ed7a020cb32bb40f59470356ca0343b0d15d3d68"
+    },
+    {
+      "path": ".runtime/context-diff-browser-validation/10cfe2f5-9084-4b6c-9fc2-94c26a6d9b17/mobile-diff.png",
+      "review_path": ".impeccable/review/context-diff/mobile-diff.png",
+      "sha256": "71d57d0a292dd6e64c3a94037b7a132fced59e08708fce6860b53f9d3a78a5eb"
+    }
+  ],
+  "build": {
+    "status": "passed",
+    "command": "npm run build --prefix ui",
+    "note": "Existing >500 kB bundle warning; main JS 526.75 kB."
+  },
+  "detector": {
+    "status": "passed",
+    "findings": [],
+    "runs": 1
+  },
+  "limits": [
+    "Uses actual saved model responses and inputs; no new model inference or robot execution.",
+    "Comparison is of redacted persisted context, not verified lineage, model correctness or physical completion.",
+    "Loopback observer only; no new remote authorization.",
+    "Existing model-test gateways were not started and truthfully display unavailable.",
+    "Momo graph not synchronized by this increment."
+  ],
+  "finish_review": {
+    "disposition": "ship",
+    "reviewer": "/root/context_diff_ui_review",
+    "material_fixes": [],
+    "scope": "New comparison extension only; reviewer inspected supplied code and four actual captures, using passing browser report for behavioral evidence; no independent browser rerun.",
+    "persistence": "Pinned baseline and unapplied draft behavior match recorded direction contract.",
+    "fidelity": "All four captures valid; explicit direction, incumbent identity, evidence limits, native disclosures and mobile stacking match.",
+    "ceiling": "Local comparison surface only; existing unavailable test widgets outside scope.",
+    "keep": "Complete IDs, paired-value labels, scope distinctions, native controls and mobile wrapping."
+  }
+}

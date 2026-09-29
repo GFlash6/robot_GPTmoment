@@ -1,0 +1,239 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/report.json",
+  "source_report_sha256": "c97bdedaf3519f4b6bc86c901eb944eb213bd95ae31f66bffad019efd756bad2",
+  "regression": "12 passed in 56.56s",
+  "live_test": "1 passed in 35.94s",
+  "report": {
+    "configured_model": "qwen3.7-plus",
+    "mock_used": false,
+    "simulation_used": false,
+    "expected_sha256": "7e91dfa21a58e9e39e8b32cdc136fca48d4a4b7a1c4113b5178fcf8613ee6c5d",
+    "scenario": "reconcile",
+    "reconciled_result": {
+      "execution_id": "99a9cca5-c6c4-4a69-9a91-b7f010724f1e",
+      "status": "canceled",
+      "quiescent": true,
+      "output": {
+        "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md",
+        "bytes_copied": 512
+      },
+      "evidence": [
+        {
+          "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md",
+          "bytes": 512
+        }
+      ],
+      "authority": {
+        "domain": "disk",
+        "token": 1
+      },
+      "reconciliation": {
+        "controller_execution_id": "current-controller",
+        "authority": {
+          "domain": "disk",
+          "token": 2
+        }
+      }
+    },
+    "status": "passed",
+    "task_id": "121f9df5-fdd0-4729-83fc-ea0bc9db9cba",
+    "task_status": "canceled",
+    "plan": {
+      "steps": [
+        {
+          "id": "copy_file",
+          "skill": "file.copy",
+          "args": {
+            "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/source.md",
+            "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md",
+            "chunk_bytes": 512
+          },
+          "deps": [],
+          "retries": 0,
+          "fallback": []
+        }
+      ],
+      "verification": "copy_file"
+    },
+    "execution": {
+      "args": {
+        "chunk_bytes": 512,
+        "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/source.md",
+        "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md"
+      },
+      "authority": {
+        "domain": "disk",
+        "token": 1
+      },
+      "created_at": 1790029437.89952,
+      "error": "HTTPStatusError: Client error '409 Conflict' for url 'http://127.0.0.1:37209/executions/99a9cca5-c6c4-4a69-9a91-b7f010724f1e'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409",
+      "id": "99a9cca5-c6c4-4a69-9a91-b7f010724f1e",
+      "result": {
+        "authority": {
+          "domain": "disk",
+          "token": 1
+        },
+        "evidence": [
+          {
+            "bytes": 512,
+            "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md"
+          }
+        ],
+        "execution_id": "99a9cca5-c6c4-4a69-9a91-b7f010724f1e",
+        "output": {
+          "bytes_copied": 512,
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md"
+        },
+        "quiescent": true,
+        "reconciliation": {
+          "authority": {
+            "domain": "disk",
+            "token": 2
+          },
+          "controller_execution_id": "current-controller"
+        },
+        "status": "canceled"
+      },
+      "skill": "file.copy",
+      "status": "canceled",
+      "step": "copy_file",
+      "task_id": "121f9df5-fdd0-4729-83fc-ea0bc9db9cba"
+    },
+    "service_request": {
+      "body": {
+        "args": {
+          "chunk_bytes": 512,
+          "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/source.md",
+          "target": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md"
+        },
+        "authority": {
+          "domain": "disk",
+          "token": 1
+        },
+        "execution_id": "99a9cca5-c6c4-4a69-9a91-b7f010724f1e",
+        "robot_id": "r1",
+        "skill": "file.copy"
+      },
+      "spec": {
+        "adapter": "local",
+        "allowed_roots": [
+          "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea"
+        ],
+        "cancelable": true,
+        "checks": [
+          {
+            "op": "eq",
+            "path": "verified",
+            "value": true
+          }
+        ],
+        "fencing_domain": "disk",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "chunk_bytes": {
+              "maximum": 8388608,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "source": {
+              "type": "string"
+            },
+            "target": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "source",
+            "target"
+          ],
+          "type": "object"
+        },
+        "name": "file.copy",
+        "output_schema": {
+          "required": [
+            "sha256",
+            "verified",
+            "path"
+          ],
+          "type": "object"
+        },
+        "replay_safe": false,
+        "resources": {},
+        "verifier": true
+      }
+    },
+    "model_records": [
+      {
+        "id": "3d45c425-d906-4144-ad8c-43df8d3e79d0",
+        "method": "planning",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-69dddbce-71a1-9823-b064-057b0c99515c",
+        "context_bundle_id": "3d45c425-d906-4144-ad8c-43df8d3e79d0"
+      },
+      {
+        "id": "8ac4e574-ab14-49f4-b402-345a42d2fedf",
+        "method": "goal_analysis",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-44055da3-b007-9441-9354-635d1d81aec1",
+        "context_bundle_id": null
+      }
+    ]
+  },
+  "verified_model_records": [
+    {
+      "id": "3d45c425-d906-4144-ad8c-43df8d3e79d0",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-69dddbce-71a1-9823-b064-057b0c99515c",
+      "method": "planning",
+      "request_sha256": "89d9c548a97ae623c6bd66b2b2b3f67a15a86fb13dd2a5580c1a270255792971",
+      "raw_sha256": "fc402af208db539bfeaabcb7f6b2d764fe53462528180b581ea1dba5fa45acf7"
+    },
+    {
+      "id": "8ac4e574-ab14-49f4-b402-345a42d2fedf",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-44055da3-b007-9441-9354-635d1d81aec1",
+      "method": "goal_analysis",
+      "request_sha256": "c074112d85fb9c559d3b450d455d374bbd4c1fe59666b6eb001595395daf81e5",
+      "raw_sha256": "ca6b3f8b32a9d206815db76a824bf9338c0e173acc8831d3fc8f017d4bfa31df"
+    }
+  ],
+  "partial_output_sha256": "d980cd6d0a55010f55c473150895bbb176bfdf528b122be5897132a6ff074f11",
+  "persisted_stop_proof": {
+    "request_hash": "a19054deff172cf1231dd1bae3cb5b66a6da29098067d3ff1b013363dbbbcd1a",
+    "result": {
+      "authority": {
+        "domain": "disk",
+        "token": 1
+      },
+      "evidence": [
+        {
+          "bytes": 512,
+          "source": "file:///home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md"
+        }
+      ],
+      "execution_id": "99a9cca5-c6c4-4a69-9a91-b7f010724f1e",
+      "output": {
+        "bytes_copied": 512,
+        "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/fencing-validation/66873794-8ccb-4209-be75-bfc90441daea/copy.md"
+      },
+      "quiescent": true,
+      "reconciliation": {
+        "authority": {
+          "domain": "disk",
+          "token": 2
+        },
+        "controller_execution_id": "current-controller"
+      },
+      "status": "canceled"
+    }
+  },
+  "limits": [
+    "Canceled partial file task, not successful copy",
+    "Explicit current-controller reconciliation only; no automatic takeover or UI",
+    "Actual synchronous file skill; robot stop adapter remains unverified"
+  ]
+}

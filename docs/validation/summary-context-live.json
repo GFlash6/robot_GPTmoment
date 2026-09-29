@@ -1,0 +1,272 @@
+{
+  "status": "passed_after_test_input_corrections",
+  "mock_used": false,
+  "simulation_used": false,
+  "initial_run": "2 failed, 2 passed in 196.51s",
+  "automatic_rerun": "1 passed in 194.19s",
+  "cancel_rerun": "1 passed in 82.72s",
+  "regression": "23 passed in 7.40s",
+  "counts": {
+    "validated_responses": 15,
+    "summary_packages": 8,
+    "successful_tasks": 2,
+    "canceled_tasks": 1
+  },
+  "sources": [
+    {
+      "report": ".runtime/session-summary-validation/c5f8cb4e-15b9-4722-9220-117a16ab4009/report.json",
+      "sha256": "205cc72e6306fdfa6daaa4b3752e0629cacbf434c9cfea269d27089f212ab693",
+      "model_count": 7,
+      "summary_evidence": [
+        {
+          "id": "127bae12-676a-4b92-a9c5-6bea4e59c27b",
+          "bundle_hash": "6c31f173f9abbe01bf17c4ff353ee9391666888a8237ae24b596fa729c0a3f7a",
+          "snapshot_id": null,
+          "raw_sha256": "a0ae80de93725685efba31f28507f3b2b09cc2de579b399fa6e26406d36091ff",
+          "response_id": "chatcmpl-b8a2eef6-c838-9e19-b741-fa5198733a42",
+          "actual_model": "qwen3.7-plus",
+          "source_ranges_and_input_reconstruction": "passed"
+        },
+        {
+          "id": "3dece827-fe42-42c5-bab2-5251b90ec97b",
+          "bundle_hash": "6600c9d3bddf719f35cc2cec7497c9d0cb21a8626f2380357e6d617ab493ca53",
+          "snapshot_id": null,
+          "raw_sha256": "7a0b7ffe5e919c979531e56fb9341101b22c429f8c33193390ca88bab2294fc0",
+          "response_id": "chatcmpl-9b913993-dea4-9774-bc37-3c6efa5f68e0",
+          "actual_model": "qwen3.7-plus",
+          "source_ranges_and_input_reconstruction": "passed"
+        },
+        {
+          "id": "76e6a269-bc5b-4b95-8d8f-48d7325c4911",
+          "bundle_hash": "52c01aa4f50fdf008548f0bd12aa0cfada092250edf75958d2a596dbb856e9c1",
+          "snapshot_id": null,
+          "raw_sha256": "90b32bbe1ba6382d4db941aeee1320f5f4d39003223b37de15c391f076fd994c",
+          "response_id": "chatcmpl-e0e769c7-7227-946a-be18-faad945b642c",
+          "actual_model": "qwen3.7-plus",
+          "source_ranges_and_input_reconstruction": "passed"
+        },
+        {
+          "id": "b4c47e38-56dd-437d-9f24-0d8bb94a070c",
+          "bundle_hash": "9992aa712ed6746102cf0a7a3a38ffba19e30d9c1cc485a67a14951852415e50",
+          "snapshot_id": null,
+          "raw_sha256": "cdb1be4b8e7671dd037e9808037ec0b7f276672f177c9637786d80d86e6997e1",
+          "response_id": "chatcmpl-5cdbdd6f-1f45-9c18-b79f-d1d8baa516b1",
+          "actual_model": "qwen3.7-plus",
+          "source_ranges_and_input_reconstruction": "passed"
+        },
+        {
+          "id": "b58a3c2f-2147-4fde-b272-1b849c780232",
+          "bundle_hash": "c47681315df5218e2be7b22239bf1b4125e37d8d5cb434f808c077c6f811d7cc",
+          "snapshot_id": null,
+          "raw_sha256": "c0b25cd0593a1c9ac268f1a86922f0e2de64d7013d3252bc391ee0d02fbc625c",
+          "response_id": "chatcmpl-b5e52faa-1281-9c3c-945f-56c6a90be274",
+          "actual_model": "qwen3.7-plus",
+          "source_ranges_and_input_reconstruction": "passed"
+        }
+      ],
+      "task_states": [
+        "succeeded"
+      ],
+      "summary_run_states": [
+        "completed"
+      ],
+      "actual_models": [
+        {
+          "id": "127bae12-676a-4b92-a9c5-6bea4e59c27b",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-b8a2eef6-c838-9e19-b741-fa5198733a42",
+          "raw_sha256": "a0ae80de93725685efba31f28507f3b2b09cc2de579b399fa6e26406d36091ff"
+        },
+        {
+          "id": "29281d51-d534-4622-8660-9659ee2cc7b3",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-f1db74bf-488d-9fd3-a51a-55cb13218061",
+          "raw_sha256": "0fc7cfd315d9ded24a5bb20fd83afd3ac41f2277813b5c86242a9c059d5fca13"
+        },
+        {
+          "id": "3dece827-fe42-42c5-bab2-5251b90ec97b",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-9b913993-dea4-9774-bc37-3c6efa5f68e0",
+          "raw_sha256": "7a0b7ffe5e919c979531e56fb9341101b22c429f8c33193390ca88bab2294fc0"
+        },
+        {
+          "id": "76e6a269-bc5b-4b95-8d8f-48d7325c4911",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-e0e769c7-7227-946a-be18-faad945b642c",
+          "raw_sha256": "90b32bbe1ba6382d4db941aeee1320f5f4d39003223b37de15c391f076fd994c"
+        },
+        {
+          "id": "b4c47e38-56dd-437d-9f24-0d8bb94a070c",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-5cdbdd6f-1f45-9c18-b79f-d1d8baa516b1",
+          "raw_sha256": "cdb1be4b8e7671dd037e9808037ec0b7f276672f177c9637786d80d86e6997e1"
+        },
+        {
+          "id": "b58a3c2f-2147-4fde-b272-1b849c780232",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-b5e52faa-1281-9c3c-945f-56c6a90be274",
+          "raw_sha256": "c0b25cd0593a1c9ac268f1a86922f0e2de64d7013d3252bc391ee0d02fbc625c"
+        },
+        {
+          "id": "d01226cf-e4c5-4dac-9cb8-6c224b4aab68",
+          "method": "planning",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-d75203bd-9906-93fa-9883-12e62bc9becc",
+          "raw_sha256": "d057fbe47a0e573a04d2089d21c12043d9b43b4ed225a6d5b16ead4045f99d58"
+        }
+      ]
+    },
+    {
+      "report": ".runtime/summary-concurrency-validation/a7f10e01-b030-4e44-aa7b-246cacbff125/report.json",
+      "sha256": "89547592e1e2406beba13ac0128d6c134ec4bc06bd444110ea7f6bd6e9bfe9c4",
+      "model_count": 1,
+      "summary_evidence": [
+        {
+          "id": "b5adad32-6292-477d-9cde-53dce9d45f6a",
+          "bundle_hash": "12ac8a9329c382b62569d8420f0bf591a9bfdaac5d38dcad9fa60cbcb3a84c34",
+          "snapshot_id": null,
+          "raw_sha256": "1ff1bc6831309f7f197d4ffe100577ee42cc75aac3b5b50c45d42655b3c8c26b",
+          "response_id": "chatcmpl-84f5a707-f245-915c-aeb4-7e38d71391eb",
+          "actual_model": "qwen3.7-plus",
+          "source_ranges_and_input_reconstruction": "passed"
+        }
+      ],
+      "task_states": [],
+      "summary_run_states": [
+        "rejected"
+      ],
+      "actual_models": [
+        {
+          "id": "b5adad32-6292-477d-9cde-53dce9d45f6a",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-84f5a707-f245-915c-aeb4-7e38d71391eb",
+          "raw_sha256": "1ff1bc6831309f7f197d4ffe100577ee42cc75aac3b5b50c45d42655b3c8c26b"
+        }
+      ]
+    },
+    {
+      "report": ".runtime/replanning-context-validation/93593234-4e6a-44a8-8bf0-e4ba3ae8ade9/report.json",
+      "sha256": "adb0bf8a458e1b31d852bfe83b29436497f6f1a976068e2be98633057ddf433d",
+      "model_count": 4,
+      "summary_evidence": [
+        {
+          "id": "f78d96d4-e323-4a15-a4cd-ba304a59955a",
+          "bundle_hash": "0be24fa29ba565f5b9af35a516e7f8f739a20e3e690d1b26e0bfe78c3e174be9",
+          "snapshot_id": "f328e428-f575-409e-8ad9-634bcac1c837",
+          "raw_sha256": "7c93bf15dfc78cd4c9e87e67ecd745c0e06186773b94b78b18c5c1834c3e70d2",
+          "response_id": "chatcmpl-4e2ffa7f-2262-9114-8e12-4d01a742b02e",
+          "actual_model": "qwen3.7-plus",
+          "source_ranges_and_input_reconstruction": "passed"
+        }
+      ],
+      "task_states": [
+        "succeeded"
+      ],
+      "summary_run_states": [
+        "completed"
+      ],
+      "actual_models": [
+        {
+          "id": "6bc4d096-8863-446d-9d1b-c1d79c3d2ee5",
+          "method": "planning",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-13abdd8a-ed08-9995-a2ca-0fdcb9627167",
+          "raw_sha256": "bd0b1aa02c06f94587efe420fd30063b1fb641f23739a5152807ff9b99d1515a"
+        },
+        {
+          "id": "b3c5050c-b28f-48cc-93ad-360a7b3e0a5b",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-e16ae3c9-ba8c-9dda-b547-c151ff352643",
+          "raw_sha256": "3099a0cdb1cae63b9f2df9e3129c2010f650a67115977ff393f27ec4a93de15d"
+        },
+        {
+          "id": "b3ce8055-b676-4ec7-8fdc-510a0edb969c",
+          "method": "planning",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-15db15db-24f7-93e2-a8a1-5616dbd1d701",
+          "raw_sha256": "452068ef10a9bf3d8dd369437f6efcbd8f27803958b46bf232dce475a8135be2"
+        },
+        {
+          "id": "f78d96d4-e323-4a15-a4cd-ba304a59955a",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-4e2ffa7f-2262-9114-8e12-4d01a742b02e",
+          "raw_sha256": "7c93bf15dfc78cd4c9e87e67ecd745c0e06186773b94b78b18c5c1834c3e70d2"
+        }
+      ]
+    },
+    {
+      "report": ".runtime/replanning-context-validation/1623ad44-d060-4c2b-8e51-e974a5087f63/report.json",
+      "sha256": "5cf80415cd7793e713a8c203423d5fba5aeaa6f17af950dc6f0163dfb7db9825",
+      "model_count": 3,
+      "summary_evidence": [
+        {
+          "id": "536dbc3f-8ee1-4573-b01e-52400e5866fd",
+          "bundle_hash": "1d4decf0d5d103ecaf3df444bb53a4f6074cfd985122ae91377bf60b8fb2cd88",
+          "snapshot_id": "58a83ca9-1343-4a00-8dda-bac7adaf5e9f",
+          "raw_sha256": "0b74602b5614293aab2f759eee578b8dd76cebd9f617718b481cbab05c38e5ee",
+          "response_id": "chatcmpl-2daa6c0f-264c-915a-8f62-57217f5119df",
+          "actual_model": "qwen3.7-plus",
+          "source_ranges_and_input_reconstruction": "passed"
+        }
+      ],
+      "task_states": [
+        "canceled"
+      ],
+      "summary_run_states": [
+        "rejected"
+      ],
+      "actual_models": [
+        {
+          "id": "44b61212-b3cc-42b4-b3a8-e263a0c49400",
+          "method": "planning",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-65f72820-7309-98c5-b527-36470250de5d",
+          "raw_sha256": "348c776878e91740152c9b60d5abf94f6b26c2ab8b74f6f61929dcda986e3177"
+        },
+        {
+          "id": "536dbc3f-8ee1-4573-b01e-52400e5866fd",
+          "method": "session_summary",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-2daa6c0f-264c-915a-8f62-57217f5119df",
+          "raw_sha256": "0b74602b5614293aab2f759eee578b8dd76cebd9f617718b481cbab05c38e5ee"
+        },
+        {
+          "id": "a74a4b6e-53c7-46f8-89f4-fc1fdb1c2a50",
+          "method": "goal_analysis",
+          "actual_model": "qwen3.7-plus",
+          "response_id": "chatcmpl-b5d93c0e-0cdd-9484-86b9-ebd4ea902bd7",
+          "raw_sha256": "b0abb2a86a49f1a585b0ddc5a61c08069eb332def9c061ff3e0428dcd38715f8"
+        }
+      ]
+    }
+  ],
+  "preserved_failures": [
+    {
+      "report": ".runtime/session-summary-validation/de93a4c5-c4d9-447d-9ccc-c7b9b12135de/report.json",
+      "sha256": "329b0343ac1e303322ccab87e7dbcf41075521ef95e3cc3c76e3bb1620cb641b",
+      "cause": "Preflight test supplied whole turns without explicit Unicode ranges; corrected test input before any model call."
+    },
+    {
+      "report": ".runtime/replanning-context-validation/e8667cd3-7a93-4978-b2c8-24bffad7470d/report.json",
+      "sha256": "f20ab750d10eac2cc5681e63ccc8b306772b3db1063777b0edf0901ae6b2e2c3",
+      "cause": "Actual initial planner refused an unsupported prerequisite file observation. Rerun supplied independently read real file hashes and clarified that later existence is determined by file.ingest; no planner validation bypass."
+    }
+  ],
+  "read_only_audit": "All summary packages reconstructed exact messages/format/temperature/allocation; Unicode ranges matched actual session or accepted planning snapshot records; successful task source bytes matched verifier hashes.",
+  "limits": [
+    "Current prompt and configuration only; old summary requests are not rewritten.",
+    "The two successful initial paths were not rerun solely for unrelated test-input corrections.",
+    "Partial model responses can remain validated while summary runs reject concurrent edits or cancellation; those are not accepted summaries.",
+    "history_summary is an additive Bundle v1 phase that older readers may reject.",
+    "No WorldState, physical robot, distributed arbitration or Momo synchronization validation."
+  ]
+}

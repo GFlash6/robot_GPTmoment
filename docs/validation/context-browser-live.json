@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "new_model_calls": 0,
+  "source_report": ".runtime/context-browser-validation/87589858-1066-4434-88f1-84a119445cad/report.json",
+  "source_report_sha256": "966517587d930de78365ae23c7a46564eb73dee3144417ba0a28a8ea276ea800",
+  "report": {
+    "status": "passed",
+    "root": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/context-browser-validation/87589858-1066-4434-88f1-84a119445cad",
+    "seed": {
+      "summary": "76e6a269-bc5b-4b95-8d8f-48d7325c4911",
+      "goal": "29281d51-d534-4622-8660-9659ee2cc7b3",
+      "legacy": "2c0070a0-8449-45cc-88fe-22b929cb390b",
+      "bundle_id": "76e6a269-bc5b-4b95-8d8f-48d7325c4911",
+      "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/session-summary-validation/c5f8cb4e-15b9-4722-9220-117a16ab4009/ledger/ledger.sqlite",
+      "legacy_source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/memory-validation/83872251-288f-402a-b821-592ce3297033/ledger/ledger.sqlite",
+      "models": 8,
+      "ledger_hash": "0f9d98489ad4d4de07d161b0b5ab5f0181f64888e0bf50a02fe664b826e9b166"
+    },
+    "mock_used": false,
+    "simulation_used": false,
+    "new_model_calls": 0,
+    "page_errors": [],
+    "mutations": [],
+    "final_ledger_hash": "0f9d98489ad4d4de07d161b0b5ab5f0181f64888e0bf50a02fe664b826e9b166",
+    "checks": [
+      "actual context disclosure by keyboard",
+      "model switch isolation",
+      "actual legacy empty state",
+      "server disconnect retention",
+      "switch while disconnected clears old data",
+      "server restart recovery",
+      "actual copied-ledger hash corruption",
+      "desktop and mobile no overflow",
+      "no new model calls or ledger writes"
+    ]
+  },
+  "original_model_report": ".runtime/session-summary-validation/c5f8cb4e-15b9-4722-9220-117a16ab4009/report.json",
+  "original_model_report_sha256": "205cc72e6306fdfa6daaa4b3752e0629cacbf434c9cfea269d27089f212ab693",
+  "screenshots": [
+    {
+      "path": ".runtime/context-browser-validation/87589858-1066-4434-88f1-84a119445cad/desktop.png",
+      "sha256": "e0fe0788b751527343f89e4c04fea4e830587ec0ac15216ec16444ee52294f59"
+    },
+    {
+      "path": ".runtime/context-browser-validation/87589858-1066-4434-88f1-84a119445cad/mobile.png",
+      "sha256": "4834eb5ef8733f66a0b885e499258442ed46e7245483fdd0bd4b7c7ff481e09f"
+    },
+    {
+      "path": ".runtime/context-browser-validation/87589858-1066-4434-88f1-84a119445cad/desktop-context.png",
+      "sha256": "e59fc0934743a0ec827f9c5f479f75b771416508f818e273c0d1958f730f5f19"
+    },
+    {
+      "path": ".runtime/context-browser-validation/87589858-1066-4434-88f1-84a119445cad/mobile-context.png",
+      "sha256": "83076423b1d420af729bdd41982ca078675f6480f3ba4760e160cd53e2ca9877"
+    }
+  ],
+  "build": {
+    "status": "passed",
+    "existing_advisory": "main JS chunk exceeds 500 kB"
+  },
+  "limits": [
+    "Genuine historical model records copied to an isolated browser-validation ledger; no new model requests or execution.",
+    "Legacy model record copied unchanged from a separate genuine historical ledger; no invented history.",
+    "Integrity UI shows backend link/hash checks, not full request reconstruction, model correctness or physical completion.",
+    "Unrelated existing model-testing gateways were not started; existing widgets report unavailable.",
+    "Existing loopback access boundary; no new remote authentication or Momo graph synchronization."
+  ],
+  "finish_review": {
+    "disposition": "ship",
+    "reviewer": "context_ui_review",
+    "material_fixes": [],
+    "captures_opened": 4,
+    "scope": "Local model context evidence panel; stored associations and hash consistency only."
+  }
+}

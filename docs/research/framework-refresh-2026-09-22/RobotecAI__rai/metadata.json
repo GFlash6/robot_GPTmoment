@@ -1,0 +1,32 @@
+{
+  "repo": "RobotecAI/rai",
+  "retrieved_at": "2026-09-22T08:37:41.584277+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/RobotecAI/rai/6802d4073e8caa2ab72c5509fa1eeeb659663f64/README.md",
+      "sha256": "11d112a35a74030658deebbbc9b198f88c8ebacc8119e46892196feb41a4d7f2",
+      "retrieved_at": "2026-09-22T08:39:24.082694+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/RobotecAI/rai/6802d4073e8caa2ab72c5509fa1eeeb659663f64/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "retrieved_at": "2026-09-22T08:39:24.901640+00:00"
+    },
+    {
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/RobotecAI/rai/6802d4073e8caa2ab72c5509fa1eeeb659663f64/pyproject.toml",
+      "sha256": "75d06b23be54413170513f9f67b406a4783ea13fd999725fb40707d443a941a4",
+      "retrieved_at": "2026-09-22T08:39:25.482829+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    }
+  ],
+  "sha": "6802d4073e8caa2ab72c5509fa1eeeb659663f64",
+  "revision_method": "git ls-remote HEAD"
+}

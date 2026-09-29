@@ -1,0 +1,30 @@
+{
+  "repo": "OpenMind/OM1",
+  "retrieved_at": "2026-09-22T08:37:41.903112+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/OpenMind/OM1/84e00a1672d17d012c24ae6b300365594265bd37/README.md",
+      "sha256": "45f57c17c1bb770b02c2d7f56ec33b4d98d011f493234bb51168ba9fcccf746b",
+      "retrieved_at": "2026-09-22T08:39:24.620270+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/OpenMind/OM1/84e00a1672d17d012c24ae6b300365594265bd37/LICENSE",
+      "sha256": "346d8a3f9ea734e02cbce9ebcc9969b18f28242badd1078360168a09e0e2f37c",
+      "retrieved_at": "2026-09-22T08:39:25.240242+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "resource": "https://raw.githubusercontent.com/OpenMind/OM1/84e00a1672d17d012c24ae6b300365594265bd37/pyproject.toml",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "sha": "84e00a1672d17d012c24ae6b300365594265bd37",
+  "revision_method": "git ls-remote HEAD"
+}

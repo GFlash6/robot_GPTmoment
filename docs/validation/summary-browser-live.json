@@ -1,0 +1,234 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "console_errors": [],
+  "mobile_overflow": false,
+  "checks": [
+    "policy save without AI",
+    "pinned original",
+    "actual summary and source disclosure",
+    "actual planning input/output",
+    "worker hash",
+    "policy invalidates draft",
+    "reload restoration",
+    "source corruption visible"
+  ],
+  "actual_result": {
+    "evidence": [
+      {
+        "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+        "source": "asset:94a93951-550d-41b1-ac10-6fe30d769760"
+      }
+    ],
+    "execution_id": "44315e60-dedb-43f6-92d0-4af741360e68",
+    "output": {
+      "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+      "size": 2669,
+      "verified": true
+    },
+    "quiescent": true,
+    "status": "succeeded"
+  },
+  "source_report": ".runtime/summary-browser-validation/875bdaf1-f93a-44de-983d-f5fd87ff7c2a/report.json",
+  "source_report_sha256": "e218f8f8786d7d5a08e186eb231398755c876ffe09fb6d2fd03a604047cb60da",
+  "session_id": "39f4857f-5c3a-4278-8694-c6733f0f44ce",
+  "task_id": "e7e8fa64-796a-4bfc-9390-d3864d638307",
+  "model_response": {
+    "id": "a9b58594-503a-4c8c-80ae-f4d6e0614de8",
+    "actual_model": "qwen3.7-plus",
+    "response_id": "chatcmpl-6aa167dc-e8d2-9e60-b8b8-b66fc378e471",
+    "has_raw_response": true
+  },
+  "summary": {
+    "chunks": [
+      {
+        "index": 0,
+        "model_response_id": "a6961952-0919-48f6-8ee2-a9f213bdd2d8",
+        "source_parts": [
+          {
+            "content_hash": "64a7acb2d4d2fbc9b41e55de34cb5d79f0373042850799f49f5223a4b58d2cd2",
+            "end": 76,
+            "start": 0,
+            "turn_id": "9c1422f7-25cd-4583-b764-704248c1da4c"
+          },
+          {
+            "content_hash": "d7963fde57afcc536ff3bb36a45bf0896681de1652c0eac190cdddff723c570e",
+            "end": 164,
+            "start": 0,
+            "turn_id": "5f042ff6-2c57-49c6-a5e9-73a7945f7716"
+          },
+          {
+            "content_hash": "188144ca89f32a3c9700972121d2cee4e841bf686d29f68b6f4785cc2932a130",
+            "end": 1216,
+            "start": 0,
+            "turn_id": "6ab809d7-760e-4b00-bb9b-51d33bda7dbe"
+          },
+          {
+            "content_hash": "32be564f5e9abba2e8f64c0b8810736f0e6b31863399671010d6a63f3f34ec29",
+            "end": 97,
+            "start": 0,
+            "turn_id": "6574a9b2-d45c-4b71-8509-10ad35754f9f"
+          }
+        ]
+      }
+    ],
+    "content_authority": "model_summary_not_execution_evidence",
+    "covered_turns": [
+      {
+        "id": "9c1422f7-25cd-4583-b764-704248c1da4c",
+        "record_hash": "2a7f5f2a1ed0e916b1871b73c1d24b1482882ce57f5e9a685b3d77a665fc8772"
+      },
+      {
+        "id": "5f042ff6-2c57-49c6-a5e9-73a7945f7716",
+        "record_hash": "c6d1e77e44a80109edc1905d1c3841f4dd7f4ea19df7945ada7906fce84ffc2d"
+      },
+      {
+        "id": "6ab809d7-760e-4b00-bb9b-51d33bda7dbe",
+        "record_hash": "291e3a08af996930adb5e6202d0cd5679632936ba416d3abda2fefb8297b8bf5"
+      },
+      {
+        "id": "6574a9b2-d45c-4b71-8509-10ad35754f9f",
+        "record_hash": "b581e2bdfe65d3f7ecddbcb45ffcc99b3daee926784aefd378e4c67e339ed4a8"
+      }
+    ],
+    "created_at": 1790020141.0189574,
+    "id": "cd7b81ec-223a-4635-9b43-43835b94b8b1",
+    "keep_recent": 2,
+    "model_response_id": "a6961952-0919-48f6-8ee2-a9f213bdd2d8",
+    "model_response_ids": [
+      "a6961952-0919-48f6-8ee2-a9f213bdd2d8"
+    ],
+    "pinned_turn_ids": [
+      "792c3b56-74e8-4bd3-9841-c938fef2a1bf"
+    ],
+    "points": [
+      {
+        "text": "任务目标是归档指定的实际协议文件，依次调用 file.ingest 和 asset.verify。系统资产库存储位置已配置，无需指定其他目标路径，且任务不涉及机器人运动。",
+        "turn_ids": [
+          "9c1422f7-25cd-4583-b764-704248c1da4c"
+        ]
+      },
+      {
+        "text": "实际源文件路径明确指定为 /home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/summary-browser-validation/875bdaf1-f93a-44de-983d-f5fd87ff7c2a/protocol.md，要求保留该路径。",
+        "turn_ids": [
+          "5f042ff6-2c57-49c6-a5e9-73a7945f7716"
+        ]
+      },
+      {
+        "text": "提供的“技能接入协议”原文（涵盖注册、请求、响应及恢复机制等）及 loopback 数据服务说明仅作为项目背景，明确声明不是额外任务。",
+        "turn_ids": [
+          "6ab809d7-760e-4b00-bb9b-51d33bda7dbe",
+          "6574a9b2-d45c-4b71-8509-10ad35754f9f"
+        ]
+      }
+    ],
+    "session_id": "39f4857f-5c3a-4278-8694-c6733f0f44ce",
+    "source_revision": 7,
+    "summary_run_id": "65575597-fe3e-4113-b158-4097bb8d639a",
+    "version": 2
+  },
+  "context_manifest": {
+    "dropped": [],
+    "estimated_input_tokens": 8181,
+    "estimator": "utf8_bytes_v1",
+    "id": "435e26e2-00dc-4e48-b238-809fb18e6f5d",
+    "included": [
+      "goal",
+      "capabilities",
+      "session-summary",
+      "session"
+    ],
+    "input_token_limit": 32768,
+    "phase": "planning",
+    "renderer_version": "role-aware-v1",
+    "request_id": "c5f39019-f10e-4c83-a349-93bef729e65a",
+    "reserved_output_tokens": 2048,
+    "sources": [
+      {
+        "authority": "operator",
+        "evidence_ids": [],
+        "id": "goal",
+        "metadata": {},
+        "source": "goal_context"
+      },
+      {
+        "authority": "framework",
+        "evidence_ids": [],
+        "id": "capabilities",
+        "metadata": {},
+        "source": "skill_registry"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [],
+        "id": "session-summary",
+        "metadata": {
+          "covered_turns": [
+            {
+              "id": "9c1422f7-25cd-4583-b764-704248c1da4c",
+              "record_hash": "2a7f5f2a1ed0e916b1871b73c1d24b1482882ce57f5e9a685b3d77a665fc8772"
+            },
+            {
+              "id": "5f042ff6-2c57-49c6-a5e9-73a7945f7716",
+              "record_hash": "c6d1e77e44a80109edc1905d1c3841f4dd7f4ea19df7945ada7906fce84ffc2d"
+            },
+            {
+              "id": "6ab809d7-760e-4b00-bb9b-51d33bda7dbe",
+              "record_hash": "291e3a08af996930adb5e6202d0cd5679632936ba416d3abda2fefb8297b8bf5"
+            },
+            {
+              "id": "6574a9b2-d45c-4b71-8509-10ad35754f9f",
+              "record_hash": "b581e2bdfe65d3f7ecddbcb45ffcc99b3daee926784aefd378e4c67e339ed4a8"
+            }
+          ],
+          "model_response_id": "a6961952-0919-48f6-8ee2-a9f213bdd2d8",
+          "model_response_ids": [
+            "a6961952-0919-48f6-8ee2-a9f213bdd2d8"
+          ],
+          "pinned_turn_ids": [
+            "792c3b56-74e8-4bd3-9841-c938fef2a1bf"
+          ],
+          "record_hash": "ea23c2db4e88cd0531194889510ee563c381b94100b1298de190384513dc7c8e",
+          "summary_id": "cd7b81ec-223a-4635-9b43-43835b94b8b1"
+        },
+        "source": "session_summary"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [],
+        "id": "session",
+        "metadata": {
+          "revision": 9,
+          "session_id": "39f4857f-5c3a-4278-8694-c6733f0f44ce",
+          "snapshot_id": null
+        },
+        "source": "session_ledger"
+      }
+    ]
+  },
+  "screenshots": [
+    ".runtime/summary-browser-validation/875bdaf1-f93a-44de-983d-f5fd87ff7c2a/desktop-final.png",
+    ".runtime/summary-browser-validation/875bdaf1-f93a-44de-983d-f5fd87ff7c2a/mobile-final.png"
+  ],
+  "regression": {
+    "passed": 29,
+    "subtests_passed": 9
+  },
+  "recapture": {
+    "source_report": ".runtime/summary-browser-validation/875bdaf1-f93a-44de-983d-f5fd87ff7c2a/recapture.json",
+    "sha256": "f6c3d78cf6b2b0d853465a300a07ca170bc950d07f2036fcc3a09dec2eb636d6",
+    "status": "passed",
+    "source_restoration": "exact original first-turn content from passed proof; policy and summary unchanged",
+    "model_calls": 0,
+    "screenshots": [
+      "desktop-final.png",
+      "mobile-final.png"
+    ],
+    "execution_report_reference": "report.json"
+  },
+  "visual_review": {
+    "disposition": "ship",
+    "scope": "summary controls, provenance, mobile layout, corrected recent/pinned union copy"
+  }
+}

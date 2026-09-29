@@ -1,6 +1,7 @@
 """Typed, serializable context contracts for model-facing task reasoning."""
 
 from dataclasses import dataclass, field
+import re
 from typing import Any
 
 from .contracts import require
@@ -17,7 +18,7 @@ CONTEXT_KINDS = {
     "operator",
 }
 AUTHORITIES = {"framework", "operator", "data"}
-PHASES = {"planning", "replanning", "subplanning"}
+PHASES = {"planning", "replanning", "subplanning", "automation_diagnosis", "history_summary"}
 TASK_RELATIONS = {
     "decomposes_to",
     "depends_on",
@@ -27,6 +28,40 @@ TASK_RELATIONS = {
     "fallback_to",
     "blocked_by",
 }
+
+
+@dataclass(frozen=True)
+class AssetBinding:
+    """A reference to verified stored bytes and their exact catalog record, not a physical entity."""
+
+    asset_id: str
+    robot_id: str
+    record_hash: str
+    sha256: str
+    size: int
+    schema_version: int = 1
+
+    def __post_init__(self):
+        require(type(self.schema_version) is int and self.schema_version == 1,
+                "unsupported asset binding version")
+        require(isinstance(self.asset_id, str) and bool(self.asset_id.strip()), "asset binding id required")
+        require(isinstance(self.robot_id, str) and bool(self.robot_id) and '/' not in self.robot_id,
+                "asset binding robot required")
+        require(all(isinstance(value, str) and re.fullmatch('[0-9a-f]{64}', value)
+                    for value in (self.record_hash, self.sha256)), "invalid asset binding hash")
+        require(type(self.size) is int and self.size >= 0, "invalid asset binding size")
+
+    def as_dict(self):
+        return {'schema_version': self.schema_version, 'asset_id': self.asset_id,
+                'robot_id': self.robot_id, 'record_hash': self.record_hash,
+                'sha256': self.sha256, 'size': self.size}
+
+    @classmethod
+    def from_dict(cls, value):
+        require(isinstance(value, dict) and set(value) == {
+            'schema_version', 'asset_id', 'robot_id', 'record_hash', 'sha256', 'size'},
+            "invalid asset binding fields")
+        return cls(**value)
 
 
 @dataclass(frozen=True)
@@ -201,6 +236,7 @@ class ContextRequest:
     goal: GoalContext
     robot_id: str | None = None
     session_id: str | None = None
+    context_snapshot_id: str | None = None
     task_id: str | None = None
     revision: int = 0
     generation: int = 0
@@ -263,6 +299,8 @@ class ContextManifest:
     reserved_output_tokens: int
     estimator: str
     renderer_version: str
+    sources: tuple[dict, ...] = ()
+    provider_diagnostics: tuple[dict, ...] = ()
 
     def as_dict(self):
         return {
@@ -275,4 +313,6 @@ class ContextManifest:
             "reserved_output_tokens": self.reserved_output_tokens,
             "estimator": self.estimator,
             "renderer_version": self.renderer_version,
+            "sources": list(self.sources),
+            "provider_diagnostics": list(self.provider_diagnostics),
         }

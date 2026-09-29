@@ -1,21 +1,23 @@
 {
   "format": "momo-relation-assessment",
   "version": 1,
-  "generatedAt": "2026-09-11T17:02:26.946Z",
+  "generatedAt": "2026-09-22T02:39:24.239675+00:00",
   "workspaceKey": "workspace-robot-agent-framework",
-  "baseRevision": 151,
+  "baseRevision": 156,
   "projects": [
     {
       "projectKey": "project-robot-agent-framework",
       "zeroRelationDisposition": "requires_review",
-      "zeroRelationRationale": "上下文架构新增节点均位于 model-adapter 容器；本轮补齐其已验证的内部语义关系。",
+      "zeroRelationRationale": "当前会话与 ContextBuilder 和 GoalAnalyzer 有实际代码及真实模型验证；历史 QA history 依赖列为待清理。",
       "graphHealth": {
-        "semanticRelationCount": 47,
+        "semanticRelationCount": 50,
         "eligibleObjectCount": 40,
         "isolatedObjectKeys": [],
         "invalidRelationKeys": [],
         "zeroRelationWarning": false,
-        "staleEvidenceRelationKeys": []
+        "staleEvidenceRelationKeys": [
+          "relation-a2b14ca51b2d1d23"
+        ]
       },
       "candidates": [
         {
@@ -33,18 +35,18 @@
             {
               "sourceId": "robot_agent/model_methods.py",
               "path": "robot_agent/model_methods.py",
-              "fingerprint": "cb640ba6076a14dbe69c8b8f25f057dd0c121f1f9dd1e81932d50e429a9c05fd",
+              "fingerprint": "1c66a2e2f968c31c5a85910c7802a7afe3df20619eda3b1b95545fde1af69589",
               "claim": "methods-drive-goal-analysis",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
               "sourceId": "robot_agent/goal_analysis.py",
               "path": "robot_agent/goal_analysis.py",
-              "fingerprint": "93330f12381fc1f2df8d77df62e8e17b73e41ecb9a69cc00d0023b7c9e201305",
+              "fingerprint": "8fa89130128c67b8671b32f3378c76cf44b1391c2f543bd4e8cb780b0b4684b8",
               "claim": "methods-drive-goal-analysis",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -72,18 +74,18 @@
             {
               "sourceId": "robot_agent/goal_analysis.py",
               "path": "robot_agent/goal_analysis.py",
-              "fingerprint": "93330f12381fc1f2df8d77df62e8e17b73e41ecb9a69cc00d0023b7c9e201305",
+              "fingerprint": "8fa89130128c67b8671b32f3378c76cf44b1391c2f543bd4e8cb780b0b4684b8",
               "claim": "goal-analysis-drives-clarification",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
-              "sourceId": "tests/test_goal_analysis.py",
-              "path": "tests/test_goal_analysis.py",
-              "fingerprint": "511d5537912938e162c57db813c04ac150760da318ca35021499313f1abce71c",
+              "sourceId": "docs/validation/goal-context-live.json",
+              "path": "docs/validation/goal-context-live.json",
+              "fingerprint": "af49233258c4e908bc427925f04b6103543da2ff96c0cc2a4557bca8b943d164",
               "claim": "goal-analysis-drives-clarification",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -109,20 +111,20 @@
           },
           "evidence": [
             {
-              "sourceId": "robot_agent/goal_analysis.py",
-              "path": "robot_agent/goal_analysis.py",
-              "fingerprint": "93330f12381fc1f2df8d77df62e8e17b73e41ecb9a69cc00d0023b7c9e201305",
+              "sourceId": "robot_agent/sessions.py",
+              "path": "robot_agent/sessions.py",
+              "fingerprint": "44c77200fdd23167c80b0bd5420cb44a36ee1ca00850a38f388b0c7b2fb4947b",
               "claim": "goal-analysis-feeds-planning",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
-              "sourceId": "robot_agent/runtime.py",
-              "path": "robot_agent/runtime.py",
-              "fingerprint": "b890dcad484202e8b0d22c18438e2078ca242a0f93d40a482e16ac602d0ffd0a",
+              "sourceId": "docs/validation/completion-recovery-live.json",
+              "path": "docs/validation/completion-recovery-live.json",
+              "fingerprint": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
               "claim": "goal-analysis-feeds-planning",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -150,18 +152,18 @@
             {
               "sourceId": "robot_agent/context_models.py",
               "path": "robot_agent/context_models.py",
-              "fingerprint": "e395cf335e0f061f680477b2cfa9ef389446b5e6c9b76e7c80181f303359e811",
+              "fingerprint": "0ddb925f071b5c7577a308adcb34412c36d9216c3369f54a59b7f66d95bab882",
               "claim": "typed-context-feeds-builder",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
               "sourceId": "robot_agent/context_builder.py",
               "path": "robot_agent/context_builder.py",
-              "fingerprint": "45cd9e3b4b1800a3a4a300a6a50a9b8f64c7b962f8564a2a7c1c3127322e6148",
+              "fingerprint": "8d17c84ccd41afcfb1496fdc3d84a1b6c85bb3521ab3c592ab04bfa0abbc64c7",
               "claim": "typed-context-feeds-builder",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -187,20 +189,28 @@
           },
           "evidence": [
             {
-              "sourceId": "robot_agent/context_builder.py",
-              "path": "robot_agent/context_builder.py",
-              "fingerprint": "45cd9e3b4b1800a3a4a300a6a50a9b8f64c7b962f8564a2a7c1c3127322e6148",
+              "sourceId": "robot_agent/context_providers.py",
+              "path": "robot_agent/context_providers.py",
+              "fingerprint": "48bc0252e40b4809c7c12b3566808084136936bf47b1388128216f792f06ed47",
               "claim": "task-state-feeds-builder",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
-              "sourceId": "tests/test_context_framework.py",
-              "path": "tests/test_context_framework.py",
-              "fingerprint": "1fb05eef69e5e5391afbea2b851014a8614b1c22dc7b0dd262ac4d9d60b6e6bf",
+              "sourceId": "robot_agent/context_builder.py",
+              "path": "robot_agent/context_builder.py",
+              "fingerprint": "8d17c84ccd41afcfb1496fdc3d84a1b6c85bb3521ab3c592ab04bfa0abbc64c7",
               "claim": "task-state-feeds-builder",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
+            },
+            {
+              "sourceId": "docs/validation/completion-recovery-live.json",
+              "path": "docs/validation/completion-recovery-live.json",
+              "fingerprint": "64cee2c46ec4ff7b9b783dcd5078744829663b9249b8ce1157c0b4654e50bc10",
+              "claim": "task-state-feeds-builder",
+              "authority": "repository",
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -228,18 +238,18 @@
             {
               "sourceId": "robot_agent/runtime.py",
               "path": "robot_agent/runtime.py",
-              "fingerprint": "b890dcad484202e8b0d22c18438e2078ca242a0f93d40a482e16ac602d0ffd0a",
+              "fingerprint": "85e43b683005b13f577994287eac77fff02c54b6aff8a601fc3d0202d905cc65",
               "claim": "replan-uses-context-builder",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
               "sourceId": "robot_agent/planner.py",
               "path": "robot_agent/planner.py",
-              "fingerprint": "f0a5bd666ffa333e8dc2b85c10743a2d3eb4787a246a586cc55469e525d2b4ab",
+              "fingerprint": "445d1d5cc443655dd6e3a2585e74adea09255bd1579bd414cd3a6232fbee0692",
               "claim": "replan-uses-context-builder",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -265,20 +275,28 @@
           },
           "evidence": [
             {
-              "sourceId": "robot_agent/context_builder.py",
-              "path": "robot_agent/context_builder.py",
-              "fingerprint": "45cd9e3b4b1800a3a4a300a6a50a9b8f64c7b962f8564a2a7c1c3127322e6148",
+              "sourceId": "robot_agent/planner.py",
+              "path": "robot_agent/planner.py",
+              "fingerprint": "445d1d5cc443655dd6e3a2585e74adea09255bd1579bd414cd3a6232fbee0692",
               "claim": "context-builder-feeds-allocation",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
-              "sourceId": "robot_agent/model_context.py",
-              "path": "robot_agent/model_context.py",
-              "fingerprint": "67335a4f009c20b58e29cb4426cc1d0a37b974d62ad62116a2dded613415f7ae",
+              "sourceId": "robot_agent/model_call.py",
+              "path": "robot_agent/model_call.py",
+              "fingerprint": "c897222ae02d15dce39460b61a724ac5247cdad5569c7f2fa81ef94e260c01c7",
               "claim": "context-builder-feeds-allocation",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
+            },
+            {
+              "sourceId": "docs/validation/context-codec-live.json",
+              "path": "docs/validation/context-codec-live.json",
+              "fingerprint": "c6f5c8acc47609eccd6bbc71ddb86910556694d30c79ab431c4bc4d54ac4b0d7",
+              "claim": "context-builder-feeds-allocation",
+              "authority": "repository",
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -309,15 +327,15 @@
               "fingerprint": "c897222ae02d15dce39460b61a724ac5247cdad5569c7f2fa81ef94e260c01c7",
               "claim": "prepared-context-produces-manifest",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
               "sourceId": "robot_agent/planner.py",
               "path": "robot_agent/planner.py",
-              "fingerprint": "f0a5bd666ffa333e8dc2b85c10743a2d3eb4787a246a586cc55469e525d2b4ab",
+              "fingerprint": "445d1d5cc443655dd6e3a2585e74adea09255bd1579bd414cd3a6232fbee0692",
               "claim": "prepared-context-produces-manifest",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -345,18 +363,18 @@
             {
               "sourceId": "robot_agent/planner.py",
               "path": "robot_agent/planner.py",
-              "fingerprint": "f0a5bd666ffa333e8dc2b85c10743a2d3eb4787a246a586cc55469e525d2b4ab",
+              "fingerprint": "445d1d5cc443655dd6e3a2585e74adea09255bd1579bd414cd3a6232fbee0692",
               "claim": "manifest-persists-with-plan-history",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             },
             {
-              "sourceId": "tests/test_context_framework.py",
-              "path": "tests/test_context_framework.py",
-              "fingerprint": "1fb05eef69e5e5391afbea2b851014a8614b1c22dc7b0dd262ac4d9d60b6e6bf",
+              "sourceId": "docs/validation/context-codec-live.json",
+              "path": "docs/validation/context-codec-live.json",
+              "fingerprint": "c6f5c8acc47609eccd6bbc71ddb86910556694d30c79ab431c4bc4d54ac4b0d7",
               "claim": "manifest-persists-with-plan-history",
               "authority": "repository",
-              "observedAt": "2026-09-12T08:00:00.000Z"
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
             }
           ],
           "alternatives": [],
@@ -368,6 +386,163 @@
           "changesSafetyBoundary": false,
           "autoEligible": true,
           "appliedAt": "2026-09-11T17:02:26.946Z"
+        },
+        {
+          "claimKey": "persistent-session-supplies-context",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-dece8cffef80fdbc",
+            "sourceKey": "model-flow-gap-session",
+            "targetKey": "model-flow-context-builder",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "robot_agent/sessions.py",
+              "path": "robot_agent/sessions.py",
+              "fingerprint": "44c77200fdd23167c80b0bd5420cb44a36ee1ca00850a38f388b0c7b2fb4947b",
+              "claim": "persistent-session-supplies-context",
+              "authority": "repository",
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
+            },
+            {
+              "sourceId": "robot_agent/context_builder.py",
+              "path": "robot_agent/context_builder.py",
+              "fingerprint": "8d17c84ccd41afcfb1496fdc3d84a1b6c85bb3521ab3c592ab04bfa0abbc64c7",
+              "claim": "persistent-session-supplies-context",
+              "authority": "repository",
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-21T18:02:06.342Z"
+        },
+        {
+          "claimKey": "persistent-session-drives-analysis",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-4050ff888f740338",
+            "sourceKey": "model-flow-gap-session",
+            "targetKey": "model-flow-goal-analysis",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "robot_agent/sessions.py",
+              "path": "robot_agent/sessions.py",
+              "fingerprint": "44c77200fdd23167c80b0bd5420cb44a36ee1ca00850a38f388b0c7b2fb4947b",
+              "claim": "persistent-session-drives-analysis",
+              "authority": "repository",
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
+            },
+            {
+              "sourceId": "docs/validation/goal-context-live.json",
+              "path": "docs/validation/goal-context-live.json",
+              "fingerprint": "af49233258c4e908bc427925f04b6103543da2ff96c0cc2a4557bca8b943d164",
+              "claim": "persistent-session-drives-analysis",
+              "authority": "repository",
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-21T18:02:06.342Z"
+        },
+        {
+          "claimKey": "session-needs-history-integration",
+          "action": "remove",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-a2b14ca51b2d1d23",
+            "sourceKey": "model-flow-gap-session",
+            "targetKey": "model-flow-qa-history",
+            "type": "depends_on"
+          },
+          "evidence": [
+            {
+              "sourceId": "robot_agent/sessions.py",
+              "path": "robot_agent/sessions.py",
+              "fingerprint": "df8a00312aa45095e3ea58746c7bc94ae3dd89fd4d6918fbf3f210dac78b27e6",
+              "claim": "当前会话使用 Store sessions 而不依赖 model-tests.sqlite",
+              "authority": "repository",
+              "observedAt": "2026-09-21T18:24:21.391688+00:00"
+            },
+            {
+              "sourceId": "robot_agent_observer/model_test.py",
+              "path": "robot_agent_observer/model_test.py",
+              "fingerprint": "ca53e6871cb2c7fa1547e669a5fbc8f2e41c90c29cf47108c759ff3ea17332d1",
+              "claim": "当前会话使用 Store sessions 而不依赖 model-tests.sqlite",
+              "authority": "repository",
+              "observedAt": "2026-09-21T18:01:28.864036+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [
+            "历史计划依赖与当前独立 sessions 账本不符；保留移除提案，不自动删除。"
+          ],
+          "status": "proposed",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": false
+        },
+        {
+          "claimKey": "verified-memory-feeds-context",
+          "action": "add",
+          "confidence": "high",
+          "confirmedDecision": false,
+          "relation": {
+            "key": "relation-0d73e0c279ff17aa",
+            "sourceKey": "model-flow-gap-summary",
+            "targetKey": "model-flow-context-builder",
+            "type": "supports"
+          },
+          "evidence": [
+            {
+              "sourceId": "robot_agent/context_providers.py",
+              "path": "robot_agent/context_providers.py",
+              "fingerprint": "48bc0252e40b4809c7c12b3566808084136936bf47b1388128216f792f06ed47",
+              "claim": "verified-memory-feeds-context",
+              "authority": "repository",
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
+            },
+            {
+              "sourceId": "docs/validation/memory-context-live.json",
+              "path": "docs/validation/memory-context-live.json",
+              "fingerprint": "7e1b82e2392f5632c63f17c7e201c31b5270b3d52e2be7127f8c7a216a608419",
+              "claim": "verified-memory-feeds-context",
+              "authority": "repository",
+              "observedAt": "2026-09-22T02:39:24.239675+00:00"
+            }
+          ],
+          "alternatives": [],
+          "blockingReasons": [],
+          "status": "auto_applied",
+          "changesBoundary": false,
+          "changesOwnership": false,
+          "changesPermission": false,
+          "changesSafetyBoundary": false,
+          "autoEligible": true,
+          "appliedAt": "2026-09-21T18:24:21.448Z"
         }
       ]
     }

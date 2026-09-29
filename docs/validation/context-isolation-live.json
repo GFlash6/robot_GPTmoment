@@ -1,0 +1,188 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/memory-validation/2b11deb4-7172-44eb-9c70-4ca081601c4a/report.json",
+  "source_report_sha256": "a911b12a1a60043b6650b424fae1bd29381eee1488232ddfeb7eae757d702b7d",
+  "regression": "22 passed in 8.44s",
+  "live_test": "1 passed in 68.89s",
+  "task_id": "4c55f788-b43a-43a7-8008-c1fcf032a48c",
+  "task_status": "succeeded",
+  "actual_result": {
+    "evidence": [
+      {
+        "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+        "source": "asset:17824834-4b97-406e-a8d0-305ac454acfd"
+      }
+    ],
+    "execution_id": "66a561ed-7af0-4da8-812b-67d1179a4bcd",
+    "output": {
+      "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+      "size": 2669,
+      "verified": true
+    },
+    "quiescent": true,
+    "status": "succeeded"
+  },
+  "expired_memory_command": {
+    "command_id": "73fc7ba678c16a42539c205d852fe5fa31739af3a28dde3abd0cb8f0dd79d540",
+    "status": "rejected",
+    "error": {
+      "code": "INVALID_STATE",
+      "message": "context memory expired"
+    }
+  },
+  "model_records": [
+    {
+      "id": "3f838740-78bb-4988-a28f-b8a354687991",
+      "method": "goal_analysis",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-13e585ee-8bbd-96b4-b7dc-6390ee0aeeb4",
+      "status": "validated",
+      "request_sha256": "faea9c2b4a6a39194c7ce02397cd4871c0a11f27bd230da7f77fc3570c4f854f",
+      "raw_sha256": "6c7aa0419c868ab080ace805bf067bc31e62ec1885cae4c80bf3e5c76c08b946"
+    },
+    {
+      "id": "7be0e557-bdc2-4afa-86a4-ace7daa8e77b",
+      "method": "planning",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-cc2f2422-038b-90be-a6ff-dce6dfed2cab",
+      "status": "validated",
+      "request_sha256": "d6a268d456030098dd3bb6e3b49c0e604d955fb68b4eb8ddaeee997546320b73",
+      "raw_sha256": "5c2b84441e9437b3da40f5069075b9f950a44e0ba84909ac05ab43175b2ce7d8",
+      "context_manifest_id": "3842afb8-9201-4ff1-af11-8122ff4a0915",
+      "provider_diagnostics": [
+        {
+          "dropped": [],
+          "fragment_ids": [
+            "goal",
+            "capabilities"
+          ],
+          "included": [
+            "goal",
+            "capabilities"
+          ],
+          "provider": "goal-capabilities",
+          "status": "collected"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [],
+          "included": [],
+          "provider": "task-state",
+          "status": "empty"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [
+            "session"
+          ],
+          "included": [
+            "session"
+          ],
+          "provider": "session",
+          "status": "collected"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [
+            "memory:46a73e2a-06b4-4907-8035-b0efff332d7a"
+          ],
+          "included": [
+            "memory:46a73e2a-06b4-4907-8035-b0efff332d7a"
+          ],
+          "provider": "memory",
+          "status": "collected"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [],
+          "included": [],
+          "provider": "assets",
+          "status": "empty"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [],
+          "included": [],
+          "provider": "selection",
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "id": "8db93f3d-b7a8-4dfb-b697-fd2e88f454be",
+      "method": "planning",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-d84e1f25-ad7e-9a50-8661-4b7f36c6e2f8",
+      "status": "validated",
+      "request_sha256": "d6a268d456030098dd3bb6e3b49c0e604d955fb68b4eb8ddaeee997546320b73",
+      "raw_sha256": "344c4b6b3a1b7afd361a032fefb634205de20abed311473307be7f180dce96ff",
+      "context_manifest_id": "109ff029-2349-4db0-8a07-73b56cbea6df",
+      "provider_diagnostics": [
+        {
+          "dropped": [],
+          "fragment_ids": [
+            "goal",
+            "capabilities"
+          ],
+          "included": [
+            "goal",
+            "capabilities"
+          ],
+          "provider": "goal-capabilities",
+          "status": "collected"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [],
+          "included": [],
+          "provider": "task-state",
+          "status": "empty"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [
+            "session"
+          ],
+          "included": [
+            "session"
+          ],
+          "provider": "session",
+          "status": "collected"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [
+            "memory:46a73e2a-06b4-4907-8035-b0efff332d7a"
+          ],
+          "included": [
+            "memory:46a73e2a-06b4-4907-8035-b0efff332d7a"
+          ],
+          "provider": "memory",
+          "status": "collected"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [],
+          "included": [],
+          "provider": "assets",
+          "status": "empty"
+        },
+        {
+          "dropped": [],
+          "fragment_ids": [],
+          "included": [],
+          "provider": "selection",
+          "status": "empty"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Real file execution, not robot motion validation",
+    "Provider input isolation is not a plugin sandbox",
+    "Persisted Provider diagnostics cover planning and replanning; not every model method",
+    "Empty providers are not classified as a specific missing-data reason"
+  ]
+}

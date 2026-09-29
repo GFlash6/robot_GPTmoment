@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "configured_model": "qwen3.7-plus",
+  "mock_used": false,
+  "simulation_used": false,
+  "task_id": "3c04f177-c449-4f85-ae76-36e9833ec9eb",
+  "snapshot_id": "ca043423-667f-4dd0-9c6b-da6d1b5ea8da",
+  "model_response_id": "19b8b5fc-fcf5-4108-b4a8-499a8ff118dd",
+  "provider_response_id": "chatcmpl-da8b63f0-baa1-9dfe-9602-2885b7cc8fb0",
+  "context_manifest": {
+    "dropped": [],
+    "estimated_input_tokens": 10517,
+    "estimator": "utf8_bytes_v1",
+    "id": "2743bcb6-225c-47e1-aa6c-880eb1337aa2",
+    "included": [
+      "goal",
+      "task-state",
+      "capabilities",
+      "session",
+      "memory:f67a54cf-6815-4b87-a303-eb05309ecab7"
+    ],
+    "input_token_limit": 32768,
+    "phase": "replanning",
+    "renderer_version": "role-aware-v1",
+    "request_id": "f96fd726-744c-406e-944e-c895f1ec598d",
+    "reserved_output_tokens": 2048,
+    "sources": [
+      {
+        "authority": "operator",
+        "evidence_ids": [],
+        "id": "goal",
+        "metadata": {},
+        "source": "goal_context"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [],
+        "id": "task-state",
+        "metadata": {},
+        "source": "runtime_ledger"
+      },
+      {
+        "authority": "framework",
+        "evidence_ids": [],
+        "id": "capabilities",
+        "metadata": {},
+        "source": "frozen_skill_catalog"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [],
+        "id": "session",
+        "metadata": {
+          "revision": 3,
+          "session_id": "de7cc2f2-6c65-4776-8062-45da158edd19",
+          "snapshot_id": "ca043423-667f-4dd0-9c6b-da6d1b5ea8da"
+        },
+        "source": "session_ledger"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [
+          "52d4db5d-59b0-487d-8ac9-1857410d2c28"
+        ],
+        "id": "memory:f67a54cf-6815-4b87-a303-eb05309ecab7",
+        "metadata": {
+          "record_hash": "3a383cc6f2d87d01925495810bfd7dd72cbb70f6d6df9ec75b1b23dff1c8550f",
+          "valid_until": null,
+          "verified_at": 1790016217.8981712
+        },
+        "source": "scoped_memory_catalog"
+      }
+    ]
+  },
+  "actual_result": {
+    "evidence": [
+      {
+        "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+        "source": "asset:4c0effda-3ae0-480e-ab07-d83b164d49b2"
+      }
+    ],
+    "execution_id": "3ae00163-0ddd-4930-a3e5-f580fa9942f0",
+    "output": {
+      "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+      "size": 2669,
+      "verified": true
+    },
+    "quiescent": true,
+    "status": "succeeded"
+  },
+  "source_report": ".runtime/replanning-context-validation/4e461f4a-d72d-4e35-90d8-83e8454a1699/report.json",
+  "source_report_sha256": "3fdcd2c98390de3edde906dc8966e263ede2195bfad3cc8604cb457b9162f9d9",
+  "scope": "Actual file disappearance -> failed skill -> actual model recovery with submitted session/memory -> worker execution and hash verification",
+  "regression": {
+    "passed": 29,
+    "subtests_passed": 9
+  },
+  "failed_test_report": ".runtime/replanning-context-validation/cbdfe5d3-1b46-45b8-94b0-1f3517ffbcca/report.json"
+}

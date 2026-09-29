@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "configured_model": "qwen3.7-plus",
+  "source": "docs/SKILL_PROTOCOL.md",
+  "expected_sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+  "memory_id": "6e52e27d-1e64-4d88-aee3-6e9506a85edf",
+  "task_id": "f62c90fa-0902-420f-9cf3-dac1c8779e79",
+  "session_id": "d7191d21-f8b0-486d-8c62-cec8a64bf053",
+  "model_records": [
+    {
+      "id": "294c111a-006e-4c63-9e9b-25d382d6a121",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-d7c26b63-08bd-9211-a7e3-52489be85752"
+    },
+    {
+      "id": "7ba56889-101b-4de8-8bd6-60eb072503dd",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-b417f135-c1ed-9931-80c7-56103350254f"
+    },
+    {
+      "id": "a9deb807-7735-49cc-9fe2-d8de65037818",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-d395f5b7-4efb-988e-9538-9e18338b7221"
+    }
+  ],
+  "expired_memory_command": {
+    "command_id": "ceb897325b3f9cf1c5f9442ab4def5928be97427c7e343709b9d1712985a79d4",
+    "status": "rejected",
+    "error": {
+      "code": "INVALID_STATE",
+      "message": "context memory expired"
+    }
+  },
+  "source_report": ".runtime/memory-validation/ef35c4cd-5609-480f-8c6e-4a211aaff70e/report.json",
+  "source_report_sha256": "ecf6a288093f8315c8c39789821d251d0be15a6f6aac5412eecb8bc225a76e70",
+  "scope": "real memory -> real model plan -> worker file/hash; second real draft rejected after annotation expiry",
+  "mock_used": false,
+  "simulation_used": false,
+  "regression": {
+    "passed": 28,
+    "subtests_passed": 9
+  }
+}

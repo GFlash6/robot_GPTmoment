@@ -1,0 +1,38 @@
+{
+  "purpose": "Recorded actual model plan rejected by output-reference validation; not a substitute model response",
+  "actual_model": "qwen3.7-plus",
+  "response_id": "chatcmpl-22fec482-ab7a-9c8c-a6f8-11c9509799ac",
+  "source_ledger": ".runtime/memory-validation/85e95c48-a0b6-4f43-a3c8-38093d24ea3d/ledger",
+  "plan": {
+    "steps": [
+      {
+        "args": {
+          "metadata": {
+            "encoding": "utf8",
+            "kind": "document",
+            "robot_id": "r1",
+            "source": "memory-selected-document"
+          },
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/memory-validation/85e95c48-a0b6-4f43-a3c8-38093d24ea3d/skill-protocol.md"
+        },
+        "deps": [],
+        "id": "step_1",
+        "skill": "file.ingest"
+      },
+      {
+        "args": {
+          "asset_id": {
+            "$ref": "step_1.output.asset_id"
+          }
+        },
+        "deps": [
+          "step_1"
+        ],
+        "id": "step_2",
+        "skill": "asset.verify"
+      }
+    ],
+    "verification": "step_2"
+  },
+  "actual_failure": "missing field: output.asset_id"
+}

@@ -11,3 +11,44 @@
 截图由浏览器读取上述实际记录后保存：[总览](validation/ui-overview.png)、[任务图](validation/ui-task.png)。截图仅记录验证时刻，实时数据以 API 返回为准。
 
 仍未验证真实模型成功路径和机器人动作；本轮界面检查不改变这一结论。未提供任务编辑/控制、3D 点云地图预览、传感器视频播放、机器人心跳、远程认证或超大账本性能验收。它们记录在 OPEN_QUESTIONS.md。
+
+
+## 2026-09-22 任务协作
+
+新增工作台使用实际应用服务、账本和环境配置的真实模型。`ui/scripts/test-application-ui.mjs` 验证图节点选择、会话恢复、实际模型解释；`--execute-only` 验证页面创建目标、分析、草稿提交和实际 worker 文件执行。没有 route mock。证据指纹见 `docs/validation/application-layer-2026-09-22.json`，截图在对应运行目录的 browser/desktop.png 与 browser/mobile.png。操作凭据在截图前清空。既有只读观察 API 仍保持 GET-only。
+
+## 工作台记忆选择的实际浏览器验收
+
+`node ui/scripts/test-memory-ui.mjs` 使用实际应用服务、SQLite、环境真实模型和 worker，通过关键词检索、空结果、勾选绑定、清除、草稿失效及新会话隔离验证。核对模型实际输入中包含记忆路径与 Manifest 引用、实际响应计划使用该路径、worker 最终哈希与真实源文件一致。TypeScript/Vite 构建通过；桌面1440px/移动390px截图已保存，移动端无横向溢出、浏览器无 pageerror。证据见 [memory-browser-live.json](validation/memory-browser-live.json)。
+
+初次完整运行在最后的新会话输入定位检查超时；已增加目标输入的显式标签关联，并在新会话清空旧输入，重新运行完整模型/执行链通过。原失败报告保留在 `.runtime/memory-browser-validation/e2bf5376-e558-4cc8-8cff-b76a9e1aea4d/report.json`。无 mock、仿真；不代表真实机器人动作验收。
+
+## 工作台历史摘要与预算
+
+`node ui/scripts/test-summary-ui.mjs` 完整通过：实际会话/文档、真实浏览器保存策略（零模型调用）、固定消息原文、真实模型摘要及来源查看、后续实际模型规划和 worker 文件归档/哈希核验。策略改变撤销旧草稿；页面重载恢复策略与摘要；实际修改覆盖消息后显示摘要失效且保留原始会话。没有mock或仿真。
+
+29项相关回归及9项子测试通过，TypeScript/Vite构建通过。1440px桌面/390px移动端无横向溢出、无pageerror。独立界面审阅要求修正近期数量与固定消息重叠关系的文案，已修正并重新拍摄，两项最终截图通过 scoped ship；重新拍摄未调用模型，仅从既有真实验证记录恢复被负向测试修改的原始消息内容。
+
+证据：[summary-browser-live.json](validation/summary-browser-live.json)。初始完整执行报告与最终截图重拍记录分别保留，不改写原有模型/执行结果。
+
+
+## 自动诊断工作台
+
+运行 `node ui/scripts/test-automations-ui.mjs` 使用真实应用服务、实际文件失败和环境模型，覆盖规则创建、预算、排队、来源损坏拒绝、显式重新诊断、实际错误引用、暂停/启用及刷新恢复。首次完整记录及最终桌面/手机截图见 [automation-browser-live.json](validation/automation-browser-live.json)。最终样式修正后复用实际账本只读复拍，没有重复模型调用；实际终止服务后刷新仍保留已读诊断。复拍脚本的已退出子进程清理问题已修正并重新验证，重复验证未新增截图或模型调用。
+
+
+工作台事件增量：已接通任务选择、每页 50 条、手动后续页及读完后的增量轮询；断连保留记录，切换任务/凭据清理旧上下文。真实浏览器验证使用已有实际模型任务的账本副本（17 条事件）及实际暂停/恢复和文件执行产生的 69 条事件，验证两页加载、服务重启、去重及权限上下文清理；浏览器未新增模型或执行记录。构建通过，独立界面审阅对列出的可读性修正给出 ship。证据见 [event-browser-live.json](validation/event-browser-live.json)。本次不增加模型生成或真机验收声明。
+# 模型上下文展示增量
+
+`ui/scripts/test-context-ui.mjs` 使用既有真实模型账本的独立 SQLite 备份，并复制一条未保存上下文包的真实历史模型记录。实际浏览器验证键盘展开、模型切换隔离、历史空状态、真实观察服务断开后的保留提示、断连期间切换清除旧数据、服务重启恢复，以及对副本真实修改引起的包哈希错误提示。
+
+桌面 1440px 与手机 390px 截图包含完整页面及新增上下文区域；页面无水平溢出或脚本异常。浏览器没有写请求，恢复测试注入后账本的完整逻辑内容哈希与初始副本一致。模型测试网关未启动，原有测试组件如实显示不可用。本轮新增模型调用为 0，不把历史证据查询算作新的 AI 或机器人验收。报告、截图和界面审查状态见 [context-browser-live.json](validation/context-browser-live.json)。
+
+
+## 上下文双记录比较增量
+
+真实浏览器脚本：`node ui/scripts/test-context-diff-ui.mjs`。脚本从已完成的真实模型规划/恢复账本建立 SQLite 副本，另复制一条未改动的真实旧模型记录，启动实际观察服务并运行 Chromium；不拦截网络请求或替换响应。使用 5 条真实历史记录，新增模型调用为 0。
+
+验证实际基准固定、手工 ID 应用、当前记录切换、正反向/自身比较及预算/来源内容；通过真实停止/重启服务检查断连保留和身份切换隔离，直接损坏隔离副本检查哈希异常。原始记录恢复后，最终逻辑账本哈希与初始值相同；没有浏览器写请求或页面异常。1440px 桌面和 390px 手机均无页面横向溢出，保存全页及比较区域截图。构建通过，保留既有大包警告；detector 单次检查无问题。独立审查为 ship，四张截图有效、没有实质修正；审查范围仅新增比较区域，行为依据上述浏览器报告。见 [context-diff-browser-live.json](validation/context-diff-browser-live.json)。
+
+现有模型测试网关未启动，其旧组件显示不可用；不将本次只读浏览器验证描述为重新执行了模型或机器人任务。

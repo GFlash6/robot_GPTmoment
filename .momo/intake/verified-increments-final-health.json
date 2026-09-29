@@ -1,0 +1,20 @@
+{
+  "workspaceKey": "workspace-robot-agent-framework",
+  "revision": 156,
+  "projects": [
+    {
+      "projectKey": "project-robot-agent-framework",
+      "semanticRelationCount": 50,
+      "eligibleObjectCount": 40,
+      "isolatedObjectKeys": [],
+      "invalidRelationKeys": [],
+      "zeroRelationWarning": false,
+      "staleEvidenceRelationKeys": [
+        "relation-a2b14ca51b2d1d23"
+      ],
+      "zeroRelationDisposition": "requires_review",
+      "zeroRelationRationale": "当前会话与 ContextBuilder 和 GoalAnalyzer 有实际代码及真实模型验证；历史 QA history 依赖列为待清理。",
+      "effectiveZeroRelationWarning": false
+    }
+  ]
+}

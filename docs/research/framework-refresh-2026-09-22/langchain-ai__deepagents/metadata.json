@@ -1,0 +1,36 @@
+{
+  "repo": "langchain-ai/deepagents",
+  "retrieved_at": "2026-09-22T08:37:42.229167+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/langchain-ai/deepagents/d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f/README.md",
+      "sha256": "569c79f865abd0d677a71e83ba5c3b971318146a4421e3851a0e25ee2d3b1146",
+      "retrieved_at": "2026-09-22T08:39:25.730812+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/langchain-ai/deepagents/d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f/LICENSE",
+      "sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478",
+      "retrieved_at": "2026-09-22T08:39:26.533357+00:00"
+    },
+    {
+      "path": "libs/deepagents/pyproject.toml",
+      "url": "https://raw.githubusercontent.com/langchain-ai/deepagents/d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f/libs/deepagents/pyproject.toml",
+      "sha256": "d9855bf92420b7226593185ff7bfc75c86838fe224568e49f45a41580b11e1fa",
+      "retrieved_at": "2026-09-22T08:39:28.062257+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "resource": "https://raw.githubusercontent.com/langchain-ai/deepagents/d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f/pyproject.toml",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "sha": "d4e1fb3fedd56bb9bb43a3c1c4021c3340a8710f",
+  "revision_method": "git ls-remote HEAD"
+}

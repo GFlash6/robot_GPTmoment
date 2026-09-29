@@ -1,0 +1,191 @@
+{
+  "status": "passed_after_reproduced_cross_action_collision_fix",
+  "mock_used": false,
+  "simulation_used": false,
+  "defect_reproduction": "Before fix, automation.create then session.create with one subject/key both persisted; regression failed DID NOT RAISE ActionError.",
+  "implementation": "One transactional owner check across existing commands/application_requests and three historical automation request hashes; no ID migration.",
+  "regression": {
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q tests/test_action_idempotency.py tests/test_action_discovery.py tests/test_application_actions.py tests/test_completion_contract.py",
+    "result": "25 passed in 11.10s"
+  },
+  "live": {
+    "command": "RUN_LIVE_MODEL_TESTS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q -s tests/test_automations_live.py::test_real_event_diagnosis_survives_queue_restart_without_duplicate_calls",
+    "result": "1 passed in 35.49s",
+    "source_report": ".runtime/automation-validation/40f87372-aaf1-40b5-95b4-a4f3534a9e9c/report.json",
+    "source_report_sha256": "12b427988309ba18de5e594634366082fda293237d45a0f8dbc143801388299a",
+    "report": {
+      "configured_model": "qwen3.7-plus",
+      "mock_used": false,
+      "simulation_used": false,
+      "context_evidence": {
+        "record_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+        "bundle_hash": "6797cdb8e1a44e327a11dd71524793e80704a9fdb017bc4ad9e3cc896c8c7df3",
+        "manifest_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+        "reconstruction": "exact_messages_response_format_and_allocation",
+        "event_snapshot_match": true
+      },
+      "status": "passed",
+      "rule": {
+        "created_at": 1790044203.0439703,
+        "cursor": 9,
+        "effect": "explain_event",
+        "enabled": true,
+        "enqueued": 1,
+        "id": "3262ce881140fe5ba4ddacbdadbd456ad33952913ad41f0f53a81f1ea90a26c9",
+        "max_runs": 1,
+        "question": "请解释实际文件归档失败的原因，引用事件和执行记录。说明哪些是已记录事实、哪些仍无法确定；不要声称已恢复。",
+        "revision": 0,
+        "robot_id": "r1",
+        "subject": "local:gflash",
+        "trigger": "execution_result.failed"
+      },
+      "run": {
+        "automation_id": "3262ce881140fe5ba4ddacbdadbd456ad33952913ad41f0f53a81f1ea90a26c9",
+        "created_at": 1790044203.2025495,
+        "event": {
+          "data": "{\"error\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/40f87372-aaf1-40b5-95b4-a4f3534a9e9c/19ed594a-83c9-4bd1-b439-4bbae7c0bfa8.md'\", \"evidence\": [{\"error_type\": \"FileNotFoundError\", \"source\": \"local:file.ingest\"}], \"execution_id\": \"276d914b-6eed-422b-9f26-a3f3d978a97c\", \"output\": {}, \"quiescent\": true, \"status\": \"failed\"}",
+          "seq": 9,
+          "task": "0c197beb-1dca-44bc-bdc5-0631ed9d4f94",
+          "ts": 1790044203.086675,
+          "type": "execution_result"
+        },
+        "event_hash": "f5ecf2013144dde53a7b04c816a93983656bd940c1de0592698645aba16dee9c",
+        "execution": {
+          "args": {
+            "metadata": {
+              "encoding": "utf8",
+              "kind": "document",
+              "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/40f87372-aaf1-40b5-95b4-a4f3534a9e9c/19ed594a-83c9-4bd1-b439-4bbae7c0bfa8.md"
+            },
+            "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/40f87372-aaf1-40b5-95b4-a4f3534a9e9c/19ed594a-83c9-4bd1-b439-4bbae7c0bfa8.md"
+          },
+          "created_at": 1790044203.0814152,
+          "id": "276d914b-6eed-422b-9f26-a3f3d978a97c",
+          "result": {
+            "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/40f87372-aaf1-40b5-95b4-a4f3534a9e9c/19ed594a-83c9-4bd1-b439-4bbae7c0bfa8.md'",
+            "evidence": [
+              {
+                "error_type": "FileNotFoundError",
+                "source": "local:file.ingest"
+              }
+            ],
+            "execution_id": "276d914b-6eed-422b-9f26-a3f3d978a97c",
+            "output": {},
+            "quiescent": true,
+            "status": "failed"
+          },
+          "skill": "file.ingest",
+          "status": "failed",
+          "step": "ingest",
+          "task_id": "0c197beb-1dca-44bc-bdc5-0631ed9d4f94"
+        },
+        "execution_hash": "6ad02d205c37be2a73cbe6aaa7654c640d910837da323bc63f2d9f8349a1ab67",
+        "finished_at": 1790044238.2299583,
+        "id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+        "model_response_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+        "question": "请解释实际文件归档失败的原因，引用事件和执行记录。说明哪些是已记录事实、哪些仍无法确定；不要声称已恢复。",
+        "result": {
+          "explanation": {
+            "observed_error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/40f87372-aaf1-40b5-95b4-a4f3534a9e9c/19ed594a-83c9-4bd1-b439-4bbae7c0bfa8.md'",
+            "record_refs": [
+              "event:9",
+              "execution:276d914b-6eed-422b-9f26-a3f3d978a97c"
+            ],
+            "summary": "根据事件 event:9 和执行记录 execution:276d914b-6eed-422b-9f26-a3f3d978a97c，file.ingest 技能在执行文件归档步骤时失败。已记录的事实是：系统尝试读取指定路径的 .md 文件时抛出了 FileNotFoundError。无法确定的部分（假设）包括：该文件为何不存在（可能是前置流程未成功生成该文件、路径参数配置错误，或是文件被意外删除）。当前任务状态为失败，未发生恢复或成功执行。",
+            "unknowns": [
+              "文件缺失的根本原因（如前置步骤未生成、路径配置错误或文件被意外删除）",
+              "该文件是否曾经存在于目标路径中",
+              "是否存在并发进程移动或清理了该文件"
+            ]
+          },
+          "is_execution_evidence": false,
+          "model_response_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5"
+        },
+        "robot_id": "r1",
+        "rule_revision": 0,
+        "started_at": 1790044203.4553227,
+        "status": "completed",
+        "subject": "local:gflash"
+      },
+      "actual_model_response": {
+        "id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+        "actual_model": "qwen3.7-plus",
+        "response_id": "chatcmpl-e0eef9e8-5262-963c-ae56-a2f4dd87d9e4"
+      },
+      "context_manifest": {
+        "dropped": [],
+        "estimated_input_tokens": 2343,
+        "estimator": "utf8_bytes_v1",
+        "id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+        "included": [
+          "failure-event"
+        ],
+        "input_token_limit": 32768,
+        "phase": "automation_diagnosis",
+        "provider_diagnostics": [],
+        "renderer_version": "role-aware-v1",
+        "request_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+        "reserved_output_tokens": 2048,
+        "sources": [
+          {
+            "authority": "data",
+            "evidence_ids": [
+              "event:9",
+              "execution:276d914b-6eed-422b-9f26-a3f3d978a97c"
+            ],
+            "id": "failure-event",
+            "metadata": {
+              "event_hash": "f5ecf2013144dde53a7b04c816a93983656bd940c1de0592698645aba16dee9c",
+              "execution_hash": "6ad02d205c37be2a73cbe6aaa7654c640d910837da323bc63f2d9f8349a1ab67"
+            },
+            "source": "runtime_event_ledger"
+          }
+        ]
+      },
+      "actual_failed_task_id": "0c197beb-1dca-44bc-bdc5-0631ed9d4f94",
+      "ignored_old_task_id": "6ccc2a4b-3b55-458d-819d-a53019dbed78",
+      "ignored_other_robot_task_id": "ea432572-a880-4698-a99e-feb52cdb9b09",
+      "budget_excluded_task_id": "5201fff1-1f50-4c72-acb0-002fb5bd462f",
+      "model_calls": 1,
+      "actual_error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/40f87372-aaf1-40b5-95b4-a4f3534a9e9c/19ed594a-83c9-4bd1-b439-4bbae7c0bfa8.md'",
+      "checks": [
+        "old events excluded",
+        "robot scope",
+        "idempotent rule create",
+        "duplicate scan",
+        "queued process restart",
+        "actual request content",
+        "exact error and evidence references",
+        "semantic missing-file explanation",
+        "task state unchanged",
+        "bounded calls and repeated worker restart",
+        "concurrent workers deduplicated"
+      ]
+    },
+    "actual_model_request_sha256": "43bb61792ff1a5f71424f88a6e79f1e12a26591871b30399c616c255de21c768",
+    "actual_model_raw_sha256": "12df5b7386cfd22faa0ac32a7bc5e0aab67c7672b1619e4f1991555d18ea6e95"
+  },
+  "legacy": {
+    "report": {
+      "status": "passed",
+      "source_report": ".runtime/automation-validation/db230961-a086-4e1c-b1a2-2cbba3a2eed1/report.json",
+      "source_report_sha256": "864fa7198c96de67eb68031ce7b2684ccbe6a20eecede6df8ae0f9bafbd3859b",
+      "source_rule_id": "3262ce881140fe5ba4ddacbdadbd456ad33952913ad41f0f53a81f1ea90a26c9",
+      "original_automation_request_id": "3262ce881140fe5ba4ddacbdadbd456ad33952913ad41f0f53a81f1ea90a26c9",
+      "original_receipt_replayed_exactly": true,
+      "cross_action_reuse_rejected": true,
+      "business_records_unchanged": true,
+      "new_model_calls": 0,
+      "mock_used": false,
+      "simulation_used": false
+    },
+    "source_report": ".runtime/idempotency-validation/ffb3f5b8-356e-4c1f-ac3a-76e586cf4ea2/report.json",
+    "source_report_sha256": "ed97faf0fcaaba53767945ac7216cf4242618ab33dbf56cdc221ea86db700475"
+  },
+  "limits": [
+    "Keys remain scoped to a subject and local ledger, not a distributed namespace.",
+    "Already ambiguous historical ownership is rejected without deleting or rewriting historical effects.",
+    "Read actions do not claim keys; failed synchronous model requests retain existing unresolved retry policy.",
+    "No physical robot or WorldState validation."
+  ]
+}

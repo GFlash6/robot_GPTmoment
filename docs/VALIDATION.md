@@ -63,3 +63,44 @@
 没有真实 RGB、深度、点云和多种地图流的高频负载检查；地图重定位失效、自动语义分类/合并、向量记忆及 DimOS memory 集成也未完成。框架具备资产类别与元数据契约、原始记录和证据查询，不将这些未验证算法能力写成已完成。
 
 DBOS 当前采用本地 SQLite，一台机器一个 worker；Postgres 生产部署、多机器人、热升级、跨主机租约和性能上限没有验证。HTTP 控制协议是已有实现接口，机器人具体适配器仍需真实返回证据接入。
+
+
+## 2026-09-22 应用动作与真实模型闭环
+
+本轮不使用 mock 或仿真。实际输入、模型原始响应和执行结果保存在隔离的 `.runtime/application-validation/` 账本；可版本化摘要及指纹见 `docs/validation/application-layer-2026-09-22.json`。
+
+- 当前环境模型 `qwen3.7-plus`：真实目标分析 → 模型两步计划 → 幂等命令 → DBOS worker → 实际文件归档和 SHA256 核验，通过。
+- 真实多轮澄清：模糊目标产生实际问讯；补充真实文件及已核验资产后继续分析，通过。
+- 实际文件不存在导致技能失败；真实模型解释引用已存在的任务/步骤，指出错误并保留未知项，任务仍为失败，通过。
+- Chromium 实际浏览器：任务 DAG 选中节点 → 会话上下文 → 真实模型解释，通过；1440 与 390 像素宽度检查，无页面脚本错误和横向溢出。
+- Chromium 完整路径：创建目标 → 分析 → 生成草稿 → 提交 → 实际 worker 文件执行 → 页面读取 succeeded，独立核对执行结果中的哈希和停止证据，通过。
+- 26 tests / 9 subtests passed：`test_application_actions.py`、`test_runtime.py`、`test_contracts_memory.py`、`test_http_execution.py`；包含真实 HTTP、并发幂等、实际进程事务中退出、worker 重启、取消竞争、版本冲突、权限范围及文件损坏。
+- UI TypeScript/Vite 构建通过；机械检查未报告新增协作组件问题。
+
+首轮真实分析曾返回 needs_grounding，使“必须 ready 才可规划”的旧假设失败。实现已改为保留待取证需求并要求规划安排真实技能，不把 unknown 改为已知。失败记录保留在 `7da8b966-0d52-42c3-9e90-543860d615b4`，随后重新调用实际模型完成验收。
+
+没有运行包含 ScriptedCaller 或固定模型响应服务的既有模型测试，因此这里不是整个历史测试目录全部通过的声明。真实 ROS2 发现只有 `/parameter_events`、`/rosout`；没有机器人动作或真实传感器现场验收。
+
+## 会话与记忆的实际重规划验收
+
+显式使用环境模型运行 `RUN_LIVE_MODEL_TESTS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest tests/test_replanning_context_live.py -q -s`：1 passed，73.08s。实际源文件被移除后技能失败；重规划真实输入含提交时人工约束、绑定记忆与失败账本，不含后续未提交消息；真实响应改用备用路径，worker 最终字节哈希一致。没有 mock 或仿真。第一次运行因测试误把任务状态期待为 failed（实际已进入 replanning）失败，原报告保留，修改断言后重新运行完整链路。
+
+相关非 AI 回归 `tests/test_context_memory.py tests/test_application_actions.py tests/test_contracts_memory.py tests/test_runtime.py`：29 passed、9 subtests，8.61s。范围包含实际 SQLite 快照修改拒绝，不代表整仓测试或真机验收。证据见 [replanning-context-live.json](validation/replanning-context-live.json)。
+
+## 历史摘要真实模型验收
+
+`RUN_LIVE_MODEL_TESTS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest tests/test_session_summary_live.py -q -s`：1 passed，81.57s。使用系统环境模型配置与实际项目协议原文；核对摘要中的实际文件路径、覆盖引用、固定原文约束和近期消息，后续真实计划与 worker 归档/哈希核验通过。实际修改覆盖消息后 ContextBuilder 拒绝旧摘要。没有 mock 或仿真，模型原始输入/响应保存在账本。见 [session-summary-live.json](validation/session-summary-live.json)。
+
+相关 `test_context_memory / test_application_actions / test_contracts_memory / test_runtime` 回归：29 passed、9 subtests，8.59s。不代表完整仓库或真机验收。
+
+## 超预算历史分块及并发修改
+
+`RUN_LIVE_MODEL_TESTS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest tests/test_session_summary_live.py -q -s`：2 passed，277.58s。普通历史1块，大历史4块；后者先确认全量输入超过实际环境模型配置预算，再逐块核对真实发送的原文、连续字符偏移、来源引用和预算，随后实际模型规划、worker执行及哈希核验通过。
+
+`tests/test_summary_concurrency_live.py` 显式真实模型运行：1 passed，50.34s。另一个 SQLite 连接在实际请求进行时通过 Action 添加操作员消息；首块真实响应被保留，后续调用停止，会话的新版本没有绑定不完整摘要。相关非AI回归29 passed、9 subtests，8.61s。无mock或仿真。完整证据：[chunked-session-summary-live.json](validation/chunked-session-summary-live.json)。
+
+## 共享会话动作的自动预算验收
+
+显式启用实际环境模型，`tests/test_session_summary_live.py -k automatic`：1 passed、2 deselected，162.66s；`tests/test_plan_budget_live.py`：1 passed，87.05s。前者覆盖默认预算拒绝和不可缩减固定内容拒绝（没有模型请求）、开启策略后真实分块摘要/分析/规划/worker 文件核验、预算内不重复整理、重新固定旧消息原文。后者用实际文档预检得到“分析可容纳、规划超预算”的输入，验证真实摘要与规划、新会话版本、旧版本拒绝及实际 worker 最终结果。
+
+相关回归29 passed、9 subtests，8.68s；TypeScript/Vite构建通过。工作台仅同步采用 plan.propose 返回的会话版本，本轮没有新增浏览器验收声明。证据：[automatic-session-budget-live.json](validation/automatic-session-budget-live.json)。未使用mock、仿真或superpowers；尚不代表机器人执行验收。

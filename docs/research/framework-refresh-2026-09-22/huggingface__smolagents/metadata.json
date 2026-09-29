@@ -1,0 +1,23 @@
+{
+  "repo": "huggingface/smolagents",
+  "retrieved_at": "2026-09-22T08:42:30.825654+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/huggingface/smolagents/30bb1161095dbae2271e6bc3cc4c219cc3897a57/README.md",
+      "sha256": "131628d2669b4ee983c715002b57ea4b375b62c8502f6354b8d9fdf3fbc39f8d"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/huggingface/smolagents/30bb1161095dbae2271e6bc3cc4c219cc3897a57/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/huggingface/smolagents/30bb1161095dbae2271e6bc3cc4c219cc3897a57/pyproject.toml",
+      "sha256": "7d7baa3f6a50d7c98eee38c41f1444b5c0f4f217e6e9626e1ece01f9b222ebde"
+    }
+  ],
+  "errors": [],
+  "sha": "30bb1161095dbae2271e6bc3cc4c219cc3897a57"
+}

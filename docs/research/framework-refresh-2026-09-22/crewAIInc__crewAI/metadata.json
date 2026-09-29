@@ -1,0 +1,32 @@
+{
+  "repo": "crewAIInc/crewAI",
+  "retrieved_at": "2026-09-22T08:37:42.229041+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/crewAIInc/crewAI/bdd1bc62007fcee732c912f0daa093e1f760f3fc/README.md",
+      "sha256": "b0f39843f93676b12883d5821a34555e2146e62bd2c42dc12733fc41222de013",
+      "retrieved_at": "2026-09-22T08:39:24.472811+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/crewAIInc/crewAI/bdd1bc62007fcee732c912f0daa093e1f760f3fc/LICENSE",
+      "sha256": "28868731966f4aa37f02879839aabc797137e27ddde4e274ef9cf965f9a71774",
+      "retrieved_at": "2026-09-22T08:39:25.207711+00:00"
+    },
+    {
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/crewAIInc/crewAI/bdd1bc62007fcee732c912f0daa093e1f760f3fc/pyproject.toml",
+      "sha256": "2afd041117adcafef852c77c09941159e56b87a17daed5d98caef0f6ac245d41",
+      "retrieved_at": "2026-09-22T08:39:25.860862+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    }
+  ],
+  "sha": "bdd1bc62007fcee732c912f0daa093e1f760f3fc",
+  "revision_method": "git ls-remote HEAD"
+}

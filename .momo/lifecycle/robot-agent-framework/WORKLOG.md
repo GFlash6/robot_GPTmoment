@@ -95,3 +95,25 @@ Momo 正式 workspace 仍为 revision 149；relation assessment 的旧 baseRevis
 按用户要求重建此前失配的 relation assessment，并将上下文第一轮实现同步到正式图。对象更新先经 `project-doc validate/diff/write` 写入 revision 150：新增 GoalAnalyzer、澄清问讯、ContextBuilder、ContextManifest 4 个节点，更新 14 个既有模型流节点；预算继承缺口转为 done，连续 Session 与摘要/记忆检索仍为 open。
 
 基于 revision 150 和当前代码 SHA-256 重新评估 9 条关系，全部通过 `relation-audit validate/diff` 后应用到 revision 151。最终为 41 个对象、87 条关系（47 条语义关系），无孤立对象、无无效关系、无过期证据。旧 assessment 的 baseRevision=16 问题已消除；本次只同步 Momo 状态，未新增代码、模型调用或机器人验收。
+
+## 2026-09-22 应用层与真实模型执行闭环
+
+按用户授权实施 Agent-Native 参考方案，不使用 superpowers，不使用 mock/仿真。新增共享动作、主体/机器人范围检查、持久幂等命令、原子回执、任务锁、独立 HTTP 服务、会话、计划草稿及任务协作 UI。真实模型使用环境配置 qwen3.7-plus，保存实际输入与原始响应。
+
+真实验收：模型计划实际归档文件并校验 SHA256；多轮澄清；真实缺文件失败的模型解释；Chromium 节点选择解释及完整页面规划执行。回归26项/9子项通过。证据见 docs/validation/application-layer-2026-09-22.json。首轮 needs_grounding 未通过记录保留，修正错误的 ready-only 门槛后重新调用真实模型通过。
+
+Momo revision 151→152 更新对象与证据；152→153 添加两条由确定性脚本判定可应用的会话关系。41对象、89关系（49语义），无孤立或结构无效关系；历史 session→QA history 依赖保留为一条待清理提案，不伪称图语义全部闭合。
+
+
+## 2026-09-22 记忆上下文增量（进行中）
+
+实现 memory.search 与 session.attach-memories，按机器人范围过滤后限量、核验实际来源字节，绑定记录哈希并在构造/提交/worker 接收时复核。首轮真实模型已从记忆读取文档路径并完成实际文件归档和哈希验证。后续运行暴露错误输出引用 step_1.output.asset_id，保留了真实失败计划与响应 ID，补全本地输出 schema 与派发前引用检查；新的完整验收仍待结果。未运行替身模型或仿真。
+
+## 记忆增量验收
+
+记忆上下文完整真实验收已通过：ef35c4cd-5609-480f-8c6e-4a211aaff70e。实际模型输入、原始响应、来源 manifest、文件执行哈希，以及第二份真实草稿在记忆过期后的拒绝均已保存。回归28项/9子项通过。
+
+
+## 2026-09-22 近期增量同步
+
+本轮同步 revision 155→156：审阅当前代码与实际验收记录，更新19个已有对象，保留全部41对象/90关系；更新12条已应用关系的支持证据，历史删除提案保留。canonical validate、diff、revision guard、最终关系审计通过；仅历史删除提案仍含过期来源及人工确认要求。无新模型调用、mock、仿真或设备操作。

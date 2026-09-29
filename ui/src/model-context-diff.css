@@ -1,0 +1,16 @@
+.model-context-diff form{max-width:75ch;margin:20px 0}
+.model-context-diff label{display:block;font-weight:600;margin-bottom:8px}
+.model-context-diff input{width:100%;min-width:0;min-height:44px;padding:10px 12px;border:1px solid #719581;border-radius:6px;background:#fff;color:#263c32;font:inherit;caret-color:#37634b}
+.context-diff-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.context-diff-actions button{min-height:44px;padding:10px 14px;font:inherit;line-height:1.5;color:#263c32;background:#eff5f1;border:1px solid #719581;border-radius:6px;cursor:pointer}
+.context-diff-actions button:hover:not(:disabled){background:#dfece3}
+.context-diff-actions button:disabled{color:#53695d;background:#f5f8f5;border-color:#dce5df;cursor:not-allowed}
+.model-context-diff :is(input,button):focus-visible{outline:2px solid #37634b;outline-offset:3px}
+.context-comparison-identity{margin:24px 0 16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.context-comparison-identity dt{font-weight:600}.context-comparison-identity dd{margin:6px 0 0;overflow-wrap:anywhere}
+.context-field-change{border-top:1px solid #dce5df;padding:12px 0;overflow-wrap:anywhere}
+.context-value-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:8px;font-variant-numeric:tabular-nums}
+.context-value-pair>div{min-width:0}.context-value-pair span{color:#40594d}
+.context-value-pair p{margin:4px 0 0}.context-value-pair pre{margin:8px 0 0;max-height:240px}
+.model-context-diff .raw{margin-top:10px}
+@media(max-width:700px){.context-comparison-identity,.context-value-pair{grid-template-columns:minmax(0,1fr);gap:12px}.context-diff-actions button{flex:1 1 auto}}

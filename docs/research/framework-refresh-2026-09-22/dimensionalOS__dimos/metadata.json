@@ -1,0 +1,42 @@
+{
+  "repo": "dimensionalOS/dimos",
+  "retrieved_at": "2026-09-22T08:37:41.584455+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/README.md",
+      "sha256": "aa21ead817a3160648c7efd7f00677d36623139340c0a74d3cf8f4dbe32d3d20",
+      "retrieved_at": "2026-09-22T08:39:24.217432+00:00"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/LICENSE",
+      "sha256": "ab463ad5ae0dcd7a4fc55871e64d061d6b40ceffe3faaa2b7037e08b2b28b21f",
+      "retrieved_at": "2026-09-22T08:39:25.054173+00:00"
+    },
+    {
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/pyproject.toml",
+      "sha256": "a39c8aace2704ea1674e14728b0afcaacb6e4d477b110cef2dbfab080cfa35cb",
+      "retrieved_at": "2026-09-22T08:39:25.655427+00:00"
+    },
+    {
+      "path": "docs/requirements.md",
+      "url": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/docs/requirements.md",
+      "sha256": "a7f5936e2d853157171791d3cfa6be6625708e22ca2fa22fcba130bdbdd85ea7",
+      "retrieved_at": "2026-09-22T08:39:26.861499+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "resource": "metadata",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "resource": "https://raw.githubusercontent.com/dimensionalOS/dimos/a7492431f15d61aa6433d8feb483186f864504bc/dimos/robot/unitree/g1/README.md",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "sha": "a7492431f15d61aa6433d8feb483186f864504bc",
+  "revision_method": "git ls-remote HEAD"
+}

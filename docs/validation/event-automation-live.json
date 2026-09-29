@@ -1,0 +1,213 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/report.json",
+  "source_report_sha256": "4aa2de362c62bc55b0f1853ba79fad943b5947d70b8ca62c34280ed682d83593",
+  "report": {
+    "configured_model": "qwen3.7-plus",
+    "mock_used": false,
+    "simulation_used": false,
+    "status": "passed",
+    "rule": {
+      "created_at": 1790024239.7993662,
+      "cursor": 9,
+      "effect": "explain_event",
+      "enabled": true,
+      "enqueued": 1,
+      "id": "3262ce881140fe5ba4ddacbdadbd456ad33952913ad41f0f53a81f1ea90a26c9",
+      "max_runs": 1,
+      "question": "请解释实际文件归档失败的原因，引用事件和执行记录。说明哪些是已记录事实、哪些仍无法确定；不要声称已恢复。",
+      "revision": 0,
+      "robot_id": "r1",
+      "subject": "local:gflash",
+      "trigger": "execution_result.failed"
+    },
+    "run": {
+      "automation_id": "3262ce881140fe5ba4ddacbdadbd456ad33952913ad41f0f53a81f1ea90a26c9",
+      "created_at": 1790024239.9574587,
+      "event": {
+        "data": "{\"error\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md'\", \"evidence\": [{\"error_type\": \"FileNotFoundError\", \"source\": \"local:file.ingest\"}], \"execution_id\": \"4f319cb7-4a9e-41e5-8e45-d2db5311f8b6\", \"output\": {}, \"quiescent\": true, \"status\": \"failed\"}",
+        "seq": 9,
+        "task": "c75cd086-23a6-4ad7-8bfe-baada4bdc794",
+        "ts": 1790024239.8392882,
+        "type": "execution_result"
+      },
+      "event_hash": "90a4e3ab667aefc4ac7be5a509dbef708977f50e93a2283b6455efff4e998ea2",
+      "execution": {
+        "args": {
+          "metadata": {
+            "encoding": "utf8",
+            "kind": "document",
+            "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md"
+          },
+          "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md"
+        },
+        "created_at": 1790024239.8334243,
+        "id": "4f319cb7-4a9e-41e5-8e45-d2db5311f8b6",
+        "result": {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md'",
+          "evidence": [
+            {
+              "error_type": "FileNotFoundError",
+              "source": "local:file.ingest"
+            }
+          ],
+          "execution_id": "4f319cb7-4a9e-41e5-8e45-d2db5311f8b6",
+          "output": {},
+          "quiescent": true,
+          "status": "failed"
+        },
+        "skill": "file.ingest",
+        "status": "failed",
+        "step": "ingest",
+        "task_id": "c75cd086-23a6-4ad7-8bfe-baada4bdc794"
+      },
+      "execution_hash": "6259e72fb2da65be80fcdd8fe31ae40232fd933d6693c4e56fc1e1aec0db427c",
+      "finished_at": 1790024266.9350443,
+      "id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+      "question": "请解释实际文件归档失败的原因，引用事件和执行记录。说明哪些是已记录事实、哪些仍无法确定；不要声称已恢复。",
+      "result": {
+        "explanation": {
+          "observed_error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md'",
+          "record_refs": [
+            "event:9",
+            "execution:4f319cb7-4a9e-41e5-8e45-d2db5311f8b6"
+          ],
+          "summary": "在执行文件归档（file.ingest）步骤时，系统尝试读取指定的 Markdown 文件失败。根据事件（event:9）和执行记录（execution:4f319cb7-4a9e-41e5-8e45-d2db5311f8b6），已记录的事实是目标文件在指定的运行时自动化验证目录下不存在，导致抛出 FileNotFoundError 并终止执行。至于该文件为何缺失（例如上游未生成、被删除或路径配置错误），目前仍无法确定，属于未知假设。",
+          "unknowns": [
+            "导致该文件不存在的具体原因（例如：上游任务未生成该文件、文件被意外删除、或路径配置错误）。",
+            "上游流程是否曾成功创建过该文件。"
+          ]
+        },
+        "is_execution_evidence": false,
+        "model_response_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5"
+      },
+      "robot_id": "r1",
+      "rule_revision": 0,
+      "started_at": 1790024240.224906,
+      "status": "completed",
+      "subject": "local:gflash"
+    },
+    "actual_model_response": {
+      "id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+      "actual_model": "qwen3.7-plus",
+      "response_id": "chatcmpl-8a88c27b-ad31-9bab-afdc-b7a2c561ba8e"
+    },
+    "context_manifest": {
+      "dropped": [],
+      "estimated_input_tokens": 2344,
+      "estimator": "utf8_bytes_v1",
+      "id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+      "included": [
+        "failure-event"
+      ],
+      "input_token_limit": 32768,
+      "phase": "automation_diagnosis",
+      "renderer_version": "role-aware-v1",
+      "request_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+      "reserved_output_tokens": 2048,
+      "sources": [
+        {
+          "authority": "data",
+          "evidence_ids": [
+            "event:9",
+            "execution:4f319cb7-4a9e-41e5-8e45-d2db5311f8b6"
+          ],
+          "id": "failure-event",
+          "metadata": {
+            "event_hash": "90a4e3ab667aefc4ac7be5a509dbef708977f50e93a2283b6455efff4e998ea2",
+            "execution_hash": "6259e72fb2da65be80fcdd8fe31ae40232fd933d6693c4e56fc1e1aec0db427c"
+          },
+          "source": "runtime_event_ledger"
+        }
+      ]
+    },
+    "actual_failed_task_id": "c75cd086-23a6-4ad7-8bfe-baada4bdc794",
+    "ignored_old_task_id": "dafaef66-0946-402b-8579-136b7eb340a0",
+    "ignored_other_robot_task_id": "124d68be-ac2d-4374-bdc8-0a01786a4420",
+    "budget_excluded_task_id": "6357ea5d-ece1-469a-9d15-8fa76071a853",
+    "model_calls": 1,
+    "actual_error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md'",
+    "checks": [
+      "old events excluded",
+      "robot scope",
+      "idempotent rule create",
+      "duplicate scan",
+      "queued process restart",
+      "actual request content",
+      "exact error and evidence references",
+      "semantic missing-file explanation",
+      "task state unchanged",
+      "bounded calls and repeated worker restart",
+      "concurrent workers deduplicated"
+    ]
+  },
+  "actual_model_request": {
+    "messages": [
+      {
+        "content": "Explain this actual failed execution in the question language. Distinguish observed error from hypotheses. Do not claim recovery, physical stop, or task success. Return JSON with summary (nonempty string), observed_error (copy the recorded error exactly), record_refs (all supplied refs), and unknowns (string array). Allowed refs: [\"event:9\", \"execution:4f319cb7-4a9e-41e5-8e45-d2db5311f8b6\"]",
+        "role": "system"
+      },
+      {
+        "content": "{\"content\": {\"event\": {\"data\": {\"error\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md'\", \"evidence\": [{\"error_type\": \"FileNotFoundError\", \"source\": \"local:file.ingest\"}], \"execution_id\": \"4f319cb7-4a9e-41e5-8e45-d2db5311f8b6\", \"output\": {}, \"quiescent\": true, \"status\": \"failed\"}, \"seq\": 9, \"task\": \"c75cd086-23a6-4ad7-8bfe-baada4bdc794\", \"ts\": 1790024239.8392882, \"type\": \"execution_result\"}, \"execution\": {\"args\": {\"metadata\": {\"encoding\": \"utf8\", \"kind\": \"document\", \"source\": \"/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md\"}, \"path\": \"/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md\"}, \"created_at\": 1790024239.8334243, \"id\": \"4f319cb7-4a9e-41e5-8e45-d2db5311f8b6\", \"result\": {\"error\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md'\", \"evidence\": [{\"error_type\": \"FileNotFoundError\", \"source\": \"local:file.ingest\"}], \"execution_id\": \"4f319cb7-4a9e-41e5-8e45-d2db5311f8b6\", \"output\": {}, \"quiescent\": true, \"status\": \"failed\"}, \"skill\": \"file.ingest\", \"status\": \"failed\", \"step\": \"ingest\", \"task_id\": \"c75cd086-23a6-4ad7-8bfe-baada4bdc794\"}}, \"context_id\": \"failure-event\", \"kind\": \"task_state\", \"source\": \"runtime_event_ledger\"}",
+        "role": "user"
+      },
+      {
+        "content": "请解释实际文件归档失败的原因，引用事件和执行记录。说明哪些是已记录事实、哪些仍无法确定；不要声称已恢复。",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3.7-plus",
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "actual_model_response": {
+    "observed_error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-validation/cf2e9586-a9c1-49cd-8f58-a0fa11c9adcf/d612aba2-0f7f-4edb-aefd-8afe651748ee.md'",
+    "record_refs": [
+      "event:9",
+      "execution:4f319cb7-4a9e-41e5-8e45-d2db5311f8b6"
+    ],
+    "summary": "在执行文件归档（file.ingest）步骤时，系统尝试读取指定的 Markdown 文件失败。根据事件（event:9）和执行记录（execution:4f319cb7-4a9e-41e5-8e45-d2db5311f8b6），已记录的事实是目标文件在指定的运行时自动化验证目录下不存在，导致抛出 FileNotFoundError 并终止执行。至于该文件为何缺失（例如上游未生成、被删除或路径配置错误），目前仍无法确定，属于未知假设。",
+    "unknowns": [
+      "导致该文件不存在的具体原因（例如：上游任务未生成该文件、文件被意外删除、或路径配置错误）。",
+      "上游流程是否曾成功创建过该文件。"
+    ]
+  },
+  "provider_response_id": "chatcmpl-8a88c27b-ad31-9bab-afdc-b7a2c561ba8e",
+  "context_manifest": {
+    "dropped": [],
+    "estimated_input_tokens": 2344,
+    "estimator": "utf8_bytes_v1",
+    "id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+    "included": [
+      "failure-event"
+    ],
+    "input_token_limit": 32768,
+    "phase": "automation_diagnosis",
+    "renderer_version": "role-aware-v1",
+    "request_id": "e5a5eb98b7dfb3fcb49d80903450753def0a34b945d5eebec89466d9d6a328d5",
+    "reserved_output_tokens": 2048,
+    "sources": [
+      {
+        "authority": "data",
+        "evidence_ids": [
+          "event:9",
+          "execution:4f319cb7-4a9e-41e5-8e45-d2db5311f8b6"
+        ],
+        "id": "failure-event",
+        "metadata": {
+          "event_hash": "90a4e3ab667aefc4ac7be5a509dbef708977f50e93a2283b6455efff4e998ea2",
+          "execution_hash": "6259e72fb2da65be80fcdd8fe31ae40232fd933d6693c4e56fc1e1aec0db427c"
+        },
+        "source": "runtime_event_ledger"
+      }
+    ]
+  },
+  "validation": {
+    "automation_live_and_guards": "2 passed in 27.57s",
+    "regression": "39 passed, 9 subtests passed in 9.04s"
+  },
+  "scope": "Real file failure events, actual model interpretation, queued process restart and concurrent worker deduplication. Diagnosis leaves failed task unchanged; no physical robot or autonomous recovery verification."
+}

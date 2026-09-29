@@ -1,0 +1,91 @@
+{
+  "status": "passed_after_assertion_correction",
+  "mock_used": false,
+  "simulation_used": false,
+  "new_model_calls": 0,
+  "tests": "7 passed in 1.49s",
+  "source_report": ".runtime/context-observer-validation/0b782cdf-a6e4-4743-8b40-da23661f500e/report.json",
+  "source_report_sha256": "e1b0a18a85f4ac9c8542d6f60f1f2e5c0a27cc6f7fd7415c517542beb765da07",
+  "report": {
+    "source_ledger": ".runtime/session-summary-validation/c5f8cb4e-15b9-4722-9220-117a16ab4009/ledger/ledger.sqlite",
+    "mock_used": false,
+    "simulation_used": false,
+    "new_model_calls": 0,
+    "context_records": [
+      {
+        "id": "127bae12-676a-4b92-a9c5-6bea4e59c27b",
+        "method": "session_summary",
+        "bundle_hash": "6c31f173f9abbe01bf17c4ff353ee9391666888a8237ae24b596fa729c0a3f7a",
+        "actual_response_id": "chatcmpl-b8a2eef6-c838-9e19-b741-fa5198733a42"
+      },
+      {
+        "id": "29281d51-d534-4622-8660-9659ee2cc7b3",
+        "method": "goal_analysis",
+        "bundle_hash": "11e9d60121a8b84736ba31cc0ea51445a9ad020f391b913ddbb8931ed7eccca3",
+        "actual_response_id": "chatcmpl-f1db74bf-488d-9fd3-a51a-55cb13218061"
+      },
+      {
+        "id": "3dece827-fe42-42c5-bab2-5251b90ec97b",
+        "method": "session_summary",
+        "bundle_hash": "6600c9d3bddf719f35cc2cec7497c9d0cb21a8626f2380357e6d617ab493ca53",
+        "actual_response_id": "chatcmpl-9b913993-dea4-9774-bc37-3c6efa5f68e0"
+      },
+      {
+        "id": "76e6a269-bc5b-4b95-8d8f-48d7325c4911",
+        "method": "session_summary",
+        "bundle_hash": "52c01aa4f50fdf008548f0bd12aa0cfada092250edf75958d2a596dbb856e9c1",
+        "actual_response_id": "chatcmpl-e0e769c7-7227-946a-be18-faad945b642c"
+      },
+      {
+        "id": "b4c47e38-56dd-437d-9f24-0d8bb94a070c",
+        "method": "session_summary",
+        "bundle_hash": "9992aa712ed6746102cf0a7a3a38ffba19e30d9c1cc485a67a14951852415e50",
+        "actual_response_id": "chatcmpl-5cdbdd6f-1f45-9c18-b79f-d1d8baa516b1"
+      },
+      {
+        "id": "b58a3c2f-2147-4fde-b272-1b849c780232",
+        "method": "session_summary",
+        "bundle_hash": "c47681315df5218e2be7b22239bf1b4125e37d8d5cb434f808c077c6f811d7cc",
+        "actual_response_id": "chatcmpl-b5e52faa-1281-9c3c-945f-56c6a90be274"
+      },
+      {
+        "id": "d01226cf-e4c5-4dac-9cb8-6c224b4aab68",
+        "method": "planning",
+        "bundle_hash": "de6879ea5970f4c3f6ba6b4f0c3dec90dcc5ac31536372fdf275983ca94a5bb8",
+        "actual_response_id": "chatcmpl-d75203bd-9906-93fa-9883-12e62bc9becc"
+      }
+    ],
+    "legacy_evidence": {
+      "root": ".runtime/memory-validation/83872251-288f-402a-b821-592ce3297033/ledger",
+      "model_record_id": "2c0070a0-8449-45cc-88fe-22b929cb390b",
+      "actual_response_id": "chatcmpl-428435c6-8cb2-9dbc-b8ac-73544d8c008a",
+      "status": "unavailable"
+    },
+    "status": "passed",
+    "checks": [
+      "actual HTTP links for all recorded model methods",
+      "no ledger mutation by reads",
+      "no model or execution dispatch",
+      "404 absent model",
+      "405 mutation",
+      "bundle corruption",
+      "missing linked bundle",
+      "manifest mismatch",
+      "restored original evidence",
+      "actual legacy model record remains unavailable without invented context"
+    ]
+  },
+  "original_real_model_report": ".runtime/session-summary-validation/c5f8cb4e-15b9-4722-9220-117a16ab4009/report.json",
+  "original_real_model_report_sha256": "205cc72e6306fdfa6daaa4b3752e0629cacbf434c9cfea269d27089f212ab693",
+  "initial_failure": {
+    "report": ".runtime/context-observer-validation/31f6cbc4-fd3c-4cf9-901b-8092ae11ec8b/report.json",
+    "sha256": "3b2355a9122dc3f92d86cbe527185da8cbc0dc59dee1bdaec3087a496eef1af6",
+    "cause": "Fault injection restored original rows but SQLite row order changed after delete/reinsert; final restoration now compares sorted full dump entries. Pre-mutation reads still compare exact dump order."
+  },
+  "limits": [
+    "Read-only retrieval of existing genuine model records; no new AI validation or robot execution.",
+    "HTTP paths validated for seven existing goal/planning/summary model records; actual legacy record checked with the same Ledger reader.",
+    "Integrity checks cover persisted links and canonical raw bundle hash, not full schema semantics, manifest authenticity or model request reconstruction.",
+    "Existing loopback-only access and redaction remain; no remote authentication or new UI surface."
+  ]
+}

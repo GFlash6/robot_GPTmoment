@@ -1,0 +1,10 @@
+{
+  "disposition": "ship",
+  "reviewer": "/root/context_diff_ui_review",
+  "material_fixes": [],
+  "scope": "New comparison extension only; reviewer inspected supplied code and four actual captures, using passing browser report for behavioral evidence; no independent browser rerun.",
+  "persistence": "Pinned baseline and unapplied draft behavior match recorded direction contract.",
+  "fidelity": "All four captures valid; explicit direction, incumbent identity, evidence limits, native disclosures and mobile stacking match.",
+  "ceiling": "Local comparison surface only; existing unavailable test widgets outside scope.",
+  "keep": "Complete IDs, paired-value labels, scope distinctions, native controls and mobile wrapping."
+}

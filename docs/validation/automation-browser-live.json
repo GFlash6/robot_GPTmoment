@@ -1,0 +1,593 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "source_report": ".runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/report.json",
+  "source_report_sha256": "776e5423fcddcd4bd3bf91cc75dc91b46679a7d9dbb0d3edb975aaff964ac9fb",
+  "report": {
+    "status": "passed",
+    "root": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa",
+    "mock_used": false,
+    "simulation_used": false,
+    "console_errors": [],
+    "actual_failure": {
+      "catalog": {
+        "asset.verify": {
+          "adapter": "local",
+          "allowed_roots": [
+            "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa"
+          ],
+          "cancelable": true,
+          "checks": [
+            {
+              "op": "eq",
+              "path": "verified",
+              "value": true
+            }
+          ],
+          "input_schema": {
+            "additionalProperties": false,
+            "properties": {
+              "asset_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "asset_id"
+            ],
+            "type": "object"
+          },
+          "name": "asset.verify",
+          "output_schema": {
+            "additionalProperties": false,
+            "properties": {
+              "sha256": {
+                "type": "string"
+              },
+              "size": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "verified": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "sha256",
+              "size",
+              "verified"
+            ],
+            "type": "object"
+          },
+          "replay_safe": true,
+          "resources": {},
+          "verifier": true
+        },
+        "file.copy": {
+          "adapter": "local",
+          "allowed_roots": [
+            "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa"
+          ],
+          "cancelable": true,
+          "checks": [
+            {
+              "op": "eq",
+              "path": "verified",
+              "value": true
+            }
+          ],
+          "input_schema": {
+            "additionalProperties": false,
+            "properties": {
+              "chunk_bytes": {
+                "maximum": 8388608,
+                "minimum": 1,
+                "type": "integer"
+              },
+              "source": {
+                "type": "string"
+              },
+              "target": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "source",
+              "target"
+            ],
+            "type": "object"
+          },
+          "name": "file.copy",
+          "output_schema": {
+            "required": [
+              "sha256",
+              "verified",
+              "path"
+            ],
+            "type": "object"
+          },
+          "replay_safe": false,
+          "resources": {},
+          "verifier": true
+        },
+        "file.ingest": {
+          "adapter": "local",
+          "allowed_roots": [
+            "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa"
+          ],
+          "cancelable": true,
+          "checks": [
+            {
+              "op": "nonempty",
+              "path": "asset_id"
+            }
+          ],
+          "input_schema": {
+            "additionalProperties": false,
+            "properties": {
+              "metadata": {
+                "type": "object"
+              },
+              "path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path",
+              "metadata"
+            ],
+            "type": "object"
+          },
+          "name": "file.ingest",
+          "output_schema": {
+            "additionalProperties": false,
+            "properties": {
+              "asset_id": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "size": {
+                "minimum": 0,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "asset_id",
+              "sha256",
+              "size"
+            ],
+            "type": "object"
+          },
+          "replay_safe": true,
+          "resources": {},
+          "verifier": false
+        }
+      },
+      "created_at": 1790025503.3165388,
+      "generation": 0,
+      "goal": null,
+      "id": "b1fd6737-ea58-47cc-abb0-370431ffc7b8",
+      "plan": {
+        "steps": [
+          {
+            "args": {
+              "metadata": {
+                "encoding": "utf8",
+                "kind": "document",
+                "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md"
+              },
+              "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md"
+            },
+            "id": "ingest",
+            "skill": "file.ingest"
+          },
+          {
+            "args": {
+              "asset_id": {
+                "$ref": "ingest.asset_id"
+              }
+            },
+            "deps": [
+              "ingest"
+            ],
+            "id": "verify",
+            "skill": "asset.verify"
+          }
+        ],
+        "verification": "verify"
+      },
+      "priority": 0,
+      "revision": 0,
+      "robot_id": "r1",
+      "status": "failed",
+      "steps": {
+        "ingest": {
+          "alternative": 0,
+          "attempts": 1,
+          "status": "failed",
+          "execution_id": "73c7cf44-6177-42ad-a0ee-6cd179acfccc",
+          "result": {
+            "execution_id": "73c7cf44-6177-42ad-a0ee-6cd179acfccc",
+            "status": "failed",
+            "quiescent": true,
+            "output": {},
+            "evidence": [
+              {
+                "source": "local:file.ingest",
+                "error_type": "FileNotFoundError"
+              }
+            ],
+            "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md'"
+          }
+        },
+        "verify": {
+          "alternative": 0,
+          "attempts": 0,
+          "status": "pending"
+        }
+      }
+    },
+    "proof": {
+      "job": {
+        "automation_id": "e2c93548c922b216426d710c26c360da4699cd1d7a52c84fdfc053d56f8148c7",
+        "created_at": 1790025508.4152315,
+        "event": {
+          "data": "{\"error\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md'\", \"evidence\": [{\"error_type\": \"FileNotFoundError\", \"source\": \"local:file.ingest\"}], \"execution_id\": \"73c7cf44-6177-42ad-a0ee-6cd179acfccc\", \"output\": {}, \"quiescent\": true, \"status\": \"failed\"}",
+          "seq": 3,
+          "task": "b1fd6737-ea58-47cc-abb0-370431ffc7b8",
+          "ts": 1790025503.327236,
+          "type": "execution_result"
+        },
+        "event_hash": "23cf2c01e32a2095559fc4e7d264e1be45ab86581b057f66775645cc9a84114f",
+        "execution": {
+          "args": {
+            "metadata": {
+              "encoding": "utf8",
+              "kind": "document",
+              "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md"
+            },
+            "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md"
+          },
+          "created_at": 1790025503.3209631,
+          "id": "73c7cf44-6177-42ad-a0ee-6cd179acfccc",
+          "result": {
+            "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md'",
+            "evidence": [
+              {
+                "error_type": "FileNotFoundError",
+                "source": "local:file.ingest"
+              }
+            ],
+            "execution_id": "73c7cf44-6177-42ad-a0ee-6cd179acfccc",
+            "output": {},
+            "quiescent": true,
+            "status": "failed"
+          },
+          "skill": "file.ingest",
+          "status": "failed",
+          "step": "ingest",
+          "task_id": "b1fd6737-ea58-47cc-abb0-370431ffc7b8"
+        },
+        "execution_hash": "1a9e357e2201f3d8945568aaeec33ee04ae1037d0080e5470b752b87ea2ed3fc",
+        "finished_at": 1790025534.736243,
+        "id": "9fd3e5d4da3b36b3ac6173ed49cf77f08dae8c8d4f090a0e6ed9d7c41b133814",
+        "model_response_id": "9fd3e5d4da3b36b3ac6173ed49cf77f08dae8c8d4f090a0e6ed9d7c41b133814",
+        "question": "解释实际失败原因，区分记录事实与待核查假设，并引用事件和执行记录。",
+        "result": {
+          "explanation": {
+            "observed_error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md'",
+            "record_refs": [
+              "event:3",
+              "execution:73c7cf44-6177-42ad-a0ee-6cd179acfccc"
+            ],
+            "summary": "执行 file.ingest 技能时失败。记录的事实是：系统在尝试读取指定路径下的 Markdown 文件时抛出了 FileNotFoundError，表明该目标文件在本地文件系统中不存在。待核查的假设包括：该文件是否因前置任务未成功生成、路径配置错误或被意外清理而导致缺失。",
+            "unknowns": [
+              "导致该文件不存在的具体原因（如前置任务未生成该文件、路径配置错误、文件被意外删除或移动）",
+              "调度系统为何会尝试 ingest 一个在本地文件系统中不存在或尚未生成的文件"
+            ]
+          },
+          "is_execution_evidence": false,
+          "model_response_id": "9fd3e5d4da3b36b3ac6173ed49cf77f08dae8c8d4f090a0e6ed9d7c41b133814"
+        },
+        "retry_of": "8ea2d2d340086fec090f16cf5f2361bbfa4cf76f83b801de0a884e5827c06e94",
+        "retry_requested_by": "local:gflash",
+        "robot_id": "r1",
+        "rule_revision": 0,
+        "started_at": 1790025508.6031766,
+        "status": "completed",
+        "subject": "local:gflash"
+      },
+      "request": {
+        "messages": [
+          {
+            "content": "Explain this actual failed execution in the question language. Distinguish observed error from hypotheses. Do not claim recovery, physical stop, or task success. Return JSON with summary (nonempty string), observed_error (copy the recorded error exactly), record_refs (all supplied refs), and unknowns (string array). Allowed refs: [\"event:3\", \"execution:73c7cf44-6177-42ad-a0ee-6cd179acfccc\"]",
+            "role": "system"
+          },
+          {
+            "content": "{\"content\": {\"event\": {\"data\": {\"error\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md'\", \"evidence\": [{\"error_type\": \"FileNotFoundError\", \"source\": \"local:file.ingest\"}], \"execution_id\": \"73c7cf44-6177-42ad-a0ee-6cd179acfccc\", \"output\": {}, \"quiescent\": true, \"status\": \"failed\"}, \"seq\": 3, \"task\": \"b1fd6737-ea58-47cc-abb0-370431ffc7b8\", \"ts\": 1790025503.327236, \"type\": \"execution_result\"}, \"execution\": {\"args\": {\"metadata\": {\"encoding\": \"utf8\", \"kind\": \"document\", \"source\": \"/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md\"}, \"path\": \"/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md\"}, \"created_at\": 1790025503.3209631, \"id\": \"73c7cf44-6177-42ad-a0ee-6cd179acfccc\", \"result\": {\"error\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md'\", \"evidence\": [{\"error_type\": \"FileNotFoundError\", \"source\": \"local:file.ingest\"}], \"execution_id\": \"73c7cf44-6177-42ad-a0ee-6cd179acfccc\", \"output\": {}, \"quiescent\": true, \"status\": \"failed\"}, \"skill\": \"file.ingest\", \"status\": \"failed\", \"step\": \"ingest\", \"task_id\": \"b1fd6737-ea58-47cc-abb0-370431ffc7b8\"}}, \"context_id\": \"failure-event\", \"kind\": \"task_state\", \"source\": \"runtime_event_ledger\"}",
+            "role": "user"
+          },
+          {
+            "content": "解释实际失败原因，区分记录事实与待核查假设，并引用事件和执行记录。",
+            "role": "user"
+          }
+        ],
+        "model": "qwen3.7-plus",
+        "response_format": {
+          "type": "json_object"
+        }
+      },
+      "model": "qwen3.7-plus",
+      "response_id": "chatcmpl-60c03889-cf13-9fc0-bc2f-ef7e13464439",
+      "model_calls": 1,
+      "task": {
+        "catalog": {
+          "asset.verify": {
+            "adapter": "local",
+            "allowed_roots": [
+              "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa"
+            ],
+            "cancelable": true,
+            "checks": [
+              {
+                "op": "eq",
+                "path": "verified",
+                "value": true
+              }
+            ],
+            "input_schema": {
+              "additionalProperties": false,
+              "properties": {
+                "asset_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "asset_id"
+              ],
+              "type": "object"
+            },
+            "name": "asset.verify",
+            "output_schema": {
+              "additionalProperties": false,
+              "properties": {
+                "sha256": {
+                  "type": "string"
+                },
+                "size": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "verified": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "sha256",
+                "size",
+                "verified"
+              ],
+              "type": "object"
+            },
+            "replay_safe": true,
+            "resources": {},
+            "verifier": true
+          },
+          "file.copy": {
+            "adapter": "local",
+            "allowed_roots": [
+              "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa"
+            ],
+            "cancelable": true,
+            "checks": [
+              {
+                "op": "eq",
+                "path": "verified",
+                "value": true
+              }
+            ],
+            "input_schema": {
+              "additionalProperties": false,
+              "properties": {
+                "chunk_bytes": {
+                  "maximum": 8388608,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "target": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source",
+                "target"
+              ],
+              "type": "object"
+            },
+            "name": "file.copy",
+            "output_schema": {
+              "required": [
+                "sha256",
+                "verified",
+                "path"
+              ],
+              "type": "object"
+            },
+            "replay_safe": false,
+            "resources": {},
+            "verifier": true
+          },
+          "file.ingest": {
+            "adapter": "local",
+            "allowed_roots": [
+              "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa"
+            ],
+            "cancelable": true,
+            "checks": [
+              {
+                "op": "nonempty",
+                "path": "asset_id"
+              }
+            ],
+            "input_schema": {
+              "additionalProperties": false,
+              "properties": {
+                "metadata": {
+                  "type": "object"
+                },
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "metadata"
+              ],
+              "type": "object"
+            },
+            "name": "file.ingest",
+            "output_schema": {
+              "additionalProperties": false,
+              "properties": {
+                "asset_id": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "size": {
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "asset_id",
+                "sha256",
+                "size"
+              ],
+              "type": "object"
+            },
+            "replay_safe": true,
+            "resources": {},
+            "verifier": false
+          }
+        },
+        "created_at": 1790025503.3165388,
+        "generation": 0,
+        "goal": null,
+        "id": "b1fd6737-ea58-47cc-abb0-370431ffc7b8",
+        "plan": {
+          "steps": [
+            {
+              "args": {
+                "metadata": {
+                  "encoding": "utf8",
+                  "kind": "document",
+                  "source": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md"
+                },
+                "path": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md"
+              },
+              "id": "ingest",
+              "skill": "file.ingest"
+            },
+            {
+              "args": {
+                "asset_id": {
+                  "$ref": "ingest.asset_id"
+                }
+              },
+              "deps": [
+                "ingest"
+              ],
+              "id": "verify",
+              "skill": "asset.verify"
+            }
+          ],
+          "verification": "verify"
+        },
+        "priority": 0,
+        "revision": 0,
+        "robot_id": "r1",
+        "status": "failed",
+        "steps": {
+          "ingest": {
+            "alternative": 0,
+            "attempts": 1,
+            "execution_id": "73c7cf44-6177-42ad-a0ee-6cd179acfccc",
+            "result": {
+              "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/f3d9b7b6-e870-40e2-9a1c-ab835dcadef4.md'",
+              "evidence": [
+                {
+                  "error_type": "FileNotFoundError",
+                  "source": "local:file.ingest"
+                }
+              ],
+              "execution_id": "73c7cf44-6177-42ad-a0ee-6cd179acfccc",
+              "output": {},
+              "quiescent": true,
+              "status": "failed"
+            },
+            "status": "failed"
+          },
+          "verify": {
+            "alternative": 0,
+            "attempts": 0,
+            "status": "pending"
+          }
+        }
+      }
+    },
+    "mobile_overflow": false,
+    "checks": [
+      "empty state",
+      "budget validation",
+      "create without model",
+      "actual failure and queue",
+      "source integrity failure displayed",
+      "explicit retry",
+      "actual model response and exact error",
+      "pause disables retry",
+      "reload restores rule",
+      "enable",
+      "desktop/mobile captures",
+      "read-only polling"
+    ]
+  },
+  "final_read_only_check": {
+    "source_report": ".runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/recapture.json",
+    "source_report_sha256": "ae4e34fee1bb7114e5c524007c76bb5abdf7bfb58a32564cf9f9a6bd3e263833",
+    "status": "passed",
+    "root": "/home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa",
+    "mock_used": false,
+    "simulation_used": false,
+    "console_errors": [],
+    "mobile_overflow": false,
+    "disconnected_records_retained": true,
+    "screenshots_reused": true,
+    "checks": [
+      "read-only final capture",
+      "actual server disconnect preserves last diagnosis"
+    ]
+  },
+  "screenshots": {
+    "desktop-final.png": {
+      "path": ".runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/desktop-final.png",
+      "sha256": "b0444924114744c5d5a62c5189a39e934eb5a0f9d8b25b3eefe991e974eb0256"
+    },
+    "mobile-final.png": {
+      "path": ".runtime/automation-browser-validation/54bc974c-11f0-4e05-98f2-2971f44f02fa/mobile-final.png",
+      "sha256": "0c8b93242827de4cdb32425a3aa6d238e91957146cd859e6faede6c5bba6f294"
+    }
+  },
+  "build": "TypeScript and Vite passed",
+  "scope": "Actual browser/shared-action creation, real file failure, source corruption refusal, explicit retry with actual model response, pause/enable/reload and read-only polling. Actual server disconnect preserves last successful diagnosis. No robot hardware validation.",
+  "scoped_design_review": {
+    "disposition": "ship",
+    "scope": "Four material corrections scored resolved: retained diagnostics on failed same-rule refresh, panel padding, rule selector width and product invocation constraints."
+  }
+}

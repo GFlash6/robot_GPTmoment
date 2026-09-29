@@ -1,0 +1,159 @@
+{
+  "configured_model": "qwen3.7-plus",
+  "mock_used": false,
+  "simulation_used": false,
+  "status": "passed",
+  "task_id": "c3392323-8106-43d3-9066-364ad3c096a5",
+  "summary": {
+    "id": "6ee4c765-9a11-49f8-9d67-d990b4ecc9b9",
+    "session_id": "c12251f3-064c-4c8b-97b6-767e16e2617c",
+    "source_revision": 5,
+    "covered_turns": [
+      {
+        "id": "c0e207e6-447e-4bd7-bb33-aeced798921f",
+        "record_hash": "0986f1abe19f62599773c04256f6c23bfb2c15f8921610a71bfffb8e720bad57"
+      },
+      {
+        "id": "8e46a886-944c-4297-8162-4fec02b6e15b",
+        "record_hash": "1ec38cb3f474a12eddc32694d6fd03f651be956a579e5eaf5b015746b7920f57"
+      },
+      {
+        "id": "7d41c12d-2b43-4836-a93f-dbe05ad85ac8",
+        "record_hash": "2c4463ebdd39a346951678dafda25f66654e64acfe54d8db0ac4dc11ec15ce59"
+      }
+    ],
+    "pinned_turn_ids": [
+      "9fef5457-b79c-46e6-803e-5069266183ca"
+    ],
+    "keep_recent": 2,
+    "points": [
+      {
+        "text": "任务要求归档指定协议文档并验证字节，流程为 file.ingest 后接 asset.verify。系统资产库位置已配置，无须询问目标路径，不涉及机器人运动。唯一归档文件路径为 /home/gflash/agents/unitree_sim_isaaclab/robot_agent_framework/.runtime/session-summary-validation/9fcc90b5-ac2b-47d2-94c2-42475aedec07/protocol.md，SHA256 为 f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5。",
+        "turn_ids": [
+          "c0e207e6-447e-4bd7-bb33-aeced798921f",
+          "8e46a886-944c-4297-8162-4fec02b6e15b"
+        ]
+      },
+      {
+        "text": "协议注册契约规定：注册文件含 adapter, endpoint, schemas, checks, resources 等；verifier 标记目标验证。资源命名拒绝折算后重名和跨机器人引用。模型仅能用已注册能力。checks 支持 nonempty, eq, gte/lte。fallback 需满足替代及原技能后置条件。重试仅限明确失败、已停止且 replay_safe 的技能，未知不是可重试失败。",
+        "turn_ids": [
+          "7d41c12d-2b43-4836-a93f-dbe05ad85ac8"
+        ]
+      },
+      {
+        "text": "协议请求与响应规定：PUT 创建执行，同 ID 同请求关联原执行，不同请求复用同 ID 必须拒绝。GET 查询状态，未找到不意味允许重发。POST 取消请求，终态需 quiescent=true 和非空 evidence（source 必须是非空白字符串，指向可追溯记录）。成功需非空 output 且通过 schema 和 checks。接入机器人需实现可信停止/目标观测适配器。",
+        "turn_ids": [
+          "7d41c12d-2b43-4836-a93f-dbe05ad85ac8"
+        ]
+      },
+      {
+        "text": "协议恢复与控制权规定：框架先持久化 execution_id 与资源分配再发请求。超时或取消不释放资源，仅终态停止证据检查后释放。远端服务需持久化执行身份和结果。本地 worker 文件锁不等于硬件 fencing 或急停，禁止把本地工作进程退出当停止证据。本项目 loopback 数据服务执行真实文件操作，不含假机器人技能。",
+        "turn_ids": [
+          "7d41c12d-2b43-4836-a93f-dbe05ad85ac8"
+        ]
+      }
+    ],
+    "model_response_id": "440259df-f375-4a74-b718-f86394699b16",
+    "created_at": 1790018020.1033823,
+    "version": 1,
+    "content_authority": "model_summary_not_execution_evidence"
+  },
+  "actual_result": {
+    "evidence": [
+      {
+        "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+        "source": "asset:16f0ad69-2c8d-4486-bf1e-c787e3110fee"
+      }
+    ],
+    "execution_id": "4101dc54-122e-47d7-a95f-0e3f3e33fbb9",
+    "output": {
+      "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+      "size": 2669,
+      "verified": true
+    },
+    "quiescent": true,
+    "status": "succeeded"
+  },
+  "source_bytes": 7063,
+  "summary_bytes": 3177,
+  "summary_response_id": "chatcmpl-a6f5b3ee-0c2d-9f4b-88e6-b095578714d9",
+  "planning_response_id": "chatcmpl-d133db31-f02f-9045-8f7f-2e5e974c0296",
+  "context_manifest": {
+    "dropped": [],
+    "estimated_input_tokens": 9234,
+    "estimator": "utf8_bytes_v1",
+    "id": "0709b933-4ef6-4a08-acde-a14789fee5b8",
+    "included": [
+      "goal",
+      "capabilities",
+      "session",
+      "session-summary"
+    ],
+    "input_token_limit": 32768,
+    "phase": "planning",
+    "renderer_version": "role-aware-v1",
+    "request_id": "dddb2003-e3e1-4d1a-85d0-301287156c7f",
+    "reserved_output_tokens": 2048,
+    "sources": [
+      {
+        "authority": "operator",
+        "evidence_ids": [],
+        "id": "goal",
+        "metadata": {},
+        "source": "goal_context"
+      },
+      {
+        "authority": "framework",
+        "evidence_ids": [],
+        "id": "capabilities",
+        "metadata": {},
+        "source": "skill_registry"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [],
+        "id": "session",
+        "metadata": {
+          "revision": 7,
+          "session_id": "c12251f3-064c-4c8b-97b6-767e16e2617c",
+          "snapshot_id": null
+        },
+        "source": "session_ledger"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [],
+        "id": "session-summary",
+        "metadata": {
+          "covered_turns": [
+            {
+              "id": "c0e207e6-447e-4bd7-bb33-aeced798921f",
+              "record_hash": "0986f1abe19f62599773c04256f6c23bfb2c15f8921610a71bfffb8e720bad57"
+            },
+            {
+              "id": "8e46a886-944c-4297-8162-4fec02b6e15b",
+              "record_hash": "1ec38cb3f474a12eddc32694d6fd03f651be956a579e5eaf5b015746b7920f57"
+            },
+            {
+              "id": "7d41c12d-2b43-4836-a93f-dbe05ad85ac8",
+              "record_hash": "2c4463ebdd39a346951678dafda25f66654e64acfe54d8db0ac4dc11ec15ce59"
+            }
+          ],
+          "model_response_id": "440259df-f375-4a74-b718-f86394699b16",
+          "pinned_turn_ids": [
+            "9fef5457-b79c-46e6-803e-5069266183ca"
+          ],
+          "record_hash": "f3bc478ad855187bd155e4c6cc1111832d10a828a0f32484515b3e1d2bab9255",
+          "summary_id": "6ee4c765-9a11-49f8-9d67-d990b4ecc9b9"
+        },
+        "source": "session_summary"
+      }
+    ]
+  },
+  "source_report": ".runtime/session-summary-validation/9fcc90b5-ac2b-47d2-94c2-42475aedec07/report.json",
+  "source_report_sha256": "4082822144fb7d5bff31819d4ba9322c12cf19f7e104fb91e2e6e067812a9caa",
+  "regression": {
+    "passed": 29,
+    "subtests_passed": 9
+  }
+}

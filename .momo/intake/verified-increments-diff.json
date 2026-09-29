@@ -1,0 +1,19 @@
+{
+  "mode": "canonical-replace",
+  "currentRevision": 155,
+  "candidateRevision": 155,
+  "records": [
+    {
+      "kind": "objects",
+      "creates": 0,
+      "updates": 19,
+      "preserved": 0
+    },
+    {
+      "kind": "relations",
+      "creates": 0,
+      "updates": 0,
+      "preserved": 0
+    }
+  ]
+}

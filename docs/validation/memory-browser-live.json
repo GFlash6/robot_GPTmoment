@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "mock_used": false,
+  "simulation_used": false,
+  "mobile_overflow": false,
+  "console_errors": [],
+  "checks": [
+    "empty search",
+    "bind/clear",
+    "no automatic model call",
+    "actual model context",
+    "actual model plan path",
+    "worker hash",
+    "stale draft invalidation",
+    "session isolation"
+  ],
+  "actual_result": {
+    "evidence": [
+      {
+        "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+        "source": "asset:aa61f249-586b-46bc-a8c5-343a84004fc8"
+      }
+    ],
+    "execution_id": "d7f4443e-7a4e-45dd-8f51-80826df3c1d5",
+    "output": {
+      "sha256": "f14fdfd0852aec1978439cf0743416705e08b8135fa2e4c6100ab1457b1904d5",
+      "size": 2669,
+      "verified": true
+    },
+    "quiescent": true,
+    "status": "succeeded"
+  },
+  "task_id": "8adb82f2-9830-4515-9798-9d9c2d4b42ae",
+  "actual_model": "qwen3.7-plus",
+  "model_response": {
+    "id": "8748914d-4e91-466d-8826-e0464b6f038d",
+    "actual_model": "qwen3.7-plus",
+    "response_id": "chatcmpl-c1533829-b8d5-9b28-96f8-02ea05264052",
+    "has_raw_response": true
+  },
+  "context_manifest": {
+    "dropped": [],
+    "estimated_input_tokens": 9211,
+    "estimator": "utf8_bytes_v1",
+    "id": "47891e92-aa93-4635-9c9c-6d7f9c206014",
+    "included": [
+      "goal",
+      "capabilities",
+      "session",
+      "memory:e7f01288-a695-423c-a5d2-860cc6273b95"
+    ],
+    "input_token_limit": 32768,
+    "phase": "planning",
+    "renderer_version": "role-aware-v1",
+    "request_id": "63f266d3-8e78-421e-b60a-36d027434bb3",
+    "reserved_output_tokens": 2048,
+    "sources": [
+      {
+        "authority": "operator",
+        "evidence_ids": [],
+        "id": "goal",
+        "metadata": {},
+        "source": "goal_context"
+      },
+      {
+        "authority": "framework",
+        "evidence_ids": [],
+        "id": "capabilities",
+        "metadata": {},
+        "source": "skill_registry"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [],
+        "id": "session",
+        "metadata": {
+          "revision": 4,
+          "session_id": "5ca3fe88-f320-43fb-8bdb-650d0eab3438",
+          "snapshot_id": null
+        },
+        "source": "session_ledger"
+      },
+      {
+        "authority": "data",
+        "evidence_ids": [
+          "1a54cca5-e902-4353-a3f5-72862acfd2b7"
+        ],
+        "id": "memory:e7f01288-a695-423c-a5d2-860cc6273b95",
+        "metadata": {
+          "record_hash": "4c03788c575c25cb23f3cda6fe3f344d353599c9d64daba011b7af200cc59db8",
+          "valid_until": null,
+          "verified_at": 1790017187.321721
+        },
+        "source": "scoped_memory_catalog"
+      }
+    ]
+  },
+  "source_report": ".runtime/memory-browser-validation/dbeb5d91-01aa-4b4f-a55d-531f5ed47898/report.json",
+  "source_report_sha256": "1802ef9dfdcf7e2c77bd7ebde06df7e90f0326cc3c722eb50beb442c7efe967d",
+  "screenshots": [
+    ".runtime/memory-browser-validation/dbeb5d91-01aa-4b4f-a55d-531f5ed47898/desktop.png",
+    ".runtime/memory-browser-validation/dbeb5d91-01aa-4b4f-a55d-531f5ed47898/mobile.png"
+  ]
+}

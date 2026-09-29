@@ -6,6 +6,12 @@
 
 当前工程情况统一维护在 [工程状态](docs/PROJECT_STATUS.md)，按模块和细项区分已完成、进行中与未完成；后续构建顺序见 [分阶段路线](docs/BUILD_ROADMAP.md)，[问题台账](docs/OPEN_QUESTIONS.md)保存待决问题和所需证据。第一版可运行，完整框架仍需完善。
 
+## 任务协作应用层（2026-09-22）
+
+新增统一动作入口、幂等控制命令、持久会话、界面选择上下文、计划草稿和真实记录解释。当前环境的 `qwen3.7-plus` 已通过实际目标分析 → 模型计划 → worker 文件执行 → 哈希核验闭环；多轮澄清和失败节点解释也有真实模型响应。此前 `qwen3.8-max` 的记录属于历史验收。
+
+使用方式见 [应用动作与任务协作](docs/APPLICATION_LAYER.md)，分阶段范围见 [实施跟踪](docs/APPLICATION_LAYER_PLAN.md)。新增应用服务与原只读观察服务独立；控制请求接受不代表执行结束。此次不使用 mock 或仿真，真机尚未验收。
+
 ## 安装与检查
 
 可视化模型测试：启动独立网关后打开 `http://127.0.0.1:8767`，进入「模型记录 → 真实问答测试」，即可手动向 `qwen3.8-max` 提问。API Key 从服务端环境读取，支持实际回答、耗时、预期答案匹配和历史记录。启动命令见 [模型测试 UI](docs/MODEL_TEST_UI.md)。
@@ -46,7 +52,7 @@ PY
 .venv/bin/robot-agent run
 ```
 
-`submit` 输出真实 task ID；`status`、`events`、`pause`、`cancel`、`resume` 和 `preempt` 接受该 ID。`run --until` 后附 task ID 可等待一个任务到安全终态。停止 worker 不等于停止远端机器人；重启继续查询原执行。`pause/cancel` 返回的是请求记录，只有任务到 paused/canceled 才完成对应流程。
+`submit` 输出命令回执及预分配 task ID，worker 应用后创建任务；`status`、`events`、`pause`、`cancel`、`resume` 和 `preempt` 接受该 ID。`run --until` 后附 task ID 可等待一个任务到安全终态。停止 worker 不等于停止远端机器人；重启继续查询原执行。`pause/cancel` 返回的是请求记录，只有任务到 paused/canceled 才完成对应流程。
 
 ## 模型、技能与恢复
 

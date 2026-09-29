@@ -11,6 +11,26 @@ import httpx
 from .contracts import ContractError, require
 
 
+def environment_config():
+    """Resolve the configured live model; never install a default model or token."""
+    path = os.environ.get("ROBOT_AGENT_MODEL_CONFIG")
+    if path:
+        from pathlib import Path
+        value = json.loads(Path(path).read_text())
+    else:
+        endpoint = os.environ.get("base_url") or os.environ.get("OPENAI_BASE_URL")
+        model = os.environ.get("llm_model") or os.environ.get("OPENAI_MODEL")
+        require(bool(endpoint) and bool(model), "model environment configuration missing")
+        endpoint = endpoint.rstrip("/")
+        if not endpoint.endswith("/chat/completions"):
+            endpoint += "/chat/completions"
+        token_env = "API_KEY" if os.environ.get("API_KEY") else "OPENAI_API_KEY"
+        value = {"endpoint": endpoint, "model": model, "token_env": token_env, "timeout": 120}
+    config = ModelConfig.from_mapping(value)
+    require(bool(config.token_env) and bool(os.environ.get(config.token_env)), "live model API key missing")
+    return value
+
+
 @dataclass(frozen=True)
 class ModelConfig:
     endpoint: str

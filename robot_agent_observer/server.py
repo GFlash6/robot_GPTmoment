@@ -43,6 +43,8 @@ def make_server(root,host='127.0.0.1',port=8765,static=None,origins=()):
                     elif len(parts)==4 and parts[2]=='tasks': result=ledger.task(parts[3])
                     elif len(parts)==5 and parts[2]=='tasks' and parts[4]=='events': result=ledger.events(parts[3],params)
                     elif len(parts)==4 and parts[2]=='models': result=ledger.model(parts[3])
+                    elif len(parts)==5 and parts[2]=='models' and parts[4]=='context-diff': result=ledger.model_context_diff(parts[3],params)
+                    elif len(parts)==5 and parts[2]=='models' and parts[4]=='context': result=ledger.model_context(parts[3])
                     else: raise ObserverError('NOT_FOUND','接口不存在',404)
                     self.json(200,result);return
                 if assets is None: raise ObserverError('UI_NOT_BUILT','API 已启动；前端需单独启动或传入 --static 构建目录',404)

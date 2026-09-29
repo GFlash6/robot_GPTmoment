@@ -1,6 +1,8 @@
 """Robot control ledger. DBOS owns workflow histories, not these resource leases."""
 
 import json
+import hashlib
+import fcntl
 import sqlite3
 import threading
 import time
@@ -32,19 +34,40 @@ CREATE TABLE IF NOT EXISTS resources(name TEXT PRIMARY KEY, capacity INTEGER NOT
 CREATE TABLE IF NOT EXISTS leases(owner TEXT, resource TEXT REFERENCES resources(name), units INTEGER NOT NULL CHECK(units>0), PRIMARY KEY(owner,resource));
 CREATE TABLE IF NOT EXISTS objects(collection TEXT, id TEXT, data TEXT NOT NULL, PRIMARY KEY(collection,id));
 CREATE TABLE IF NOT EXISTS events(seq INTEGER PRIMARY KEY AUTOINCREMENT, ts REAL NOT NULL, task TEXT, type TEXT NOT NULL, data TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS events_task_seq ON events(task,seq);
 CREATE VIRTUAL TABLE IF NOT EXISTS memory_search USING fts5(id UNINDEXED, text);
 """)
 
     @contextmanager
     def transaction(self):
         with self.lock:
-            self.db.execute("BEGIN IMMEDIATE")
+            # Commands wrap existing Runtime transactions in one atomic receipt.
+            nested = self.db.in_transaction
+            marker = "nested_" + str(time.monotonic_ns())
+            self.db.execute(f"SAVEPOINT {marker}" if nested else "BEGIN IMMEDIATE")
             try:
                 yield
-                self.db.execute("COMMIT")
+                self.db.execute(f"RELEASE {marker}" if nested else "COMMIT")
             except BaseException:
-                self.db.execute("ROLLBACK")
+                if nested:
+                    self.db.execute(f"ROLLBACK TO {marker}")
+                    self.db.execute(f"RELEASE {marker}")
+                else:
+                    self.db.execute("ROLLBACK")
                 raise
+
+    @contextmanager
+    def task_lock(self, task_id):
+        """Serialize worker transitions across connections and DBOS threads."""
+        directory = self.root / "task-locks"
+        directory.mkdir(exist_ok=True)
+        name = hashlib.sha256(task_id.encode()).hexdigest()
+        with (directory / name).open("a+") as handle:
+            fcntl.flock(handle, fcntl.LOCK_EX)
+            try:
+                yield
+            finally:
+                fcntl.flock(handle, fcntl.LOCK_UN)
 
     def put(self, collection, key, value):
         with self.lock:
@@ -86,6 +109,24 @@ CREATE VIRTUAL TABLE IF NOT EXISTS memory_search USING fts5(id UNINDEXED, text);
                     "SELECT * FROM events WHERE task=? ORDER BY seq", (task,)
                 )
             ]
+
+    def event_page(self, task, *, after_seq=0, through_seq=None, limit=100):
+        require(type(after_seq) is int and 0 <= after_seq < 2**63, 'invalid event cursor')
+        require(type(limit) is int and 1 <= limit <= 500, 'invalid event page limit')
+        require(through_seq is None or (type(through_seq) is int and 0 <= through_seq < 2**63),
+                'invalid event upper bound')
+        with self.lock:
+            latest = self.db.execute('SELECT COALESCE(MAX(seq),0) FROM events WHERE task=?', (task,)).fetchone()[0]
+            upper = latest if through_seq is None else through_seq
+            require(after_seq <= upper <= latest, 'event cursor outside task history')
+            for boundary in {after_seq, upper} - {0}:
+                require(self.db.execute('SELECT 1 FROM events WHERE task=? AND seq=?', (task, boundary)).fetchone() is not None,
+                        'event cursor does not belong to task history')
+            rows = list(self.db.execute('SELECT * FROM events WHERE task=? AND seq>? AND seq<=? ORDER BY seq LIMIT ?',
+                (task, after_seq, upper, limit + 1)))
+            events = [{**dict(row), 'data': json.loads(row['data'])} for row in rows[:limit]]
+            return {'events': events, 'next_seq': events[-1]['seq'] if events else after_seq,
+                    'through_seq': upper, 'has_more': len(rows) > limit}
 
     def set_capacity(self, name, capacity):
         require(
